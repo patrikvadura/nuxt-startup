@@ -1,0 +1,37 @@
+@import 'bootstrap';
+@import 'fonts';
+@import 'lazyload';
+@import 'custom/pagination';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background: #fff;
+  color: $typo;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img,
+iframe {
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+button:focus {
+  outline: none;
+}
