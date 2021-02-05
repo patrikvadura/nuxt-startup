@@ -1,7 +1,7 @@
 <template>
   <b-container fluid class="p-0 m-0 hero">
     <video
-      src="https://st4.depositphotos.com/24158806/27894/v/600/depositphotos_278945248-stock-video-beautiful-minimal-background-with-moving.mp4"
+      src="https://st4.depositphotos.com/5265263/19876/v/600/depositphotos_198767068-stock-video-metal-factory-equipment-pipes-in.mp4"
       autoplay
       loop
       playsinline

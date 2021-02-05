@@ -95,7 +95,7 @@ export default {
 .header-scroll {
   position: fixed;
   padding: 1.5rem 3rem;
-  background: $secondary;
+  background: #fff;
   top: 0;
   left: 0;
   width: 100%;

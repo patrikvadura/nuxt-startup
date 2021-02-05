@@ -7,7 +7,6 @@
     <b-navbar-brand :to="localePath('/')">
       <Logo
         class="navbar__logo"
-        secondary
       />
     </b-navbar-brand>
 
@@ -29,11 +28,6 @@
             {{ item.title }}
           </b-nav-item>
         </div>
-
-        <CustomButton
-          :title="$t('global.header.button.title')"
-          :href="$t('global.header.button.href')"
-        />
 
         <div class="navbar__lang">
           <b-form-select
@@ -107,20 +101,20 @@ export default {
       background: $light;
       font-size: .9rem;
       font-weight: 600;
-      color: #fff;
+      color: $typo;
       border: none;
       cursor: pointer;
 
       @include border-radius (.5rem);
 
       &::after {
-        color: #fff;
+        color: $primary;
       }
     }
 
     option {
       text-align: center;
-      color: #1d1d1d;
+      color: $typo;
     }
   }
 
@@ -135,7 +129,7 @@ export default {
     }
 
     &-nav .nav-link {
-      color: #fff;
+      color: $typo;
       font-size: .9rem;
       font-weight: 700;
       transition: all 300ms ease-in-out;
@@ -151,7 +145,7 @@ export default {
       }
 
       &.active {
-        color: #fff !important;
+        color: $primary !important;
       }
     }
 
