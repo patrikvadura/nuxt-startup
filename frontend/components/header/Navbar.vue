@@ -17,17 +17,40 @@
       is-nav
     >
       <b-navbar-nav class="ml-auto navbar__links">
-        <div
-          v-for="item in $t('global.header.navLinks')"
-          :key="item.id"
+        <b-nav-item
+          :to="localePath('/')"
+          active-class="active"
         >
-          <b-nav-item
-            :to="localePath(item.href)"
-            active-class="active"
-          >
-            {{ item.title }}
-          </b-nav-item>
-        </div>
+          {{ $t('global.header.navLinks.products') }}
+        </b-nav-item>
+
+        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+          <template #button-content>
+            <b-nav-item active-class="active">
+              {{ $t('global.header.navLinks.tech.title') }}
+            </b-nav-item>
+          </template>
+          <b-dropdown-item>
+            <div
+              v-for="item in $t('global.header.navLinks.tech.items')"
+              :key="item.id"
+            >
+              <b-nav-item
+                :to="localePath(item.href)"
+                active-class="active"
+              >
+                {{ item.title }}
+              </b-nav-item>
+            </div>
+          </b-dropdown-item>
+        </b-dropdown>
+
+        <b-nav-item
+          :to="localePath('contact')"
+          active-class="active"
+        >
+          {{ $t('global.header.navLinks.contact') }}
+        </b-nav-item>
 
         <div class="navbar__lang">
           <b-form-select
@@ -212,4 +235,13 @@ export default {
 .lock-scroll {
   overflow: hidden;
 }
+
+::v-deep .btn-link {
+  padding: 0;
+  color: $typo;
+  font-size: .9rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 </style>

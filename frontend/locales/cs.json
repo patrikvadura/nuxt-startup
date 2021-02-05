@@ -2,23 +2,19 @@
   "global": {
     "home": "Domů",
     "header": {
-      "navLinks": [
-        {
-          "id": 1,
-          "href": "global",
-          "title": "Výrobky"
+      "navLinks": {
+        "products": "Výrobky",
+        "tech": {
+          "title": "Technické informace",
+          "items": [
+            {
+              "id": 1,
+              "title": "Item 2"
+            }
+          ]
         },
-        {
-          "id": 2,
-          "href": "global",
-          "title": "Technické informace"
-        },
-        {
-          "id": 3,
-          "href": "contact",
-          "title": "Kontakt"
-        }
-      ],
+        "contact": "Kontakt"
+      },
       "lang": {
         "cs": "Čeština",
         "en": "Angličtina"
