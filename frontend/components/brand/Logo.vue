@@ -40,7 +40,7 @@ export default {
       required: false,
       default: true
     },
-    secondary: {
+    light: {
       type: Boolean,
       required: false,
       default: false
@@ -56,7 +56,7 @@ export default {
     classes () {
       return {
         'logo--primary': this.primary,
-        'logo--secondary': this.secondary,
+        'logo--light': this.light,
         'logo--negative': this.negative
       }
     }
@@ -69,7 +69,7 @@ export default {
   fill-rule: nonzero;
 
   .logo__text {
-    fill: $primary;
+    fill: $dark;
   }
 }
 
@@ -81,11 +81,11 @@ export default {
   }
 }
 
-.logo--secondary {
+.logo--light {
   fill-rule: nonzero;
 
   .logo__text {
-    fill: #fff;
+    fill: rgba(0, 0, 0, .2);
   }
 }
 </style>

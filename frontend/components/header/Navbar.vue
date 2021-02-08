@@ -10,11 +10,14 @@
       />
     </b-navbar-brand>
 
-    <b-navbar-toggle target="nav-collapse" />
+    <b-navbar-toggle target="nav-collapse" v-if="open" @click="closeMenu" />
+
+    <b-navbar-toggle target="nav-collapse" v-else @click="openMenu" />
 
     <b-collapse
       id="nav-collapse"
       is-nav
+      v-scroll-lock="open"
     >
       <b-navbar-nav class="ml-auto navbar__links">
         <b-nav-item
@@ -24,26 +27,9 @@
           {{ $t('global.header.navLinks.products') }}
         </b-nav-item>
 
-        <b-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
-          <template #button-content>
-            <b-nav-item active-class="active">
-              {{ $t('global.header.navLinks.tech.title') }}
-            </b-nav-item>
-          </template>
-          <b-dropdown-item>
-            <div
-              v-for="item in $t('global.header.navLinks.tech.items')"
-              :key="item.id"
-            >
-              <b-nav-item
-                :to="localePath(item.href)"
-                active-class="active"
-              >
-                {{ item.title }}
-              </b-nav-item>
-            </div>
-          </b-dropdown-item>
-        </b-dropdown>
+        <Megamenu class="d-none d-md-block" />
+
+        <MegamenuMobile class="d-block d-md-none" />
 
         <b-nav-item
           :to="localePath('contact')"
@@ -72,6 +58,11 @@
 
 <script>
 export default {
+  components: {
+    Megamenu: () => import('~/components/header/Megamenu'),
+    MegamenuMobile: () => import('~/components/header/MegamenuMobile')
+  },
+
   mounted () {
     this.$nextTick(function () {
       window.addEventListener('scroll', function () {
@@ -86,6 +77,21 @@ export default {
         }
       })
     })
+  },
+
+  data () {
+    return {
+      open: false
+    }
+  },
+
+  methods: {
+    openMenu () {
+      this.open = true
+    },
+    closeMenu () {
+      this.open = false
+    }
   }
 }
 </script>
@@ -190,10 +196,6 @@ export default {
         width: 1.25rem;
         background-image: url('~assets/images/icons/white/burger.svg');
         vertical-align: middle;
-
-        &:active {
-          background-image: url('~assets/images/icons/primary/burger.svg');
-        }
       }
     }
   }
@@ -235,13 +237,4 @@ export default {
 .lock-scroll {
   overflow: hidden;
 }
-
-::v-deep .btn-link {
-  padding: 0;
-  color: $typo;
-  font-size: .9rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
 </style>
