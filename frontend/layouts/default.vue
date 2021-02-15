@@ -2,6 +2,7 @@
   <div>
     <Header />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
@@ -9,7 +10,8 @@
 
 export default {
   components: {
-    Header: () => import('~/components/header/Header')
+    Header: () => import('~/components/header/Header'),
+    Footer: () => import('~/components/footer/Footer')
   }
 }
 </script>

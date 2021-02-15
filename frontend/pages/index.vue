@@ -1,8 +1,8 @@
 <template>
-  <div class="home">
+  <div class="homepage">
     <Hero />
 
-    <div>
+    <b-container class="homepage__content">
       <p>{{ $tc('global.apple', 10, { count: 10 }) }}</p>
       <p>{{ $tc('global.apple', 10) }}</p>
       <p>{{ $tc('global.apple') }}</p>
@@ -19,21 +19,7 @@
       <p>{{ $n(7000000, 'currency', 'sk') }}</p>
 
       <p>{{ $d(new Date(), 'short') }}</p>
-    </div>
-
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
+    </b-container>
   </div>
 </template>
 
@@ -65,7 +51,11 @@ export default {
 </script>
 
 <style lang="scss">
-.home {
+.homepage {
   padding: 0;
+
+  &__content {
+    padding: 3rem 0 2rem;
+  }
 }
 </style>

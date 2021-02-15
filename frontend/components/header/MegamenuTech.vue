@@ -3,9 +3,9 @@
     <template v-if="$device.isDesktop">
       <div @mouseover="onOver" @mouseleave="onLeave">
         <b-dropdown
+          ref="dropdown"
           variant="link"
           toggle-class="text-decoration-none"
-          ref="dropdown"
           right
           no-caret
         >
@@ -93,7 +93,6 @@ export default {
     &--item {
       padding: 1rem;
       border-radius: 1rem;
-      background: linear-gradient(180deg, rgba(10, 106, 206, .05) 0%, rgba(255, 255, 255, 0) 100%);
 
       a {
         font-size: 1rem;
@@ -135,7 +134,9 @@ export default {
       padding: 2rem;
       min-width: 50vw;
       transform: translateX(-75%);
-      background: rgba(255, 255, 255, 1);
+      background: rgba(255, 255, 255, .7);
+      -webkit-backdrop-filter: blur(.5rem);
+      backdrop-filter: blur(.5rem);
       box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
       border-radius: 1rem;
       border: none;
