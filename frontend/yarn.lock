@@ -1549,6 +1549,13 @@
     webpack-node-externals "^2.5.2"
     webpackbar "^4.0.0"
 
+"@nuxtjs/device@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/device/-/device-2.0.0.tgz#cf33c65d64b17582aca7107e89bc51e269b1010c"
+  integrity sha512-9yvWPFV/6Di0oZ1pv+dIKOiKJ/aq5JX8MulBNt0T/HgWqi8R1h+IyqCYEjLpJwAlfaMsq+Gn7RoeCeOKGQ70gA==
+  dependencies:
+    defu "^3.2.2"
+
 "@nuxtjs/eslint-config@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config/-/eslint-config-3.1.0.tgz#7e73aa08035a743b99e64ee4337cf526a09c9973"
@@ -12095,6 +12102,13 @@ vue-meta@^2.4.0:
   dependencies:
     deepmerge "^4.2.2"
 
+vue-mobile-detection@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-mobile-detection/-/vue-mobile-detection-1.0.0.tgz#1c0d6f80fa4745c1c528e07968ae351d9e32af83"
+  integrity sha512-84hsJEYTcXjAlqigg/5XfFYfIyGKtcI3rCHOOFyf99RcuMfYyMQ6wUwCCB52rf8k4xL/3DKUY4hx+vF2psgqFQ==
+  dependencies:
+    vue "^2.6.10"
+
 vue-no-ssr@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/vue-no-ssr/-/vue-no-ssr-1.1.1.tgz#875f3be6fb0ae41568a837f3ac1a80eaa137b998"
@@ -12140,7 +12154,7 @@ vue-template-es2015-compiler@^1.6.0, vue-template-es2015-compiler@^1.9.0:
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
-vue@^2.6.12:
+vue@^2.6.10, vue@^2.6.12:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
   integrity sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==

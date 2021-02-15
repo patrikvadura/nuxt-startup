@@ -8,24 +8,6 @@
       muted
     />
 
-    <!--
-    <video
-      src="https://st3.depositphotos.com/11124126/34955/v/600/depositphotos_349552212-stock-video-view-on-big-sheet-of.mp4"
-      autoplay
-      loop
-      playsinline
-      muted
-    />
-    -->
-
-    <!--
-    <img
-      src="~/assets/images/fakeapi/fakeapi.jpg"
-      srcset="~/assets/images/fakeapi/fakeapi.jpg 1x, ~/assets/images/fakeapi/fakeapi.jpg 2x"
-      alt="fakeapi"
-    >
-    -->
-
     <b-row cols="1" align-v="center" class="text-left hero__content overlay">
       <b-col
         class="px-4 text-center"
@@ -57,23 +39,15 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
   components: {
   },
+
   data () {
     return {
       hero: [],
       error: null
-    }
-  },
-  async mounted () {
-    try {
-      const response = await axios.get('http://localhost:1337/hero')
-      this.hero = response.data
-    } catch (error) {
-      this.error = error
     }
   }
 }
@@ -160,51 +134,6 @@ export default {
 
   &__actions {
     padding-top: 2rem;
-
-    ::v-deep .custom-button {
-      @include media-breakpoint-down(md) {
-        margin-top: 1rem;
-        margin-left: 0;
-      }
-
-      @include media-breakpoint-down(sm) {
-        width: 100%;
-      }
-
-      .custom-button__title {
-        @include media-breakpoint-down(md) {
-          width: 100%;
-        }
-      }
-
-      &:hover {
-        background: $light;
-      }
-
-      &--light {
-        background: $light;
-
-        .custom-button__title {
-          color: #fff;
-
-          &:hover {
-            color: $secondary;
-          }
-        }
-
-        .custom-button__box--title {
-          color: #fff;
-
-          &:hover {
-            color: $secondary;
-          }
-        }
-
-        &:hover {
-          background: #fff;
-        }
-      }
-    }
   }
 }
 

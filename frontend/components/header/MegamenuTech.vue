@@ -1,0 +1,157 @@
+<template>
+  <div class="megamenu">
+    <template v-if="$device.isDesktop">
+      <div @mouseover="onOver" @mouseleave="onLeave">
+        <b-dropdown
+          variant="link"
+          toggle-class="text-decoration-none"
+          ref="dropdown"
+          right
+          no-caret
+        >
+          <template #button-content>
+            <b-nav-item active-class="active">
+              {{ $t('global.header.navLinks.tech.title') }}
+            </b-nav-item>
+          </template>
+          <b-row cols-lg="2">
+            <b-col>
+              <div class="megamenu__dropdown--item">
+                <nuxt-link :to="localePath('contact')" active-class="active">
+                  {{ $t('global.header.navLinks.tech.category.tables.title') }}
+                </nuxt-link>
+                <div
+                  v-for="item in $t('global.header.navLinks.tech.category.tables.items')"
+                  :key="item.id"
+                  class="megamenu__dropdown--subitem"
+                >
+                  {{ item.title }}
+                </div>
+              </div>
+            </b-col>
+
+            <b-col>
+              <div class="megamenu__dropdown--item">
+                <nuxt-link :to="localePath('contact')" active-class="active">
+                  {{ $t('global.header.navLinks.tech.category.schemes.title') }}
+                </nuxt-link>
+                <div
+                  v-for="item in $t('global.header.navLinks.tech.category.schemes.items')"
+                  :key="item.id"
+                  class="megamenu__dropdown--subitem"
+                >
+                  {{ item.title }}
+                </div>
+              </div>
+            </b-col>
+          </b-row>
+        </b-dropdown>
+      </div>
+    </template>
+
+    <template v-else>
+      <b-dropdown variant="link" toggle-class="text-decoration-none" block>
+        <template #button-content>
+          <b-nav-item active-class="active">
+            {{ title }}
+          </b-nav-item>
+        </template>
+        <b-dropdown-item>
+          <div
+            v-for="item in items"
+            :key="item.id"
+          >
+            <b-nav-item
+              :to="localePath(item.href)"
+              active-class="active"
+            >
+              {{ item.title }}
+            </b-nav-item>
+          </div>
+        </b-dropdown-item>
+      </b-dropdown>
+    </template>
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    onOver () {
+      this.$refs.dropdown.visible = true
+    },
+    onLeave () {
+      this.$refs.dropdown.visible = false
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.megamenu {
+  &__dropdown {
+    &--item {
+      padding: 1rem;
+      border-radius: 1rem;
+      background: linear-gradient(180deg, rgba(10, 106, 206, .05) 0%, rgba(255, 255, 255, 0) 100%);
+
+      a {
+        font-size: 1rem;
+        line-height: 1rem;
+        font-weight: 600;
+        color: $primary;
+
+        &:active {
+          color: $primary;
+        }
+      }
+    }
+
+    &--subitem {
+      font-size: .8rem;
+    }
+  }
+
+  ::v-deep .btn-link {
+    padding: 0;
+    color: $typo;
+    font-size: .9rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+      color: $typo;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+
+  ::v-deep .dropdown-menu {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      left: 0;
+      padding: 2rem;
+      min-width: 50vw;
+      transform: translateX(-75%);
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
+      border-radius: 1rem;
+      border: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      border: none;
+    }
+
+    a {
+      @include media-breakpoint-down(sm) {
+        font-size: .8rem !important;
+        font-weight: 400 !important;
+      }
+    }
+  }
+}
+</style>

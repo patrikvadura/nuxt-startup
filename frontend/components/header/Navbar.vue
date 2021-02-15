@@ -20,16 +20,11 @@
       v-scroll-lock="open"
     >
       <b-navbar-nav class="ml-auto navbar__links">
-        <b-nav-item
-          :to="localePath('/')"
-          active-class="active"
-        >
-          {{ $t('global.header.navLinks.products') }}
-        </b-nav-item>
+        <MegamenuProducts />
 
-        <Megamenu class="d-none d-md-block" />
-
-        <MegamenuMobile class="d-block d-md-none" />
+        <MegamenuTech
+          :title="$t('global.header.navLinks.tech.title')"
+        />
 
         <b-nav-item
           :to="localePath('contact')"
@@ -59,8 +54,8 @@
 <script>
 export default {
   components: {
-    Megamenu: () => import('~/components/header/Megamenu'),
-    MegamenuMobile: () => import('~/components/header/MegamenuMobile')
+    MegamenuProducts: () => import('@/components/header/MegamenuProducts'),
+    MegamenuTech: () => import('@/components/header/MegamenuTech')
   },
 
   mounted () {
@@ -160,6 +155,8 @@ export default {
     &-nav .nav-link {
       color: $typo;
       font-size: .9rem;
+      margin: 0 .25rem;
+      padding: .5rem 1rem;
       font-weight: 700;
       transition: all 300ms ease-in-out;
 
@@ -180,7 +177,7 @@ export default {
 
     &-toggler {
       padding: 1rem 1.25rem;
-      background: $light;
+      background: $primary;
       border: none;
 
       @include border-radius (.5rem);
@@ -197,25 +194,6 @@ export default {
         background-image: url('~assets/images/icons/white/burger.svg');
         vertical-align: middle;
       }
-    }
-  }
-
-  ::v-deep .custom-button {
-    margin-left: 1rem;
-
-    @include media-breakpoint-down(md) {
-      margin-top: 3rem;
-      margin-left: 0;
-    }
-
-    .custom-button__title {
-      @include media-breakpoint-down(md) {
-        width: 100%;
-      }
-    }
-
-    &:hover {
-      background: $light;
     }
   }
 }
