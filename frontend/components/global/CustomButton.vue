@@ -186,13 +186,13 @@ export default {
   }
 
   &--light {
-    background: $light;
+    background: $lightWhite;
 
     .custom-button__title {
       color: #fff;
 
       &:hover {
-        color: $secondary;
+        color: $primary;
       }
     }
 
@@ -200,7 +200,7 @@ export default {
       color: #fff;
 
       &:hover {
-        color: $secondary;
+        color: $primary;
       }
     }
 

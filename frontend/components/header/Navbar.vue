@@ -10,24 +10,28 @@
       />
     </b-navbar-brand>
 
-    <b-navbar-toggle target="nav-collapse" />
+    <b-navbar-toggle target="nav-collapse" v-if="open" @click="closeMenu" />
+
+    <b-navbar-toggle target="nav-collapse" v-else @click="openMenu" />
 
     <b-collapse
       id="nav-collapse"
       is-nav
+      v-scroll-lock="open"
     >
       <b-navbar-nav class="ml-auto navbar__links">
-        <div
-          v-for="item in $t('global.header.navLinks')"
-          :key="item.id"
+        <MegamenuProducts />
+
+        <MegamenuTech
+          :title="$t('global.header.navLinks.tech.title')"
+        />
+
+        <b-nav-item
+          :to="localePath('contact')"
+          active-class="active"
         >
-          <b-nav-item
-            :to="localePath(item.href)"
-            active-class="active"
-          >
-            {{ item.title }}
-          </b-nav-item>
-        </div>
+          {{ $t('global.header.navLinks.contact') }}
+        </b-nav-item>
 
         <div class="navbar__lang">
           <b-form-select
@@ -49,6 +53,11 @@
 
 <script>
 export default {
+  components: {
+    MegamenuProducts: () => import('@/components/header/MegamenuProducts'),
+    MegamenuTech: () => import('@/components/header/MegamenuTech')
+  },
+
   mounted () {
     this.$nextTick(function () {
       window.addEventListener('scroll', function () {
@@ -63,6 +72,21 @@ export default {
         }
       })
     })
+  },
+
+  data () {
+    return {
+      open: false
+    }
+  },
+
+  methods: {
+    openMenu () {
+      this.open = true
+    },
+    closeMenu () {
+      this.open = false
+    }
   }
 }
 </script>
@@ -131,6 +155,8 @@ export default {
     &-nav .nav-link {
       color: $typo;
       font-size: .9rem;
+      margin: 0 .25rem;
+      padding: .5rem 1rem;
       font-weight: 700;
       transition: all 300ms ease-in-out;
 
@@ -151,7 +177,7 @@ export default {
 
     &-toggler {
       padding: 1rem 1.25rem;
-      background: $light;
+      background: $primary;
       border: none;
 
       @include border-radius (.5rem);
@@ -167,30 +193,7 @@ export default {
         width: 1.25rem;
         background-image: url('~assets/images/icons/white/burger.svg');
         vertical-align: middle;
-
-        &:active {
-          background-image: url('~assets/images/icons/primary/burger.svg');
-        }
       }
-    }
-  }
-
-  ::v-deep .custom-button {
-    margin-left: 1rem;
-
-    @include media-breakpoint-down(md) {
-      margin-top: 3rem;
-      margin-left: 0;
-    }
-
-    .custom-button__title {
-      @include media-breakpoint-down(md) {
-        width: 100%;
-      }
-    }
-
-    &:hover {
-      background: $light;
     }
   }
 }

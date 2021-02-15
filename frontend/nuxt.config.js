@@ -43,7 +43,9 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~plugins/GlobalComponents',
-    '~plugins/bootstrap-vue'
+    '~plugins/bootstrap-vue',
+    '~plugins/VScrollLock',
+    '~plugins/mobile-detection'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -54,7 +56,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/device'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
