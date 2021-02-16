@@ -31,7 +31,7 @@ export default {
 
   data () {
     return {
-      title: 'Reklamní agentura v Uherském Hradišti | STUDIO 5'
+      title: 'Výroba armatur z nerezové oceli | NiobFluid'
     }
   },
 
@@ -42,7 +42,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Poskytujeme komplexní reklamní servis. Našim krédem je spokojený zákazník, proto dbáme na dodržování termínů a svým klientům jdeme vždy vstříct.'
+          content: 'Společnost NIOB FLUID s.r.o. je českým výrobcem armatur z nerezových ocelí pro potravinářský, chemický a farmaceutický průmysl. Výroba potravinářských ...'
         }
       ]
     }

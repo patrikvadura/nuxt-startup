@@ -160,16 +160,34 @@
           </b-nav-item>
         </template>
         <b-dropdown-item>
-          <div
-            v-for="item in items"
-            :key="item.id"
-          >
-            <b-nav-item
-              :to="localePath(item.href)"
-              active-class="active"
-            >
-              {{ item.title }}
-            </b-nav-item>
+          <div class="d-flex flex-column">
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.02.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.03.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.04.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.05.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.06.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.07.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.08.title') }}
+            </nuxt-link>
           </div>
         </b-dropdown-item>
       </b-dropdown>

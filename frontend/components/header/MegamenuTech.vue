@@ -53,20 +53,34 @@
       <b-dropdown variant="link" toggle-class="text-decoration-none" block>
         <template #button-content>
           <b-nav-item active-class="active">
-            {{ title }}
+            {{ $t('global.header.navLinks.tech.title') }}
           </b-nav-item>
         </template>
         <b-dropdown-item>
-          <div
-            v-for="item in items"
-            :key="item.id"
-          >
-            <b-nav-item
-              :to="localePath(item.href)"
-              active-class="active"
+          <div id="tables">
+            <nuxt-link :to="localePath('contact')">
+              {{ $t('global.header.navLinks.tech.category.tables.title') }}
+            </nuxt-link>
+            <div
+              v-for="item in $t('global.header.navLinks.tech.category.tables.items')"
+              :key="item.id"
+              class="megamenu__dropdown--subitem"
             >
               {{ item.title }}
-            </b-nav-item>
+            </div>
+          </div>
+
+          <div id="schemes" class="pt-3">
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.tech.category.schemes.title') }}
+            </nuxt-link>
+            <div
+              v-for="item in $t('global.header.navLinks.tech.category.schemes.items')"
+              :key="item.id"
+              class="megamenu__dropdown--subitem"
+            >
+              {{ item.title }}
+            </div>
           </div>
         </b-dropdown-item>
       </b-dropdown>

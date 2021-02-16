@@ -18,7 +18,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'description'
+        content: 'Společnost NIOB FLUID s.r.o. je českým výrobcem armatur z nerezových ocelí pro potravinářský, chemický a farmaceutický průmysl. Výroba potravinářských ...'
       }
     ],
     link: [
