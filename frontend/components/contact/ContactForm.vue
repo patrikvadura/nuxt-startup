@@ -21,6 +21,7 @@
         <ul>
           <div v-for="item in $t('contact.contact')" :key="item.id">
             <li>
+              <CustomIcon :name="item.icon" color="#0a6ace" bootstrap />
               {{ item.title }}
             </li>
           </div>
@@ -109,6 +110,11 @@ export default {
       list-style: none;
       font-size: .8rem;
       line-height: 1.5rem;
+
+      ::v-deep .custom-icon {
+        padding-right: .5rem;
+        transform: translateY(.2rem);
+      }
     }
   }
 }

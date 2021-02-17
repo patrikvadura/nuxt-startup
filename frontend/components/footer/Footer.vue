@@ -1,28 +1,36 @@
 <template>
   <div class="footer">
     <b-container>
-      <b-row cols-md="3" cols="1">
-        <b-col>
-          <h3>O nás</h3>
-          <p>Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992</p>
-          <a href="/">Zobrazit více</a>
+      <b-row>
+        <b-col md="7" cols="12">
+          <h3>{{ $t('global.footer.about.title') }}</h3>
+          <p>{{ $t('global.footer.about.description') }}</p>
+          <nuxt-link :to="localePath('/')" class="footer__more">
+            {{ $t('global.showMore') }}
+          </nuxt-link>
         </b-col>
 
-        <b-col>
-          <h3>O nás</h3>
-          <div class="footer__contact">
-            <span class="footer__contact--item">
-              <CustomIcon name="telephone-fill" bootstrap />
-              +420 572 419 822-8
-            </span>
+        <b-col md="5" cols="12">
+          <h3>{{ $t('contact.titleContact') }}</h3>
+          <div
+            v-for="item in $t('contact.contact')"
+            :key="item.id"
+            class="footer__contact"
+          >
+            <div class="footer__contact--item align-items-center">
+              <CustomIcon :name="item.icon" bootstrap />
+              {{ item.title }}
+            </div>
           </div>
         </b-col>
       </b-row>
 
       <b-row cols="1" class="footer__credits">
-        <b-col class="d-flex flex-row align-items-center">
-          <div>&copy; NIOB FLUID s.r.o. Všechna práva vyhrazena. Vytvořilo</div>
-          <img src="~/assets/images/brand/logo_S5_negative.svg" alt="STUDIO 5, v.o.s.">
+        <b-col class="d-flex flex-column flex-md-row align-items-center">
+          <div>&copy; {{ $t('global.footer.copyrightMessage') }}</div>
+          <a href="https://www.s5.cz/" target="_blank">
+            <img src="~/assets/images/brand/logo_S5_negative.svg" alt="STUDIO 5, v.o.s." class="pt-3 pt-md-0">
+          </a>
         </b-col>
       </b-row>
     </b-container>
@@ -40,12 +48,40 @@ export default {
   background: $primary;
   color: #fff;
 
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    padding: 3rem 2rem 4rem;
+  }
+
   h3 {
     color: $secondary;
   }
 
-  &__credits {
+  &__more {
     font-size: .8rem;
+    font-weight: 700;
+    color: $secondary;
+    text-decoration: none;
+  }
+
+  &__contact {
+    &--item {
+      font-size: .9rem;
+      font-weight: 600;
+      line-height: 2rem;
+
+      ::v-deep .custom-icon {
+        margin-right: .5rem;
+        transform: translateY(.2rem);
+      }
+    }
+  }
+
+  &__credits {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    font-size: .8rem;
+    border-top: 1px solid rgba(255, 255, 255, .2);
 
     img {
       margin-left: 1rem;
