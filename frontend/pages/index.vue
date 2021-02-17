@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <CookieControl :locale="$i18n.locale" />
     <Hero />
 
     <div>

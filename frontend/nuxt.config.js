@@ -65,8 +65,114 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/style-resources',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    [
+      'nuxt-cookie-control',
+      {
+        barPosition: 'bottom-right',
+        blockIframe: true,
+        locales: ['cs', 'en'],
+        colors: {
+          barTextColor: '#0a6ace',
+          barBackground: 'rgba(10, 106, 206, .05)',
+          barButtonColor: '#fff',
+          barButtonBackground: '#0a6ace',
+          barButtonHoverColor: '#fff',
+          barButtonHoverBackground: '#6ec1e4',
+          modalButtonBackground: '#0a6ace',
+          modalButtonColor: '#fff',
+          modalButtonHoverColor: '#fff',
+          modalButtonHoverBackground: '#6ec1e4',
+          controlButtonBackground: '#0a6ace',
+          controlButtonHoverBackground: '#6ec1e4',
+          controlButtonIconHoverColor: '#fff',
+          controlButtonIconColor: '#fff',
+          checkboxActiveBackground: '#6ec1e4',
+          checkboxInactiveBackground: '#ddd',
+          checkboxActiveCircleBackground: '#0a6ace',
+          checkboxInactiveCircleBackground: '#6ec1e4',
+          checkboxDisabledBackground: '#ddd',
+          checkboxDisabledCircleBackground: '#fff'
+        },
+        text: {
+          locale: {
+            cs: {
+              barTitle: 'Cookies',
+              barDescription: 'Využíváme vlastní a third-party cookies tudíž jsme schoůni vám nabídnout lepší obsah přizpůsobený tomu, co právě hledáte. Pokud hodláte pokračovat v prohlížení obsahu webu, prosíme o potvrzení nezbytných cookies.',
+              acceptAll: 'Přijmout vše',
+              declineAll: 'Smazat vše',
+              manageCookies: 'Nastavení',
+              unsaved: 'Máte neuložené změny',
+              close: 'Hotovo',
+              save: 'Uložit',
+              necessary: 'Nezbytné cookies',
+              optional: 'Volitelné cookies',
+              functional: 'Funkční cookies',
+              blockedIframe: 'Pro tuhle volbu potvrďte "funkční cookies"',
+              here: 'zde'
+            },
+
+            en: {
+              barTitle: 'Cookies',
+              barDescription: 'We use our own cookies and third-party cookies so that we can show you this website and better understand how you use it, with a view to improving the services we offer. If you continue browsing, we consider that you have accepted the cookies.',
+              acceptAll: 'Accept all',
+              declineAll: 'Delete all',
+              manageCookies: 'Manage cookies',
+              unsaved: 'You have unsaved settings',
+              close: 'Close',
+              save: 'Save',
+              necessary: 'Necessary cookies',
+              optional: 'Optional cookies',
+              functional: 'Functional cookies',
+              blockedIframe: 'To see this, please enable functional cookies',
+              here: 'here'
+            }
+          }
+        }
+      }
+    ]
   ],
+
+  cookies: {
+    necessary: [
+      {
+        name: {
+          cs: 'Základní cookies',
+          en: 'Default cookie'
+        },
+        description: {
+          cs: 'Základní zlepšení obahu',
+          en: 'Improve quality of content'
+        }
+      }
+    ],
+    optional: [
+      {
+        name: {
+          cs: 'Google Analitycs',
+          en: 'Google Analitycs'
+        },
+        identifier: 'ga',
+        description: {
+          cs: 'Sledování a analýza návštěvnosti',
+          en: 'Tracking and analytics'
+        },
+
+        initialState: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=<API-KEY>',
+        async: true,
+        accepted: () => {
+          window.dataLayer = window.dataLayer || []
+          window.dataLayer.push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+          })
+        },
+        declined: () => {
+        }
+      }
+    ]
+  },
 
   i18n: {
     strategy: 'prefix',
