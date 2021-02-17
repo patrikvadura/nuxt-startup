@@ -1,6 +1,7 @@
 <template>
   <img
     ref="image"
+    v-lazy-load
     :src="image1x"
     :srcset="`${image1x} 1x, ${image2x} 2x`"
     :alt="image"
@@ -42,13 +43,19 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    fullwidth: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
 
   computed: {
     classes () {
       return {
-        'effect--grayscale': this.grayscale
+        'effect--grayscale': this.grayscale,
+        'full-width': this.fullwidth
       }
     },
 
@@ -71,5 +78,9 @@ img {
   &--grayscale {
     filter: grayscale(1);
   }
+}
+
+.full-width {
+  width: 100%;
 }
 </style>

@@ -131,6 +131,28 @@ export default {
         }
       }
     ]
+      'nuxt-gmaps',
+      {
+        key: 'AIzaSyCXiLPCUvel1ctT6kV7uDqiV5peKf10yYQ'
+      }
+    ]
+    ['nuxt-lazy-load', {
+      images: true,
+      videos: true,
+      audios: true,
+      iframes: true,
+      native: false,
+      polyfill: true,
+      directiveOnly: false,
+
+      // Default image must be in the static folder
+      defaultImage: '/images/default-image.jpg',
+
+      // To remove class set value to false
+      loadingClass: 'isLoading',
+      loadedClass: 'isLoaded',
+      appendClass: 'lazyLoad'
+    }]
   ],
 
   cookies: {
