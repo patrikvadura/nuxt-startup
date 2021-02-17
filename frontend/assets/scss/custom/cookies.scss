@@ -1,0 +1,15 @@
+.cookieControl {
+  &__ModalContent {
+    position: relative;
+    width: 100%;
+    padding: 3rem;
+    max-width: 35rem;
+    max-height: 80vh;
+    text-align: left;
+    overflow-y: hidden;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
