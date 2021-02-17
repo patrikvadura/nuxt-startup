@@ -1,4 +1,8 @@
 .cookieControl {
+  --cookie-control-modalOverlay: #0f365f;
+
+  border-radius: 1rem;
+
   &__ModalContent {
     position: relative;
     width: 100%;
@@ -7,6 +11,30 @@
     max-height: 80vh;
     text-align: left;
     overflow-y: hidden;
+    box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
+    border-radius: 1rem;
+  }
+
+  &__Bar {
+    border-radius: 1rem;
+    box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
+
+    @include media-breakpoint-down(sm) {
+      margin: 0 1rem 2rem;
+    }
+
+    &--bottom-right {
+      border-radius: 1rem;
+    }
+
+    &Container {
+      display: flex;
+      padding: 1.25rem;
+      align-items: flex-end;
+      justify-content: space-between;
+      backdrop-filter: blur(.5rem);
+      border-radius: 1rem;
+    }
   }
 }
 

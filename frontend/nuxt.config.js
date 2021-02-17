@@ -74,7 +74,7 @@ export default {
         locales: ['cs', 'en'],
         colors: {
           barTextColor: '#0a6ace',
-          barBackground: 'rgba(10, 106, 206, .05)',
+          barBackground: 'rgba(255, 255, 255, .7)',
           barButtonColor: '#fff',
           barButtonBackground: '#0a6ace',
           barButtonHoverColor: '#fff',
@@ -130,29 +130,26 @@ export default {
           }
         }
       }
-    ]
-      'nuxt-gmaps',
+    ],
+    ['nuxt-lazy-load',
       {
-        key: 'AIzaSyCXiLPCUvel1ctT6kV7uDqiV5peKf10yYQ'
+        images: true,
+        videos: true,
+        audios: true,
+        iframes: true,
+        native: false,
+        polyfill: true,
+        directiveOnly: false,
+
+        // Default image must be in the static folder
+        defaultImage: '/images/default-image.jpg',
+
+        // To remove class set value to false
+        loadingClass: 'isLoading',
+        loadedClass: 'isLoaded',
+        appendClass: 'lazyLoad'
       }
     ]
-    ['nuxt-lazy-load', {
-      images: true,
-      videos: true,
-      audios: true,
-      iframes: true,
-      native: false,
-      polyfill: true,
-      directiveOnly: false,
-
-      // Default image must be in the static folder
-      defaultImage: '/images/default-image.jpg',
-
-      // To remove class set value to false
-      loadingClass: 'isLoading',
-      loadedClass: 'isLoaded',
-      appendClass: 'lazyLoad'
-    }]
   ],
 
   cookies: {

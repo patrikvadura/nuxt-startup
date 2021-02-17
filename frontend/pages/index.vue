@@ -23,7 +23,7 @@
       <p>{{ $d(new Date(), 'short') }}</p>
     </b-container>
 
-    <CustomImage image="fakeApi" width="600" />
+    <CustomImage image="fakeApi" height="400" />
 
     <h1>Test</h1>
     <h1>Test</h1>

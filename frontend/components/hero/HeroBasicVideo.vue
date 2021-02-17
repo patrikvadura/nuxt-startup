@@ -4,6 +4,7 @@
     class="p-0 m-0 hero"
   >
     <video
+      v-lazy-load
       :src="video"
       autoplay
       loop
