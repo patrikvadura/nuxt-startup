@@ -65,7 +65,24 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/style-resources',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    ['nuxt-lazy-load', {
+      images: true,
+      videos: true,
+      audios: true,
+      iframes: true,
+      native: false,
+      polyfill: true,
+      directiveOnly: false,
+
+      // Default image must be in the static folder
+      defaultImage: '/images/default-image.jpg',
+
+      // To remove class set value to false
+      loadingClass: 'isLoading',
+      loadedClass: 'isLoaded',
+      appendClass: 'lazyLoad'
+    }]
   ],
 
   i18n: {
