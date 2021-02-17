@@ -3,11 +3,7 @@
     fluid
     class="p-0 m-0 hero"
   >
-    <img
-      :src="image1x"
-      :srcset="`${image1x} 1x, ${image2x} 2x`"
-      :alt="title"
-    >
+    <CustomImage :image="image" />
 
     <b-row
       cols="1"
