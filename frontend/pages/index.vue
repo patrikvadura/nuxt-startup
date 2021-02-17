@@ -21,6 +21,8 @@
       <p>{{ $d(new Date(), 'short') }}</p>
     </div>
 
+    <CustomImage image="fakeApi" width="600" />
+
     <h1>Test</h1>
     <h1>Test</h1>
     <h1>Test</h1>
