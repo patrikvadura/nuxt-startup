@@ -3,9 +3,9 @@
     <template v-if="$device.isDesktop">
       <div @mouseover="onOver" @mouseleave="onLeave">
         <b-dropdown
+          ref="dropdown"
           variant="link"
           toggle-class="text-decoration-none"
-          ref="dropdown"
           right
           no-caret
         >
@@ -53,20 +53,34 @@
       <b-dropdown variant="link" toggle-class="text-decoration-none" block>
         <template #button-content>
           <b-nav-item active-class="active">
-            {{ title }}
+            {{ $t('global.header.navLinks.tech.title') }}
           </b-nav-item>
         </template>
         <b-dropdown-item>
-          <div
-            v-for="item in items"
-            :key="item.id"
-          >
-            <b-nav-item
-              :to="localePath(item.href)"
-              active-class="active"
+          <div id="tables">
+            <nuxt-link :to="localePath('contact')">
+              {{ $t('global.header.navLinks.tech.category.tables.title') }}
+            </nuxt-link>
+            <div
+              v-for="item in $t('global.header.navLinks.tech.category.tables.items')"
+              :key="item.id"
+              class="megamenu__dropdown--subitem"
             >
               {{ item.title }}
-            </b-nav-item>
+            </div>
+          </div>
+
+          <div id="schemes" class="pt-3">
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.tech.category.schemes.title') }}
+            </nuxt-link>
+            <div
+              v-for="item in $t('global.header.navLinks.tech.category.schemes.items')"
+              :key="item.id"
+              class="megamenu__dropdown--subitem"
+            >
+              {{ item.title }}
+            </div>
           </div>
         </b-dropdown-item>
       </b-dropdown>
@@ -93,7 +107,6 @@ export default {
     &--item {
       padding: 1rem;
       border-radius: 1rem;
-      background: linear-gradient(180deg, rgba(10, 106, 206, .05) 0%, rgba(255, 255, 255, 0) 100%);
 
       a {
         font-size: 1rem;
@@ -135,7 +148,9 @@ export default {
       padding: 2rem;
       min-width: 50vw;
       transform: translateX(-75%);
-      background: rgba(255, 255, 255, 1);
+      background: rgba(255, 255, 255, .7);
+      -webkit-backdrop-filter: blur(.5rem);
+      backdrop-filter: blur(.5rem);
       box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
       border-radius: 1rem;
       border: none;

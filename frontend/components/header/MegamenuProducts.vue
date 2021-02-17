@@ -3,9 +3,9 @@
     <template v-if="$device.isDesktop">
       <div @mouseover="onOver" @mouseleave="onLeave">
         <b-dropdown
+          ref="dropdown"
           variant="link"
           toggle-class="text-decoration-none"
-          ref="dropdown"
           right
           no-caret
         >
@@ -160,16 +160,34 @@
           </b-nav-item>
         </template>
         <b-dropdown-item>
-          <div
-            v-for="item in items"
-            :key="item.id"
-          >
-            <b-nav-item
-              :to="localePath(item.href)"
-              active-class="active"
-            >
-              {{ item.title }}
-            </b-nav-item>
+          <div class="d-flex flex-column">
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.02.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.03.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.04.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.05.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.06.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.07.title') }}
+            </nuxt-link>
+
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.products.category.08.title') }}
+            </nuxt-link>
           </div>
         </b-dropdown-item>
       </b-dropdown>
@@ -196,7 +214,6 @@ export default {
     &--item {
       padding: 1rem;
       border-radius: 1rem;
-      background: linear-gradient(180deg, rgba(10, 106, 206, .05) 0%, rgba(255, 255, 255, 0) 100%);
 
       a {
         font-size: 1rem;
@@ -243,7 +260,9 @@ export default {
       padding: 2rem;
       min-width: 80vw;
       transform: translateX(-75%);
-      background: rgba(255, 255, 255, 1);
+      background: rgba(255, 255, 255, .7);
+      -webkit-backdrop-filter: blur(.5rem);
+      backdrop-filter: blur(.5rem);
       box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
       border-radius: 1rem;
       border: none;

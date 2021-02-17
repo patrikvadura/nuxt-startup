@@ -13,7 +13,7 @@
 
     <template v-else>
       <img
-        :src="require(`~/assets/images/icons${color}/${name}.svg`)"
+        :src="require(`~/assets/images/icons/${color}/${name}.svg`)"
         :alt="name"
         :width="width"
       >
@@ -41,7 +41,7 @@ export default {
     color: {
       type: String,
       required: false,
-      default: ''
+      default: 'white'
     },
     width: {
       type: String,

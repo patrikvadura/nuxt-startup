@@ -10,14 +10,14 @@
       />
     </b-navbar-brand>
 
-    <b-navbar-toggle target="nav-collapse" v-if="open" @click="closeMenu" />
+    <b-navbar-toggle v-if="open" id="close" target="nav-collapse" @click="closeMenu" />
 
-    <b-navbar-toggle target="nav-collapse" v-else @click="openMenu" />
+    <b-navbar-toggle v-else target="nav-collapse" @click="openMenu" />
 
     <b-collapse
       id="nav-collapse"
-      is-nav
       v-scroll-lock="open"
+      is-nav
     >
       <b-navbar-nav class="ml-auto navbar__links">
         <MegamenuProducts />
@@ -58,6 +58,12 @@ export default {
     MegamenuTech: () => import('@/components/header/MegamenuTech')
   },
 
+  data () {
+    return {
+      open: false
+    }
+  },
+
   mounted () {
     this.$nextTick(function () {
       window.addEventListener('scroll', function () {
@@ -72,12 +78,6 @@ export default {
         }
       })
     })
-  },
-
-  data () {
-    return {
-      open: false
-    }
   },
 
   methods: {
@@ -214,5 +214,28 @@ export default {
 
 .lock-scroll {
   overflow: hidden;
+}
+
+#close {
+  ::v-deep .navbar-toggler {
+    padding: 1rem 1.25rem;
+    background: $primary;
+    border: none;
+
+    @include border-radius (.5rem);
+
+    &:focus,
+    &:hover {
+      border: none;
+      text-decoration: none;
+    }
+
+    &-icon {
+      display: inline-block;
+      width: 1.25rem;
+      background-image: url('~assets/images/icons/white/cross.svg');
+      vertical-align: middle;
+    }
+  }
 }
 </style>

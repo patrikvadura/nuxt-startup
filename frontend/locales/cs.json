@@ -1,6 +1,7 @@
 {
   "global": {
     "home": "Domů",
+    "showMore": "Zobrazit více",
     "header": {
       "navLinks": {
         "products": {
@@ -136,6 +137,13 @@
         "en": "Angličtina"
       }
     },
+    "footer": {
+      "about": {
+        "title": "O nás",
+        "description": "Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992"
+      },
+      "copyrightMessage": "NIOB FLUID s.r.o. Všechna práva vyhrazena. Vytvořilo"
+    },
     "hero": {
       "title": "Výroba armatur z nerezové oceli",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam sed tellus id magna elementum tincidunt. Integer lacinia.",
@@ -149,7 +157,6 @@
       "goBack": "Zpět",
       "goHome": "Zpět na úvodní stránku"
     },
-    "copyrightMessage": "Copyright: All Rights Reserved { name }",
     "apple": "žádné jablka | jedno jablko | {count} jablek",
     "banana": "žádné banány | {n} banán | {n} banánů"
   },
@@ -160,37 +167,36 @@
     "address": [
       {
         "id": 1,
-        "title": "STUDIO 5, v.o.s."
+        "title": "NIOB FLUID s.r.o."
       },
       {
         "id": 2,
-        "title": "Sokolovská 418, Uherské Hradiště, 68601"
+        "title": "Ostrožská 1003, 687 25 Hluk"
       },
       {
         "id": 3,
-        "title": "IČO: 63493365"
+        "title": "IČO: 27712541"
       },
       {
         "id": 4,
-        "title": "DIČ: CZ63493365"
-      },
-      {
-        "id": 5,
-        "title": "Společnost je zapsána v Obchodním rejstříku – Krajský soud Brno, oddíl A, vložka 7242"
+        "title": "DIČ: CZ27712541"
       }
     ],
     "contact": [
       {
         "id": 1,
-        "title": "+(420) 572-554-247"
+        "title": "+(420) 572 419 822-8",
+        "icon": "telephone-fill"
       },
       {
         "id": 2,
-        "title": "+(420) 572-554-248"
+        "title": "marketing@niobfluid.cz",
+        "icon": "envelope-fill"
       },
       {
         "id": 3,
-        "title": "s5@s5.cz"
+        "title": "www.niobfluid.cz",
+        "icon": "globe"
       }
     ],
     "name": "Vaše jméno",

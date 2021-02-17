@@ -1,9 +1,10 @@
 <template>
-  <div class="home">
+  <div class="homepage">
     <CookieControl :locale="$i18n.locale" />
+
     <Hero />
 
-    <div>
+    <b-container class="homepage__content">
       <p>{{ $tc('global.apple', 10, { count: 10 }) }}</p>
       <p>{{ $tc('global.apple', 10) }}</p>
       <p>{{ $tc('global.apple') }}</p>
@@ -20,9 +21,9 @@
       <p>{{ $n(7000000, 'currency', 'sk') }}</p>
 
       <p>{{ $d(new Date(), 'short') }}</p>
-    </div>
+    </b-container>
 
-    <CustomImage image="fakeApi" width="600" />
+    <CustomImage image="fakeApi" height="400" />
 
     <h1>Test</h1>
     <h1>Test</h1>
@@ -48,7 +49,7 @@ export default {
 
   data () {
     return {
-      title: 'Reklamní agentura v Uherském Hradišti | STUDIO 5'
+      title: 'Výroba armatur z nerezové oceli | NiobFluid'
     }
   },
 
@@ -59,7 +60,7 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Poskytujeme komplexní reklamní servis. Našim krédem je spokojený zákazník, proto dbáme na dodržování termínů a svým klientům jdeme vždy vstříct.'
+          content: 'Společnost NIOB FLUID s.r.o. je českým výrobcem armatur z nerezových ocelí pro potravinářský, chemický a farmaceutický průmysl. Výroba potravinářských ...'
         }
       ]
     }
@@ -68,7 +69,11 @@ export default {
 </script>
 
 <style lang="scss">
-.home {
+.homepage {
   padding: 0;
+
+  &__content {
+    padding: 3rem 0 2rem;
+  }
 }
 </style>

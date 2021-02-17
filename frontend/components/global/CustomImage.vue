@@ -43,19 +43,13 @@ export default {
       type: Boolean,
       required: false,
       default: false
-    },
-    fullwidth: {
-      type: Boolean,
-      required: false,
-      default: false
     }
   },
 
   computed: {
     classes () {
       return {
-        'effect--grayscale': this.grayscale,
-        'full-width': this.fullwidth
+        'effect--grayscale': this.grayscale
       }
     },
 
@@ -78,9 +72,5 @@ img {
   &--grayscale {
     filter: grayscale(1);
   }
-}
-
-.full-width {
-  width: 100%;
 }
 </style>
