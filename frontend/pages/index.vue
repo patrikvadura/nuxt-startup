@@ -1,5 +1,7 @@
 <template>
   <div class="homepage">
+    <CookieControl :locale="$i18n.locale" />
+
     <Hero />
 
     <b-container class="homepage__content">
@@ -20,6 +22,22 @@
 
       <p>{{ $d(new Date(), 'short') }}</p>
     </b-container>
+
+    <CustomImage image="fakeApi" width="600" />
+
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
+    <h1>Test</h1>
   </div>
 </template>
 

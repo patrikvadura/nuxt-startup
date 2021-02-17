@@ -3,7 +3,13 @@
     fluid
     class="p-0 m-0 hero"
   >
-    <CustomImage :image="image" />
+    <video
+      :src="video"
+      autoplay
+      loop
+      playsinline
+      muted
+    />
 
     <b-row
       cols="1"
@@ -34,7 +40,7 @@ export default {
       required: true,
       default: ''
     },
-    image: {
+    video: {
       type: String,
       required: false,
       default: ''
@@ -43,15 +49,6 @@ export default {
       type: String,
       required: false,
       default: 'fakeapi'
-    }
-  },
-
-  computed: {
-    image1x () {
-      return require(`~/assets/images/${this.folder}/${this.image}.jpg`)
-    },
-    image2x () {
-      return require(`~/assets/images/${this.folder}/${this.image}@2x.jpg`)
     }
   }
 }
@@ -72,7 +69,7 @@ export default {
     width: 100%;
   }
 
-  img {
+  video {
     object-fit: cover;
     filter: blur(1px);
     width: 100%;

@@ -1,6 +1,7 @@
 <template>
   <b-container fluid class="p-0 m-0 hero">
     <video
+      v-lazy-load
       src="https://st4.depositphotos.com/5265263/19876/v/600/depositphotos_198767068-stock-video-metal-factory-equipment-pipes-in.mp4"
       autoplay
       loop
