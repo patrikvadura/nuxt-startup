@@ -1,13 +1,15 @@
 <template>
   <div>
-    <HeroBasic
-      image="fakeApi"
+    <HeroBasicVideo
+      video="https://st3.depositphotos.com/1040130/13520/v/600/depositphotos_135207336-stock-video-technical-equipment-at-diary-plant.mp4"
       :title="$t('contact.title')"
     />
 
     <b-container class="contact d-flex justify-content-center">
       <ContactForm />
     </b-container>
+
+    <Gmaps />
   </div>
 </template>
 
@@ -15,7 +17,8 @@
 export default {
   components: {
     ContactForm: () => import('~/components/contact/ContactForm'),
-    HeroBasic: () => import('~/components/hero/HeroBasic')
+    Gmaps: () => import('~/components/contact/Gmaps'),
+    HeroBasicVideo: () => import('~/components/hero/HeroBasicVideo')
   },
 
   data () {

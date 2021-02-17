@@ -66,6 +66,12 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/style-resources',
     'nuxt-i18n',
+    [
+      'nuxt-gmaps',
+      {
+        key: 'AIzaSyCXiLPCUvel1ctT6kV7uDqiV5peKf10yYQ'
+      }
+    ]
     ['nuxt-lazy-load', {
       images: true,
       videos: true,
