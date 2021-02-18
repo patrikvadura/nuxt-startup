@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/sk/global", {data:[{}],fetch:[],mutations:void 0});

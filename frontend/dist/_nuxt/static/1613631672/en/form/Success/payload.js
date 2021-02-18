@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en/form/Success", {data:[{}],fetch:[],mutations:void 0});
