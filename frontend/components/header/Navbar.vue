@@ -22,9 +22,9 @@
       <b-navbar-nav class="ml-auto navbar__links">
         <MegamenuProducts />
 
-        <MegamenuTech
-          :title="$t('global.header.navLinks.tech.title')"
-        />
+        <MegamenuCatalogs />
+
+        <MegamenuTech />
 
         <b-nav-item
           :to="localePath('contact')"
@@ -55,7 +55,8 @@
 export default {
   components: {
     MegamenuProducts: () => import('@/components/header/MegamenuProducts'),
-    MegamenuTech: () => import('@/components/header/MegamenuTech')
+    MegamenuTech: () => import('@/components/header/MegamenuTech'),
+    MegamenuCatalogs: () => import('@/components/header/MegamenuCatalogs')
   },
 
   data () {

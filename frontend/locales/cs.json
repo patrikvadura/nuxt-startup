@@ -110,11 +110,81 @@
             }
           }
         },
+        "catalogs": {
+          "title": "Katalogy",
+          "table": {
+            "title": "Název katalogu",
+            "cs": "Čeština",
+            "en": "Angličtina",
+            "de": "Němčina",
+            "content": [
+              {
+                "id": 2,
+                "title": "Spojovací armatury",
+                "cs": "check-circle-fill",
+                "en": "check-circle-fill",
+                "de": "check-circle-fill"
+              },
+              {
+                "id": 3,
+                "title": "Potrubní tvarovky",
+                "cs": "check-circle-fill",
+                "en": "x-circle-fill",
+                "de": "check-circle-fill"
+              },
+              {
+                "id": 4,
+                "title": "Regulační armatury",
+                "cs": "check-circle-fill",
+                "en": "x-circle-fill",
+                "de": "check-circle-fill"
+              },
+              {
+                "id": 5,
+                "title": "Speciální armatury",
+                "cs": "check-circle-fill",
+                "en": "x-circle-fill",
+                "de": "x-circle-fill"
+              },
+              {
+                "id": 6,
+                "title": "Vlezy a průlezy",
+                "cs": "check-circle-fill",
+                "en": "x-circle-fill",
+                "de": "check-circle-fill"
+              },
+              {
+                "id": 7,
+                "title": "Příslušenství",
+                "cs": "check-circle-fill",
+                "en": "check-circle-fill",
+                "de": "check-circle-fill"
+              },
+              {
+                "id": 8,
+                "title": "Dvouplášťové armatury",
+                "cs": "check-circle-fill",
+                "en": "check-circle-fill",
+                "de": "x-circle-fill"
+              }
+            ]
+          }
+        },
+
         "tech": {
           "title": "Technické informace",
           "category": {
             "tables": {
-              "title": "Převodní tabulky",
+              "title": "Technické tabulky",
+              "items": [
+                {"id": 1, "title": "Tabulka převodu tlaků"},
+                {"id": 2, "title": "Tabulka nerezových ocelí"},
+                {"id": 3, "title": "Technické informace pro těsnící kroužky"},
+                {"id": 4, "title": "Tabulka převodu rozměrů"}
+              ]
+            },
+            "info": {
+              "title": "Technické informace",
               "items": [
                 {"id": 1, "title": "Tabulka převodu tlaků"},
                 {"id": 2, "title": "Tabulka nerezových ocelí"},
@@ -123,9 +193,10 @@
               ]
             },
             "schemes": {
-              "title": "Montážní schémata",
+              "title": "Technické schémata",
               "items": [
                 {"id": 1, "title": "Montážní schémata regulační armatury"}
+
               ]
             }
           }

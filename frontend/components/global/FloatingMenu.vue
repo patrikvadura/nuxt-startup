@@ -9,7 +9,7 @@
         no-caret
       >
         <template #button-content>
-          <CustomIcon name="globe" bootstrap />
+          <CustomIcon name="globe" color="#fff" bootstrap />
         </template>
         <div
           v-for="lang in $i18n.locales"
@@ -24,13 +24,13 @@
 
       <div class="floating-menu__item">
         <nuxt-link :to="localePath('/contact')">
-          <CustomIcon name="book-half" bootstrap />
+          <CustomIcon name="book-half" color="#fff" bootstrap />
         </nuxt-link>
       </div>
 
       <div class="floating-menu__item">
         <nuxt-link :to="localePath('/download')">
-          <CustomIcon name="download" bootstrap />
+          <CustomIcon name="download" color="#fff" bootstrap />
         </nuxt-link>
       </div>
 

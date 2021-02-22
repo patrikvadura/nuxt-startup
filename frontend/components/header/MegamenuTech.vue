@@ -14,7 +14,7 @@
               {{ $t('global.header.navLinks.tech.title') }}
             </b-nav-item>
           </template>
-          <b-row cols-lg="2">
+          <b-row cols-lg="3">
             <b-col>
               <div class="megamenu__dropdown--item">
                 <nuxt-link :to="localePath('contact')" active-class="active">
@@ -22,6 +22,21 @@
                 </nuxt-link>
                 <div
                   v-for="item in $t('global.header.navLinks.tech.category.tables.items')"
+                  :key="item.id"
+                  class="megamenu__dropdown--subitem"
+                >
+                  {{ item.title }}
+                </div>
+              </div>
+            </b-col>
+
+            <b-col>
+              <div class="megamenu__dropdown--item">
+                <nuxt-link :to="localePath('contact')" active-class="active">
+                  {{ $t('global.header.navLinks.tech.category.info.title') }}
+                </nuxt-link>
+                <div
+                  v-for="item in $t('global.header.navLinks.tech.category.info.items')"
                   :key="item.id"
                   class="megamenu__dropdown--subitem"
                 >
@@ -63,6 +78,19 @@
             </nuxt-link>
             <div
               v-for="item in $t('global.header.navLinks.tech.category.tables.items')"
+              :key="item.id"
+              class="megamenu__dropdown--subitem"
+            >
+              {{ item.title }}
+            </div>
+          </div>
+
+          <div id="info" class="pt-3">
+            <nuxt-link :to="localePath('contact')" active-class="active">
+              {{ $t('global.header.navLinks.tech.category.info.title') }}
+            </nuxt-link>
+            <div
+              v-for="item in $t('global.header.navLinks.tech.category.info.items')"
               :key="item.id"
               class="megamenu__dropdown--subitem"
             >
@@ -144,10 +172,9 @@ export default {
   ::v-deep .dropdown-menu {
     @include media-breakpoint-up(lg) {
       position: absolute;
-      left: 0;
+      right: 0;
       padding: 2rem;
       min-width: 50vw;
-      transform: translateX(-75%);
       background: rgba(255, 255, 255, .7);
       -webkit-backdrop-filter: blur(.5rem);
       backdrop-filter: blur(.5rem);
