@@ -138,6 +138,14 @@ export default {
     },
     onLeave () {
       this.$refs.dropdown.visible = false
+    },
+
+    icon () {
+      if (this.item.en === 1) {
+        this.answer = 'check-circle-fill'
+      } else {
+        this.answer = 'x-circle-fill'
+      }
     }
   }
 }
