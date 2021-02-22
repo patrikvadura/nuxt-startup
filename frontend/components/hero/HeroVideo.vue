@@ -28,7 +28,7 @@
             <CustomButton
               :title="$t('global.hero.button_2')"
               :href="localePath('/casestudies')"
-              icon="cinema"
+              icon="open-book"
               class="ml-1"
               light
             />
