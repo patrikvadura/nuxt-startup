@@ -47,20 +47,20 @@
 <script>
 export default {
   mounted () {
-    this.functionCase()
+    this.functionSlider()
   },
 
   methods: {
-    functionCase () {
+    functionSlider () {
       /* eslint-disable */
       let hero = document.getElementById('hero-slides');
       let slides = document.getElementById('slides');
       let next = [ 'next', 'next-catch' ].map(n => document.getElementById(n));
       let prev = [ 'prev', 'prev-catch' ].map(n => document.getElementById(n));
-      let slideCount = slides.children.length;
+      let currentlyDemoing = true;
       let currentPage = 0;
       let slidesPerPage = () => window.innerWidth > 1700 ? 4 : window.innerWidth > 1200 ? 3 : 1;
-      let maxPageCount = () => slideCount / slidesPerPage();
+      let maxPageCount = () => slidesPerPage();
       function goToPage(pageNumber = 0) {
         currentPage = Math.min(maxPageCount(), Math.max(0, pageNumber));
         console.log(currentPage);
@@ -71,6 +71,49 @@ export default {
       window.addEventListener('resize', () => {
         console.log(document.body.style.getPropertyValue('--slide-per-page'));
       });
+
+
+
+
+      function sleep(time) {
+        return new Promise(res => setTimeout(res, time));
+      }
+
+      async function demo() {
+        let slides = slidesPerPage();
+        let pageSeq_ = { 2: [ 1, 2, 3, 4, 5, 6 ] };
+        let pageSeq = pageSeq_[slides] || pageSeq_[2];
+        let slideSeq_ = { 2: [ 1, 2, 3, 4, 5, 6 ] };
+        let slideSeq = slideSeq_[slides] || slideSeq_[2];
+        goToPage(pageSeq[0]);
+        await sleep(5000);
+        goToPage(pageSeq[1]);
+        await sleep(5000);
+        goToPage(pageSeq[2]);
+        await sleep(5000);
+        goToPage(0);
+        await sleep(5000);
+        goToPage(pageSeq[0]);
+        await sleep(5000);
+        goToPage(pageSeq[1]);
+        await sleep(5000);
+        goToPage(pageSeq[2]);
+        await sleep(5000);
+        goToPage(0);
+        await sleep(5000);
+        goToPage(pageSeq[0]);
+        await sleep(5000);
+        goToPage(pageSeq[1]);
+        await sleep(5000);
+        goToPage(pageSeq[2]);
+        await sleep(5000);
+        goToPage(0);
+
+        currentlyDemoing = true;
+      }
+
+      sleep(500).then(demo);
+
       /* eslint-enable */
     }
   }
@@ -85,6 +128,7 @@ $curve: cubic-bezier(.7, 0, .3, 1);
 }
 
 #hero-slides {
+  --slides-per-page: 3;
   --page: 0;
 
   height: 30rem;
@@ -371,10 +415,11 @@ $curve: cubic-bezier(.7, 0, .3, 1);
 
       .link {
         display: inline-block;
-        background: #fff;
         padding: .5rem 2rem;
-        color: $typo;
+        color: $primary;
+        background: rgba(255, 255, 255, .8);
         font-size: 1rem;
+        font-weight: 600;
         opacity: 0;
         position: absolute;
         left: 50%;
@@ -386,11 +431,17 @@ $curve: cubic-bezier(.7, 0, .3, 1);
         @include border-radius ($spacer);
 
         @include media-breakpoint-down(sm) {
-          left: 1rem;
+          text-align: center;
+          width: 80%;
+          left: 50%;
+          transform: translateX(-50%);
           bottom: 0;
           opacity: 1;
+          color: $secondary;
+          background: rgba(255, 255, 255, .8);
           padding: .5rem 1.5rem;
           font-size: 1rem;
+          font-weight: 600;
           pointer-events: auto;
         }
       }
