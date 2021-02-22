@@ -200,12 +200,12 @@ export default {
       color: #fff;
 
       &:hover {
-        color: $primary;
+        color: #fff;
       }
     }
 
     &:hover {
-      background: #fff;
+      background: $secondary;
     }
   }
 }

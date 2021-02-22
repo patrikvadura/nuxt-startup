@@ -20,7 +20,15 @@
     }
 
     button {
+      color: #fff !important;
+      background-color: $primary !important;
+
       @include border-radius (.5rem);
+
+      &:hover {
+        color: #fff !important;
+        background-color: $secondary !important;
+      }
     }
   }
 

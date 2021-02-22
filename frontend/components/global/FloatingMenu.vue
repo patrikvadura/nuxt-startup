@@ -69,7 +69,7 @@ export default {
 <style lang="scss" scoped>
 #floating-menu {
   position: fixed;
-  margin-top: 45vh;
+  margin-top: 40vh;
   right: 1rem;
   width: 3rem;
   z-index: 1000;
