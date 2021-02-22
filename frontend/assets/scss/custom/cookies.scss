@@ -1,18 +1,27 @@
 .cookieControl {
   --cookie-control-modalOverlay: #0f365f;
 
-  border-radius: 1rem;
+  @include border-radius (1rem);
 
-  &__ModalContent {
-    position: relative;
-    width: 100%;
-    padding: 3rem;
-    max-width: 35rem;
-    max-height: 80vh;
-    text-align: left;
-    overflow-y: hidden;
-    box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
-    border-radius: 1rem;
+  &__Modal {
+    &Content {
+      position: relative;
+      width: 100%;
+      padding: 3rem;
+      max-width: 35rem;
+      max-height: 80vh;
+      text-align: left;
+      overflow-y: hidden;
+      background-color: rgba(255, 255, 255, .8) !important;
+      backdrop-filter: blur(.3rem);
+      box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
+
+      @include border-radius (1rem);
+    }
+
+    button {
+      @include border-radius (.5rem);
+    }
   }
 
   &__Bar {
@@ -24,7 +33,7 @@
     }
 
     &--bottom-right {
-      border-radius: 1rem;
+      @include border-radius (1rem);
     }
 
     &Container {
@@ -33,7 +42,8 @@
       align-items: flex-end;
       justify-content: space-between;
       backdrop-filter: blur(.5rem);
-      border-radius: 1rem;
+
+      @include border-radius (1rem);
     }
   }
 }

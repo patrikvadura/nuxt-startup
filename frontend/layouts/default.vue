@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header />
+    <FloatingMenu />
     <Nuxt />
     <Footer />
   </div>
@@ -11,7 +12,8 @@
 export default {
   components: {
     Header: () => import('~/components/header/Header'),
-    Footer: () => import('~/components/footer/Footer')
+    Footer: () => import('~/components/footer/Footer'),
+    FloatingMenu: () => import('~/components/global/FloatingMenu')
   }
 }
 </script>
