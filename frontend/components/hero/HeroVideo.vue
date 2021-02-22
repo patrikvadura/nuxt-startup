@@ -29,7 +29,7 @@
               :title="$t('global.hero.button_2')"
               :href="localePath('/casestudies')"
               icon="open-book"
-              class="ml-1"
+              class="ml-1 mt-2 mt-md-0"
               light
             />
           </div>

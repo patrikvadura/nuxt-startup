@@ -46,6 +46,22 @@
       @include border-radius (1rem);
     }
   }
+
+  &__ControlButton {
+    background: $primary !important;
+
+    &:hover {
+      background: $secondary !important;
+    }
+
+    svg {
+      color: #fff !important;
+
+      &:hover {
+        color: #fff !important;
+      }
+    }
+  }
 }
 
 ::-webkit-scrollbar {

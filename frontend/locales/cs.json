@@ -121,51 +121,51 @@
               {
                 "id": 2,
                 "title": "Spojovací armatury",
-                "cs": "check-circle-fill",
-                "en": "check-circle-fill",
-                "de": "check-circle-fill"
+                "cs": "/catalog/02",
+                "en": "/error",
+                "de": "/catalog/02"
               },
               {
                 "id": 3,
                 "title": "Potrubní tvarovky",
-                "cs": "check-circle-fill",
-                "en": "x-circle-fill",
-                "de": "check-circle-fill"
+                "cs": "/catalog/03",
+                "en": "/catalog/03",
+                "de": "/error"
               },
               {
                 "id": 4,
                 "title": "Regulační armatury",
-                "cs": "check-circle-fill",
-                "en": "x-circle-fill",
-                "de": "check-circle-fill"
+                "cs": "/error",
+                "en": "/error",
+                "de": "/catalog/04"
               },
               {
                 "id": 5,
                 "title": "Speciální armatury",
-                "cs": "check-circle-fill",
-                "en": "x-circle-fill",
-                "de": "x-circle-fill"
+                "cs": "/catalog/05",
+                "en": "/catalog/05",
+                "de": "/error"
               },
               {
                 "id": 6,
                 "title": "Vlezy a průlezy",
-                "cs": "check-circle-fill",
-                "en": "x-circle-fill",
-                "de": "check-circle-fill"
+                "cs": "/catalog/06",
+                "en": "/catalog/06",
+                "de": "/error"
               },
               {
                 "id": 7,
                 "title": "Příslušenství",
-                "cs": "check-circle-fill",
-                "en": "check-circle-fill",
-                "de": "check-circle-fill"
+                "cs": "/catalog/07",
+                "en": "/catalog/07",
+                "de": "/catalog/07"
               },
               {
                 "id": 8,
                 "title": "Dvouplášťové armatury",
-                "cs": "check-circle-fill",
-                "en": "check-circle-fill",
-                "de": "x-circle-fill"
+                "cs": "/catalog/08",
+                "en": "/error",
+                "de": "/catalog/08"
               }
             ]
           }

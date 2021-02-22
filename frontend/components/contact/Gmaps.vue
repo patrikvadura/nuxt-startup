@@ -17,13 +17,13 @@ export default {
 .gmaps {
   margin-bottom: -.5rem;
   width: 100%;
-  height: 20rem;
+  height: 19rem;
   display: inline-block;
   overflow: hidden;
 
   iframe {
     position: relative;
-    top: -3rem;
+    top: -3.5rem;
     border: none;
   }
 }

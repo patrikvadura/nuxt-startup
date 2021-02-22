@@ -69,8 +69,7 @@ export default {
 <style lang="scss" scoped>
 #floating-menu {
   position: fixed;
-  margin-top: 40%;
-  transform: translateY(-50%);
+  margin-top: 45vh;
   right: 1rem;
   width: 3rem;
   z-index: 1000;
@@ -87,6 +86,7 @@ export default {
     margin-bottom: .5rem;
     background: $primary;
 
+    @include shadow (.2);
     @include border-radius(.5rem);
 
     &:hover {
