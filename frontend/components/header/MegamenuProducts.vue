@@ -256,10 +256,10 @@ export default {
   ::v-deep .dropdown-menu {
     @include media-breakpoint-up(lg) {
       position: absolute;
-      left: 0;
+      right: 0;
       padding: 2rem;
       min-width: 80vw;
-      transform: translateX(-75%);
+      transform: translateX(25%);
       background: rgba(255, 255, 255, .7);
       -webkit-backdrop-filter: blur(.5rem);
       backdrop-filter: blur(.5rem);

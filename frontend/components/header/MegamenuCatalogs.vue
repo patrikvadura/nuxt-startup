@@ -1,0 +1,310 @@
+<template>
+  <div class="megamenu">
+    <template v-if="$device.isDesktop">
+      <div @mouseover="onOver" @mouseleave="onLeave">
+        <b-dropdown
+          ref="dropdown"
+          variant="link"
+          toggle-class="text-decoration-none"
+          right
+          no-caret
+        >
+          <template #button-content>
+            <b-nav-item active-class="active">
+              {{ $t('global.header.navLinks.catalogs.title') }}
+            </b-nav-item>
+          </template>
+
+          <b-row id="header">
+            <b-col cols="5">
+              <div class="megamenu__dropdown--item">
+                <div>
+                  {{ $t('global.header.navLinks.catalogs.table.title') }}
+                </div>
+              </div>
+            </b-col>
+
+            <b-col cols="7">
+              <b-row cols="3">
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <div>
+                    {{ $t('global.header.navLinks.catalogs.table.cs') }}
+                  </div>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <div>
+                    {{ $t('global.header.navLinks.catalogs.table.en') }}
+                  </div>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <div>
+                    {{ $t('global.header.navLinks.catalogs.table.de') }}
+                  </div>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+
+          <b-row
+            v-for="item in $t('global.header.navLinks.catalogs.table.content')"
+            id="content"
+            :key="item.id"
+          >
+            <b-col cols="5">
+              <div class="megamenu__dropdown--item">
+                <div>
+                  {{ item.title }}
+                </div>
+              </div>
+            </b-col>
+
+            <b-col cols="7">
+              <b-row cols="3">
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <nuxt-link :to="localePath(item.cs)">
+                    <template v-if="item.cs.length > 6">
+                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                    </template>
+
+                    <template v-else>
+                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                    </template>
+                  </nuxt-link>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <nuxt-link :to="localePath(item.en)">
+                    <template v-if="item.en.length > 6">
+                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                    </template>
+
+                    <template v-else>
+                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                    </template>
+                  </nuxt-link>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <nuxt-link :to="localePath(item.de)">
+                    <template v-if="item.de.length > 6">
+                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                    </template>
+
+                    <template v-else>
+                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                    </template>
+                  </nuxt-link>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+        </b-dropdown>
+      </div>
+    </template>
+
+    <template v-else>
+      <b-dropdown variant="link" toggle-class="text-decoration-none" block>
+        <template #button-content>
+          <b-nav-item active-class="active">
+            {{ $t('global.header.navLinks.catalogs.title') }}
+          </b-nav-item>
+        </template>
+        <b-dropdown-item>
+          <b-row id="header">
+            <b-col cols="7">
+              <div class="megamenu__dropdown--item">
+                <div>
+                  {{ $t('global.header.navLinks.catalogs.table.title') }}
+                </div>
+              </div>
+            </b-col>
+
+            <b-col cols="5">
+              <b-row cols="3">
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <div>
+                    CS
+                  </div>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <div>
+                    EN
+                  </div>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <div>
+                    DE
+                  </div>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+
+          <b-row
+            v-for="item in $t('global.header.navLinks.catalogs.table.content')"
+            id="content"
+            :key="item.id"
+          >
+            <b-col cols="7">
+              <div class="megamenu__dropdown--item">
+                <div>
+                  {{ item.title }}
+                </div>
+              </div>
+            </b-col>
+
+            <b-col cols="5">
+              <b-row cols="3">
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <nuxt-link :to="localePath(item.cs)">
+                    <template v-if="item.cs.length > 6">
+                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                    </template>
+
+                    <template v-else>
+                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                    </template>
+                  </nuxt-link>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <nuxt-link :to="localePath(item.en)">
+                    <template v-if="item.en.length > 6">
+                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                    </template>
+
+                    <template v-else>
+                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                    </template>
+                  </nuxt-link>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <nuxt-link :to="localePath(item.de)">
+                    <template v-if="item.de.length > 6">
+                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                    </template>
+
+                    <template v-else>
+                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                    </template>
+                  </nuxt-link>
+                </b-col>
+              </b-row>
+            </b-col>
+          </b-row>
+        </b-dropdown-item>
+      </b-dropdown>
+    </template>
+  </div>
+</template>
+
+<script>
+export default {
+
+  methods: {
+    onOver () {
+      this.$refs.dropdown.visible = true
+    },
+    onLeave () {
+      this.$refs.dropdown.visible = false
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.megamenu {
+  &__dropdown {
+    &--item {
+      padding: .25rem;
+      border-radius: 1rem;
+
+      @include media-breakpoint-down(sm) {
+        white-space: normal;
+      }
+    }
+  }
+
+  ::v-deep .btn-link {
+    padding: 0;
+    color: $typo;
+    font-size: .9rem;
+    font-weight: 700;
+    text-decoration: none;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+      color: $typo;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
+
+  ::v-deep .dropdown-menu {
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      right: 0;
+      padding: 2rem;
+      min-width: 50vw;
+      background: rgba(255, 255, 255, .7);
+      -webkit-backdrop-filter: blur(.5rem);
+      backdrop-filter: blur(.5rem);
+      box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
+      border-radius: 1rem;
+      border: none;
+    }
+
+    @include media-breakpoint-down(sm) {
+      border: none;
+    }
+
+    a {
+      @include media-breakpoint-down(sm) {
+        font-size: .8rem !important;
+        font-weight: 400 !important;
+      }
+    }
+  }
+}
+
+#header {
+  margin-bottom: 1rem;
+
+  .megamenu__dropdown--item {
+    padding-bottom: 1rem;
+    color: $primary;
+    font-weight: 600;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: .5rem;
+    }
+  }
+}
+
+#content {
+  .megamenu__dropdown--item {
+    color: $typo;
+    font-size: .8rem;
+    font-weight: 600;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+      font-size: .6rem;
+    }
+
+    a {
+      font-size: 1rem;
+
+      @include media-breakpoint-down(sm) {
+        font-size: .8rem;
+      }
+    }
+  }
+}
+</style>

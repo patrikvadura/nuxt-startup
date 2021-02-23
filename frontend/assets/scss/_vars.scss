@@ -37,9 +37,10 @@ $light: rgba(10, 106, 206, .05) !default;
 $lightWhite: rgba(255, 255, 255, .05) !default;
 $typo: #1d1d1d !default;
 
-$font-primary:  "Mukta", sans-serif;
-$font-paragraph:  "Mukta", sans-serif;
-$font-buttons:  "Mukta", sans-serif;
+$font-primary:  "Roboto", sans-serif; // 100, 300, 400, 500, 700, 900
+$font-condensed: "Roboto Condensed", sans-serif; // 300, 400, 700
+$font-paragraph:  "Roboto", sans-serif;
+$font-buttons:  "Roboto", sans-serif;
 
 @import 'mixins';
 @import '~bootstrap/scss/functions';

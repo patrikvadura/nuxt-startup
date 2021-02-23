@@ -28,9 +28,10 @@
             <CustomButton
               :title="$t('global.hero.button_2')"
               :href="localePath('/casestudies')"
-              icon="cinema"
-              class="ml-1"
+              icon="book-half"
+              class="ml-1 mt-2 mt-md-0"
               light
+              bootstrap
             />
           </div>
         </div>
