@@ -109,6 +109,75 @@
             }
           }
         },
+
+        "catalogs": {
+          "title": "Catalog",
+          "table": {
+            "title": "Catalog name",
+            "cs": "Czech",
+            "en": "English",
+            "de": "Germany",
+            "ru": "Russian",
+            "content": [
+              {
+                "id": 2,
+                "title": "Connecting fittings",
+                "cs": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
+                "en": "/catalog/02_spojovaci_armatury_en_de.pdf",
+                "de": "/catalog/02_spojovaci_armatury_en_de.pdf",
+                "ru": "/catalog/02_spojovaci_armatury_cz_ru.pdf"
+              },
+              {
+                "id": 3,
+                "title": "Potrubní tvarovky",
+                "cs": "/catalog/03",
+                "en": "/catalog/03",
+                "de": "/error",
+                "ru": "/catalog/03"
+              },
+              {
+                "id": 4,
+                "title": "Control fittings",
+                "cs": "/error",
+                "en": "/error",
+                "de": "/catalog/04",
+                "ru": "/error"
+              },
+              {
+                "id": 5,
+                "title": "Special fittings",
+                "cs": "/catalog/05",
+                "en": "/catalog/05",
+                "de": "/error"
+              },
+              {
+                "id": 6,
+                "title": "Manholes and manholes",
+                "cs": "/catalog/06",
+                "en": "/catalog/06",
+                "de": "/error",
+                "ru": "/error"
+              },
+              {
+                "id": 7,
+                "title": "Accessories",
+                "cs": "/catalog/07",
+                "en": "/catalog/07",
+                "de": "/catalog/07",
+                "ru": "/catalog/07"
+              },
+              {
+                "id": 8,
+                "title": "Double jacketed fittings",
+                "cs": "/catalog/08",
+                "en": "/error",
+                "de": "/catalog/08",
+                "ru": "/catalog/08"
+              }
+            ]
+          }
+        },
+
         "tech": {
           "title": "Tech information",
           "category": {

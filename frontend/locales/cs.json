@@ -117,55 +117,63 @@
             "cs": "Čeština",
             "en": "Angličtina",
             "de": "Němčina",
+            "ru": "Ruština",
             "content": [
               {
                 "id": 2,
                 "title": "Spojovací armatury",
-                "cs": "/catalog/02",
-                "en": "/error",
-                "de": "/catalog/02"
+                "cs": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
+                "en": "/catalog/02_spojovaci_armatury_en_de.pdf",
+                "de": "/catalog/02_spojovaci_armatury_en_de.pdf",
+                "ru": "/catalog/02_spojovaci_armatury_cz_ru.pdf"
               },
               {
                 "id": 3,
                 "title": "Potrubní tvarovky",
                 "cs": "/catalog/03",
                 "en": "/catalog/03",
-                "de": "/error"
+                "de": "/error",
+                "ru": "/catalog/03"
               },
               {
                 "id": 4,
                 "title": "Regulační armatury",
                 "cs": "/error",
                 "en": "/error",
-                "de": "/catalog/04"
+                "de": "/catalog/04",
+                "ru": "/error"
               },
               {
                 "id": 5,
                 "title": "Speciální armatury",
                 "cs": "/catalog/05",
                 "en": "/catalog/05",
-                "de": "/error"
+                "de": "/error",
+                "ru": "/catalog/05"
               },
               {
                 "id": 6,
                 "title": "Vlezy a průlezy",
                 "cs": "/catalog/06",
                 "en": "/catalog/06",
-                "de": "/error"
+                "de": "/error",
+                "ru": "/error"
               },
               {
                 "id": 7,
                 "title": "Příslušenství",
                 "cs": "/catalog/07",
                 "en": "/catalog/07",
-                "de": "/catalog/07"
+                "de": "/catalog/07",
+                "ru": "/catalog/07"
               },
               {
                 "id": 8,
                 "title": "Dvouplášťové armatury",
                 "cs": "/catalog/08",
                 "en": "/error",
-                "de": "/catalog/08"
+                "de": "/catalog/08",
+                "ru": "/catalog/08"
               }
             ]
           }
