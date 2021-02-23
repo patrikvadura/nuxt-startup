@@ -27,7 +27,7 @@
             />
             <CustomButton
               :title="$t('global.hero.button_2')"
-              :href="localePath('/casestudies')"
+              href="/catalog/00_niob_fluid_komplet.pdf"
               icon="book-half"
               class="ml-1 mt-2 mt-md-0"
               light

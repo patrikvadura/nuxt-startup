@@ -6,7 +6,7 @@ export default {
 
   // Global page metadata (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'Výroba armatur z nerezové oceli | NiobFluid',
+    title: 'Výroba armatur z nerezové oceli | NIOB FLUID s.r.o.',
     meta: [
       {
         charset: 'utf-8'

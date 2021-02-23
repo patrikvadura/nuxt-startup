@@ -25,22 +25,28 @@
             </b-col>
 
             <b-col cols="7">
-              <b-row cols="3">
+              <b-row cols="4">
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                   <div>
-                    {{ $t('global.header.navLinks.catalogs.table.cs') }}
+                    {{ $t('global.header.navLinks.catalogs.table.czech') }}
                   </div>
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                   <div>
-                    {{ $t('global.header.navLinks.catalogs.table.en') }}
+                    {{ $t('global.header.navLinks.catalogs.table.english') }}
                   </div>
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                   <div>
-                    {{ $t('global.header.navLinks.catalogs.table.de') }}
+                    {{ $t('global.header.navLinks.catalogs.table.german') }}
+                  </div>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <div>
+                    {{ $t('global.header.navLinks.catalogs.table.russian') }}
                   </div>
                 </b-col>
               </b-row>
@@ -61,41 +67,53 @@
             </b-col>
 
             <b-col cols="7">
-              <b-row cols="3">
+              <b-row cols="4">
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <nuxt-link :to="localePath(item.cs)">
-                    <template v-if="item.cs.length > 6">
+                  <a :href="item.czech">
+                    <template v-if="item.czech.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
                     <template v-else>
                       <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
                     </template>
-                  </nuxt-link>
+                  </a>
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <nuxt-link :to="localePath(item.en)">
-                    <template v-if="item.en.length > 6">
+                  <a :href="item.english">
+                    <template v-if="item.english.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
                     <template v-else>
                       <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
                     </template>
-                  </nuxt-link>
+                  </a>
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <nuxt-link :to="localePath(item.de)">
-                    <template v-if="item.de.length > 6">
+                  <a :href="item.german">
+                    <template v-if="item.german.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
                     <template v-else>
                       <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
                     </template>
-                  </nuxt-link>
+                  </a>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <a :href="item.russian">
+                    <template v-if="item.russian.length > 6">
+                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                    </template>
+
+                    <template v-else>
+                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                    </template>
+                  </a>
                 </b-col>
               </b-row>
             </b-col>
@@ -113,16 +131,8 @@
         </template>
         <b-dropdown-item>
           <b-row id="header">
-            <b-col cols="7">
-              <div class="megamenu__dropdown--item">
-                <div>
-                  {{ $t('global.header.navLinks.catalogs.table.title') }}
-                </div>
-              </div>
-            </b-col>
-
-            <b-col cols="5">
-              <b-row cols="3">
+            <b-col cols="12">
+              <b-row cols="4">
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                   <div>
                     CS
@@ -140,6 +150,12 @@
                     DE
                   </div>
                 </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <div>
+                    RU
+                  </div>
+                </b-col>
               </b-row>
             </b-col>
           </b-row>
@@ -149,7 +165,7 @@
             id="content"
             :key="item.id"
           >
-            <b-col cols="7">
+            <b-col cols="12">
               <div class="megamenu__dropdown--item">
                 <div>
                   {{ item.title }}
@@ -157,42 +173,54 @@
               </div>
             </b-col>
 
-            <b-col cols="5">
-              <b-row cols="3">
+            <b-col cols="12">
+              <b-row cols="4">
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <nuxt-link :to="localePath(item.cs)">
-                    <template v-if="item.cs.length > 6">
+                  <a :href="item.czech">
+                    <template v-if="item.czech.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
                     <template v-else>
                       <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
                     </template>
-                  </nuxt-link>
+                  </a>
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <nuxt-link :to="localePath(item.en)">
-                    <template v-if="item.en.length > 6">
+                  <a :href="item.english">
+                    <template v-if="item.english.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
                     <template v-else>
                       <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
                     </template>
-                  </nuxt-link>
+                  </a>
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <nuxt-link :to="localePath(item.de)">
-                    <template v-if="item.de.length > 6">
+                  <a :href="item.german">
+                    <template v-if="item.german.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
                     <template v-else>
                       <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
                     </template>
-                  </nuxt-link>
+                  </a>
+                </b-col>
+
+                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                  <a :href="item.russian">
+                    <template v-if="item.russian.length > 6">
+                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                    </template>
+
+                    <template v-else>
+                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                    </template>
+                  </a>
                 </b-col>
               </b-row>
             </b-col>
@@ -243,7 +271,17 @@ export default {
       font-size: 1rem;
       font-weight: 700;
       text-decoration: none;
+      max-height: 3rem;
     }
+  }
+
+  ::v-deep.dropdown-toggle::after {
+    display: inline;
+    width: .25rem;
+    height: .25rem;
+    transform: translateY(-1rem);
+    color: rgba(0, 0, 0, .3);
+    vertical-align: 0;
   }
 
   ::v-deep .dropdown-menu {
@@ -261,6 +299,7 @@ export default {
     }
 
     @include media-breakpoint-down(sm) {
+      text-align: center;
       border: none;
     }
 
@@ -274,6 +313,7 @@ export default {
 }
 
 #header {
+  margin-top: -1rem;
   margin-bottom: 1rem;
 
   .megamenu__dropdown--item {
@@ -282,7 +322,7 @@ export default {
     font-weight: 600;
 
     @include media-breakpoint-down(sm) {
-      padding-bottom: .5rem;
+      padding-bottom: 0;
     }
   }
 }
@@ -294,15 +334,16 @@ export default {
     font-weight: 600;
 
     @include media-breakpoint-down(sm) {
-      padding: 0;
-      font-size: .6rem;
+      padding-bottom: .25rem;
+      font-size: .7rem;
     }
 
     a {
       font-size: 1rem;
 
       @include media-breakpoint-down(sm) {
-        font-size: .8rem;
+        margin-top: .25rem;
+        font-size: .6rem;
       }
     }
   }

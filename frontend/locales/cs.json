@@ -2,6 +2,13 @@
   "global": {
     "home": "Domů",
     "showMore": "Zobrazit více",
+    "catalog": "Katalog",
+    "techInfo": "Technické informace",
+    "techTables": "Technické tabulky",
+    "techSchemes": "Technické schémata",
+    "techLists": "Technické listy",
+    "download": "Ke stažení",
+    "downloadCatalog": "Katalog ke stažení",
     "header": {
       "navLinks": {
         "products": {
@@ -9,6 +16,7 @@
           "category": {
             "02": {
               "title": "Spojovacví armatury",
+              "link": "/products/connecting-fittings",
               "items": [
                 {"id": 1, "title": "Šroubení DIN 11851"},
                 {"id": 2, "title": "Šroubení ISO"},
@@ -27,6 +35,7 @@
             },
             "03": {
               "title": "Potrubní tvarovky",
+              "link": "/products/pipe-fittings",
               "items": [
                 {"id": 1, "title": "Oblouky 90°"},
                 {"id": 2, "title": "Oblouky 45°"},
@@ -38,6 +47,7 @@
             },
             "04": {
               "title": "Regulační armatury",
+              "link": "/products/control-fittings",
               "items": [
                 {"id": 1, "title": "Kuželové trojcestné ventily"},
                 {"id": 2, "title": "Kulové trojcestné ventily"},
@@ -55,6 +65,7 @@
             },
             "05": {
               "title": "Speciální armatury",
+              "link": "/products/special-fittings",
               "items": [
                 {"id": 1, "title": "Zpětné klapky"},
                 {"id": 2, "title": "Zpětné klapky"},
@@ -76,6 +87,7 @@
             },
             "06": {
               "title": "Vlezy a průlezy",
+              "link": "/products/manholes-and-manholes",
               "items": [
                 {"id": 1, "title": "Oválné průlety tlakové"},
                 {"id": 2, "title": "Oválný průlez s izolačním víkem"},
@@ -89,6 +101,7 @@
             },
             "07": {
               "title": "Příslušenství",
+              "link": "/products/accessories",
               "items": [
                 {"id": 1, "title": "Plechové objímky"},
                 {"id": 2, "title": "Třmeny"},
@@ -98,6 +111,7 @@
             },
             "08": {
               "title": "Dvouplášťové armatury",
+              "link": "/products/double-jacketed-fittings",
               "items": [
                 {"id": 1, "title": "Trubky"},
                 {"id": 2, "title": "Kolena"},
@@ -114,58 +128,66 @@
           "title": "Katalogy",
           "table": {
             "title": "Název katalogu",
-            "cs": "Čeština",
-            "en": "Angličtina",
-            "de": "Němčina",
+            "czech": "Čeština",
+            "english": "Angličtina",
+            "german": "Němčina",
+            "russian": "Ruština",
             "content": [
               {
                 "id": 2,
                 "title": "Spojovací armatury",
-                "cs": "/catalog/02",
-                "en": "/error",
-                "de": "/catalog/02"
+                "czech": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
+                "english": "/catalog/02_spojovaci_armatury_en_de.pdf",
+                "german": "/catalog/02_spojovaci_armatury_en_de.pdf",
+                "russian": "/catalog/02_spojovaci_armatury_cz_ru.pdf"
               },
               {
                 "id": 3,
                 "title": "Potrubní tvarovky",
-                "cs": "/catalog/03",
-                "en": "/catalog/03",
-                "de": "/error"
+                "czech": "/catalog/03",
+                "english": "/catalog/03",
+                "german": "/error",
+                "russian": "/catalog/03"
               },
               {
                 "id": 4,
                 "title": "Regulační armatury",
-                "cs": "/error",
-                "en": "/error",
-                "de": "/catalog/04"
+                "czech": "/error",
+                "english": "/error",
+                "german": "/catalog/04",
+                "russian": "/error"
               },
               {
                 "id": 5,
                 "title": "Speciální armatury",
-                "cs": "/catalog/05",
-                "en": "/catalog/05",
-                "de": "/error"
+                "czech": "/catalog/05",
+                "english": "/catalog/05",
+                "german": "/error",
+                "russian": "/catalog/05"
               },
               {
                 "id": 6,
                 "title": "Vlezy a průlezy",
-                "cs": "/catalog/06",
-                "en": "/catalog/06",
-                "de": "/error"
+                "czech": "/catalog/06",
+                "english": "/catalog/06",
+                "german": "/error",
+                "russian": "/error"
               },
               {
                 "id": 7,
                 "title": "Příslušenství",
-                "cs": "/catalog/07",
-                "en": "/catalog/07",
-                "de": "/catalog/07"
+                "czech": "/catalog/07",
+                "english": "/catalog/07",
+                "german": "/catalog/07",
+                "russian": "/catalog/07"
               },
               {
                 "id": 8,
                 "title": "Dvouplášťové armatury",
-                "cs": "/catalog/08",
-                "en": "/error",
-                "de": "/catalog/08"
+                "czech": "/catalog/08",
+                "english": "/error",
+                "german": "/catalog/08",
+                "russian": "/catalog/08"
               }
             ]
           }
@@ -227,9 +249,26 @@
       "subtitle": "Vypadá to, že jste se ztratili",
       "goBack": "Zpět",
       "goHome": "Zpět na úvodní stránku"
-    },
-    "apple": "žádné jablka | jedno jablko | {count} jablek",
-    "banana": "žádné banány | {n} banán | {n} banánů"
+    }
+  },
+  "homepage": {
+    "features": [
+      {
+        "title": "Přehledný katalog produktů",
+        "description": "Pro zajištění lepší přehlednosti jsme pro vás vytvořili obsáhlý katalog.",
+        "icon": "book-half"
+      },
+      {
+        "title": "Spojovací armatury armatury",
+        "description": "Slouží ke spojování potrubí, připojování ventilů, klapek nebo jiných potrubních dílů více.",
+        "icon": "bag-check-fill"
+      },
+      {
+        "title": "24/7 telefonická podpora",
+        "description": "Potřebujete s něčím poradit nebo si nevíte rady s naším katalogem nebo webovými stránkami? Zavolejte nám.",
+        "icon": "telephone-fill"
+      }
+    ]
   },
   "contact": {
     "title": "Napište nám, nebo si domluvte nezávaznou schůzku",
