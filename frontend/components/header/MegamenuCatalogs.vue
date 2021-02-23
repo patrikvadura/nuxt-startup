@@ -28,25 +28,25 @@
               <b-row cols="4">
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                   <div>
-                    {{ $t('global.header.navLinks.catalogs.table.cs') }}
+                    {{ $t('global.header.navLinks.catalogs.table.czech') }}
                   </div>
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                   <div>
-                    {{ $t('global.header.navLinks.catalogs.table.en') }}
+                    {{ $t('global.header.navLinks.catalogs.table.english') }}
                   </div>
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                   <div>
-                    {{ $t('global.header.navLinks.catalogs.table.de') }}
+                    {{ $t('global.header.navLinks.catalogs.table.german') }}
                   </div>
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                   <div>
-                    {{ $t('global.header.navLinks.catalogs.table.ru') }}
+                    {{ $t('global.header.navLinks.catalogs.table.russian') }}
                   </div>
                 </b-col>
               </b-row>
@@ -69,8 +69,8 @@
             <b-col cols="7">
               <b-row cols="4">
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.cs">
-                    <template v-if="item.cs.length > 6">
+                  <a :href="item.czech">
+                    <template v-if="item.czech.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
@@ -81,8 +81,8 @@
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.en">
-                    <template v-if="item.en.length > 6">
+                  <a :href="item.english">
+                    <template v-if="item.english.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
@@ -93,8 +93,8 @@
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.de">
-                    <template v-if="item.de.length > 6">
+                  <a :href="item.german">
+                    <template v-if="item.german.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
@@ -105,8 +105,8 @@
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.ru">
-                    <template v-if="item.ru.length > 6">
+                  <a :href="item.russian">
+                    <template v-if="item.russian.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
@@ -176,8 +176,8 @@
             <b-col cols="12">
               <b-row cols="4">
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.cs">
-                    <template v-if="item.cs.length > 6">
+                  <a :href="item.czech">
+                    <template v-if="item.czech.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
@@ -188,8 +188,8 @@
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.en">
-                    <template v-if="item.en.length > 6">
+                  <a :href="item.english">
+                    <template v-if="item.english.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
@@ -200,8 +200,8 @@
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.de">
-                    <template v-if="item.de.length > 6">
+                  <a :href="item.german">
+                    <template v-if="item.german.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 
@@ -212,8 +212,8 @@
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.ru">
-                    <template v-if="item.ru.length > 6">
+                  <a :href="item.russian">
+                    <template v-if="item.russian.length > 6">
                       <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
                     </template>
 

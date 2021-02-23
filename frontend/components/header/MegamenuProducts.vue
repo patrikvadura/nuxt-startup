@@ -20,7 +20,7 @@
                 <img src="~/assets/images/megamenu/niob_fluid_katalog_02.jpg" alt="Spojovacví armatury">
 
                 <div>
-                  <nuxt-link :to="localePath('contact')" active-class="active">
+                  <nuxt-link :to="localePath($t('global.header.navLinks.products.category.02.link'))">
                     {{ $t('global.header.navLinks.products.category.02.title') }}
                   </nuxt-link>
                   <div
@@ -39,7 +39,7 @@
                 <img src="~/assets/images/megamenu/niob_fluid_katalog_03.jpg" alt="Spojovacví armatury">
 
                 <div>
-                  <nuxt-link :to="localePath('contact')" active-class="active">
+                  <nuxt-link :to="localePath($t('global.header.navLinks.products.category.03.link'))">
                     {{ $t('global.header.navLinks.products.category.03.title') }}
                   </nuxt-link>
                   <div
@@ -58,7 +58,7 @@
                 <img src="~/assets/images/megamenu/niob_fluid_katalog_04.jpg" alt="Spojovacví armatury">
 
                 <div>
-                  <nuxt-link :to="localePath('contact')" active-class="active">
+                  <nuxt-link :to="localePath($t('global.header.navLinks.products.category.04.link'))">
                     {{ $t('global.header.navLinks.products.category.04.title') }}
                   </nuxt-link>
                   <div
@@ -77,7 +77,7 @@
                 <img src="~/assets/images/megamenu/niob_fluid_katalog_05.jpg" alt="Spojovacví armatury">
 
                 <div>
-                  <nuxt-link :to="localePath('contact')" active-class="active">
+                  <nuxt-link :to="localePath($t('global.header.navLinks.products.category.05.link'))">
                     {{ $t('global.header.navLinks.products.category.05.title') }}
                   </nuxt-link>
                   <div
@@ -96,7 +96,7 @@
                 <img src="~/assets/images/megamenu/niob_fluid_katalog_06.jpg" alt="Spojovacví armatury">
 
                 <div>
-                  <nuxt-link :to="localePath('contact')" active-class="active">
+                  <nuxt-link :to="localePath($t('global.header.navLinks.products.category.06.link'))">
                     {{ $t('global.header.navLinks.products.category.06.title') }}
                   </nuxt-link>
                   <div
@@ -115,7 +115,7 @@
                 <img src="~/assets/images/megamenu/niob_fluid_katalog_07.jpg" alt="Spojovacví armatury">
 
                 <div>
-                  <nuxt-link :to="localePath('contact')" active-class="active">
+                  <nuxt-link :to="localePath($t('global.header.navLinks.products.category.07.link'))">
                     {{ $t('global.header.navLinks.products.category.07.title') }}
                   </nuxt-link>
                   <div
@@ -134,7 +134,7 @@
                 <img src="~/assets/images/megamenu/niob_fluid_katalog_08.jpg" alt="Spojovacví armatury">
 
                 <div>
-                  <nuxt-link :to="localePath('contact')" active-class="active">
+                  <nuxt-link :to="localePath($t('global.header.navLinks.products.category.08.link'))">
                     {{ $t('global.header.navLinks.products.category.08.title') }}
                   </nuxt-link>
                   <div
@@ -161,31 +161,31 @@
         </template>
         <b-dropdown-item>
           <div class="d-flex flex-column">
-            <nuxt-link :to="localePath('contact')" active-class="active">
+            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.02.link'))">
               {{ $t('global.header.navLinks.products.category.02.title') }}
             </nuxt-link>
 
-            <nuxt-link :to="localePath('contact')" active-class="active">
+            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.03.link'))">
               {{ $t('global.header.navLinks.products.category.03.title') }}
             </nuxt-link>
 
-            <nuxt-link :to="localePath('contact')" active-class="active">
+            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.04.link'))">
               {{ $t('global.header.navLinks.products.category.04.title') }}
             </nuxt-link>
 
-            <nuxt-link :to="localePath('contact')" active-class="active">
+            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.05.link'))">
               {{ $t('global.header.navLinks.products.category.05.title') }}
             </nuxt-link>
 
-            <nuxt-link :to="localePath('contact')" active-class="active">
+            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.06.link'))">
               {{ $t('global.header.navLinks.products.category.06.title') }}
             </nuxt-link>
 
-            <nuxt-link :to="localePath('contact')" active-class="active">
+            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.07.link'))">
               {{ $t('global.header.navLinks.products.category.07.title') }}
             </nuxt-link>
 
-            <nuxt-link :to="localePath('contact')" active-class="active">
+            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.08link'))">
               {{ $t('global.header.navLinks.products.category.08.title') }}
             </nuxt-link>
           </div>

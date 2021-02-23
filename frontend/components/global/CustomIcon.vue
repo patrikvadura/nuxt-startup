@@ -67,10 +67,10 @@ export default {
   display: inline-flex;
 
   &--background {
-    width: 2rem;
+    width: auto;
     background: $secondary;
     border-radius: .5rem;
-    padding: .5rem;
+    padding: 3%;
   }
 }
 </style>

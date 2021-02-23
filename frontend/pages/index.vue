@@ -7,41 +7,23 @@
     <ProductSlider />
 
     <b-container class="homepage__content">
-      <p>{{ $t('content') }}</p>
-
-      <p>{{ $tc('global.apple', 10, { count: 10 }) }}</p>
-      <p>{{ $tc('global.apple', 10) }}</p>
-      <p>{{ $tc('global.apple') }}</p>
-      <p>{{ $tc('global.apple', 0) }}</p>
-
-      <p>{{ $tc('global.banana') }}</p>
-      <p>{{ $tc('global.banana', 0) }}</p>
-      <p>{{ $tc('global.banana', 1, { n: 1 }) }}</p>
-      <p>{{ $tc('global.banana', 1) }}</p>
-      <p>{{ $tc('global.banana', 100, { n: 'too many' }) }}</p>
-
-      <p>{{ $n(1000000, 'currency') }}</p>
-      <p>{{ $n(7000000, 'currency', 'cs-CZ') }}</p>
-      <p>{{ $n(7000000, 'currency', 'sk') }}</p>
-
-      <p>{{ $d(new Date(), 'short') }}</p>
+      <b-row cols="3" class="py-5">
+        <div
+          v-for="item in $t('homepage.features')"
+          :key="item.title"
+        >
+          <b-col class="homepage__features">
+            <CustomIcon :name="item.icon" scale="2" background bootstrap />
+            <h3>
+              {{ item.title }}
+            </h3>
+            <p>
+              {{ item.description }}
+            </p>
+          </b-col>
+        </div>
+      </b-row>
     </b-container>
-
-    <CustomImage image="fakeApi" height="400" />
-
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
-    <h1>Test</h1>
   </div>
 </template>
 
@@ -50,13 +32,6 @@ export default {
   components: {
     Hero: () => import('~/components/hero/HeroVideo'),
     ProductSlider: () => import('~/components/homepage/ProductSlider')
-  },
-
-  i18n: {
-    messages: {
-      cs: require('~/locales/cs/test.json'),
-      en: require('~/locales/en/test.json')
-    }
   },
 
   data () {
@@ -86,6 +61,19 @@ export default {
 
   &__content {
     padding: 3rem 0 2rem;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+      padding-top: 1rem;
+      color: $primary;
+    }
   }
 }
 </style>
