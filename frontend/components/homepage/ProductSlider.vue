@@ -9,7 +9,7 @@
         </div>
 
         <div id="slides">
-          <div v-for="item in $t('product.items')" :key="item.id" class="d-inline-flex">
+          <div v-for="item in $t('productSlider.items')" :key="item.id" class="d-inline-flex">
             <div class="slide">
               <CustomImage
                 :image="item.preview"
@@ -46,6 +46,13 @@
 
 <script>
 export default {
+  i18n: {
+    messages: {
+      cs: require('~/locales/cs/productSlider.json'),
+      en: require('~/locales/en/productSlider.json')
+    }
+  },
+
   mounted () {
     this.functionSlider()
   },
@@ -403,6 +410,7 @@ $curve: cubic-bezier(.7, 0, .3, 1);
       }
 
       .headline {
+        font-family: $font-condensed;
         font-size: 1.8rem;
         line-height: 2.2rem;
         font-weight: 900;

@@ -7,6 +7,8 @@
     <ProductSlider />
 
     <b-container class="homepage__content">
+      <p>{{ $t('content') }}</p>
+
       <p>{{ $tc('global.apple', 10, { count: 10 }) }}</p>
       <p>{{ $tc('global.apple', 10) }}</p>
       <p>{{ $tc('global.apple') }}</p>
@@ -48,6 +50,13 @@ export default {
   components: {
     Hero: () => import('~/components/hero/HeroVideo'),
     ProductSlider: () => import('~/components/homepage/ProductSlider')
+  },
+
+  i18n: {
+    messages: {
+      cs: require('~/locales/cs/test.json'),
+      en: require('~/locales/en/test.json')
+    }
   },
 
   data () {

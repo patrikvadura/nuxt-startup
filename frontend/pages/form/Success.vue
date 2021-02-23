@@ -1,5 +1,5 @@
 <template>
-  <div class="success d-flex justify-content-center">
+  <div class="success d-flex justify-content-center align-items-center">
     <div>
       <h2 class="pt-2 pt-md-5">
         {{ $t('contact.success') }}
@@ -31,6 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 .success {
+  min-height: 70vh;
   text-align: center;
   padding: 3rem 0;
 
