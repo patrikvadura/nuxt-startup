@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/en/products/connecting-fittings", {data:[{}],fetch:[],mutations:void 0});
