@@ -1,26 +1,29 @@
 <template>
   <div v-if="!$device.isMobile" id="floating-menu">
     <div class="floating-menu">
-      <b-dropdown
-        class="floating-menu__item"
-        toggle-class="text-decoration-none"
-        variant="link"
-        dropleft
-        no-caret
-      >
-        <template #button-content>
-          <CustomIcon name="globe" bootstrap />
-        </template>
-        <div
-          v-for="lang in $i18n.locales"
-          :key="lang.code"
-          :value="lang.code"
+      <div @mouseover="onOver" @mouseleave="onLeave">
+        <b-dropdown
+          ref="dropdown"
+          class="floating-menu__item"
+          toggle-class="text-decoration-none"
+          variant="link"
+          dropleft
+          no-caret
         >
-          <b-dropdown-item :to="switchLocalePath(lang.code)">
-            {{ lang.name }}
-          </b-dropdown-item>
-        </div>
-      </b-dropdown>
+          <template #button-content>
+            <CustomIcon name="globe" bootstrap />
+          </template>
+          <div
+            v-for="lang in $i18n.locales"
+            :key="lang.code"
+            :value="lang.code"
+          >
+            <b-dropdown-item :to="switchLocalePath(lang.code)">
+              {{ lang.name }}
+            </b-dropdown-item>
+          </div>
+        </b-dropdown>
+      </div>
 
       <div class="floating-menu__item">
         <a href="/catalog/00_niob_fluid_komplet.pdf">
@@ -28,32 +31,29 @@
         </a>
       </div>
 
-      <b-dropdown
-        class="floating-menu__item"
-        toggle-class="text-decoration-none"
-        variant="link"
-        dropleft
-        no-caret
-      >
-        <template #button-content>
-          <CustomIcon name="download" bootstrap />
-        </template>
-        <b-dropdown-item>
-          <a href="/catalog/00_niob_fluid_komplet.pdf">
+      <div @mouseover="onHover" @mouseleave="onLeav">
+        <b-dropdown
+          ref="dropdown1"
+          class="floating-menu__item"
+          toggle-class="text-decoration-none"
+          variant="link"
+          dropleft
+          no-caret
+        >
+          <template #button-content>
+            <CustomIcon name="download" bootstrap />
+          </template>
+          <b-dropdown-item href="/catalog/00_niob_fluid_komplet.pdf" download>
             {{ $t('global.catalog') }}
-          </a>
-        </b-dropdown-item>
-        <b-dropdown-item>
-          <nuxt-link :to="localePath('/downloads')">
+          </b-dropdown-item>
+          <b-dropdown-item :to="localePath('/downloads')">
             {{ $t('global.techLists') }}
-          </nuxt-link>
-        </b-dropdown-item>
-        <b-dropdown-item>
-          <nuxt-link :to="localePath('/downloads')">
+          </b-dropdown-item>
+          <b-dropdown-item :to="localePath('/downloads')">
             {{ $t('global.techInfo') }}
-          </nuxt-link>
-        </b-dropdown-item>
-      </b-dropdown>
+          </b-dropdown-item>
+        </b-dropdown>
+      </div>
     </div>
   </div>
 </template>
@@ -65,6 +65,22 @@ export default {
       items: [
         {}
       ]
+    }
+  },
+
+  methods: {
+    onOver () {
+      this.$refs.dropdown.visible = true
+    },
+    onLeave () {
+      this.$refs.dropdown.visible = false
+    },
+
+    onHover () {
+      this.$refs.dropdown1.visible = true
+    },
+    onLeav () {
+      this.$refs.dropdown1.visible = false
     }
   }
 }
@@ -109,6 +125,32 @@ export default {
     ::v-deep .btn {
       display: flex;
       align-items: center;
+    }
+  }
+
+  ::v-deep .dropdown-menu {
+    padding: .5rem;
+
+    @include media-breakpoint-up(lg) {
+      background: rgba(255, 255, 255, .7);
+      -webkit-backdrop-filter: blur(.5rem);
+      backdrop-filter: blur(.5rem);
+      box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
+      border-radius: 1rem;
+      border: none;
+    }
+
+    a {
+      font-size: .9rem;
+      color: $primary;
+      font-weight: 500;
+    }
+
+    .dropdown-item {
+      &:hover {
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, .2);
+      }
     }
   }
 }
