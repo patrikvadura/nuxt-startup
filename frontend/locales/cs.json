@@ -2,6 +2,13 @@
   "global": {
     "home": "Domů",
     "showMore": "Zobrazit více",
+    "catalog": "Katalog",
+    "techInfo": "Technické informace",
+    "techTables": "Technické tabulky",
+    "techSchemes": "Technické schémata",
+    "techLists": "Technické listy",
+    "download": "Ke stažení",
+    "downloadCatalog": "Katalog ke stažení",
     "header": {
       "navLinks": {
         "products": {

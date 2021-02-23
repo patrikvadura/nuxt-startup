@@ -19,28 +19,28 @@
       <b-row class="products__footer">
         <b-col class="products__footer--item">
           <h4>
-            {{ $t('products.downloadItem') }}
+            {{ $t('global.downloadCatalog') }}
           </h4>
           <div v-html="post.downloadItem" />
         </b-col>
 
         <b-col class="products__footer--item">
           <h4>
-            {{ $t('products.tables') }}
+            {{ $t('global.techTables') }}
           </h4>
           <div v-html="post.tables" />
         </b-col>
 
         <b-col class="products__footer--item">
           <h4>
-            {{ $t('products.info') }}
+            {{ $t('global.techInfo') }}
           </h4>
           <div v-html="post.info" />
         </b-col>
 
         <b-col class="products__footer--item">
           <h4>
-            {{ $t('products.schemes') }}
+            {{ $t('global.techSchemes') }}
           </h4>
           <div v-html="post.schemes" />
         </b-col>
@@ -67,9 +67,27 @@ export default {
       id: this.$route.params.id
     }
   },
+
   computed: {
     post () {
       return this.$t('products.posts').find(post => post.id === this.id)
+    },
+
+    description () {
+      return this.post.content.substring(0, 67)
+    }
+  },
+
+  head () {
+    return {
+      title: this.post.title + ' | NIOB FLUID s.r.o.',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description + '...'
+        }
+      ]
     }
   }
 }

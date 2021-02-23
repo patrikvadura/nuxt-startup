@@ -2,6 +2,13 @@
   "global": {
     "home": "Home",
     "showMore": "Show more",
+    "catalog": "Catalog",
+    "techInfo": "Tech information",
+    "techTables": "Tech tables",
+    "techSchemes": "Tech schemes",
+    "techLists": "Tech lists",
+    "download": "Downloads",
+    "downloadCatalog": "Download catalog",
     "header": {
       "navLinks": {
         "products": {

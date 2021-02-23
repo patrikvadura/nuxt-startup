@@ -9,7 +9,7 @@
         no-caret
       >
         <template #button-content>
-          <CustomIcon name="globe" color="#fff" bootstrap />
+          <CustomIcon name="globe" bootstrap />
         </template>
         <div
           v-for="lang in $i18n.locales"
@@ -24,17 +24,10 @@
 
       <div class="floating-menu__item">
         <a href="/catalog/00_niob_fluid_komplet.pdf">
-          <CustomIcon name="book-half" color="#fff" bootstrap />
+          <CustomIcon name="book-half" bootstrap />
         </a>
       </div>
 
-      <div class="floating-menu__item">
-        <nuxt-link :to="localePath('/download')">
-          <CustomIcon name="download" color="#fff" bootstrap />
-        </nuxt-link>
-      </div>
-
-      <!--
       <b-dropdown
         class="floating-menu__item"
         toggle-class="text-decoration-none"
@@ -43,13 +36,24 @@
         no-caret
       >
         <template #button-content>
-          <CustomIcon name="book-half" bootstrap />
+          <CustomIcon name="download" bootstrap />
         </template>
-        <b-dropdown-item :to="localePath('/')">
-          Kompletní katalog
+        <b-dropdown-item>
+          <a href="/catalog/00_niob_fluid_komplet.pdf">
+            {{ $t('global.catalog') }}
+          </a>
+        </b-dropdown-item>
+        <b-dropdown-item>
+          <nuxt-link :to="localePath('/downloads')">
+            {{ $t('global.techLists') }}
+          </nuxt-link>
+        </b-dropdown-item>
+        <b-dropdown-item>
+          <nuxt-link :to="localePath('/downloads')">
+            {{ $t('global.techInfo') }}
+          </nuxt-link>
         </b-dropdown-item>
       </b-dropdown>
-      -->
     </div>
   </div>
 </template>

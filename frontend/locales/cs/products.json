@@ -1,9 +1,5 @@
 {
   "products": {
-    "downloadItem": "Katalog ke stažení",
-    "tables": "Technické tabulky",
-    "info": "Technické informace",
-    "schemes": "Technické schémata",
     "posts": [
       {
         "id": "connecting-fittings",
