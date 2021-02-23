@@ -250,7 +250,17 @@ export default {
       font-size: 1rem;
       font-weight: 700;
       text-decoration: none;
+      max-height: 3rem;
     }
+  }
+
+  ::v-deep.dropdown-toggle::after {
+    display: inline;
+    width: .25rem;
+    height: .25rem;
+    transform: translateY(-1rem);
+    color: rgba(0, 0, 0, .3);
+    vertical-align: 0;
   }
 
   ::v-deep .dropdown-menu {

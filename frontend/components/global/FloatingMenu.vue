@@ -23,9 +23,9 @@
       </b-dropdown>
 
       <div class="floating-menu__item">
-        <nuxt-link :to="localePath('/contact')">
+        <a href="/catalog/00_niob_fluid_komplet.pdf">
           <CustomIcon name="book-half" color="#fff" bootstrap />
-        </nuxt-link>
+        </a>
       </div>
 
       <div class="floating-menu__item">
