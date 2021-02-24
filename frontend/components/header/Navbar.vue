@@ -10,7 +10,7 @@
       />
     </b-navbar-brand>
 
-    <b-navbar-toggle v-if="open" id="close" target="nav-collapse" @click="closeMenu" />
+    <b-navbar-toggle v-if="open" target="nav-collapse" @click="closeMenu" />
 
     <b-navbar-toggle v-else target="nav-collapse" @click="openMenu" />
 
@@ -29,6 +29,7 @@
         <b-nav-item
           :to="localePath('contact')"
           active-class="active"
+          @click="closeMenu"
         >
           {{ $t('global.header.navLinks.contact') }}
         </b-nav-item>
@@ -95,7 +96,8 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   @include media-breakpoint-down(sm) {
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   &__logo {
@@ -209,6 +211,7 @@ export default {
   .navbar-toggler {
     padding: .75rem 1rem;
     background: $light;
+    background: $primary;
     border: none;
   }
 }

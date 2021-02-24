@@ -7,38 +7,40 @@
 
     <b-container class="products__content">
       <b-row>
-        <b-col cols="7">
-          <div v-html="post.content" />
+        <b-col md="7" cols="12">
+          <p v-html="post.content" />
         </b-col>
 
-        <b-col cols="5" class="products__content--image">
+        <b-col md="5" cols="12" class="products__content--image">
           <CustomImage :image="post.preview" folder="fakeapi/products" />
         </b-col>
       </b-row>
 
       <b-row class="products__footer">
-        <b-col class="products__footer--item">
+        <b-col md="3" cols="12" class="products__footer--item">
           <h4>
             {{ $t('global.downloadCatalog') }}
           </h4>
-          <div v-html="post.downloadItem" />
+          <nuxt-link :to="localePath(post.downloadItem)">
+            <CustomButton :title="$t('global.download')" />
+          </nuxt-link>
         </b-col>
 
-        <b-col class="products__footer--item">
+        <b-col md="3" cols="12" class="products__footer--item">
           <h4>
             {{ $t('global.techTables') }}
           </h4>
           <div v-html="post.tables" />
         </b-col>
 
-        <b-col class="products__footer--item">
+        <b-col md="3" cols="12" class="products__footer--item">
           <h4>
             {{ $t('global.techInfo') }}
           </h4>
           <div v-html="post.info" />
         </b-col>
 
-        <b-col class="products__footer--item">
+        <b-col md="3" cols="12" class="products__footer--item">
           <h4>
             {{ $t('global.techSchemes') }}
           </h4>
@@ -98,6 +100,10 @@ export default {
   &__content {
     padding: 4rem 0;
 
+    @include media-breakpoint-down(sm) {
+      padding: 3rem 2rem;
+    }
+
     b {
       color: $primary;
     }
@@ -107,9 +113,17 @@ export default {
       justify-content: center;
       align-items: center;
 
+      @include media-breakpoint-down(sm) {
+        margin-top: 2rem;
+      }
+
       img {
         width: auto;
         height: 20rem;
+
+        @include media-breakpoint-down(sm) {
+          height: 15rem;
+        }
       }
     }
   }
@@ -120,8 +134,15 @@ export default {
     border-top: 1px solid rgba(0, 0, 0, .1);
 
     &--item {
-      margin-right: 1rem;
+      padding-left: 2rem;
       border-right: 1px solid rgba(0, 0, 0, .1);
+
+      @include media-breakpoint-down(sm) {
+        margin: 1rem 0;
+        padding-left: 1rem;
+        text-align: center;
+        border-right: none;
+      }
 
       h4 {
         color: $primary;

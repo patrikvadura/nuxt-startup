@@ -114,10 +114,10 @@ export default {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
-  height: 2rem;
-  line-height: 2rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   border: none;
-  padding: 0;
+  padding: .5rem;
   background: $primary;
   cursor: pointer;
   transition: all 300ms ease-in-out;
@@ -129,8 +129,8 @@ export default {
   }
 
   &__box {
-    padding: .5rem 1rem;
     display: inline-flex;
+    align-items: center;
 
     &--icon {
       display: inline-flex;
@@ -138,7 +138,6 @@ export default {
     }
 
     &--bicon {
-      margin-top: .3rem;
       display: inline-flex;
       width: 1rem;
     }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <FloatingMenu />
+    <FloatingMenu v-if="!$device.isMobile" class="d-none d-md-flex" />
     <Nuxt />
     <Footer />
   </div>

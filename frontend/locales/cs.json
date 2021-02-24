@@ -7,7 +7,7 @@
     "techTables": "Technické tabulky",
     "techSchemes": "Technické schémata",
     "techLists": "Technické listy",
-    "download": "Ke stažení",
+    "download": "Stáhnout",
     "downloadCatalog": "Katalog ke stažení",
     "header": {
       "navLinks": {
@@ -234,6 +234,23 @@
       "about": {
         "title": "O nás",
         "description": "Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992"
+      },
+      "useful": {
+        "title": "Užitečné odkazy",
+        "links": [
+          {
+            "title": "Novinky",
+            "url": "/news"
+          },
+          {
+            "title": "Ke stažení",
+            "url": "/downloads"
+          },
+          {
+            "title": "Obchodní podmínky",
+            "url": "/downloads"
+          }
+        ]
       },
       "copyrightMessage": "NIOB FLUID s.r.o. Všechna práva vyhrazena. Vytvořilo"
     },

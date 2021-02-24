@@ -159,37 +159,77 @@
             {{ $t('global.header.navLinks.products.title') }}
           </b-nav-item>
         </template>
-        <b-dropdown-item>
-          <div class="d-flex flex-column">
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.02.link'))">
+        <div class="d-flex flex-column">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.02.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.02.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.03.link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.03.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.03.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.04.link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.04.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.04.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.05.link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.05link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.05.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.06.link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.06.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.06.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.07.link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.07.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.07.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.08link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.08.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.08.title') }}
             </nuxt-link>
-          </div>
-        </b-dropdown-item>
+          </b-dropdown-item>
+        </div>
       </b-dropdown>
     </template>
   </div>
@@ -269,13 +309,14 @@ export default {
       right: 0;
       padding: 2rem;
       min-width: 80vw;
-      transform: translateX(25%);
-      background: rgba(255, 255, 255, .7);
-      -webkit-backdrop-filter: blur(.5rem);
-      backdrop-filter: blur(.5rem);
-      box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
-      border-radius: 1rem;
+      background: rgba(255, 255, 255, .9);
       border: none;
+      transform: translateX(25%) translateY(-50rem);
+
+      @include shadow (.2);
+      @include blur (.5rem);
+      @include border-radius(1rem);
+      @include transition-opacity (.5s);
     }
 
     @include media-breakpoint-down(sm) {
@@ -288,6 +329,27 @@ export default {
         font-size: .8rem !important;
         font-weight: 400 !important;
       }
+    }
+
+    .bold {
+      font-weight: 700 !important;
+    }
+  }
+
+  ::v-deep .dropdown.show .dropdown-menu {
+    @include media-breakpoint-up(lg) {
+      transform: translateX(25%) translateY(-.25rem);
+
+      @include transition-opacity-after;
+    }
+  }
+
+  ::v-deep .dropdown-item {
+    &:hover {
+      color: $primary;
+      background: rgba(0, 0, 0, .02);
+
+      @include border-radius(.5rem);
     }
   }
 }

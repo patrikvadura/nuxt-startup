@@ -129,103 +129,102 @@
             {{ $t('global.header.navLinks.catalogs.title') }}
           </b-nav-item>
         </template>
-        <b-dropdown-item>
-          <b-row id="header">
-            <b-col cols="12">
-              <b-row cols="4">
-                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <div>
-                    CS
-                  </div>
-                </b-col>
 
-                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <div>
-                    EN
-                  </div>
-                </b-col>
-
-                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <div>
-                    DE
-                  </div>
-                </b-col>
-
-                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <div>
-                    RU
-                  </div>
-                </b-col>
-              </b-row>
-            </b-col>
-          </b-row>
-
-          <b-row
-            v-for="item in $t('global.header.navLinks.catalogs.table.content')"
-            id="content"
-            :key="item.id"
-          >
-            <b-col cols="12">
-              <div class="megamenu__dropdown--item">
+        <b-row id="header-mobile">
+          <b-col cols="12">
+            <b-row cols="4">
+              <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                 <div>
-                  {{ item.title }}
+                  CS
                 </div>
+              </b-col>
+
+              <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                <div>
+                  EN
+                </div>
+              </b-col>
+
+              <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                <div>
+                  DE
+                </div>
+              </b-col>
+
+              <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                <div>
+                  RU
+                </div>
+              </b-col>
+            </b-row>
+          </b-col>
+        </b-row>
+
+        <b-row
+          v-for="item in $t('global.header.navLinks.catalogs.table.content')"
+          id="content-mobile"
+          :key="item.id"
+        >
+          <b-col cols="12">
+            <div class="megamenu__dropdown--item">
+              <div>
+                {{ item.title }}
               </div>
-            </b-col>
+            </div>
+          </b-col>
 
-            <b-col cols="12">
-              <b-row cols="4">
-                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.czech">
-                    <template v-if="item.czech.length > 6">
-                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
-                    </template>
+          <b-col cols="12">
+            <b-row cols="4">
+              <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                <b-dropdown-item :href="item.czech">
+                  <template v-if="item.czech.length > 6">
+                    <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                  </template>
 
-                    <template v-else>
-                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
-                    </template>
-                  </a>
-                </b-col>
+                  <template v-else>
+                    <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                  </template>
+                </b-dropdown-item>
+              </b-col>
 
-                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.english">
-                    <template v-if="item.english.length > 6">
-                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
-                    </template>
+              <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                <b-dropdown-item :href="item.english">
+                  <template v-if="item.english.length > 6">
+                    <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                  </template>
 
-                    <template v-else>
-                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
-                    </template>
-                  </a>
-                </b-col>
+                  <template v-else>
+                    <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                  </template>
+                </b-dropdown-item>
+              </b-col>
 
-                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.german">
-                    <template v-if="item.german.length > 6">
-                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
-                    </template>
+              <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                <b-dropdown-item :href="item.german">
+                  <template v-if="item.german.length > 6">
+                    <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                  </template>
 
-                    <template v-else>
-                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
-                    </template>
-                  </a>
-                </b-col>
+                  <template v-else>
+                    <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                  </template>
+                </b-dropdown-item>
+              </b-col>
 
-                <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.russian">
-                    <template v-if="item.russian.length > 6">
-                      <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
-                    </template>
+              <b-col class="megamenu__dropdown--item d-flex justify-content-center">
+                <b-dropdown-item :href="item.russian">
+                  <template v-if="item.russian.length > 6">
+                    <CustomIcon name="check-circle-fill" color="#0a6ace" bootstrap />
+                  </template>
 
-                    <template v-else>
-                      <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
-                    </template>
-                  </a>
-                </b-col>
-              </b-row>
-            </b-col>
-          </b-row>
-        </b-dropdown-item>
+                  <template v-else>
+                    <CustomIcon name="x-circle-fill" color="rgba(0,0,0,.2)" bootstrap />
+                  </template>
+                </b-dropdown-item>
+              </b-col>
+            </b-row>
+          </b-col>
+        </b-row>
       </b-dropdown>
     </template>
   </div>
@@ -288,14 +287,16 @@ export default {
     @include media-breakpoint-up(lg) {
       position: absolute;
       right: 0;
-      padding: 2rem;
+      padding: 3rem;
       min-width: 50vw;
-      background: rgba(255, 255, 255, .7);
-      -webkit-backdrop-filter: blur(.5rem);
-      backdrop-filter: blur(.5rem);
-      box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
-      border-radius: 1rem;
+      background: rgba(255, 255, 255, .9);
       border: none;
+      transform: translateX(0) translateY(-50rem);
+
+      @include shadow (.2);
+      @include blur (.5rem);
+      @include border-radius(1rem);
+      @include transition-opacity (.5s);
     }
 
     @include media-breakpoint-down(sm) {
@@ -309,10 +310,32 @@ export default {
         font-weight: 400 !important;
       }
     }
+
+    .bold {
+      font-weight: 700 !important;
+    }
+  }
+
+  ::v-deep .dropdown.show .dropdown-menu {
+    @include media-breakpoint-up(lg) {
+      transform: translateX(0) translateY(-.25rem);
+
+      @include transition-opacity-after;
+    }
+  }
+
+  ::v-deep .dropdown-item {
+    &:hover {
+      color: $primary;
+      background: rgba(0, 0, 0, .02);
+
+      @include border-radius(.5rem);
+    }
   }
 }
 
-#header {
+#header,
+#header-mobile {
   margin-top: -1rem;
   margin-bottom: 1rem;
 
@@ -327,7 +350,8 @@ export default {
   }
 }
 
-#content {
+#content,
+#content-mobile {
   .megamenu__dropdown--item {
     color: $typo;
     font-size: .8rem;
