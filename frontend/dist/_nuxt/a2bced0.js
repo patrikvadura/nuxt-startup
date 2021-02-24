@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{278:function(n){n.exports=JSON.parse('{"content":"český text"}')}}]);
