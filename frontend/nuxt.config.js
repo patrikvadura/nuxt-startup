@@ -90,7 +90,7 @@ export default {
           locale: {
             cs: {
               barTitle: 'Cookies',
-              barDescription: 'Využíváme vlastní a third-party cookies tudíž jsme schoůni vám nabídnout lepší obsah přizpůsobený tomu, co právě hledáte. Pokud hodláte pokračovat v prohlížení obsahu webu, prosíme o potvrzení nezbytných cookies.',
+              barDescription: 'Využíváme vlastní a third-party cookies tudíž jsme schopni vám nabídnout lepší obsah přizpůsobený tomu, co právě hledáte. Pokud hodláte pokračovat v prohlížení obsahu webu, prosíme o potvrzení nezbytných cookies.',
               acceptAll: 'Přijmout vše',
               declineAll: 'Smazat vše',
               manageCookies: 'Nastavení',

@@ -44,6 +44,13 @@
       @include border-radius (1rem);
     }
 
+    button {
+      color: #fff !important;
+      background-color: $primary !important;
+
+      @include border-radius (.5rem);
+    }
+
     &Container {
       display: flex;
       padding: 1.25rem;
