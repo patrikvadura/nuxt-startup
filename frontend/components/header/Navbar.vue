@@ -209,6 +209,7 @@ export default {
   .navbar-toggler {
     padding: .75rem 1rem;
     background: $light;
+    background: $primary;
     border: none;
   }
 }
