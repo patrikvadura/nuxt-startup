@@ -294,6 +294,7 @@ export default {
       border: none;
 
       @include shadow (.2);
+      @include blur (.5rem);
       @include border-radius(1rem);
       @include transition-slide (.5s, 0, -50rem);
     }

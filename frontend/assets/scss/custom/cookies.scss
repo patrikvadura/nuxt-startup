@@ -13,10 +13,22 @@
       text-align: left;
       overflow-y: hidden;
       background-color: rgba(255, 255, 255, .8) !important;
-      backdrop-filter: blur(.3rem);
-      box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
 
+      @include shadow (.2);
+      @include blur (.5rem);
       @include border-radius (1rem);
+
+      @include media-breakpoint-down(sm) {
+        padding: 5rem 3rem !important;
+        background-color: rgba(255, 255, 255, 1) !important;
+
+        @include border-radius (0);
+      }
+    }
+
+    &CookieName {
+      font-weight: bold;
+      text-transform: none !important;
     }
 
     button {
@@ -38,6 +50,7 @@
 
     @include media-breakpoint-down(sm) {
       margin: 0 1rem 2rem;
+      background: rgba(255, 255, 255, 1) !important;
     }
 
     &--bottom-right {
@@ -49,6 +62,27 @@
       background-color: $primary !important;
 
       @include border-radius (.5rem);
+
+      &:hover {
+        color: #fff !important;
+        background-color: $secondary !important;
+      }
+    }
+
+    h3 {
+      &::before {
+        margin-right: .5rem;
+        content: url('~assets/images/icons/primary/cookies.svg');
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+
+    p {
+      font-size: .8rem !important;
+      font-weight: 400;
+      color: $typo !important;
     }
 
     &Container {
@@ -56,9 +90,13 @@
       padding: 1.25rem;
       align-items: flex-end;
       justify-content: space-between;
-      backdrop-filter: blur(.5rem);
 
+      @include blur (.5rem);
       @include border-radius (1rem);
+
+      @include media-breakpoint-down(sm) {
+        @include blur (0);
+      }
     }
   }
 
