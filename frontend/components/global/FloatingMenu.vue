@@ -1,5 +1,5 @@
 <template>
-  <div v-if="!$device.isMobile" id="floating-menu">
+  <div id="floating-menu">
     <div class="floating-menu">
       <div @mouseover="onOver" @mouseleave="onLeave">
         <b-dropdown
@@ -132,12 +132,12 @@ export default {
     padding: .5rem;
 
     @include media-breakpoint-up(lg) {
-      background: rgba(255, 255, 255, .7);
-      -webkit-backdrop-filter: blur(.5rem);
-      backdrop-filter: blur(.5rem);
-      box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
-      border-radius: 1rem;
+      background: #fff;
       border: none;
+
+      @include shadow (.2);
+      @include border-radius(1rem);
+      @include transition-slide (.5s, 20rem, 0);
     }
 
     a {
@@ -148,9 +148,16 @@ export default {
 
     .dropdown-item {
       &:hover {
-        border-radius: 1rem;
-        background: rgba(255, 255, 255, .2);
+        background: rgba(0, 0, 0, .05);
+
+        @include border-radius(.5rem);
       }
+    }
+  }
+
+  ::v-deep .dropdown.show .dropdown-menu {
+    @include media-breakpoint-up(lg) {
+      @include transition-slide-after (0, 0);
     }
   }
 }
