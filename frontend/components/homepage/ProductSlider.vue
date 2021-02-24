@@ -81,7 +81,7 @@ export default {
 
 
 
-
+      /*
       function sleep(time) {
         return new Promise(res => setTimeout(res, time));
       }
@@ -119,7 +119,9 @@ export default {
         currentlyDemoing = true;
       }
 
+
       sleep(500).then(demo);
+       */
 
       /* eslint-enable */
     }
