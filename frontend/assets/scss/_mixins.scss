@@ -2,6 +2,23 @@
   transition: all $time $effect;
 }
 
+@mixin transition-opacity ($time) {
+  -webkit-transition: opacity $time;
+  -moz-transition: opacity $time;
+  -ms-transition: opacity $time;
+  -o-transition: opacity $time;
+  transition: opacity $time;
+  display: block;
+  overflow: hidden;
+  opacity: 0 !important;
+  z-index: 0;
+}
+
+@mixin transition-opacity-after {
+  opacity: 1 !important;
+  z-index: 900;
+}
+
 @mixin transition-slide ($time, $moveX, $moveY) {
   -webkit-transition: all $time;
   -moz-transition: all $time;

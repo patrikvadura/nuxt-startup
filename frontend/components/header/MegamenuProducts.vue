@@ -271,11 +271,12 @@ export default {
       min-width: 80vw;
       background: rgba(255, 255, 255, .9);
       border: none;
+      transform: translateX(25%) translateY(-50rem);
 
       @include shadow (.2);
       @include blur (.5rem);
       @include border-radius(1rem);
-      @include transition-slide (.5s, 25%, -50rem);
+      @include transition-opacity (.5s);
     }
 
     @include media-breakpoint-down(sm) {
@@ -293,7 +294,9 @@ export default {
 
   ::v-deep .dropdown.show .dropdown-menu {
     @include media-breakpoint-up(lg) {
-      @include transition-slide-after (25%, -.25rem);
+      transform: translateX(25%) translateY(-.25rem);
+
+      @include transition-opacity-after;
     }
   }
 }

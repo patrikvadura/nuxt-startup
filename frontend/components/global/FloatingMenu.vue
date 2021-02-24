@@ -132,12 +132,14 @@ export default {
     padding: .5rem;
 
     @include media-breakpoint-up(lg) {
-      background: #fff;
+      background: rgba(255, 255, 255, .9);
       border: none;
+      transform: translateX(20rem) translateY(0);
 
       @include shadow (.2);
+      @include blur (.5rem);
       @include border-radius(1rem);
-      @include transition-slide (.5s, 20rem, 0);
+      @include transition-opacity (.5s);
     }
 
     a {
@@ -157,7 +159,9 @@ export default {
 
   ::v-deep .dropdown.show .dropdown-menu {
     @include media-breakpoint-up(lg) {
-      @include transition-slide-after (0, 0);
+      transform: translateX(0) translateY(0);
+
+      @include transition-opacity-after;
     }
   }
 }
