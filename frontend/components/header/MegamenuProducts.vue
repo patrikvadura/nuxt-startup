@@ -159,37 +159,77 @@
             {{ $t('global.header.navLinks.products.title') }}
           </b-nav-item>
         </template>
-        <b-dropdown-item>
-          <div class="d-flex flex-column">
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.02.link'))">
+        <div class="d-flex flex-column">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.02.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.02.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.03.link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.03.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.03.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.04.link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.04.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.04.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.05.link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.05link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.05.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.06.link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.06.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.06.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.07.link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.07.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.07.title') }}
             </nuxt-link>
+          </b-dropdown-item>
 
-            <nuxt-link :to="localePath($t('global.header.navLinks.products.category.08link'))">
+          <b-dropdown-item>
+            <nuxt-link
+              :to="localePath($t('global.header.navLinks.products.category.08.link'))"
+              active-class="active"
+              class="bold"
+            >
               {{ $t('global.header.navLinks.products.category.08.title') }}
             </nuxt-link>
-          </div>
-        </b-dropdown-item>
+          </b-dropdown-item>
+        </div>
       </b-dropdown>
     </template>
   </div>
@@ -290,6 +330,10 @@ export default {
         font-weight: 400 !important;
       }
     }
+
+    .bold {
+      font-weight: 700 !important;
+    }
   }
 
   ::v-deep .dropdown.show .dropdown-menu {
@@ -297,6 +341,15 @@ export default {
       transform: translateX(25%) translateY(-.25rem);
 
       @include transition-opacity-after;
+    }
+  }
+
+  ::v-deep .dropdown-item {
+    &:hover {
+      color: $primary;
+      background: rgba(0, 0, 0, .02);
+
+      @include border-radius(.5rem);
     }
   }
 }

@@ -140,7 +140,7 @@ $curve: cubic-bezier(.7, 0, .3, 1);
   --slides-per-page: 3;
   --page: 0;
 
-  height: 30rem;
+  height: 25rem;
   padding: 1.5rem 0;
   width: 100%;
   overflow: hidden;
@@ -166,7 +166,7 @@ $curve: cubic-bezier(.7, 0, .3, 1);
       background: $primary;
       position: absolute;
       left: 4rem;
-      top: 12rem;
+      top: 10rem;
       z-index: 50;
       cursor: pointer;
 
@@ -268,7 +268,7 @@ $curve: cubic-bezier(.7, 0, .3, 1);
   }
 
   #slides {
-    --slides-height: 25rem;
+    --slides-height: 20rem;
 
     width: auto;
     height: var(--slides-height);

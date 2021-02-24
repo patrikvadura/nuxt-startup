@@ -71,44 +71,43 @@
             {{ $t('global.header.navLinks.tech.title') }}
           </b-nav-item>
         </template>
-        <b-dropdown-item>
-          <div id="tables">
-            <nuxt-link :to="localePath('contact')">
-              {{ $t('global.header.navLinks.tech.category.tables.title') }}
-            </nuxt-link>
-            <div
-              v-for="item in $t('global.header.navLinks.tech.category.tables.items')"
-              :key="item.id"
-              class="megamenu__dropdown--subitem"
-            >
-              {{ item.title }}
-            </div>
-          </div>
 
-          <div id="info" class="pt-3">
-            <nuxt-link :to="localePath('contact')" active-class="active">
-              {{ $t('global.header.navLinks.tech.category.info.title') }}
-            </nuxt-link>
-            <div
-              v-for="item in $t('global.header.navLinks.tech.category.info.items')"
-              :key="item.id"
-              class="megamenu__dropdown--subitem"
-            >
-              {{ item.title }}
-            </div>
+        <b-dropdown-item id="tables">
+          <nuxt-link :to="localePath('contact')" class="bold">
+            {{ $t('global.header.navLinks.tech.category.tables.title') }}
+          </nuxt-link>
+          <div
+            v-for="item in $t('global.header.navLinks.tech.category.tables.items')"
+            :key="item.id"
+            class="megamenu__dropdown--subitem"
+          >
+            {{ item.title }}
           </div>
+        </b-dropdown-item>
 
-          <div id="schemes" class="pt-3">
-            <nuxt-link :to="localePath('contact')" active-class="active">
-              {{ $t('global.header.navLinks.tech.category.schemes.title') }}
-            </nuxt-link>
-            <div
-              v-for="item in $t('global.header.navLinks.tech.category.schemes.items')"
-              :key="item.id"
-              class="megamenu__dropdown--subitem"
-            >
-              {{ item.title }}
-            </div>
+        <b-dropdown-item id="info" class="pt-3">
+          <nuxt-link :to="localePath('contact')" active-class="active" class="bold">
+            {{ $t('global.header.navLinks.tech.category.info.title') }}
+          </nuxt-link>
+          <div
+            v-for="item in $t('global.header.navLinks.tech.category.info.items')"
+            :key="item.id"
+            class="megamenu__dropdown--subitem"
+          >
+            {{ item.title }}
+          </div>
+        </b-dropdown-item>
+
+        <b-dropdown-item id="schemes" class="pt-3">
+          <nuxt-link :to="localePath('contact')" active-class="active" class="bold">
+            {{ $t('global.header.navLinks.tech.category.schemes.title') }}
+          </nuxt-link>
+          <div
+            v-for="item in $t('global.header.navLinks.tech.category.schemes.items')"
+            :key="item.id"
+            class="megamenu__dropdown--subitem"
+          >
+            {{ item.title }}
           </div>
         </b-dropdown-item>
       </b-dropdown>
@@ -124,6 +123,9 @@ export default {
     },
     onLeave () {
       this.$refs.dropdown.visible = false
+    },
+    closeMenu () {
+      this.open = false
     }
   }
 }
@@ -150,6 +152,7 @@ export default {
 
     &--subitem {
       font-size: .8rem;
+      font-weight: 400;
     }
   }
 
@@ -204,7 +207,12 @@ export default {
       @include media-breakpoint-down(sm) {
         font-size: .8rem !important;
         font-weight: 400 !important;
+        white-space: normal !important;
       }
+    }
+
+    .bold {
+      font-weight: 700 !important;
     }
   }
 
@@ -213,6 +221,15 @@ export default {
       transform: translateX(0) translateY(-.25rem);
 
       @include transition-opacity-after;
+    }
+  }
+
+  ::v-deep .dropdown-item {
+    &:hover {
+      color: $primary;
+      background: rgba(0, 0, 0, .02);
+
+      @include border-radius(.5rem);
     }
   }
 }

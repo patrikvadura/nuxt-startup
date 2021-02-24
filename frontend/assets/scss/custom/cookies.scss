@@ -12,7 +12,7 @@
       max-height: 80vh;
       text-align: left;
       overflow-y: hidden;
-      background-color: rgba(255, 255, 255, .8) !important;
+      background-color: rgba(255, 255, 255, .9) !important;
 
       @include shadow (.2);
       @include blur (.5rem);

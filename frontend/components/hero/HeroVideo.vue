@@ -29,7 +29,7 @@
               :title="$t('global.hero.button_2')"
               href="/catalog/00_niob_fluid_komplet.pdf"
               icon="book-half"
-              class="ml-1 mt-2 mt-md-0"
+              class="ml-0 ml-md-1 mt-2 mt-md-0"
               light
               bootstrap
             />
