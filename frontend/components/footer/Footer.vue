@@ -2,7 +2,7 @@
   <div class="footer">
     <b-container>
       <b-row>
-        <b-col md="7" cols="12">
+        <b-col md="6" cols="12">
           <h3>{{ $t('global.footer.about.title') }}</h3>
           <p>{{ $t('global.footer.about.description') }}</p>
           <nuxt-link :to="localePath('/')" class="footer__more">
@@ -10,7 +10,7 @@
           </nuxt-link>
         </b-col>
 
-        <b-col md="5" cols="12">
+        <b-col md="3" cols="12" class="pt-3 pt-md-0">
           <h3>{{ $t('contact.titleContact') }}</h3>
           <div
             v-for="item in $t('contact.contact')"
@@ -21,6 +21,19 @@
               <CustomIcon :name="item.icon" bootstrap />
               {{ item.title }}
             </div>
+          </div>
+        </b-col>
+
+        <b-col md="3" cols="12" class="pt-3 pt-md-0">
+          <h3>{{ $t('global.footer.useful.title') }}</h3>
+          <div
+            v-for="item in $t('global.footer.useful.links')"
+            :key="item.title"
+            class="footer__useful"
+          >
+            <nuxt-link :to="localePath(item.url)" class="align-items-center">
+              {{ item.title }}
+            </nuxt-link>
           </div>
         </b-col>
       </b-row>
@@ -73,6 +86,20 @@ export default {
       ::v-deep .custom-icon {
         margin-right: .5rem;
         transform: translateY(.2rem);
+      }
+    }
+  }
+
+  &__useful {
+    a {
+      font-size: .9rem;
+      font-weight: 600;
+      line-height: 2rem;
+      text-decoration: none;
+      color: #fff;
+
+      &:hover {
+        color: $secondary;
       }
     }
   }
