@@ -2,6 +2,25 @@
   transition: all $time $effect;
 }
 
+@mixin transition-slide ($time, $moveX, $moveY) {
+  -webkit-transition: all $time;
+  -moz-transition: all $time;
+  -ms-transition: all $time;
+  -o-transition: all $time;
+  transition: all $time;
+  transform: translateX($moveX) translateY($moveY);
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+  z-index: 0;
+}
+
+@mixin transition-slide-after ($moveX, $moveY) {
+  transform: translateX($moveX) translateY($moveY);
+  opacity: 1;
+  z-index: 900;
+}
+
 @mixin border-radius ($radius) {
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
@@ -12,6 +31,11 @@
   -webkit-box-shadow: 0 .5rem 1.75rem -.5rem rgba(0, 0, 0, $opacity);
   -moz-box-shadow: 0 .5rem 1.75rem -.5rem rgba(0, 0, 0, $opacity);
   box-shadow: 0 .25rem 1.5rem rgba(0, 0, 0, $opacity);
+}
+
+@mixin blur ($intensity) {
+  -webkit-backdrop-filter: blur($intensity);
+  backdrop-filter: blur($intensity);
 }
 
 @mixin scrollHeader ($time) {

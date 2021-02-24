@@ -130,7 +130,7 @@
           </b-nav-item>
         </template>
         <b-dropdown-item>
-          <b-row id="header">
+          <b-row id="header-mobile">
             <b-col cols="12">
               <b-row cols="4">
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
@@ -162,7 +162,7 @@
 
           <b-row
             v-for="item in $t('global.header.navLinks.catalogs.table.content')"
-            id="content"
+            id="content-mobile"
             :key="item.id"
           >
             <b-col cols="12">
@@ -288,14 +288,14 @@ export default {
     @include media-breakpoint-up(lg) {
       position: absolute;
       right: 0;
-      padding: 2rem;
+      padding: 3rem;
       min-width: 50vw;
-      background: rgba(255, 255, 255, .7);
-      -webkit-backdrop-filter: blur(.5rem);
-      backdrop-filter: blur(.5rem);
-      box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
-      border-radius: 1rem;
+      background: #fff;
       border: none;
+
+      @include shadow (.2);
+      @include border-radius(1rem);
+      @include transition-slide (.5s, 0, -50rem);
     }
 
     @include media-breakpoint-down(sm) {
@@ -310,9 +310,16 @@ export default {
       }
     }
   }
+
+  ::v-deep .dropdown.show .dropdown-menu {
+    @include media-breakpoint-up(lg) {
+      @include transition-slide-after (0, -.25rem);
+    }
+  }
 }
 
-#header {
+#header,
+#header-mobile {
   margin-top: -1rem;
   margin-bottom: 1rem;
 
@@ -327,7 +334,8 @@ export default {
   }
 }
 
-#content {
+#content,
+#content-mobile {
   .megamenu__dropdown--item {
     color: $typo;
     font-size: .8rem;

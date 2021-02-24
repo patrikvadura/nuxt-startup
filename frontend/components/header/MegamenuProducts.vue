@@ -269,13 +269,13 @@ export default {
       right: 0;
       padding: 2rem;
       min-width: 80vw;
-      transform: translateX(25%);
-      background: rgba(255, 255, 255, .7);
-      -webkit-backdrop-filter: blur(.5rem);
-      backdrop-filter: blur(.5rem);
-      box-shadow: 2px 2px 1rem .5rem rgba(0, 0, 0, .05);
-      border-radius: 1rem;
+      background: rgba(255, 255, 255, .9);
       border: none;
+
+      @include shadow (.2);
+      @include blur (.5rem);
+      @include border-radius(1rem);
+      @include transition-slide (.5s, 25%, -50rem);
     }
 
     @include media-breakpoint-down(sm) {
@@ -288,6 +288,12 @@ export default {
         font-size: .8rem !important;
         font-weight: 400 !important;
       }
+    }
+  }
+
+  ::v-deep .dropdown.show .dropdown-menu {
+    @include media-breakpoint-up(lg) {
+      @include transition-slide-after (25%, -.25rem);
     }
   }
 }
