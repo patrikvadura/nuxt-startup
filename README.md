@@ -1,7 +1,5 @@
 # NiobFluid - Nuxt.js frontend
 
-https://studio5vos.deployhq.com/deploy/niobfluid/EqLO3K6XTiL4jmnfkcqxogSnpD-NP4ua
-
 [![Netlify Status](https://api.netlify.com/api/v1/badges/22ab67ff-97db-446c-bcc9-65f8fc9c74e3/deploy-status)](https://app.netlify.com/sites/niobfluid/deploys)
 
 ## Frontend
