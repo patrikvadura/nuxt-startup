@@ -123,9 +123,6 @@ export default {
     },
     onLeave () {
       this.$refs.dropdown.visible = false
-    },
-    closeMenu () {
-      this.open = false
     }
   }
 }
