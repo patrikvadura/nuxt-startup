@@ -26,6 +26,12 @@
       </div>
 
       <div class="floating-menu__item">
+        <nuxt-link :to="localePath('/news')">
+          <CustomIcon name="newspaper" bootstrap />
+        </nuxt-link>
+      </div>
+
+      <div class="floating-menu__item">
         <a href="/catalog/00_niob_fluid_komplet.pdf">
           <CustomIcon name="book-half" bootstrap />
         </a>

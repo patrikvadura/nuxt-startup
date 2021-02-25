@@ -6,35 +6,51 @@
     />
 
     <b-container class="news__content">
-      <b-row class="d-flex flex-column-reverse">
+      <b-row>
         <div
           v-for="post in $t('news.posts')"
           :key="post.id"
           class="news__content--item"
         >
-          <b-col cols="12" class="d-flex flex-row align-items-center">
-            <div class="news__content--image">
-              <CustomImage :image="post.preview" folder="fakeapi/products" grayscale />
+          <b-col cols="12">
+            <div class="d-flex justify-content-start justify-content-md-end">
+              <h5>
+                {{ $t('global.newestArticle') }}
+              </h5>
             </div>
 
-            <div>
-              <h4>
-                {{ $t('global.newestArticle') }}
-              </h4>
-              <nuxt-link :to="localePath('/news/' + post.id)">
-                <h3>
-                  {{ post.title }}
-                </h3>
-              </nuxt-link>
-              <p v-html="post.content.substring(0, 150)" />
+            <div class="d-flex flex-row align-items-center">
+              <div class="news__content--image">
+                <CustomImage :image="post.preview" folder="fakeapi/products" grayscale />
+              </div>
 
-              <nuxt-link :to="localePath('/news/' + post.id)">
-                <CustomButton :title="$t('global.showMore')" />
-              </nuxt-link>
+              <div>
+                <nuxt-link :to="localePath('/news/' + post.id)">
+                  <h3>
+                    {{ post.title }}
+                  </h3>
+                </nuxt-link>
+
+                <span>
+                  {{ post.category }}
+                </span>
+
+                <p v-html="post.content.substring(0, 150)" />
+
+                <nuxt-link :to="localePath('/news/' + post.id)">
+                  <CustomButton :title="$t('global.showMore')" />
+                </nuxt-link>
+              </div>
             </div>
           </b-col>
         </div>
       </b-row>
+
+      <!--
+      <b-row class="mt-5 d-flex justify-content-center">
+        <CustomButton :title="$t('global.showMore')" @click="limit = null" />
+      </b-row>
+      --->
     </b-container>
   </div>
 </template>
@@ -52,11 +68,20 @@ export default {
     }
   },
 
-  computed: {
-    newest () {
-      return this.$t('global.newestArticle')
+  /*
+  data () {
+    return {
+      object: this.$t('news.posts'),
+      limit: 5
     }
   },
+
+  computed: {
+    numberItems () {
+      return this.limit ? this.object.slice(0, this.limit) : this.object
+    }
+  },
+   */
 
   head () {
     return {
@@ -94,11 +119,16 @@ export default {
         padding-bottom: 1rem;
       }
 
-      h4 {
+      h5 {
         display: none;
       }
 
-      &:last-child {
+      span {
+        line-height: 2rem;
+        font-weight: 500;
+      }
+
+      &:first-child {
         margin-top: 0;
         padding: 3rem 2rem;
         background: rgba(0, 0, 0, .05);
@@ -111,7 +141,7 @@ export default {
           @include border-radius(0);
         }
 
-        h4 {
+        h5 {
           padding-bottom: 1rem;
           display: block;
           color: $primary;
