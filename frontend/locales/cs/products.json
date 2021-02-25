@@ -6,10 +6,42 @@
         "href": "/",
         "title": "Spojovacví armatury",
         "content": "Slouží ke spojování potrubí, připojování ventilů, klapek nebo jiných potrubních dílů.<br><b>Šroubení</b> je rozebíratelný spoj skládající se ze závitového hrdla, kuželového hrdla, matice a těsnění, je možno jej doplnit o matici zaslepovací. Dodává se ve světlostech DN 10 – DN 150. Typy dodávaného šroubení : DIN, ISO , SMS, Hygienické DIN 11853, Aseptické DIN 11864.<br><b>Clampový spoj</b> je jednoduše rozebíratelný spoj, spojený pomocí nerezové objímky , typy clampových spojů : DIN , SMS<br><b>Přírubové spojení</b> je rozebíratelný spoj, krerý spojují šrouby<br>Typy spojovacích přírub: ploché příruby PN10, krkové příruby PN10, PN 16, Hygienické<br>krkové příruby PN 10 (DIN 11853), Aseptické krkové příruby PN 10 (DIN 11864)<br><b>Hadicové nádstavce</b> slouží jako koncovky hadic a umožňují spojení dvou hadic, nebo jako přechod mezi trubku a hadicí.<br><b>Spoj Garola</b> je jednoduchá spojka potrubí nebo hadic zhotovená z plechu lisováním.",
-        "downloadItem": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
-        "tables": "Tabulka převodu rozměrů<br>Tabulka převodu tlaků<br>Tabulka nerezových ocelí<br>Technické informace pro těsnící kroužky",
-        "info": "Spojovacví armatury",
-        "schemes": "<a href='/'>Montážní schémata regulační armatury</a>",
+        "downloadItem": {
+          "czech": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
+          "english": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
+          "german": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
+          "russian":  "/catalog/02_spojovaci_armatury_cz_ru.pdf"
+        },
+        "tables": [
+          {
+            "title": "Tabulka převodu rozměrů",
+            "url": "/"
+          },
+          {
+            "title": "Tabulka převodu tlaků",
+            "url": "/"
+          },
+          {
+            "title": "Tabulka nerezových ocelí",
+            "url": "/"
+          },
+          {
+            "title": "Technické informace pro těsnící kroužky",
+            "url": "/"
+          }
+        ],
+        "info": [
+          {
+            "title": "Spojovacví armatury",
+            "url": "/"
+          }
+        ],
+        "schemes": [
+          {
+            "title": "Montážní schémata regulační armatury",
+            "url": "/"
+          }
+        ],
         "preview": "fake_product_01"
       },
       {

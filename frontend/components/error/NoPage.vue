@@ -14,13 +14,13 @@
 
         <div class="noPage__content--action">
           <CustomButton
-            :title="$t('global.error.goBack')"
+            :title="$t('global.goBack')"
             secondary
             onclick="history.back(-1)"
           />
 
           <CustomButton
-            :title="$t('global.error.goHome')"
+            :title="$t('global.goHome')"
             :href="localePath('/')"
             class="mt-1 mt-md-0"
           />

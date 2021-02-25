@@ -9,16 +9,13 @@
         </div>
 
         <div id="slides">
-          <div v-for="item in $t('productSlider.items')" :key="item.id" class="d-inline-flex">
+          <div v-for="item in $t('news.posts').slice(0, 10)" :key="item.id" class="d-inline-flex">
             <div class="slide">
               <CustomImage
                 :image="item.preview"
                 folder="fakeapi/products"
                 grayscale
               />
-              <div class="number">
-                {{ item.id }}
-              </div>
               <div class="body">
                 <div class="category">
                   {{ item.category }}
@@ -26,11 +23,11 @@
                 <div class="headline">
                   {{ item.title }}
                 </div>
-                <a :href="localePath(item.href)">
+                <nuxt-link :to="localePath('/news/' + item.id)">
                   <div class="link">
-                    Zobrazit
+                    {{ $t('global.show') }}
                   </div>
-                </a>
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -48,8 +45,8 @@
 export default {
   i18n: {
     messages: {
-      cs: require('~/locales/cs/productSlider.json'),
-      en: require('~/locales/en/productSlider.json')
+      cs: require('~/locales/cs/news.json'),
+      en: require('~/locales/en/news.json')
     }
   },
 

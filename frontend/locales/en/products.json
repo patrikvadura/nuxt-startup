@@ -6,10 +6,42 @@
         "href": "/",
         "title": "Connecting fittings",
         "content": "It is used for connecting pipes, connecting valves, dampers or other pipe parts. <br> <b> Fitting </b> is a detachable connection consisting of a threaded neck, a conical neck, a nut and a seal, possibly supplemented by a blind nut. It is available in sizes DN 10 - DN 150. Types of supplied fittings: DIN, ISO, SMS, Hygienic DIN 11853, Aseptic DIN 11864. <br> <b> Clamp joint </b> is the same detachable joint, connected by a stainless steel sleeve, types of clamp connections: DIN, SMS <br> <b> Flange connection </b> is a detachable connection, which is connected by screws <br> Types of connecting flanges: flat flanges PN10, neck flanges PN10, PN 16, Hygienic <br> neck flanges PN 10 (DIN 11853), Aseptic neck flanges PN 10 (DIN 11864) <br> <b> Hose extensions </b> serve as hose ends and use a connection of two hoses, or as a transition between pipe and hose. <br> <b> Garola joint </b> is a simple joint of pipes or hoses made of sheet metal by pressing.",
-        "downloadItem": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
-        "tables": "Tabulka převodu rozměrů<br>Tabulka převodu tlaků<br>Tabulka nerezových ocelí<br>Technické informace pro těsnící kroužky",
-        "info": "Spojovacví armatury",
-        "schemes": "<a href='/'>Montážní schémata regulační armatury</a>",
+        "downloadItem": {
+          "czech": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
+          "english": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
+          "german": "/catalog/02_spojovaci_armatury_cz_ru.pdf",
+          "russian":  "/catalog/02_spojovaci_armatury_cz_ru.pdf"
+        },
+        "tables": [
+          {
+            "title": "Tabulka převodu rozměrů",
+            "url": "/"
+          },
+          {
+            "title": "Tabulka převodu tlaků",
+            "url": "/"
+          },
+          {
+            "title": "Tabulka nerezových ocelí",
+            "url": "/"
+          },
+          {
+            "title": "Technické informace pro těsnící kroužky",
+            "url": "/"
+          }
+        ],
+        "info": [
+          {
+            "title": "Spojovacví armatury",
+            "url": "/"
+          }
+        ],
+        "schemes": [
+          {
+            "title": "Montážní schémata regulační armatury",
+            "url": "/"
+          }
+        ],
         "preview": "fake_product_01"
       },
       {

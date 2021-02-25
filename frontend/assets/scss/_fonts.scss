@@ -24,6 +24,10 @@ h3,
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 3rem;
+
+  @include media-breakpoint-down(sm) {
+    line-height: 2.5rem;
+  }
 }
 
 h4,
