@@ -21,30 +21,55 @@
           <h4>
             {{ $t('global.downloadCatalog') }}
           </h4>
-          <nuxt-link :to="localePath(post.downloadItem)">
-            <CustomButton :title="$t('global.download')" />
-          </nuxt-link>
+
+          <ProductsDownload
+            :czech="post.downloadItem.czech"
+            :english="post.downloadItem.english"
+            :german="post.downloadItem.german"
+            :russian="post.downloadItem.russian"
+          />
         </b-col>
 
         <b-col md="3" cols="12" class="products__footer--item">
           <h4>
             {{ $t('global.techTables') }}
           </h4>
-          <div v-html="post.tables" />
+          <div
+            v-for="table in post.tables"
+            :key="table.title"
+          >
+            <nuxt-link :to="localePath(table.url)">
+              {{ table.title }}
+            </nuxt-link>
+          </div>
         </b-col>
 
         <b-col md="3" cols="12" class="products__footer--item">
           <h4>
             {{ $t('global.techInfo') }}
           </h4>
-          <div v-html="post.info" />
+          <div
+            v-for="info in post.info"
+            :key="info.title"
+          >
+            <nuxt-link :to="localePath(info.url)">
+              {{ info.title }}
+            </nuxt-link>
+          </div>
         </b-col>
 
         <b-col md="3" cols="12" class="products__footer--item">
           <h4>
             {{ $t('global.techSchemes') }}
           </h4>
-          <div v-html="post.schemes" />
+          <div
+            v-for="schemes in post.schemes"
+            :key="schemes.title"
+          >
+            <nuxt-link :to="localePath(schemes.url)">
+              {{ schemes.title }}
+            </nuxt-link>
+          </div>
         </b-col>
       </b-row>
     </b-container>
@@ -54,7 +79,8 @@
 <script>
 export default {
   components: {
-    HeroBasicVideo: () => import('~/components/hero/HeroBasicVideo')
+    HeroBasicVideo: () => import('~/components/hero/HeroBasicVideo'),
+    ProductsDownload: () => import('~/components/products/ProductsDownload')
   },
 
   i18n: {
