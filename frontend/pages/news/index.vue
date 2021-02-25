@@ -8,7 +8,7 @@
     <b-container class="news__content">
       <b-row>
         <div
-          v-for="post in $t('news.posts')"
+          v-for="post in numberItems"
           :key="post.id"
           class="news__content--item"
         >
@@ -46,11 +46,9 @@
         </div>
       </b-row>
 
-      <!--
-      <b-row class="mt-5 d-flex justify-content-center">
+      <b-row class="news__content--showMore justify-content-center">
         <CustomButton :title="$t('global.showMore')" @click="limit = null" />
       </b-row>
-      --->
     </b-container>
   </div>
 </template>
@@ -68,7 +66,6 @@ export default {
     }
   },
 
-  /*
   data () {
     return {
       object: this.$t('news.posts'),
@@ -81,7 +78,6 @@ export default {
       return this.limit ? this.object.slice(0, this.limit) : this.object
     }
   },
-   */
 
   head () {
     return {
@@ -147,6 +143,10 @@ export default {
           color: $primary;
         }
       }
+    }
+
+    &--showMore {
+      padding-top: 5rem;
     }
 
     &--image {

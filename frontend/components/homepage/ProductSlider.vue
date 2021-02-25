@@ -23,11 +23,11 @@
                 <div class="headline">
                   {{ item.title }}
                 </div>
-                <a :href="localePath(item.href)">
+                <nuxt-link :to="localePath('/news/' + item.id)">
                   <div class="link">
                     {{ $t('global.show') }}
                   </div>
-                </a>
+                </nuxt-link>
               </div>
             </div>
           </div>

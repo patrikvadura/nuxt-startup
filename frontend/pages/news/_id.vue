@@ -18,10 +18,18 @@
       </b-row>
 
       <b-row class="products__footer">
-        <b-col cols="12" class="d-flex justify-content-center">
-          <nuxt-link :to="localePath('/news')">
-            <CustomButton :title="$t('global.backNews')" />
-          </nuxt-link>
+        <b-col cols="12" class="d-flex flex-column flex-md-row justify-content-center">
+          <CustomButton
+            :title="$t('global.goHome')"
+            :href="localePath('/')"
+            class="mr-0 mr-md-2"
+          />
+
+          <CustomButton
+            :title="$t('global.backNews')"
+            :href="localePath('/news')"
+            class="mt-2 mt-md-0"
+          />
         </b-col>
       </b-row>
     </b-container>
@@ -113,6 +121,23 @@ export default {
     margin-top: 4rem;
     padding-top: 4rem;
     border-top: 1px solid rgba(0, 0, 0, .1);
+    display: block;
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 3rem;
+    }
+
+    ::v-deep .custom-button {
+      text-align: center;
+
+      .custom-button__title {
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 </style>
