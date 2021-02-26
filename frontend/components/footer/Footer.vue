@@ -5,7 +5,7 @@
         <b-col md="6" cols="12">
           <h3>{{ $t('global.footer.about.title') }}</h3>
           <p>{{ $t('global.footer.about.description') }}</p>
-          <nuxt-link :to="localePath('/')" class="footer__more">
+          <nuxt-link :to="localePath('/about')" class="footer__more">
             {{ $t('global.showMore') }}
           </nuxt-link>
         </b-col>

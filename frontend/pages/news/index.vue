@@ -94,7 +94,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .news {
   &__content {
     padding: 4rem 0;
@@ -166,7 +166,7 @@ export default {
         display: none;
       }
 
-      img {
+      ::v-deep img {
         width: 10rem;
         height: 10rem;
         object-fit: contain;
