@@ -3,8 +3,8 @@
     <b-container>
       <b-row>
         <b-col md="6" cols="12">
-          <h3>{{ $t('global.footer.about.title') }}</h3>
-          <p>{{ $t('global.footer.about.description') }}</p>
+          <h3>{{ $t('about.title') }}</h3>
+          <p>{{ $t('about.description').substring(0, 200) }}...</p>
           <nuxt-link :to="localePath('/about')" class="footer__more">
             {{ $t('global.showMore') }}
           </nuxt-link>

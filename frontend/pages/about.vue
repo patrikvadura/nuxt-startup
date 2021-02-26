@@ -2,39 +2,39 @@
   <div>
     <HeroBasic
       image="niob_building_foto"
-      :title="$t('contact.title')"
+      :title="$t('about.title')"
     />
 
     <b-container class="contact d-flex justify-content-center">
-      <ContactForm />
+      <b-row>
+        <b-col>
+          <p>{{ $t('about.description') }}</p>
+        </b-col>
+      </b-row>
     </b-container>
-
-    <Gmaps />
   </div>
 </template>
 
 <script>
 export default {
   components: {
-    ContactForm: () => import('~/components/contact/ContactForm'),
-    Gmaps: () => import('~/components/contact/Gmaps'),
     HeroBasic: () => import('~/components/hero/HeroBasic')
   },
 
-  data () {
-    return {
-      title: 'Kontakt | STUDIO 5'
+  computed: {
+    description () {
+      return this.$t('about.description').substring(0, 67)
     }
   },
 
   head () {
     return {
-      title: this.title,
+      title: this.$t('about.title') + ' | NIOB FLUID s.r.o.',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Máte otázky na členy našeho týmu, nebo si chcete domluvit nezávaznou schůzku u šálku kávy? Napište nám, zavolejte nbeo se stavte přímo za námi do studia.'
+          content: this.description + '...'
         }
       ]
     }

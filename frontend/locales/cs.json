@@ -1,6 +1,8 @@
 {
   "global": {
     "home": "Domů",
+    "metaTitle": "Výroba armatur z nerezové oceli",
+    "metaDescription": "Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992.",
     "show": "Zobrazit",
     "showMore": "Zobrazit více",
     "goBack": "Zpět",
@@ -241,10 +243,6 @@
       }
     },
     "footer": {
-      "about": {
-        "title": "O nás",
-        "description": "Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992"
-      },
       "useful": {
         "title": "Užitečné odkazy",
         "links": [
@@ -294,7 +292,12 @@
       }
     ]
   },
+  "about": {
+    "title": "O nás",
+    "description": "Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992. Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992."
+  },
   "contact": {
+    "metaTitle": "Kontakt",
     "title": "Napište nám, nebo si domluvte nezávaznou schůzku",
     "titleAddress": "Sídlo společnosti",
     "titleContact": "Kontakty",

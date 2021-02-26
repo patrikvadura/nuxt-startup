@@ -21,20 +21,20 @@ export default {
     HeroBasic: () => import('~/components/hero/HeroBasic')
   },
 
-  data () {
-    return {
-      title: 'Kontakt | STUDIO 5'
+  computed: {
+    description () {
+      return this.$t('global.metaDescription').substring(0, 67)
     }
   },
 
   head () {
     return {
-      title: this.title,
+      title: this.$t('contact.metaTitle') + ' | NIOB FLUID s.r.o.',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Máte otázky na členy našeho týmu, nebo si chcete domluvit nezávaznou schůzku u šálku kávy? Napište nám, zavolejte nbeo se stavte přímo za námi do studia.'
+          content: this.description + '...'
         }
       ]
     }
