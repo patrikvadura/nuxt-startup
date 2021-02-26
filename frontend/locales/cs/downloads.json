@@ -6,10 +6,91 @@
       "title": "Katalogy ke stažení"
     },
     "lists": {
-      "title": "Technické listy"
+      "title": "Technické listy",
+      "items": [
+        {
+          "title": "Item 1 ke stažení",
+          "url": "/"
+        },
+        {
+          "title": "Item 2 ke stažení",
+          "url": "/"
+        },
+        {
+          "title": "Item 3 ke stažení",
+          "url": "/"
+        },
+        {
+          "title": "Item 4 ke stažení",
+          "url": "/"
+        }
+      ]
     },
     "info": {
-      "title": "Technické informace"
+      "title": "Technické informace",
+      "tables": {
+        "title": "Technické tabulky",
+        "items": [
+          {
+            "title": "Item 1 ke stažení",
+            "url": "/"
+          },
+          {
+            "title": "Item 2 ke stažení",
+            "url": "/"
+          },
+          {
+            "title": "Item 3 ke stažení",
+            "url": "/"
+          },
+          {
+            "title": "Item 4 ke stažení",
+            "url": "/"
+          }
+        ]
+      },
+      "info": {
+        "title": "Technické informace",
+        "items": [
+          {
+            "title": "Item 1 ke stažení",
+            "url": "/"
+          },
+          {
+            "title": "Item 2 ke stažení",
+            "url": "/"
+          },
+          {
+            "title": "Item 3 ke stažení",
+            "url": "/"
+          },
+          {
+            "title": "Item 4 ke stažení",
+            "url": "/"
+          }
+        ]
+      },
+      "schemes": {
+        "title": "Technická schémata",
+        "items": [
+          {
+            "title": "Item 1 ke stažení",
+            "url": "/"
+          },
+          {
+            "title": "Item 2 ke stažení",
+            "url": "/"
+          },
+          {
+            "title": "Item 3 ke stažení",
+            "url": "/"
+          },
+          {
+            "title": "Item 4 ke stažení",
+            "url": "/"
+          }
+        ]
+      }
     }
   }
 }
