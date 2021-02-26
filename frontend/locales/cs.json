@@ -256,7 +256,11 @@
           },
           {
             "title": "Obchodní podmínky",
-            "url": "/downloads"
+            "url": "/terms-and-conditions"
+          },
+          {
+            "title": "Často kladené dotazy",
+            "url": "/faq"
           }
         ]
       },
@@ -291,6 +295,14 @@
         "icon": "telephone-fill"
       }
     ]
+  },
+  "terms-and-conditions": {
+    "title": "Obchodní podmínky",
+    "description": "The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992."
+  },
+  "faq": {
+    "title": "Často kladené dotazy",
+    "description": "The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992."
   },
   "about": {
     "title": "O nás",
