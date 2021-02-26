@@ -5,8 +5,12 @@
       :title="$t('contact.title')"
     />
 
-    <b-container class="contact d-flex justify-content-center">
+    <b-container class="contact">
       <ContactForm />
+    </b-container>
+
+    <b-container class="contact">
+      <ContactAddress />
     </b-container>
 
     <Gmaps />
@@ -17,6 +21,7 @@
 export default {
   components: {
     ContactForm: () => import('~/components/contact/ContactForm'),
+    ContactAddress: () => import('~/components/contact/ContactAddress'),
     Gmaps: () => import('~/components/contact/Gmaps'),
     HeroBasic: () => import('~/components/hero/HeroBasic')
   },
