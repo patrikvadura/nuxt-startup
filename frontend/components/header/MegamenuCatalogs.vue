@@ -135,25 +135,25 @@
             <b-row cols="4">
               <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                 <div>
-                  CS
+                  {{ $t('global.header.navLinks.catalogs.table.czechShortcut') }}
                 </div>
               </b-col>
 
               <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                 <div>
-                  EN
+                  {{ $t('global.header.navLinks.catalogs.table.englishShortcut') }}
                 </div>
               </b-col>
 
               <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                 <div>
-                  DE
+                  {{ $t('global.header.navLinks.catalogs.table.germanShortcut') }}
                 </div>
               </b-col>
 
               <b-col class="megamenu__dropdown--item d-flex justify-content-center">
                 <div>
-                  RU
+                  {{ $t('global.header.navLinks.catalogs.table.russianShortcut') }}
                 </div>
               </b-col>
             </b-row>

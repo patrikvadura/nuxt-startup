@@ -1,0 +1,96 @@
+{
+  "downloads": {
+    "title": "Downloads",
+    "footer": "Don´t you find what are you looking for? Contact us.",
+    "catalog": {
+      "title": "Catalog"
+    },
+    "lists": {
+      "title": "Tech lists",
+      "items": [
+        {
+          "title": "Item 1 to download",
+          "url": "/"
+        },
+        {
+          "title": "Item 2 to download",
+          "url": "/"
+        },
+        {
+          "title": "Item 3 to download",
+          "url": "/"
+        },
+        {
+          "title": "Item 4 to download",
+          "url": "/"
+        }
+      ]
+    },
+    "info": {
+      "title": "Tech info",
+      "tables": {
+        "title": "Tech tables",
+        "items": [
+          {
+            "title": "Item 1 to download",
+            "url": "/"
+          },
+          {
+            "title": "Item 2 to download",
+            "url": "/"
+          },
+          {
+            "title": "Item 3 to download",
+            "url": "/"
+          },
+          {
+            "title": "Item 4 to download",
+            "url": "/"
+          }
+        ]
+      },
+      "info": {
+        "title": "Tech info",
+        "items": [
+          {
+            "title": "Item 1 to download",
+            "url": "/"
+          },
+          {
+            "title": "Item 2 to download",
+            "url": "/"
+          },
+          {
+            "title": "Item 3 to download",
+            "url": "/"
+          },
+          {
+            "title": "Item 4 to download",
+            "url": "/"
+          }
+        ]
+      },
+      "schemes": {
+        "title": "Tech schemes",
+        "items": [
+          {
+            "title": "Item 1 to download",
+            "url": "/"
+          },
+          {
+            "title": "Item 2 to download",
+            "url": "/"
+          },
+          {
+            "title": "Item 3 to download",
+            "url": "/"
+          },
+          {
+            "title": "Item 4 to download",
+            "url": "/"
+          }
+        ]
+      }
+    }
+  }
+}
