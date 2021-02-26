@@ -93,6 +93,11 @@ export default {
       type: Boolean,
       required: false,
       default: false
+    },
+    height: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
 
@@ -102,7 +107,8 @@ export default {
         'custom-button--wide': this.wide,
         'custom-button': this.primary,
         'custom-button--secondary': this.secondary,
-        'custom-button--light': this.light
+        'custom-button--light': this.light,
+        'custom-button--height': this.height
       }
     }
   }
@@ -114,6 +120,7 @@ export default {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   height: 2.5rem;
   line-height: 2.5rem;
   border: none;
@@ -131,6 +138,7 @@ export default {
   &__box {
     display: inline-flex;
     align-items: center;
+    padding: 0 .75rem;
 
     &--icon {
       display: inline-flex;
@@ -157,6 +165,12 @@ export default {
     text-align: center;
     padding: .5rem 1rem;
     color: #fff;
+  }
+
+  &--height {
+    margin: .5rem 0 0 0;
+    height: 3.5rem;
+    line-height: 1.3rem;
   }
 
   &--wide {
