@@ -120,6 +120,7 @@ export default {
     display: flex;
     border-radius: .5rem;
     height: 2rem;
+    width: 100%;
     overflow: hidden;
     background: white;
     transition: all 3ms;

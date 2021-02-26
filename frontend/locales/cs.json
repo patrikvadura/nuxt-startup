@@ -1,6 +1,8 @@
 {
   "global": {
     "home": "Domů",
+    "metaTitle": "Výroba armatur z nerezové oceli",
+    "metaDescription": "Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992.",
     "show": "Zobrazit",
     "showMore": "Zobrazit více",
     "goBack": "Zpět",
@@ -241,10 +243,6 @@
       }
     },
     "footer": {
-      "about": {
-        "title": "O nás",
-        "description": "Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992"
-      },
       "useful": {
         "title": "Užitečné odkazy",
         "links": [
@@ -294,45 +292,78 @@
       }
     ]
   },
+  "about": {
+    "title": "O nás",
+    "description": "Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992. Společnost NIOB FLUID s.r.o. je českým výrobcem spojovacích a regulačních armatur z nerezových ocelí pro použití v potravinářském, chemickém a farmaceutickém průmysl. Výroba potravinářských armatur začala již v roce 1992."
+  },
   "contact": {
+    "metaTitle": "Kontakt",
     "title": "Napište nám, nebo si domluvte nezávaznou schůzku",
     "titleAddress": "Sídlo společnosti",
     "titleContact": "Kontakty",
     "address": [
       {
-        "id": 1,
-        "title": "NIOB FLUID s.r.o."
+        "title": "<b>NIOB FLUID s.r.o.</b>"
       },
       {
-        "id": 2,
         "title": "Ostrožská 1003, 687 25 Hluk"
       },
       {
-        "id": 3,
         "title": "IČO: 27712541"
       },
       {
-        "id": 4,
         "title": "DIČ: CZ27712541"
       }
     ],
     "contact": [
       {
-        "id": 1,
         "title": "+(420) 572 419 822-8",
         "icon": "telephone-fill"
       },
       {
-        "id": 2,
         "title": "marketing@niobfluid.cz",
         "icon": "envelope-fill"
       },
       {
-        "id": 3,
         "title": "www.niobfluid.cz",
         "icon": "globe"
       }
     ],
+    "branches": {
+      "01": {
+        "title": "NIOB FLUID - Украина",
+        "contact": [
+          { "title": "19B, Chystiakivska St, 19Б,<br>Kyiv, Ukrajina, 02000" },
+          { "title": "+(420) 572 419 822-8" },
+          { "title": "marketing@niobfluid.cz" }
+        ]
+      },
+      "02": {
+        "title": "NIOB FLUID - ČR",
+        "contact": [
+          { "title": "Ostrožská 1003,<br>687 25 Hluk" },
+          { "title": "+(420) 572 419 822-8" },
+          { "title": "marketing@niobfluid.cz" }
+        ]
+      },
+      "03": {
+        "title": "BUPOSPOL, armaturka Koukol, spol. s r.o.",
+        "contact": [
+          { "title": "Vrbenská 511/25A, České Budějovice 4,<br>370 01 České Budějovice" },
+          { "title": "+(420) 572 419 822-8" },
+          { "title": "marketing@niobfluid.cz" }
+        ]
+      },
+
+      "04": {
+        "title": "NIOB FLUID - Germany",
+        "contact": [
+          { "title": "Vrbenská 511/25A, České Budějovice 4,<br>370 01 České Budějovice" },
+          { "title": "+(420) 572 419 822-8" },
+          { "title": "marketing@niobfluid.cz" }
+        ]
+      }
+    },
     "name": "Vaše jméno",
     "email": "Emailová adresa",
     "message": "Zpráva",

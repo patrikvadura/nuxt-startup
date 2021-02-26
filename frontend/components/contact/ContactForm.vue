@@ -7,10 +7,8 @@
         </h4>
 
         <ul>
-          <div v-for="item in $t('contact.address')" :key="item.id">
-            <li>
-              {{ item.title }}
-            </li>
+          <div v-for="item in $t('contact.address')" :key="item.title">
+            <li v-html="item.title" />
           </div>
         </ul>
 
@@ -19,7 +17,7 @@
         </h4>
 
         <ul>
-          <div v-for="item in $t('contact.contact')" :key="item.id">
+          <div v-for="item in $t('contact.contact')" :key="item.title">
             <li>
               <CustomIcon :name="item.icon" color="#0a6ace" bootstrap />
               {{ item.title }}
@@ -42,6 +40,7 @@
             name="name"
             type="name"
             class="contact-form__input"
+            wide
           />
           <CustomInput
             :label="$t('contact.email')"
@@ -78,17 +77,20 @@ export default {
 
 <style lang="scss" scoped>
 .contact-form {
-  width: 90%;
-  padding: 0 5rem;
-
   @include media-breakpoint-down(sm) {
     padding: 0 2rem;
   }
 
-  &__title {
-    text-align: center;
-    max-width: 35rem;
+  h4 {
     color: $primary;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+
+  form {
+    width: 100%;
   }
 
   &__input {
@@ -104,6 +106,7 @@ export default {
 
     @include media-breakpoint-down(sm) {
       padding: 1rem 0;
+      text-align: center;
     }
 
     li {

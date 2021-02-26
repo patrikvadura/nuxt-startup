@@ -2,39 +2,34 @@
   <div>
     <HeroBasic
       image="niob_building_foto"
-      :title="$t('contact.title')"
+      :title="$t('about.title')"
     />
 
-    <b-container class="contact">
-      <ContactForm />
+    <b-container class="contact d-flex justify-content-center">
+      <b-row>
+        <b-col>
+          <p>{{ $t('about.description') }}</p>
+        </b-col>
+      </b-row>
     </b-container>
-
-    <b-container class="contact">
-      <ContactAddress />
-    </b-container>
-
-    <Gmaps />
   </div>
 </template>
 
 <script>
 export default {
   components: {
-    ContactForm: () => import('~/components/contact/ContactForm'),
-    ContactAddress: () => import('~/components/contact/ContactAddress'),
-    Gmaps: () => import('~/components/contact/Gmaps'),
     HeroBasic: () => import('~/components/hero/HeroBasic')
   },
 
   computed: {
     description () {
-      return this.$t('global.metaDescription').substring(0, 67)
+      return this.$t('about.description').substring(0, 67)
     }
   },
 
   head () {
     return {
-      title: this.$t('contact.metaTitle') + ' | NIOB FLUID s.r.o.',
+      title: this.$t('about.title') + ' | NIOB FLUID s.r.o.',
       meta: [
         {
           hid: 'description',
