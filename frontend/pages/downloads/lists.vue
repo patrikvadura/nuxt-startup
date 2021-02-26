@@ -2,48 +2,18 @@
   <div class="downloads">
     <HeroBasic
       image="hero_niob_03"
-      :title="$t('downloads.info.title')"
+      :title="$t('downloads.lists.title')"
     />
 
     <b-container class="downloads__content">
       <b-row class="flex-column">
         <div class="pb-2 mb-2 border-bottom">
           <h4>
-            {{ $t('downloads.info.tables.title') }}
+            {{ $t('downloads.lists.title') }}
           </h4>
         </div>
 
-        <div v-for="item in $t('downloads.info.tables.items')" :key="item.title">
-          <a :href="item.url">
-            <CustomIcon name="arrow-down-circle-fill" color="#0a6ace" class="mr-1" bootstrap />
-            {{ item.title }}
-          </a>
-        </div>
-      </b-row>
-
-      <b-row class="pt-5 flex-column">
-        <div class="pb-2 mb-2 border-bottom">
-          <h4>
-            {{ $t('downloads.info.info.title') }}
-          </h4>
-        </div>
-
-        <div v-for="item in $t('downloads.info.info.items')" :key="item.title">
-          <a :href="item.url">
-            <CustomIcon name="arrow-down-circle-fill" color="#0a6ace" class="mr-1" bootstrap />
-            {{ item.title }}
-          </a>
-        </div>
-      </b-row>
-
-      <b-row class="pt-5 flex-column">
-        <div class="pb-2 mb-2 border-bottom">
-          <h4>
-            {{ $t('downloads.info.schemes.title') }}
-          </h4>
-        </div>
-
-        <div v-for="item in $t('downloads.info.schemes.items')" :key="item.title">
+        <div v-for="item in $t('downloads.lists.items')" :key="item.title">
           <a :href="item.url">
             <CustomIcon name="arrow-down-circle-fill" color="#0a6ace" class="mr-1" bootstrap />
             {{ item.title }}
