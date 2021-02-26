@@ -23,6 +23,7 @@
             :title="$t('global.goHome')"
             :href="localePath('/')"
             class="mr-0 mr-md-2"
+            secondary
           />
 
           <CustomButton
@@ -126,17 +127,7 @@ export default {
     @include media-breakpoint-down(sm) {
       display: flex;
       flex-direction: column;
-      padding: 2rem 3rem;
-    }
-
-    ::v-deep .custom-button {
-      text-align: center;
-
-      .custom-button__title {
-        @include media-breakpoint-down(sm) {
-          width: 100%;
-        }
-      }
+      padding: 2rem 2rem;
     }
   }
 }
