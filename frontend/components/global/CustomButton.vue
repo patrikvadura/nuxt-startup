@@ -106,6 +106,7 @@ export default {
       return {
         'custom-button--wide': this.wide,
         'custom-button': this.primary,
+        'custom-button--disabled': this.disabled,
         'custom-button--secondary': this.secondary,
         'custom-button--light': this.light,
         'custom-button--height': this.height
@@ -165,6 +166,11 @@ export default {
     text-align: center;
     padding: .5rem 1rem;
     color: #fff;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: .2;
   }
 
   &--height {
