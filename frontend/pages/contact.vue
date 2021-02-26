@@ -1,7 +1,7 @@
 <template>
   <div>
-    <HeroBasicVideo
-      video="https://st3.depositphotos.com/1040130/13520/v/600/depositphotos_135207336-stock-video-technical-equipment-at-diary-plant.mp4"
+    <HeroBasic
+      image="niob_building_foto"
       :title="$t('contact.title')"
     />
 
@@ -18,7 +18,7 @@ export default {
   components: {
     ContactForm: () => import('~/components/contact/ContactForm'),
     Gmaps: () => import('~/components/contact/Gmaps'),
-    HeroBasicVideo: () => import('~/components/hero/HeroBasicVideo')
+    HeroBasic: () => import('~/components/hero/HeroBasic')
   },
 
   data () {

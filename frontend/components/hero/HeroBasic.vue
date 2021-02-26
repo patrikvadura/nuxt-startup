@@ -3,7 +3,7 @@
     fluid
     class="p-0 m-0 hero"
   >
-    <CustomImage :image="image" />
+    <CustomImage :image="image" :folder="folder" />
 
     <b-row
       cols="1"
@@ -25,9 +25,6 @@
 
 <script>
 export default {
-  components: {
-  },
-
   props: {
     title: {
       type: String,
@@ -42,16 +39,7 @@ export default {
     folder: {
       type: String,
       required: false,
-      default: 'fakeapi'
-    }
-  },
-
-  computed: {
-    image1x () {
-      return require(`~/assets/images/${this.folder}/${this.image}.jpg`)
-    },
-    image2x () {
-      return require(`~/assets/images/${this.folder}/${this.image}@2x.jpg`)
+      default: 'hero'
     }
   }
 }
@@ -74,13 +62,13 @@ export default {
 
   img {
     object-fit: cover;
-    filter: blur(1px);
+    filter: blur(1px) grayscale(1);
     width: 100%;
     height: 40vh;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .1;
+    opacity: .15;
 
     @include media-breakpoint-down(sm) {
       width: 100%;
