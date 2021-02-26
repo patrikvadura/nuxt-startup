@@ -110,7 +110,7 @@ export default {
     width: 3rem;
     height: 3rem;
     margin-bottom: .5rem;
-    background: $primary;
+    background: $secondary;
 
     @include shadow (.2);
     @include border-radius(.5rem);
