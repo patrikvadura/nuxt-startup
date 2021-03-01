@@ -17,6 +17,7 @@
     "download": "Download",
     "downloadCatalog": "Download catalog",
     "newestArticle": "Newest article",
+    "noFind": "Did not find what you were looking for? Contact us.",
     "header": {
       "navLinks": {
         "products": {
@@ -302,7 +303,25 @@
   },
   "faq": {
     "title": "Frequently asked questions",
-    "description": "The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992."
+    "description": "The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.",
+    "answeredBy": "your team NIOB FLUID s.r.o.",
+    "guestions": [
+      {
+        "id": 1,
+        "title": "The question to which you will find the answer below.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Aenean id metus id velit ullamcorper pulvinar. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
+      },
+      {
+        "id": 2,
+        "title": "The question to which you will find the answer below.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Aenean id metus id velit ullamcorper pulvinar. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
+      },
+      {
+        "id": 3,
+        "title": "The question to which you will find the answer below.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Aenean id metus id velit ullamcorper pulvinar. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
+      }
+    ]
   },
   "about": {
     "title": "About us",
