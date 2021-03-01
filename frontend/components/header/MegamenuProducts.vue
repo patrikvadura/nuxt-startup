@@ -14,7 +14,7 @@
               {{ $t('global.header.navLinks.products.title') }}
             </b-nav-item>
           </template>
-          <b-row cols-lg="4">
+          <b-row cols-xl="4" cols-lg="3">
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
                 <img src="~/assets/images/megamenu/niob_fluid_katalog_02.jpg" alt="Spojovacví armatury">
@@ -295,12 +295,14 @@ export default {
   }
 
   ::v-deep.dropdown-toggle::after {
-    display: inline;
-    width: .25rem;
-    height: .25rem;
-    transform: translateY(-1rem);
-    color: rgba(0, 0, 0, .3);
-    vertical-align: 0;
+    @include media-breakpoint-down(md) {
+      display: inline;
+      width: .25rem;
+      height: .25rem;
+      transform: translateY(-1rem);
+      color: rgba(0, 0, 0, .3);
+      vertical-align: 0;
+    }
   }
 
   ::v-deep .dropdown-menu {
@@ -317,6 +319,10 @@ export default {
       @include blur (.5rem);
       @include border-radius(1rem);
       @include transition-opacity (.5s);
+
+      @include media-breakpoint-down(lg) {
+        transform: translateX(45%) translateY(-100rem);
+      }
     }
 
     @include media-breakpoint-down(sm) {
@@ -339,6 +345,12 @@ export default {
   ::v-deep .dropdown.show .dropdown-menu {
     @include media-breakpoint-up(lg) {
       transform: translateX(25%) translateY(-.25rem);
+
+      @include transition-opacity-after;
+    }
+
+    @include media-breakpoint-down(lg) {
+      transform: translateX(45%) translateY(-.25rem);
 
       @include transition-opacity-after;
     }
