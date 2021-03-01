@@ -53,6 +53,20 @@ p {
   line-height: 1.25rem;
 }
 
+ol li {
+  font-family: $font-paragraph;
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
+ul li {
+  font-family: $font-paragraph;
+  font-size: .875rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+}
+
 button {
   font-family: $font-buttons;
 }
