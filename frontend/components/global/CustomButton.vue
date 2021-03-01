@@ -64,11 +64,6 @@ export default {
       required: false,
       default: ''
     },
-    wide: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
     primary: {
       type: Boolean,
       required: false,
@@ -94,7 +89,32 @@ export default {
       required: false,
       default: false
     },
+    wide: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    wideTablet: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    wideMobile: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
     height: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    heightTablet: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    heightMobile: {
       type: Boolean,
       required: false,
       default: false
@@ -104,11 +124,15 @@ export default {
   computed: {
     classes () {
       return {
-        'custom-button--wide': this.wide,
         'custom-button': this.primary,
         'custom-button--secondary': this.secondary,
         'custom-button--light': this.light,
-        'custom-button--height': this.height
+        'custom-button--wide': this.wide,
+        'custom-button--wideTablet': this.wideTablet,
+        'custom-button--wideMobile': this.wideMobile,
+        'custom-button--height': this.height,
+        'custom-button--heightTablet': this.heightTablet,
+        'custom-button--heightMobile': this.heightMobile
       }
     }
   }
@@ -171,6 +195,22 @@ export default {
     margin: .5rem 0 0 0;
     height: 3.5rem;
     line-height: 1.3rem;
+
+    &Tablet {
+      @include media-breakpoint-down(md) {
+        margin: .5rem 0 0 0;
+        height: 3.5rem;
+        line-height: 1.3rem;
+      }
+    }
+
+    &Mobile {
+      @include media-breakpoint-down(sm) {
+        margin: .5rem 0 0 0;
+        height: 3.5rem;
+        line-height: 1.3rem;
+      }
+    }
   }
 
   &--wide {
@@ -179,6 +219,32 @@ export default {
 
     .custom-button__title {
       width: 100%;
+    }
+
+    &Tablet {
+      @include media-breakpoint-down(md) {
+        margin: .5rem 0 0 0;
+        width: 100%;
+      }
+
+      .custom-button__title {
+        @include media-breakpoint-down(md) {
+          width: 100%;
+        }
+      }
+    }
+
+    &Mobile {
+      @include media-breakpoint-down(sm) {
+        margin: .5rem 0 0 0;
+        width: 100%;
+      }
+
+      .custom-button__title {
+        @include media-breakpoint-down(md) {
+          width: 100%;
+        }
+      }
     }
   }
 
