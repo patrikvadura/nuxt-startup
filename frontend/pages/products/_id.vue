@@ -1,7 +1,7 @@
 <template>
   <div class="products">
-    <HeroBasicVideo
-      video="https://st3.depositphotos.com/1040130/13520/v/600/depositphotos_135207336-stock-video-technical-equipment-at-diary-plant.mp4"
+    <HeroBasic
+      :image="post.hero"
       :title="post.title"
     />
 
@@ -12,7 +12,7 @@
         </b-col>
 
         <b-col md="5" cols="12" class="products__content--image">
-          <CustomImage :image="post.preview" folder="fakeapi/products" />
+          <CustomImage :image="post.preview" folder="products" />
         </b-col>
       </b-row>
 
@@ -72,6 +72,23 @@
           </div>
         </b-col>
       </b-row>
+
+      <b-row class="products__actions">
+        <b-col cols="12" class="d-flex flex-column flex-md-row justify-content-center">
+          <CustomButton
+            :title="$t('global.goBack')"
+            secondary
+            onclick="history.back(-1)"
+            class="mr-0 mr-md-2"
+          />
+
+          <CustomButton
+            :title="$t('global.goHome')"
+            :href="localePath('/')"
+            class="mt-2 mt-md-0"
+          />
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -79,7 +96,7 @@
 <script>
 export default {
   components: {
-    HeroBasicVideo: () => import('~/components/hero/HeroBasicVideo'),
+    HeroBasic: () => import('~/components/hero/HeroBasic'),
     ProductsDownload: () => import('~/components/products/ProductsDownload')
   },
 
@@ -177,6 +194,19 @@ export default {
       &:last-child {
         border-right: none;
       }
+    }
+  }
+
+  &__actions {
+    margin-top: 4rem;
+    padding-top: 4rem;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+    display: block;
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 2rem;
     }
   }
 }
