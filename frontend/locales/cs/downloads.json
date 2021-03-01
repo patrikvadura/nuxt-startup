@@ -2,6 +2,8 @@
   "downloads": {
     "title": "Dokumenty ke stažení",
     "footer": "Nenašli jste co jste hledali? Kontaktujte nás.",
+    "downloadComplet": "Celkový katalog ke stažení",
+    "downloadCompletDescription": "Neztrácejte čas procházením několika různých katalogů abyste našli co hledáte.",
     "catalog": {
       "title": "Katalogy ke stažení"
     },

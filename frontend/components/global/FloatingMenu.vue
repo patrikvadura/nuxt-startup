@@ -49,8 +49,11 @@
           <template #button-content>
             <CustomIcon name="download" bootstrap />
           </template>
+          <b-dropdown-item :to="localePath('/downloads/catalog')">
+            {{ $t('global.catalogs') }}
+          </b-dropdown-item>
           <b-dropdown-item href="/catalog/00_niob_fluid_komplet.pdf" download>
-            {{ $t('global.catalog') }}
+            {{ $t('global.completCatalog') }}
           </b-dropdown-item>
           <b-dropdown-item :to="localePath('/downloads')">
             {{ $t('global.techLists') }}

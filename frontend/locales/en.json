@@ -10,6 +10,8 @@
     "backOverview": "Back to overview",
     "backNews": "Back to all news",
     "catalog": "Catalog",
+    "catalogs": "Individual catalogs",
+    "completCatalog": "Overall catalog",
     "techInfo": "Tech information",
     "techTables": "Tech tables",
     "techSchemes": "Tech schemes",
@@ -17,6 +19,7 @@
     "download": "Download",
     "downloadCatalog": "Download catalog",
     "newestArticle": "Newest article",
+    "noFind": "Did not find what you were looking for? Contact us.",
     "header": {
       "navLinks": {
         "products": {
@@ -257,6 +260,10 @@
           {
             "title": "Terms and Conditions",
             "url": "/terms-and-conditions"
+          },
+          {
+            "title": "Frequently asked questions",
+            "url": "/faq"
           }
         ]
       },
@@ -289,6 +296,32 @@
         "title": "24/7 online support",
         "description": "Do you need advice or are you unsure about our catalog or website? Call us.",
         "icon": "telephone-fill"
+      }
+    ]
+  },
+  "terms-and-conditions": {
+    "title": "Terms and Conditions",
+    "description": "The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992."
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "description": "The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.",
+    "answeredBy": "your team NIOB FLUID s.r.o.",
+    "guestions": [
+      {
+        "id": 1,
+        "title": "The question to which you will find the answer below.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Aenean id metus id velit ullamcorper pulvinar. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
+      },
+      {
+        "id": 2,
+        "title": "The question to which you will find the answer below.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Aenean id metus id velit ullamcorper pulvinar. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
+      },
+      {
+        "id": 3,
+        "title": "The question to which you will find the answer below.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Aenean id metus id velit ullamcorper pulvinar. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
       }
     ]
   },

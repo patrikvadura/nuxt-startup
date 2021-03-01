@@ -1,23 +1,23 @@
 <template>
-  <div class="products">
+  <div class="news">
     <HeroBasicVideo
       video="https://st3.depositphotos.com/1040130/13520/v/600/depositphotos_135207336-stock-video-technical-equipment-at-diary-plant.mp4"
       :title="post.title"
     />
 
-    <b-container class="products__content">
+    <b-container class="news__content">
       <b-row>
         <b-col md="7" cols="12">
           <p class="products__content--perex" v-html="post.perex" />
           <p v-html="post.content" />
         </b-col>
 
-        <b-col md="5" cols="12" class="products__content--image">
+        <b-col md="5" cols="12" class="news__content--image">
           <CustomImage :image="post.preview" folder="fakeapi/products" />
         </b-col>
       </b-row>
 
-      <b-row class="products__footer">
+      <b-row class="news__footer">
         <b-col cols="12" class="d-flex flex-column flex-md-row justify-content-center">
           <CustomButton
             :title="$t('global.goHome')"
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.products {
+.news {
   &__content {
     padding: 4rem 0;
 

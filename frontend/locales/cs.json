@@ -10,6 +10,8 @@
     "backOverview": "Zpět na přehled",
     "backNews": "Zpět na přehled novinek",
     "catalog": "Katalog",
+    "catalogs": "Jednotlivé katalogy",
+    "completCatalog": "Celkový katalog",
     "techInfo": "Technické informace",
     "techTables": "Technické tabulky",
     "techSchemes": "Technické schémata",
@@ -17,6 +19,7 @@
     "download": "Stáhnout",
     "downloadCatalog": "Katalog ke stažení",
     "newestArticle": "Nejnovější článek",
+    "noFind": "Nenašli jste co jste hledali? Kontaktujte nás.",
     "header": {
       "navLinks": {
         "products": {
@@ -256,7 +259,11 @@
           },
           {
             "title": "Obchodní podmínky",
-            "url": "/downloads"
+            "url": "/terms-and-conditions"
+          },
+          {
+            "title": "Často kladené dotazy",
+            "url": "/faq"
           }
         ]
       },
@@ -289,6 +296,32 @@
         "title": "24/7 telefonická podpora",
         "description": "Potřebujete s něčím poradit nebo si nevíte rady s naším katalogem nebo webovými stránkami? Zavolejte nám.",
         "icon": "telephone-fill"
+      }
+    ]
+  },
+  "terms-and-conditions": {
+    "title": "Obchodní podmínky",
+    "description": "The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992."
+  },
+  "faq": {
+    "title": "Často kladené dotazy",
+    "description": "The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.The company NIOB FLUID s.r.o. is a Czech manufacturer of connecting and regulating fittings made of stainless steel for use in the food, chemical and pharmaceutical industries. The production of food fittings began in 1992.",
+    "answeredBy": "váš tým NIOB FLUID s.r.o.",
+    "guestions": [
+      {
+        "id": 1,
+        "title": "Otázka na kterou níže naleznete odpověď.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Aenean id metus id velit ullamcorper pulvinar. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
+      },
+      {
+        "id": 2,
+        "title": "Otázka na kterou níže naleznete odpověď.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Aenean id metus id velit ullamcorper pulvinar. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
+      },
+      {
+        "id": 3,
+        "title": "Otázka na kterou níže naleznete odpověď.",
+        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. Aenean id metus id velit ullamcorper pulvinar. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Fusce suscipit libero eget elit. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
       }
     ]
   },
