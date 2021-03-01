@@ -19,13 +19,21 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: scroll;
   white-space: normal;
 
   --slides-per-page: 2;
 
   @include media-breakpoint-down(sm) {
     --slides-per-page: 2;
+  }
+}
+
+::-webkit-scrollbar {
+  display: block;
+  width: .75rem;
+
+  &-thumb {
+    background: rgba(0, 0, 0, .15);
   }
 }
 
