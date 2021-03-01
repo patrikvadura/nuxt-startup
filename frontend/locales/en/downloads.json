@@ -2,6 +2,8 @@
   "downloads": {
     "title": "Downloads",
     "footer": "Don´t you find what are you looking for? Contact us.",
+    "downloadComplet": "The complete catalog for download",
+    "downloadCompletDescription": "Don't waste time browsing several different catalogs to find what you are looking for.",
     "catalog": {
       "title": "Catalog"
     },
