@@ -57,10 +57,22 @@
           "russian":  "/catalog/03"
         },
         "tables": [
+          {
+            "title": "Tabulka převodu rozměrů",
+            "url": "/"
+          },
+          {
+            "title": "Tabulka převodu tlaků",
+            "url": "/"
+          }
         ],
         "info": [
         ],
         "schemes": [
+          {
+            "title": "Montážní schémata regulační armatury",
+            "url": "/"
+          }
         ],
         "hero": "03_potrubni_tvarovky_header",
         "preview": "03_potrbuni_tvarovky"
@@ -77,13 +89,21 @@
           "russian":  "/catalog/03"
         },
         "tables": [
+          {
+            "title": "Tabulka převodu rozměrů",
+            "url": "/"
+          },
+          {
+            "title": "Tabulka převodu tlaků",
+            "url": "/"
+          }
         ],
         "info": [
         ],
         "schemes": [
         ],
         "hero": "04_regulacni_armatury_header",
-        "preview": "02_spojovaci_armatury"
+        "preview": "04_regulacni_armatury"
       },
       {
         "id": "special-fittings",
@@ -102,8 +122,8 @@
         ],
         "schemes": [
         ],
-        "hero": "02_spojovaci_armatury_header",
-        "preview": "02_spojovaci_armatury"
+        "hero": "05_specialni_armatury_header",
+        "preview": "05_specialni_armatury"
       },
       {
         "id": "manholes-and-manholes",
@@ -122,8 +142,8 @@
         ],
         "schemes": [
         ],
-        "hero": "02_spojovaci_armatury_header",
-        "preview": "02_spojovaci_armatury"
+        "hero": "06_vlezy_prulezy_header",
+        "preview": "06_vlezy_prulezy"
       },
       {
         "id": "accessories",
@@ -142,8 +162,8 @@
         ],
         "schemes": [
         ],
-        "hero": "02_spojovaci_armatury_header",
-        "preview": "02_spojovaci_armatury"
+        "hero": "07_prislusenstvi_header",
+        "preview": "07_prislusenstvi"
       },
       {
         "id": "double-jacketed-fittings",
@@ -162,8 +182,8 @@
         ],
         "schemes": [
         ],
-        "hero": "02_spojovaci_armatury_header",
-        "preview": "02_spojovaci_armatury"
+        "hero": "08_dvouplastove_armatury_header",
+        "preview": "08_dvouplastove_armatury"
       }
     ]
   }
