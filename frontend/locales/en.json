@@ -20,6 +20,11 @@
     "downloadCatalog": "Download catalog",
     "newestArticle": "Newest article",
     "noFind": "Did not find what you were looking for? Contact us.",
+    "noNews": "There are currently no articles available.",
+    "noText": "No text available.",
+    "noDownload": "No downloads.",
+    "noTerms": "Unfortunately, the terms and conditions are not currently available.",
+    "noFAQ": "So far, no questions have been asked that we would list here.",
     "header": {
       "navLinks": {
         "products": {
