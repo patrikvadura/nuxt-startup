@@ -323,6 +323,10 @@ export default {
       @include media-breakpoint-down(lg) {
         transform: translateX(45%) translateY(-100rem);
       }
+
+      @include media-breakpoint-down(sm) {
+        transform: translateX(0) translateY(0);
+      }
     }
 
     @include media-breakpoint-down(sm) {
@@ -353,6 +357,10 @@ export default {
       transform: translateX(45%) translateY(-.25rem);
 
       @include transition-opacity-after;
+    }
+
+    @include media-breakpoint-down(sm) {
+      transform: translateX(0) translateY(0);
     }
   }
 
