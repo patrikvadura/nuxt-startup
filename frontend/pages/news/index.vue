@@ -5,51 +5,63 @@
       :title="$t('news.title')"
     />
 
-    <b-container class="news__content">
-      <b-row>
-        <div
-          v-for="post in numberItems"
-          :key="post.id"
-          class="news__content--item"
-        >
-          <b-col cols="12">
-            <div class="d-flex justify-content-start justify-content-md-end">
-              <h5>
-                {{ $t('global.newestArticle') }}
-              </h5>
-            </div>
-
-            <div class="d-flex flex-row align-items-center">
-              <div class="news__content--image">
-                <CustomImage :image="post.preview" folder="fakeapi/products" grayscale />
+    <template v-if="numberItems.length > 0">
+      <b-container class="news__content">
+        <b-row>
+          <div
+            v-for="post in numberItems"
+            :key="post.id"
+            class="news__content--item"
+          >
+            <b-col cols="12">
+              <div class="d-flex justify-content-start justify-content-md-end">
+                <h5>
+                  {{ $t('global.newestArticle') }}
+                </h5>
               </div>
 
-              <div>
-                <nuxt-link :to="localePath('/news/' + post.id)">
-                  <h3>
-                    {{ post.title }}
-                  </h3>
-                </nuxt-link>
+              <div class="d-flex flex-row align-items-center">
+                <div class="news__content--image">
+                  <CustomImage :image="post.preview" folder="fakeapi/products" grayscale />
+                </div>
 
-                <span>
-                  {{ post.category }}
-                </span>
+                <div>
+                  <nuxt-link :to="localePath('/news/' + post.id)">
+                    <h3>
+                      {{ post.title }}
+                    </h3>
+                  </nuxt-link>
 
-                <p v-html="post.content.substring(0, 150)" />
+                  <span>
+                    {{ post.category }}
+                  </span>
 
-                <nuxt-link :to="localePath('/news/' + post.id)">
-                  <CustomButton :title="$t('global.showMore')" />
-                </nuxt-link>
+                  <p v-html="post.content.substring(0, 150)" />
+
+                  <nuxt-link :to="localePath('/news/' + post.id)">
+                    <CustomButton :title="$t('global.showMore')" gray />
+                  </nuxt-link>
+                </div>
               </div>
-            </div>
-          </b-col>
-        </div>
-      </b-row>
+            </b-col>
+          </div>
+        </b-row>
 
-      <b-row class="news__content--showMore justify-content-center">
-        <CustomButton :title="$t('global.showMore')" @click="limit = null" />
-      </b-row>
-    </b-container>
+        <b-row class="news__content--showMore justify-content-center">
+          <CustomButton :title="$t('global.showMore')" @click="limit = null" />
+        </b-row>
+      </b-container>
+    </template>
+
+    <template v-else>
+      <b-container class="news__noContent">
+        <b-row>
+          <h4>
+            {{ $t('global.noNews') }}
+          </h4>
+        </b-row>
+      </b-container>
+    </template>
   </div>
 </template>
 
@@ -175,6 +187,18 @@ export default {
           height: 15rem;
         }
       }
+    }
+  }
+
+  &__noContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 6rem 0;
+
+    @include media-breakpoint-down(sm) {
+      padding: 6rem 2rem;
     }
   }
 }

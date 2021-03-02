@@ -8,12 +8,20 @@
     <b-container class="news__content">
       <b-row>
         <b-col md="7" cols="12">
-          <p class="products__content--perex" v-html="post.perex" />
-          <p v-html="post.content" />
+          <p
+            class="products__content--perex"
+            v-html="post.perex"
+          />
+          <p
+            v-html="post.content"
+          />
         </b-col>
 
         <b-col md="5" cols="12" class="news__content--image">
-          <CustomImage :image="post.preview" folder="fakeapi/products" />
+          <CustomImage
+            :image="post.preview"
+            folder="fakeapi/products"
+          />
         </b-col>
       </b-row>
 
@@ -23,7 +31,7 @@
             :title="$t('global.goHome')"
             :href="localePath('/')"
             class="mr-0 mr-md-2"
-            secondary
+            gray
           />
 
           <CustomButton

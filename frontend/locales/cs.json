@@ -20,6 +20,11 @@
     "downloadCatalog": "Katalog ke stažení",
     "newestArticle": "Nejnovější článek",
     "noFind": "Nenašli jste co jste hledali? Kontaktujte nás.",
+    "noNews": "Aktuálně nejsou k dipozici žádné články.",
+    "noText": "Žádný text k dispozici.",
+    "noDownload": "Žádné položky ke stažení.",
+    "noTerms": "Bohužel obchodní podmínky nejsou aktuálně k dispozici.",
+    "noFAQ": "Zatím nebyly položeny žádné dotazy, které bychom zde uvedli.",
     "header": {
       "navLinks": {
         "products": {

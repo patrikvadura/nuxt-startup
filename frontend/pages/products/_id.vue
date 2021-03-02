@@ -30,54 +30,60 @@
           />
         </b-col>
 
-        <b-col md="3" cols="12" class="products__footer--item">
-          <h4>
-            {{ $t('global.techTables') }}
-          </h4>
-          <div
-            v-for="table in post.tables"
-            :key="table.title"
-          >
-            <nuxt-link :to="localePath(table.url)">
-              {{ table.title }}
-            </nuxt-link>
-          </div>
-        </b-col>
+        <template v-if="post.tables.length > 0">
+          <b-col md="3" cols="12" class="products__footer--item">
+            <h4>
+              {{ $t('global.techTables') }}
+            </h4>
+            <div
+              v-for="table in post.tables"
+              :key="table.title"
+            >
+              <nuxt-link :to="localePath(table.url)">
+                {{ table.title }}
+              </nuxt-link>
+            </div>
+          </b-col>
+        </template>
 
-        <b-col md="3" cols="12" class="products__footer--item">
-          <h4>
-            {{ $t('global.techInfo') }}
-          </h4>
-          <div
-            v-for="info in post.info"
-            :key="info.title"
-          >
-            <nuxt-link :to="localePath(info.url)">
-              {{ info.title }}
-            </nuxt-link>
-          </div>
-        </b-col>
+        <template v-if="post.info.length > 0">
+          <b-col md="3" cols="12" class="products__footer--item">
+            <h4>
+              {{ $t('global.techInfo') }}
+            </h4>
+            <div
+              v-for="info in post.info"
+              :key="info.title"
+            >
+              <nuxt-link :to="localePath(info.url)">
+                {{ info.title }}
+              </nuxt-link>
+            </div>
+          </b-col>
+        </template>
 
-        <b-col md="3" cols="12" class="products__footer--item">
-          <h4>
-            {{ $t('global.techSchemes') }}
-          </h4>
-          <div
-            v-for="schemes in post.schemes"
-            :key="schemes.title"
-          >
-            <nuxt-link :to="localePath(schemes.url)">
-              {{ schemes.title }}
-            </nuxt-link>
-          </div>
-        </b-col>
+        <template v-if="post.schemes.length > 0">
+          <b-col md="3" cols="12" class="products__footer--item">
+            <h4>
+              {{ $t('global.techSchemes') }}
+            </h4>
+            <div
+              v-for="schemes in post.schemes"
+              :key="schemes.title"
+            >
+              <nuxt-link :to="localePath(schemes.url)">
+                {{ schemes.title }}
+              </nuxt-link>
+            </div>
+          </b-col>
+        </template>
       </b-row>
 
       <b-row class="products__actions">
         <b-col cols="12" class="d-flex flex-column flex-md-row justify-content-center">
           <CustomButton
             :title="$t('global.goBack')"
-            secondary
+            gray
             onclick="history.back(-1)"
             class="mr-0 mr-md-2"
           />

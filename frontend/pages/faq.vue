@@ -8,11 +8,27 @@
     <b-container class="faq">
       <b-row class="d-flex justify-content-center">
         <div class="accordion" role="tablist">
-          <b-card v-for="question in numberItems" :key="question.id" no-body class="mb-1">
+          <b-card
+            v-for="question in numberItems"
+            :key="question.id"
+            no-body
+            class="mb-1"
+          >
             <b-card-header header-tag="header" class="p-1" role="tab">
-              <CustomButton v-b-toggle="'question-' + question.id" :title="question.title" wide height-mobile />
+              <CustomButton
+                v-b-toggle="'question-' + question.id"
+                :title="question.title"
+                gray
+                wide
+                height-mobile
+              />
             </b-card-header>
-            <b-collapse :id="'question-' + question.id" visible accordion="my-accordion" role="tabpanel">
+            <b-collapse
+              :id="'question-' + question.id"
+              visible
+              accordion="my-accordion"
+              role="tabpanel"
+            >
               <b-card-body>
                 <b-card-text>
                   {{ question.description }}
@@ -26,13 +42,22 @@
           </b-card>
         </div>
 
-        <CustomButton :title="$t('global.showMore')" class="mt-5" @click="limit = null" />
+        <CustomButton
+          :title="$t('global.showMore')"
+          class="mt-5"
+          @click="limit = null"
+        />
       </b-row>
 
       <b-row>
         <b-col class="faq__footer">
           <div class="pr-2">
-            <CustomIcon name="chat-dots-fill" scale="2" color="#00a6eb" bootstrap />
+            <CustomIcon
+              name="chat-dots-fill"
+              scale="2"
+              color="#00a6eb"
+              bootstrap
+            />
           </div>
 
           <nuxt-link :to="localePath('/contact')">

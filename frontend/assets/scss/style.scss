@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'lazyload';
 @import 'custom/cookies';
+@import 'custom/browser';
 
 *,
 *::before,
@@ -30,15 +31,6 @@ body {
   }
 }
 
-::-webkit-scrollbar {
-  display: block;
-  width: .75rem;
-
-  &-thumb {
-    background: rgba(0, 0, 0, .15);
-  }
-}
-
 img,
 iframe {
   max-width: 100%;
@@ -48,8 +40,4 @@ iframe {
 
 a {
   text-decoration: none !important;
-}
-
-button:focus {
-  outline: none;
 }
