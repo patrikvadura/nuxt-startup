@@ -10,13 +10,10 @@
       />
     </b-navbar-brand>
 
-    <b-navbar-toggle v-if="open" target="nav-collapse" @click="closeMenu" />
-
-    <b-navbar-toggle v-else target="nav-collapse" @click="openMenu" />
+    <b-navbar-toggle target="nav-collapse" />
 
     <b-collapse
       id="nav-collapse"
-      v-scroll-lock="open"
       is-nav
     >
       <b-navbar-nav class="ml-auto navbar__links">
@@ -29,7 +26,6 @@
         <b-nav-item
           :to="localePath('contact')"
           active-class="active"
-          @click="closeMenu"
         >
           {{ $t('global.header.navLinks.contact') }}
         </b-nav-item>
@@ -60,12 +56,6 @@ export default {
     MegamenuCatalogs: () => import('@/components/header/MegamenuCatalogs')
   },
 
-  data () {
-    return {
-      open: false
-    }
-  },
-
   mounted () {
     this.$nextTick(function () {
       window.addEventListener('scroll', function () {
@@ -80,15 +70,6 @@ export default {
         }
       })
     })
-  },
-
-  methods: {
-    openMenu () {
-      this.open = true
-    },
-    closeMenu () {
-      this.open = false
-    }
   }
 }
 </script>
@@ -97,7 +78,7 @@ export default {
 .navbar {
   @include media-breakpoint-down(sm) {
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
 
   &__logo {
@@ -213,33 +194,6 @@ export default {
     background: $light;
     background: $primary;
     border: none;
-  }
-}
-
-.lock-scroll {
-  overflow: hidden;
-}
-
-#close {
-  ::v-deep .navbar-toggler {
-    padding: 1rem 1.25rem;
-    background: $primary;
-    border: none;
-
-    @include border-radius (.5rem);
-
-    &:focus,
-    &:hover {
-      border: none;
-      text-decoration: none;
-    }
-
-    &-icon {
-      display: inline-block;
-      width: 1.25rem;
-      background-image: url('~assets/images/icons/white/cross.svg');
-      vertical-align: middle;
-    }
   }
 }
 </style>
