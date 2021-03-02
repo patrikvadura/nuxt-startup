@@ -38,7 +38,7 @@
                 <p v-html="post.content.substring(0, 150)" />
 
                 <nuxt-link :to="localePath('/news/' + post.id)">
-                  <CustomButton :title="$t('global.showMore')" />
+                  <CustomButton :title="$t('global.showMore')" gray />
                 </nuxt-link>
               </div>
             </div>

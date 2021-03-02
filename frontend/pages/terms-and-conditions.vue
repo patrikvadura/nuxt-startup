@@ -6,9 +6,13 @@
     />
 
     <b-container class="terms d-flex justify-content-center">
-      <b-row>
+      <b-row cols="1">
         <b-col>
-          <div v-html="$t('terms.content')" />
+          <div v-html="content" />
+        </b-col>
+
+        <b-col class="mt-5 d-flex justify-content-center">
+          <CustomButton :title="$t('global.showMore')" @click="limit = null" />
         </b-col>
       </b-row>
     </b-container>
@@ -28,9 +32,19 @@ export default {
     }
   },
 
+  data () {
+    return {
+      object: this.$t('terms.content'),
+      limit: 2000
+    }
+  },
+
   computed: {
     description () {
       return this.$t('global.metaDescription').substring(0, 67)
+    },
+    content () {
+      return this.limit ? this.object.substring(0, this.limit) : this.object
     }
   },
 
@@ -52,6 +66,10 @@ export default {
 <style lang="scss" scoped>
 .terms {
   padding: 4rem 0;
+
+  @include media-breakpoint-down(sm) {
+    padding: 3rem 2rem;
+  }
 
   ::v-deep h2 {
     padding-top: 3rem;
