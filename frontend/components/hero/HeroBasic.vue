@@ -3,7 +3,20 @@
     fluid
     class="p-0 m-0 hero"
   >
-    <CustomImage :image="image" :folder="folder" />
+    <template v-if="video">
+      <video
+        v-lazy-load
+        :src="video"
+        autoplay
+        loop
+        playsinline
+        muted
+      />
+    </template>
+
+    <template v-else>
+      <CustomImage :image="image" :folder="folder" />
+    </template>
 
     <b-row
       cols="1"
@@ -18,6 +31,30 @@
             {{ title }}
           </h1>
         </div>
+
+        <template v-if="before.length > 1 || after.length > 1">
+          <div class="hero__actions d-flex flex-md-row flex-column align-items-center justify-content-center">
+            <template v-if="before.length > 1">
+              <CustomButton
+                :title="before"
+                :href="localePath('/products/' + hrefBefore)"
+                icon="arrow-left-circle"
+                class="mr-0 mr-md-1 mb-2 mb-md-0"
+                light
+              />
+            </template>
+
+            <template v-if="after.length > 1">
+              <CustomButton
+                :title="after"
+                :href="localePath('/products/' + hrefAfter)"
+                icon="arrow-right-circle"
+                light
+                right
+              />
+            </template>
+          </div>
+        </template>
       </b-col>
     </b-row>
   </b-container>
@@ -26,21 +63,19 @@
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      required: true,
-      default: ''
-    },
-    image: {
-      type: String,
-      required: false,
-      default: ''
-    },
-    folder: {
-      type: String,
-      required: false,
-      default: 'hero'
-    }
+    // default
+    title: { type: String, required: false, default: '' },
+    image: { type: String, required: false, default: '' },
+    folder: { type: String, required: false, default: 'hero' },
+
+    // buttons
+    before: { type: String, required: false, default: '' },
+    after: { type: String, required: false, default: '' },
+    hrefBefore: { type: String, required: false, default: '' },
+    hrefAfter: { type: String, required: false, default: '' },
+
+    // atributes
+    video: { type: Boolean, required: false, default: false }
   }
 }
 </script>
@@ -60,7 +95,8 @@ export default {
     width: 100%;
   }
 
-  img {
+  img,
+  video {
     object-fit: cover;
     filter: blur(3px) grayscale(1);
     width: 100%;
@@ -127,51 +163,6 @@ export default {
 
   &__actions {
     padding-top: 2rem;
-
-    ::v-deep .custom-button {
-      @include media-breakpoint-down(md) {
-        margin-top: 1rem;
-        margin-left: 0;
-      }
-
-      @include media-breakpoint-down(sm) {
-        width: 100%;
-      }
-
-      .custom-button__title {
-        @include media-breakpoint-down(md) {
-          width: 100%;
-        }
-      }
-
-      &:hover {
-        background: $light;
-      }
-
-      &--light {
-        background: $light;
-
-        .custom-button__title {
-          color: #fff;
-
-          &:hover {
-            color: $secondary;
-          }
-        }
-
-        .custom-button__box--title {
-          color: #fff;
-
-          &:hover {
-            color: $secondary;
-          }
-        }
-
-        &:hover {
-          background: #fff;
-        }
-      }
-    }
   }
 }
 </style>

@@ -5,10 +5,24 @@
       :title="$t('about.title')"
     />
 
-    <b-container class="contact d-flex justify-content-center">
-      <b-row>
+    <b-container class="about">
+      <b-row cols="1">
         <b-col>
           <p>{{ $t('about.description') }}</p>
+        </b-col>
+      </b-row>
+
+      <b-row cols="3" class="pt-5">
+        <b-col class="about__image">
+          <CustomImage image="niob_building_foto" folder="hero" lightbox />
+        </b-col>
+
+        <b-col class="about__image">
+          <CustomImage image="niob_building_foto" folder="hero" lightbox />
+        </b-col>
+
+        <b-col class="about__image">
+          <CustomImage image="niob_building_foto" folder="hero" lightbox />
         </b-col>
       </b-row>
     </b-container>
@@ -43,7 +57,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.contact {
+.about {
   padding: 4rem 0;
+
+  @include media-breakpoint-down(sm) {
+    padding: 3rem;
+  }
+
+  &__image {
+    object-fit: cover;
+  }
 }
 </style>

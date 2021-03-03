@@ -25,6 +25,7 @@
     "noDownload": "No downloads.",
     "noTerms": "Unfortunately, the terms and conditions are not currently available.",
     "noFAQ": "So far, no questions have been asked that we would list here.",
+    "gallery": "Gallery",
     "header": {
       "navLinks": {
         "products": {
@@ -278,7 +279,7 @@
       "title": "Production of stainless steel fittings",
       "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam sed tellus id magna elementum tincidunt. Integer lacinia.",
       "button_1": "Products",
-      "button_2": "Catalog"
+      "button_2": "Catalogs"
     },
     "error": {
       "title": "404",

@@ -1,6 +1,6 @@
 <template>
   <div class="news">
-    <HeroBasicVideo
+    <HeroBasic
       video="https://st3.depositphotos.com/1040130/13520/v/600/depositphotos_135207336-stock-video-technical-equipment-at-diary-plant.mp4"
       :title="$t('news.title')"
     />
@@ -68,7 +68,7 @@
 <script>
 export default {
   components: {
-    HeroBasicVideo: () => import('~/components/hero/HeroBasicVideo')
+    HeroBasic: () => import('~/components/hero/HeroBasic')
   },
 
   i18n: {

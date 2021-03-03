@@ -112,7 +112,18 @@
         "schemes": [
         ],
         "hero": "04_regulacni_armatury_header",
-        "preview": "04_regulacni_armatury"
+        "preview": "04_regulacni_armatury",
+        "gallery" : [
+          {
+            "image": "04_regulacni_armatury"
+          },
+          {
+            "image": "04_regulacni_armatury"
+          },
+          {
+            "image": "04_regulacni_armatury"
+          }
+        ]
       },
       {
         "id": "special-fittings",
@@ -135,7 +146,15 @@
         "schemes": [
         ],
         "hero": "05_specialni_armatury_header",
-        "preview": "05_specialni_armatury"
+        "preview": "05_specialni_armatury",
+        "gallery" : [
+          {
+            "image": "04_regulacni_armatury"
+          },
+          {
+            "image": "04_regulacni_armatury"
+          }
+        ]
       },
       {
         "id": "manholes-and-manholes",

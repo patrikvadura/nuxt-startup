@@ -15,7 +15,7 @@
         <div class="noPage__content--action">
           <CustomButton
             :title="$t('global.goBack')"
-            secondary
+            gray
             onclick="history.back(-1)"
           />
 
