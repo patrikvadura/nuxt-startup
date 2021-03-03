@@ -1,8 +1,12 @@
 <template>
   <div class="products">
-    <HeroBasic
+    <HeroBasicBeforeAfter
       :image="post.hero"
       :title="post.title"
+      :before="post.before"
+      :after="post.after"
+      :href-before="post.hrefBefore"
+      :href-after="post.hrefAfter"
     />
 
     <b-container class="products__content">
@@ -102,7 +106,7 @@
 <script>
 export default {
   components: {
-    HeroBasic: () => import('~/components/hero/HeroBasic'),
+    HeroBasicBeforeAfter: () => import('~/components/hero/HeroBasicBeforeAfter'),
     ProductsDownload: () => import('~/components/products/ProductsDownload')
   },
 

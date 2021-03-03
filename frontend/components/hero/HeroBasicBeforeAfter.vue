@@ -3,14 +3,7 @@
     fluid
     class="p-0 m-0 hero"
   >
-    <video
-      v-lazy-load
-      :src="video"
-      autoplay
-      loop
-      playsinline
-      muted
-    />
+    <CustomImage :image="image" :folder="folder" />
 
     <b-row
       cols="1"
@@ -25,6 +18,28 @@
             {{ title }}
           </h1>
         </div>
+
+        <div class="hero__actions d-flex flex-md-row flex-column align-items-center justify-content-center">
+          <template v-if="before.length > 1">
+            <CustomButton
+              :title="before"
+              :href="localePath('/products/' + hrefBefore)"
+              icon="arrow-left-circle"
+              class="mr-0 mr-md-1 mb-2 mb-md-0"
+              light
+            />
+          </template>
+
+          <template v-if="after.length > 1">
+            <CustomButton
+              :title="after"
+              :href="localePath('/products/' + hrefAfter)"
+              icon="arrow-right-circle"
+              light
+              right
+            />
+          </template>
+        </div>
       </b-col>
     </b-row>
   </b-container>
@@ -32,16 +47,13 @@
 
 <script>
 export default {
-  components: {
-  },
-
   props: {
     title: {
       type: String,
       required: true,
       default: ''
     },
-    video: {
+    image: {
       type: String,
       required: false,
       default: ''
@@ -49,7 +61,27 @@ export default {
     folder: {
       type: String,
       required: false,
-      default: 'fakeapi'
+      default: 'hero'
+    },
+    before: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    after: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    hrefBefore: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    hrefAfter: {
+      type: String,
+      required: false,
+      default: ''
     }
   }
 }
@@ -70,15 +102,15 @@ export default {
     width: 100%;
   }
 
-  video {
+  img {
     object-fit: cover;
-    filter: blur(1px) grayscale(1);
+    filter: blur(3px) grayscale(1);
     width: 100%;
     height: 40vh;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .1;
+    opacity: .15;
 
     @include media-breakpoint-down(sm) {
       width: 100%;
@@ -137,51 +169,6 @@ export default {
 
   &__actions {
     padding-top: 2rem;
-
-    ::v-deep .custom-button {
-      @include media-breakpoint-down(md) {
-        margin-top: 1rem;
-        margin-left: 0;
-      }
-
-      @include media-breakpoint-down(sm) {
-        width: 100%;
-      }
-
-      .custom-button__title {
-        @include media-breakpoint-down(md) {
-          width: 100%;
-        }
-      }
-
-      &:hover {
-        background: $light;
-      }
-
-      &--light {
-        background: $light;
-
-        .custom-button__title {
-          color: #fff;
-
-          &:hover {
-            color: $secondary;
-          }
-        }
-
-        .custom-button__box--title {
-          color: #fff;
-
-          &:hover {
-            color: $secondary;
-          }
-        }
-
-        &:hover {
-          background: #fff;
-        }
-      }
-    }
   }
 }
 </style>

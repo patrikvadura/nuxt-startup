@@ -20,6 +20,7 @@
           <p>
             {{ $t('global.hero.description') }}
           </p>
+
           <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
             <CustomButton
               :title="$t('global.hero.button_1')"
@@ -31,7 +32,6 @@
               icon="book-half"
               class="ml-0 ml-md-1 mt-2 mt-md-0"
               light
-              bootstrap
             />
           </div>
         </div>
@@ -100,7 +100,7 @@ export default {
   }
 
   .overlay {
-    background: rgb(13, 50, 79, .8);
+    background: rgba(0, 71, 152, .8);
   }
 
   &__content {

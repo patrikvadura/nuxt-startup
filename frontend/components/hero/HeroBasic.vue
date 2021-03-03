@@ -62,13 +62,13 @@ export default {
 
   img {
     object-fit: cover;
-    filter: blur(1px) grayscale(1);
+    filter: blur(3px) grayscale(1);
     width: 100%;
     height: 40vh;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .15;
+    opacity: .25;
 
     @include media-breakpoint-down(sm) {
       width: 100%;
@@ -89,7 +89,7 @@ export default {
   }
 
   .overlay {
-    background: rgba(21, 34, 49, .8);
+    background: rgba(0, 71, 152, .8);
   }
 
   &__content {

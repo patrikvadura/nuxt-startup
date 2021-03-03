@@ -134,25 +134,30 @@
         </b-col>
       </b-row>
 
-      <b-row class="downloads__catalog">
-        <b-col md="8" cols="12">
-          <h3>
-            {{ $t('downloads.downloadComplet') }}
-          </h3>
+      <div class="downloads__catalog">
+        <div class="downloads__overlay">
+          <b-row>
+            <b-col md="8" cols="12">
+              <h3>
+                {{ $t('downloads.downloadComplet') }}
+              </h3>
 
-          <h5>
-            {{ $t('downloads.downloadCompletDescription') }}
-          </h5>
-        </b-col>
+              <h5>
+                {{ $t('downloads.downloadCompletDescription') }}
+              </h5>
+            </b-col>
 
-        <b-col md="4" cols="12" class="d-flex justify-content-end align-items-center">
-          <CustomButton
-            :title="$t('global.download')"
-            href="/catalog/00_niob_fluid_komplet.pdf"
-            download
-          />
-        </b-col>
-      </b-row>
+            <b-col md="4" cols="12" class="d-flex justify-content-end align-items-center">
+              <CustomButton
+                :title="$t('global.download')"
+                href="/catalog/00_niob_fluid_komplet.pdf"
+                download
+                secondary
+              />
+            </b-col>
+          </b-row>
+        </div>
+      </div>
 
       <b-row class="downloads__footer">
         <b-col cols="12" class="d-flex flex-column flex-md-row justify-content-center">
@@ -232,10 +237,8 @@ export default {
   }
 
   &__catalog {
-    margin-top: 4rem;
-    padding: 4rem 3rem;
-    background: rgba(0, 0, 0, .05);
-    color: $primary;
+    background-image: url('~assets/images/banners/banner_downloads_catalog_bw.jpg');
+    color: #fff;
 
     @include border-radius(1rem);
 
@@ -243,10 +246,21 @@ export default {
       padding: 2rem 2rem;
     }
 
+    h3 {
+      font-weight: 600;
+    }
+
     h5 {
       font-weight: 400;
-      color: $secondary;
     }
+  }
+
+  &__overlay {
+    margin-top: 4rem;
+    padding: 4rem 3rem;
+    background: rgba(0, 71, 152, .8);
+
+    @include border-radius(1rem);
   }
 
   &__footer {

@@ -10,24 +10,25 @@
   >
     <template v-if="icon">
       <div class="custom-button__box">
-        <template v-if="bootstrap">
+        <template v-if="!right">
           <b-icon
-            class="custom-button__box--icon"
+            class="custom-button__box--icon-left"
+            :icon="icon"
+            :style="{ color: `#fff` }"
+          />
+
+          {{ title }}
+        </template>
+
+        <template v-else>
+          {{ title }}
+
+          <b-icon
+            class="custom-button__box--icon-right"
             :icon="icon"
             :style="{ color: `#fff` }"
           />
         </template>
-
-        <template v-else>
-          <img
-            :src="require(`~/assets/images/icons/white/${icon}.svg`)"
-            title=""
-            :alt="icon"
-            class="custom-button__box--icon"
-          >
-        </template>
-
-        {{ title }}
       </div>
     </template>
 
@@ -56,7 +57,9 @@ export default {
 
     // icons
     icon: { type: String, required: false, default: '' },
-    bootstrap: { type: Boolean, required: false, default: false },
+
+    // positioning
+    right: { type: Boolean, required: false, default: false },
 
     // sizing
     wide: { type: Boolean, required: false, default: false },
@@ -147,7 +150,14 @@ button:focus {
     &--icon {
       display: inline-flex;
       width: 1rem;
-      margin-right: .5rem;
+
+      &-right {
+        margin-left: .5rem;
+      }
+
+      &-left {
+        margin-right: .5rem;
+      }
     }
   }
 
@@ -164,6 +174,11 @@ button:focus {
   &--light {
     background: $lightWhite;
     color: #fff;
+
+    &:hover {
+      background: $secondary;
+      color: #fff;
+    }
   }
 
   &--gray {
