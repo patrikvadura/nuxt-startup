@@ -5,7 +5,7 @@
       :title="$t('faq.title')"
     />
 
-    <template v-if="!numberItems.length > 0">
+    <template v-if="numberItems.length > 0">
       <b-container class="faq">
         <b-row class="d-flex justify-content-center">
           <div class="accordion" role="tablist">
