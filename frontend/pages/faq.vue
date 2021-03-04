@@ -5,69 +5,84 @@
       :title="$t('faq.title')"
     />
 
-    <b-container class="faq">
-      <b-row class="d-flex justify-content-center">
-        <div class="accordion" role="tablist">
-          <b-card
-            v-for="question in numberItems"
-            :key="question.id"
-            no-body
-            class="mb-1"
-          >
-            <b-card-header header-tag="header" class="p-1" role="tab">
-              <CustomButton
-                v-b-toggle="'question-' + question.id"
-                :title="question.title"
-                gray
-                wide
-                height-mobile
-              />
-            </b-card-header>
-            <b-collapse
-              :id="'question-' + question.id"
-              visible
-              accordion="my-accordion"
-              role="tabpanel"
+    <template v-if="!numberItems.length > 0">
+      <b-container class="faq">
+        <b-row class="d-flex justify-content-center">
+          <div class="accordion" role="tablist">
+            <b-card
+              v-for="question in numberItems"
+              :key="question.id"
+              no-body
+              class="mb-1"
             >
-              <b-card-body>
-                <b-card-text>
-                  {{ question.description }}
+              <b-card-header header-tag="header" class="p-1" role="tab">
+                <CustomButton
+                  v-b-toggle="'question-' + question.id"
+                  :title="question.title"
+                  gray
+                  wide
+                  height-mobile
+                />
+              </b-card-header>
+              <b-collapse
+                :id="'question-' + question.id"
+                visible
+                accordion="my-accordion"
+                role="tabpanel"
+              >
+                <b-card-body>
+                  <b-card-text>
+                    {{ question.description }}
 
-                  <span class="faq__answered">
-                    {{ $t('faq.answeredBy') }}
-                  </span>
-                </b-card-text>
-              </b-card-body>
-            </b-collapse>
-          </b-card>
-        </div>
-
-        <CustomButton
-          :title="$t('global.showMore')"
-          class="mt-5"
-          @click="limit = null"
-        />
-      </b-row>
-
-      <b-row>
-        <b-col class="faq__footer">
-          <div class="pr-2">
-            <CustomIcon
-              name="chat-dots-fill"
-              scale="2"
-              color="#00a6eb"
-              bootstrap
-            />
+                    <span class="faq__answered">
+                      {{ $t('faq.answeredBy') }}
+                    </span>
+                  </b-card-text>
+                </b-card-body>
+              </b-collapse>
+            </b-card>
           </div>
 
-          <nuxt-link :to="localePath('/contact')">
-            <h3>
-              {{ $t('global.noFind') }}
-            </h3>
-          </nuxt-link>
-        </b-col>
-      </b-row>
-    </b-container>
+          <CustomButton
+            :title="$t('global.showMore')"
+            class="mt-5"
+            @click="limit = null"
+          />
+        </b-row>
+
+        <b-row>
+          <b-col class="faq__footer">
+            <div class="pr-2">
+              <CustomIcon
+                name="chat-dots-fill"
+                scale="2"
+                color="#00a6eb"
+                bootstrap
+              />
+            </div>
+
+            <nuxt-link :to="localePath('/contact')">
+              <h3>
+                {{ $t('global.noFind') }}
+              </h3>
+            </nuxt-link>
+          </b-col>
+        </b-row>
+      </b-container>
+    </template>
+
+    <template v-else>
+      <b-container class="faq__noContent">
+        <b-row>
+          <h4>
+            {{ $t('global.noFAQ') }}
+            <nuxt-link :to="localePath('/contact')">
+              {{ $t('global.noFAQBeFisrt') }}
+            </nuxt-link>
+          </h4>
+        </b-row>
+      </b-container>
+    </template>
   </div>
 </template>
 
@@ -110,15 +125,15 @@ export default {
 
 <style lang="scss" scoped>
 .faq {
-  padding: 4rem 0;
+  padding: $spacer-xl 0;
 
   @include media-breakpoint-down(sm) {
-    padding: 3rem 2rem;
+    padding: $spacer-lg;
   }
 
   &__answered {
-    padding-top: 2rem;
-    font-weight: 700;
+    padding-top: $spacer-lg;
+    font-weight: $font-weight-bold;
     color: $primary;
 
     @include positionRight;
@@ -128,7 +143,7 @@ export default {
     border: none;
 
     &-header {
-      background-color: #fff;
+      background-color: $white;
       border: none;
     }
   }
@@ -139,21 +154,40 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 5rem;
-    padding: 0 2rem;
+    margin-top: $spacer-xl + 1;
+    padding: 0 $spacer-md;
 
     @include media-breakpoint-down(sm) {
       flex-direction: column;
       justify-content: center;
-      margin-top: 2rem;
+      margin-top: $spacer-xl;
     }
 
     h3 {
-      font-weight: 700;
+      font-weight: $font-weight-bold;
 
       @include media-breakpoint-down(sm) {
-        padding-top: 1rem;
+        padding-top: $spacer-md;
       }
+    }
+  }
+
+  &__noContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: $spacer-xl + 2 0;
+
+    @include media-breakpoint-down(sm) {
+      padding: $spacer-xl + 2 $spacer-lg;
+    }
+
+    a {
+      padding-top: $spacer-md;
+      display: block;
+      font-weight: $font-weight-bold;
+      color: $primary;
     }
   }
 }

@@ -12,18 +12,12 @@
         </b-col>
       </b-row>
 
-      <b-row cols="3" class="pt-5">
-        <b-col class="about__image">
-          <CustomImage image="niob_building_foto" folder="hero" lightbox />
-        </b-col>
-
-        <b-col class="about__image">
-          <CustomImage image="niob_building_foto" folder="hero" lightbox />
-        </b-col>
-
-        <b-col class="about__image">
-          <CustomImage image="niob_building_foto" folder="hero" lightbox />
-        </b-col>
+      <b-row cols-md="3" cols="1" class="pt-5">
+        <div v-for="item in $t('about.gallery')" :key="item.image">
+          <b-col class="about__image">
+            <CustomImage :image="item.image" :folder="item.folder" lightbox />
+          </b-col>
+        </div>
       </b-row>
     </b-container>
   </div>
@@ -58,14 +52,18 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-  padding: 4rem 0;
+  padding: $spacer-xl 0;
 
   @include media-breakpoint-down(sm) {
-    padding: 3rem;
+    padding: $spacer-xl - 1;
   }
 
   &__image {
     object-fit: cover;
+
+    @include media-breakpoint-down(sm) {
+      padding: $spacer $spacer-md;
+    }
   }
 }
 </style>

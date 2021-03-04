@@ -7,10 +7,8 @@
 
     <b-container class="contact">
       <ContactForm />
-    </b-container>
 
-    <b-container class="contact">
-      <ContactAddress />
+      <ContactAddress class="mt-10" />
     </b-container>
 
     <Gmaps />
@@ -49,6 +47,6 @@ export default {
 
 <style lang="scss" scoped>
 .contact {
-  padding: 4rem 0;
+  padding: $spacer-xl 0;
 }
 </style>

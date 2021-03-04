@@ -1,5 +1,6 @@
 <template>
   <img
+    v-if="image.length > 1 ? image : 'noImage'"
     ref="image"
     v-lazy-load
     :data-fancybox="lightbox ? 'gallery': null"

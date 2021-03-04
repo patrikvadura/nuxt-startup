@@ -97,13 +97,13 @@ export default {
 
 <style lang="scss" scoped>
 @mixin heightBtn {
-  margin: .5rem 0 0 0;
+  margin: $spacer 0 0 0;
   height: 3.5rem;
-  line-height: 1.3rem;
+  line-height: $line-height-base;
 }
 
 @mixin widthBtn {
-  margin: .5rem 0 0 0;
+  margin: $spacer 0 0 0;
   width: 100%;
 }
 
@@ -117,12 +117,12 @@ button:focus {
   align-items: center;
   justify-content: center;
   height: 2.5rem;
-  line-height: 2.5rem;
-  font-size: 1rem;
-  font-weight: 600;
+  line-height: $line-height-base;
+  font-size: $h5-font-size;
+  font-weight: $font-weight-bold;
   text-align: center;
-  padding: .5rem 1.5rem;
-  color: #fff;
+  padding: $spacer 1.5rem;
+  color: $white;
   border: none;
   background: $primary;
   cursor: pointer;
@@ -132,7 +132,7 @@ button:focus {
 
   &:hover {
     background: $secondary;
-    color: #fff;
+    color: $white;
   }
 
   // atributes
@@ -149,14 +149,14 @@ button:focus {
 
     &--icon {
       display: inline-flex;
-      width: 1rem;
+      width: $spacer-md;
 
       &-right {
-        margin-left: .5rem;
+        margin-left: $spacer;
       }
 
       &-left {
-        margin-right: .5rem;
+        margin-right: $spacer;
       }
     }
   }
@@ -164,7 +164,7 @@ button:focus {
   // color variables
   &--secondary {
     background: $secondary;
-    color: #fff;
+    color: $white;
 
     &:hover {
       background: $primary;
@@ -172,17 +172,17 @@ button:focus {
   }
 
   &--light {
-    background: $lightWhite;
-    color: #fff;
+    background: $white-05;
+    color: $white;
 
     &:hover {
       background: $secondary;
-      color: #fff;
+      color: $white;
     }
   }
 
   &--gray {
-    background: rgba(0, 0, 0, .05);
+    background: $black-05;
     color: $primary;
 
     &:hover {
