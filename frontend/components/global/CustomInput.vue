@@ -23,6 +23,17 @@
       </div>
     </template>
 
+    <template v-else-if="file">
+      <div class="custom-input__file">
+        <b-form-file
+          name="file"
+          type="file"
+          :placeholder="placeholder"
+          :browse-text="$t('global.browseFile')"
+        />
+      </div>
+    </template>
+
     <template v-else>
       <label v-if="label" :for="name" class="custom-input__label">
         {{ label }}
@@ -49,56 +60,36 @@
 <script>
 export default {
   props: {
-    name: {
-      type: String,
-      required: true
-    },
-    type: {
-      type: String,
-      required: false,
-      default: 'text'
-    },
-    label: {
-      type: String,
-      required: false,
-      default: ''
-    },
-    placeholder: {
-      type: String,
-      required: false,
-      default: ''
-    },
-    disabled: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    height: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    textarea: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    rows: {
-      type: String,
-      required: false,
-      default: '3'
-    }
+    // default
+    name: { type: String, required: false, default: '' },
+    type: { type: String, required: false, default: 'text' },
+    label: { type: String, required: false, default: '' },
+    placeholder: { type: String, required: false, default: '' },
+
+    // atributes
+    disabled: { type: Boolean, required: false, default: false },
+    textarea: { type: Boolean, required: false, default: false },
+    file: { type: Boolean, required: false, default: false },
+
+    // sizing
+    height: { type: Boolean, required: false, default: false },
+    rows: { type: String, required: false, default: '3' }
   },
+
   data () {
     return {
       focused: false
     }
   },
+
   computed: {
     classes () {
       return {
+        // atributes
         'custom-input__input--disabled': this.disabled,
         'custom-input__input--focused': this.focused,
+
+        // sizing
         'custom-input__input--height': this.height
       }
     }
@@ -108,61 +99,62 @@ export default {
 
 <style lang="scss" scoped>
 .custom-input {
+  // default
   &__label {
     display: block;
     text-align: left;
-    font-size: .9rem;
-    font-weight: 300;
-    margin-left: .75rem;
+    font-size: $base-font-size;
+    font-weight: $font-weight-light;
+    margin-left: $spacer;
   }
 
   &__input {
     display: flex;
-    border-radius: .5rem;
-    height: 2rem;
+    height: $spacer-lg;
     width: 100%;
     overflow: hidden;
     background: white;
     transition: all 3ms;
 
     @include shadow (.1);
+    @include border-radius($spacer);
 
     input {
       width: 100%;
-      height: 2rem;
-      line-height: 2rem;
+      height: $spacer-lg;
+      line-height: $line-height-base;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      font-size: 1rem;
-      color: #495057;
-      padding: 0 1.25rem;
+      font-size: $base-font-size;
+      color: $gray;
+      padding: 0 $spacer-md + $spacer-sm;
       border: 0;
       background: transparent;
     }
 
     &--focused {
-      border: 2px solid $primary;
+      border: $spacer-xs solid $primary;
 
       input::-webkit-input-placeholder {
         opacity: .7;
-        color: #495057;
+        color: $gray-75;
       }
 
       input {
         border: 0;
         box-shadow: none;
         outline: 0;
-        color: #495057;
+        color: $gray;
       }
     }
 
     &--error {
-      background: red;
+      background: $error;
     }
 
     &--height {
-      height: 4rem;
+      height: $spacer-xl;
       width: 100%;
 
       input {
@@ -172,52 +164,74 @@ export default {
     }
   }
 
+  &__file {
+    padding-top: $spacer;
+
+    ::v-deep .custom-file-label {
+      position: absolute;
+      height: $spacer-lg;
+      font-size: $base-font-size;
+      font-weight: $font-weight-base;
+      line-height: $line-height-md;
+      color: $gray-75;
+      background: $white;
+      border: none;
+      cursor: pointer;
+      overflow-y: hidden;
+
+      @include shadow(.1);
+      @include border-radius(.5rem);
+
+      &::after {
+        height: $spacer-lg;
+        padding: $spacer $spacer-md;
+        line-height: $line-height-base;
+        color: $gray-75;
+        font-weight: $font-weight-bold;
+        background-color: $black-05;
+      }
+    }
+  }
+
   &__textarea {
     display: flex;
-    border-radius: .5rem;
     overflow: hidden;
     background: white;
     transition: all 3ms;
 
+    @include border-radius($spacer);
     @include shadow(.1);
 
     textarea {
       white-space: nowrap;
-      font-size: 1rem;
-      color: #495057;
-      padding: 1rem 1.25rem;
+      font-size: $base-font-size;
+      color: $gray;
+      padding: $spacer-md $spacer-md + $spacer-sm;
       border: 0;
       background: transparent;
     }
 
     &--focused {
-      border: 2px solid $primary;
+      border: $spacer-xs solid $primary;
 
       input::-webkit-input-placeholder {
         opacity: .7;
-        color: #495057;
-      }
-
-      input {
-        border: 0;
-        box-shadow: none;
-        outline: 0;
-        color: #495057;
+        color: $gray-75;
       }
     }
 
     &--error {
-      background: red;
+      background: $error;
     }
   }
 
   &__error-message {
-    color: $primary;
-    margin-top: .5rem;
+    color: $error;
+    margin-top: $spacer;
   }
 }
 
 input::-webkit-input-placeholder {
-  color: #495057;
+  color: $gray-75;
 }
 </style>

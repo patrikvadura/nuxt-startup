@@ -5,17 +5,29 @@
       :title="$t('terms.title')"
     />
 
-    <b-container class="terms d-flex justify-content-center">
-      <b-row cols="1">
-        <b-col>
-          <div v-html="content" />
-        </b-col>
+    <template v-if="content.length > 1">
+      <b-container class="terms d-flex justify-content-center">
+        <b-row cols="1">
+          <b-col>
+            <div v-html="content" />
+          </b-col>
 
-        <b-col class="mt-5 d-flex justify-content-center">
-          <CustomButton :title="$t('global.showMore')" @click="limit = null" />
-        </b-col>
-      </b-row>
-    </b-container>
+          <b-col class="mt-5 d-flex justify-content-center">
+            <CustomButton :title="$t('global.showMore')" @click="limit = null" />
+          </b-col>
+        </b-row>
+      </b-container>
+    </template>
+
+    <template v-else>
+      <b-container class="terms__noContent">
+        <b-row>
+          <h4>
+            {{ $t('global.noTerms') }}
+          </h4>
+        </b-row>
+      </b-container>
+    </template>
   </div>
 </template>
 
@@ -65,16 +77,16 @@ export default {
 
 <style lang="scss" scoped>
 .terms {
-  padding: 4rem 0;
+  padding: $spacer-xl 0;
 
   @include media-breakpoint-down(sm) {
-    padding: 3rem 2rem;
+    padding: $spacer-xl - 1 $spacer-lg;
   }
 
   ::v-deep h2 {
-    padding-top: 3rem;
-    font-size: 1.75rem;
-    font-weight: 700;
+    padding-top: $spacer-xl - 1;
+    font-size: $h3-font-size;
+    font-weight: $font-weight-bold;
     color: $primary;
 
     &:first-child {
@@ -85,6 +97,18 @@ export default {
   ::v-deep p,
   ::v-deep ol li {
     text-align: justify;
+  }
+
+  &__noContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: $spacer-xl + 2 0;
+
+    @include media-breakpoint-down(sm) {
+      padding: $spacer-xl + 2 $spacer-lg;
+    }
   }
 }
 </style>

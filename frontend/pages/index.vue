@@ -13,7 +13,7 @@
 <script>
 export default {
   components: {
-    Hero: () => import('~/components/hero/HeroVideo'),
+    Hero: () => import('~/components/hero/HeroHomepage'),
     ProductSlider: () => import('~/components/homepage/ProductSlider'),
     HomepageFeatures: () => import('~/components/homepage/HomepageFeatures')
   },

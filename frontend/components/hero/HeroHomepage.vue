@@ -1,29 +1,45 @@
 <template>
-  <b-container
-    fluid
-    class="p-0 m-0 hero"
-  >
+  <b-container fluid class="p-0 m-0 hero">
     <video
       v-lazy-load
-      :src="video"
+      src="https://st4.depositphotos.com/5265263/19876/v/600/depositphotos_198767068-stock-video-metal-factory-equipment-pipes-in.mp4"
       autoplay
       loop
       playsinline
       muted
     />
 
-    <b-row
-      cols="1"
-      align-v="center"
-      class="text-left hero__content overlay"
-    >
+    <b-row cols="1" align-v="center" class="text-left hero__content overlay">
       <b-col
         class="px-4 text-center"
       >
         <div class="d-flex align-items-center flex-column">
           <h1>
-            {{ title }}
+            {{ $t('global.hero.title') }}
           </h1>
+          <p>
+            {{ $t('global.hero.description') }}
+          </p>
+
+          <div class="hero__actions d-flex align-items-center flex-md-row flex-column">
+            <template v-if="$t('global.hero.button_1').length > 1">
+              <CustomButton
+                :title="$t('global.hero.button_1')"
+                :href="localePath('global')"
+                secondary
+              />
+            </template>
+
+            <template v-if="$t('global.hero.button_2').length > 1">
+              <CustomButton
+                :title="$t('global.hero.button_2')"
+                :href="localePath('/downloads/catalog')"
+                icon="book-half"
+                class="ml-0 ml-md-1 mt-2 mt-md-0"
+                light
+              />
+            </template>
+          </div>
         </div>
       </b-col>
     </b-row>
@@ -31,25 +47,15 @@
 </template>
 
 <script>
+
 export default {
   components: {
   },
 
-  props: {
-    title: {
-      type: String,
-      required: true,
-      default: ''
-    },
-    video: {
-      type: String,
-      required: false,
-      default: ''
-    },
-    folder: {
-      type: String,
-      required: false,
-      default: 'fakeapi'
+  data () {
+    return {
+      hero: [],
+      error: null
     }
   }
 }
@@ -61,24 +67,25 @@ export default {
   position: relative;
   text-align: center;
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   object-fit: cover;
-  z-index: 0;
-  background: $secondary;
 
   @include media-breakpoint-down(sm) {
     width: 100%;
+    height: 90vh;
   }
 
-  video {
+  video,
+  img {
+    background: $secondary;
     object-fit: cover;
     filter: blur(1px) grayscale(1);
     width: 100%;
-    height: 40vh;
+    height: 60vh;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: .1;
+    opacity: .8;
 
     @include media-breakpoint-down(sm) {
       width: 100%;
@@ -103,7 +110,7 @@ export default {
   }
 
   &__content {
-    height: 40vh;
+    height: 60vh;
 
     @include media-breakpoint-down(sm) {
       height: 100%;
@@ -111,8 +118,7 @@ export default {
 
     h1 {
       color: #fff;
-      font-size: 3rem;
-      max-width: 50rem;
+      font-size: 4rem;
 
       @include media-breakpoint-down(sm) {
         font-size: 2.25rem;
@@ -137,51 +143,16 @@ export default {
 
   &__actions {
     padding-top: 2rem;
-
-    ::v-deep .custom-button {
-      @include media-breakpoint-down(md) {
-        margin-top: 1rem;
-        margin-left: 0;
-      }
-
-      @include media-breakpoint-down(sm) {
-        width: 100%;
-      }
-
-      .custom-button__title {
-        @include media-breakpoint-down(md) {
-          width: 100%;
-        }
-      }
-
-      &:hover {
-        background: $light;
-      }
-
-      &--light {
-        background: $light;
-
-        .custom-button__title {
-          color: #fff;
-
-          &:hover {
-            color: $secondary;
-          }
-        }
-
-        .custom-button__box--title {
-          color: #fff;
-
-          &:hover {
-            color: $secondary;
-          }
-        }
-
-        &:hover {
-          background: #fff;
-        }
-      }
-    }
   }
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
 }
 </style>

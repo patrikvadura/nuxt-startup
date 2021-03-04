@@ -1,3 +1,4 @@
+// breakpoints
 $grid-breakpoints: (
   xs: 0,
   sm: 576px,
@@ -13,6 +14,7 @@ $container-max-widths: (
   xl: 1200px
 );
 
+// spacing
 $spacer: .5rem !default;
 $spacers: () !default;
 
@@ -25,23 +27,131 @@ $spacers: map-merge(
     3: ($spacer * 3),
     4: ($spacer * 4),
     5: ($spacer * 5),
-    6: ($spacer * 6)
+    6: ($spacer * 6),
+    7: ($spacer * 7),
+    8: ($spacer * 8),
+    9: ($spacer * 9),
+    10: ($spacer * 10),
   ),
   $spacers
 );
 
+$spacer-xs: 2px !default;
+$spacer-sm: .25rem !default;
+$spacer-md: 1rem !default;
+$spacer-lg: 2rem !default;
+$spacer-xl: 4rem !default;
+
+// colors
+// primary
 $primary: #004798 !default;
+$primary-75: rgb(0, 71, 152, .75) !default;
+$primary-50: rgb(0, 71, 152, .5) !default;
+$primary-25: rgb(0, 71, 152, .25) !default;
+$primary-10: rgb(0, 71, 152, .1) !default;
+$primary-05: rgb(0, 71, 152, .05) !default;
+
+// secondary
 $secondary: #00a6eb !default;
+$secondary-75: rgba(0, 166, 235, .75) !default;
+$secondary-50: rgba(0, 166, 235, .5) !default;
+$secondary-25: rgba(0, 166, 235, .25) !default;
+$secondary-10: rgba(0, 166, 235, .1) !default;
+$secondary-05: rgba(0, 166, 235, .05) !default;
+
+// typo
+$typo: #1d1d1d !default;
+$typo-75: rgba(29, 29, 29, .75) !default;
+$typo-50: rgba(29, 29, 29, .5) !default;
+$typo-25: rgba(29, 29, 29, .25) !default;
+$typo-10: rgba(29, 29, 29, .1) !default;
+$typo-05: rgba(29, 29, 29, .05) !default;
+
+// black
+$black: #000 !default;
+$black-75: rgba(0, 0, 0, .75) !default;
+$black-50: rgba(0, 0, 0, .5) !default;
+$black-25: rgba(0, 0, 0, .25) !default;
+$black-10: rgba(0, 0, 0, .1) !default;
+$black-05: rgba(0, 0, 0, .05) !default;
+
+// gray
+$gray: rgba(81, 81, 81, 1) !default;
+$gray-75: rgba(81, 81, 81, .75) !default;
+$gray-50: rgba(81, 81, 81, .5) !default;
+$gray-25: rgba(81, 81, 81, .25) !default;
+$gray-10: rgba(81, 81, 81, .1) !default;
+$gray-05: rgba(81, 81, 81, .05) !default;
+
+
+// white
+$white: #fff !default;
+$white-75: rgba(255, 255, 255, .75) !default;
+$white-50: rgba(255, 255, 255, .5) !default;
+$white-25: rgba(255, 255, 255, .25) !default;
+$white-10: rgba(255, 255, 255, .1) !default;
+$white-05: rgba(255, 255, 255, .05) !default;
+
+// system
+$error: #db4545 !default;
+$error-75: rgba(219, 69, 69, .75) !default;
+$error-50: rgba(219, 69, 69, .5) !default;
+$error-25: rgba(219, 69, 69, .25) !default;
+$error-10: rgba(219, 69, 69, .1) !default;
+$error-05: rgba(219, 69, 69, .05) !default;
+
+$success: #65a933 !default;
+$success-75: rgba(101, 169, 51, .75) !default;
+$success-50: rgba(101, 169, 51, .5) !default;
+$success-25: rgba(101, 169, 51, .25) !default;
+$success-10: rgba(101, 169, 51, .1) !default;
+$success-05: rgba(101, 169, 51, .05) !default;
+
+$warning: #e5c039 !default;
+$warning-75: rgba(229, 192, 57, .75) !default;
+$warning-50: rgba(229, 192, 57, .5) !default;
+$warning-25: rgba(229, 192, 57, .25) !default;
+$warning-10: rgba(229, 192, 57, .1) !default;
+$warning-05: rgba(229, 192, 57, .05) !default;
+
 $dark: #244994 !default;
 $light: rgba(10, 106, 206, .05) !default;
 $lightWhite: rgba(255, 255, 255, .05) !default;
-$typo: #1d1d1d !default;
 
+// typography
+// font
 $font-primary:  "Roboto", sans-serif; // 100, 300, 400, 500, 700, 900
 $font-condensed: "Roboto Condensed", sans-serif; // 300, 400, 700
 $font-paragraph:  "Roboto", sans-serif;
 $font-buttons:  "Roboto", sans-serif;
+$font-labels:  "Roboto", sans-serif;
 
+// font size
+$h1-font-size: 3rem !default;
+$h2-font-size: 2.5rem !default;
+$h3-font-size: 1.75rem !default;
+$h4-font-size: 1.3rem !default;
+$h5-font-size: 1rem !default;
+$base-font-size: .875rem !default;
+$sm-font-size: .8rem !default;
+$xs-font-size: .5rem !default;
+
+// font weight
+$font-weight-lighter: 100 !default;
+$font-weight-light: 300 !default;
+$font-weight-base: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: 900 !default;
+
+// line height
+$line-height-xs: 1 !default;
+$line-height-sm: 1.25 !default;
+$line-height-base: 1.5 !default;
+$line-height-md: 1.75 !default;
+$line-height-lg: 2 !default;
+$line-height-xl: 3 !default;
+
+// include
 @import 'mixins';
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';

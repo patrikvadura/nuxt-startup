@@ -1,6 +1,6 @@
 <template>
   <div class="products">
-    <HeroBasicBeforeAfter
+    <HeroBasic
       :image="post.hero"
       :title="post.title"
       :before="post.before"
@@ -12,13 +12,34 @@
     <b-container class="products__content">
       <b-row>
         <b-col md="7" cols="12">
-          <p v-html="post.content" />
+          <p v-if="post.content.length > 1" v-html="post.content" />
+          <p v-else v-html="$t('global.noText')" />
         </b-col>
 
         <b-col md="5" cols="12" class="products__content--image">
-          <CustomImage :image="post.preview" folder="products" />
+          <CustomImage v-if="post.preview.length > 1" :image="post.preview" folder="products" lightbox />
         </b-col>
       </b-row>
+
+      <template v-if="post.gallery">
+        <div class="products__gallery">
+          <h4>
+            {{ $t('global.gallery') }}
+          </h4>
+
+          <b-row cols-md="6" cols="12">
+            <div v-for="gallery in post.gallery" :key="gallery.image">
+              <b-col>
+                <CustomImage
+                  :image="gallery.image"
+                  folder="products"
+                  lightbox
+                />
+              </b-col>
+            </div>
+          </b-row>
+        </div>
+      </template>
 
       <b-row class="products__footer">
         <b-col md="3" cols="12" class="products__footer--item">
@@ -106,7 +127,7 @@
 <script>
 export default {
   components: {
-    HeroBasicBeforeAfter: () => import('~/components/hero/HeroBasicBeforeAfter'),
+    HeroBasic: () => import('~/components/hero/HeroBasic'),
     ProductsDownload: () => import('~/components/products/ProductsDownload')
   },
 
@@ -178,6 +199,17 @@ export default {
           height: 15rem;
         }
       }
+    }
+  }
+
+  &__gallery {
+    margin-top: 3rem;
+    padding: 2rem 2rem;
+    background: rgba(0, 0, 0, .05);
+
+    h4 {
+      margin-bottom: 1rem;
+      color: $primary;
     }
   }
 

@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: $white;
   color: $typo;
   margin: 0;
   padding: 0;
@@ -36,8 +36,4 @@ iframe {
   max-width: 100%;
   vertical-align: middle;
   border: 0;
-}
-
-a {
-  text-decoration: none !important;
 }

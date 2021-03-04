@@ -3,7 +3,10 @@
     "posts": [
       {
         "id": "connecting-fittings",
-        "href": "/",
+        "before": "",
+        "after": "Pipe fittings",
+        "hrefBefore": "",
+        "hrefAfter": "pipe-fittings",
         "title": "Connection fittings",
         "content": "It is used to connect pipes, connect valves, flaps or other pipe parts. <br> <b> Fitting </b> is a detachable connection consisting of a threaded neck, conical neck, nut and seal, it can be supplemented with a blind nut. It is available in sizes DN 10 - DN 150. Types of supplied fittings: DIN, ISO, SMS, Hygienic DIN 11853, Aseptic DIN 11864. <br> <b> Clamp joint </b> is an easily detachable joint, connected by a stainless steel sleeve, types of clamp connections: DIN, SMS <br> <b> Flange connection </b> is a detachable connection, which is connected by screws <br> Types of connecting flanges: flat flanges PN10, neck flanges PN10, PN 16, Hygienic <br> neck flanges PN 10 (DIN 11853), Aseptic neck flanges PN 10 (DIN 11864) <br> <b> Hose extensions </b> serve as hose ends and allow the connection of two hoses, or as a transition between pipe and hose. <br> < b> Garola joint </b> is a simple joint of pipes or hoses made of sheet metal by pressing.",
         "downloadItem": {
@@ -47,7 +50,10 @@
       },
       {
         "id": "pipe-fittings",
-        "href": "/",
+        "before": "Connection fittings",
+        "after": "Control fittings",
+        "hrefBefore": "connecting-fittings",
+        "hrefAfter": "control-fittings",
         "title": "Pipe fittings",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {
@@ -79,7 +85,10 @@
       },
       {
         "id": "control-fittings",
-        "href": "/",
+        "before": "Pipe fittings",
+        "after": "Special fittings",
+        "hrefBefore": "pipe-fittings",
+        "hrefAfter": "special-fittings",
         "title": "Control fittings",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {
@@ -107,7 +116,10 @@
       },
       {
         "id": "special-fittings",
-        "href": "/",
+        "before": "Control fittings",
+        "after": "Manholes and manholes",
+        "hrefBefore": "control-fittings",
+        "hrefAfter": "manholes-and-manholes",
         "title": "Special fittings",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {
@@ -127,7 +139,10 @@
       },
       {
         "id": "manholes-and-manholes",
-        "href": "/",
+        "before": "Special fittings",
+        "after": "Accessories",
+        "hrefBefore": "special-fittings",
+        "hrefAfter": "accessories",
         "title": "Manholes and manholes",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {
@@ -147,7 +162,10 @@
       },
       {
         "id": "accessories",
-        "href": "/",
+        "before": "Manholes and manholes",
+        "after": "Double jacketed fittings",
+        "hrefBefore": "manholes-and-manholes",
+        "hrefAfter": "double-jacketed-fittings",
         "title": "Accessories",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {
@@ -167,7 +185,10 @@
       },
       {
         "id": "double-jacketed-fittings",
-        "href": "/",
+        "before": "Accessories",
+        "after": "",
+        "hrefBefore": "accessories",
+        "hrefAfter": "",
         "title": "Double jacketed fittings",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {

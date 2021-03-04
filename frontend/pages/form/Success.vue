@@ -8,15 +8,15 @@
       <div class="success__content">
         <div class="success__content--action">
           <CustomButton
-            :title="$t('global.error.goBack')"
-            secondary
+            :title="$t('global.goBack')"
+            gray
             onclick="history.back(-1)"
           />
 
           <CustomButton
-            :title="$t('global.error.goHome')"
+            :title="$t('global.goHome')"
             :href="localePath('/')"
-            class="mt-1 mt-md-0"
+            class="ml-0 ml-md-1 mt-1 mt-md-0"
           />
         </div>
       </div>

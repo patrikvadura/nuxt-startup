@@ -39,19 +39,30 @@
             :label="$t('contact.name')"
             name="name"
             type="name"
+            rules="required"
             class="contact-form__input"
             wide
           />
+
           <CustomInput
             :label="$t('contact.email')"
             name="email"
             type="email"
+            rules="required|email"
             class="contact-form__input"
           />
+
+          <CustomInput
+            placeholder="Váš soubor"
+            file
+            class="contact-form__input"
+          />
+
           <CustomInput
             :label="$t('contact.message')"
             name="message"
             type="message"
+            rules="required"
             class="contact-form__input"
             textarea
             rows="6"
@@ -95,6 +106,37 @@ export default {
 
   &__input {
     padding: .5rem 0;
+  }
+
+  &__file {
+    margin: 1rem 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+
+    @include shadow(.1);
+    @include border-radius(.5rem);
+
+    ::v-deep label {
+      background: $primary;
+      color: white;
+      padding: .5rem;
+      font-family: sans-serif;
+      border-radius: .3rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    ::v-deep input::-webkit-file-upload-button {
+      background: $primary;
+      color: white;
+      padding: .5rem;
+      font-family: sans-serif;
+      border-radius: .3rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
   }
 
   &__button {
