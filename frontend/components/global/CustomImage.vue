@@ -1,6 +1,5 @@
 <template>
   <img
-    v-if="image.length > 1 ? image : 'noImage'"
     ref="image"
     v-lazy-load
     :data-fancybox="lightbox ? 'gallery': null"
@@ -50,10 +49,10 @@ export default {
     },
 
     image1x () {
-      return require(`~/assets/images/${this.folder}/${this.image}.jpg`)
+      return require(`~/assets/images/${this.image.length > 1 ? this.folder : 'other'}/${this.image.length > 1 ? this.image : 'noImage'}.jpg`)
     },
     image2x () {
-      return require(`~/assets/images/${this.folder}/${this.image}@2x.jpg`)
+      return require(`~/assets/images/${this.image.length > 1 ? this.folder : 'other'}/${this.image.length > 1 ? this.image : 'noImage'}@2x.jpg`)
     }
   }
 }
