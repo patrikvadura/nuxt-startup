@@ -27,7 +27,7 @@
             {{ $t('global.gallery') }}
           </h4>
 
-          <b-row cols-md="6" cols="12">
+          <b-row cols-md="5" cols="12">
             <div v-for="gallery in post.gallery" :key="gallery.image">
               <b-col>
                 <CustomImage
@@ -35,6 +35,17 @@
                   folder="products"
                   lightbox
                 />
+
+                <div class="products__gallery--badge">
+                  <CustomBadge
+                    :title="$t('global.code') + ' ' + gallery.code"
+                  />
+
+                  <CustomBadge
+                    :title="gallery.catalog + ' / ' + $t('global.catalogPage') + ' ' + gallery.catalogPage"
+                    secondary
+                  />
+                </div>
               </b-col>
             </div>
           </b-row>
@@ -42,9 +53,9 @@
       </template>
 
       <b-row class="products__footer">
-        <b-col md="4" cols="12" class="products__footer--item">
+        <b-col md="3" cols="12" class="products__footer--item">
           <h4>
-            {{ $t('global.downloadCatalog') }}
+            {{ $t('global.catalog') }} <span>{{ post.title }}</span> {{ $t('global.forDownload') }}
           </h4>
 
           <ProductsDownload
@@ -56,18 +67,24 @@
         </b-col>
 
         <template v-if="post.tables.length > 0">
-          <b-col md="4" cols="12" class="products__footer--item">
+          <b-col md="3" cols="12" class="products__footer--item">
             <h4>
               {{ $t('global.techTables') }}
             </h4>
             <div
-              v-for="table in post.tables"
+              v-for="table in post.tables.slice(0,3)"
               :key="table.title"
             >
-              <nuxt-link :to="localePath(table.url)">
+              <nuxt-link :to="localePath('/downloads/info#' + table.url)">
                 {{ table.title }}
               </nuxt-link>
             </div>
+
+            <nuxt-link :to="localePath('/downloads/info#conversion-tables')">
+              <span>
+                {{ $t('global.showMore') }}
+              </span>
+            </nuxt-link>
           </b-col>
         </template>
 
@@ -77,31 +94,31 @@
               {{ $t('global.techInfo') }}
             </h4>
             <div
-              v-for="info in post.info"
+              v-for="info in post.info.slice(0,3)"
               :key="info.title"
             >
-              <nuxt-link :to="localePath(info.url)">
+              <nuxt-link :to="localePath('/downloads/info#' + info.url)">
                 {{ info.title }}
               </nuxt-link>
             </div>
+
+            <nuxt-link :to="localePath('/downloads/info#tech-information')">
+              <span>
+                {{ $t('global.showMore') }}
+              </span>
+            </nuxt-link>
           </b-col>
         </template>
 
-        <template v-if="post.schemes.length > 0">
-          <b-col md="4" cols="12" class="products__footer--item">
-            <h4>
-              {{ $t('global.techSchemes') }}
-            </h4>
-            <div
-              v-for="schemes in post.schemes"
-              :key="schemes.title"
-            >
-              <nuxt-link :to="localePath(schemes.url)">
-                {{ schemes.title }}
-              </nuxt-link>
-            </div>
-          </b-col>
-        </template>
+        <b-col md="3" cols="12" class="products__footer--item">
+          <h4>
+            {{ $t('global.techSchemes') }}
+          </h4>
+
+          <nuxt-link :to="localePath('/downloads/schemes#' + id)">
+            <CustomButton :title="$t('global.show')" />
+          </nuxt-link>
+        </b-col>
       </b-row>
 
       <b-row class="products__actions">
@@ -178,10 +195,6 @@ export default {
       padding: $spacer-xl - 1 $spacer-lg;
     }
 
-    b {
-      color: $primary;
-    }
-
     &--image {
       display: flex;
       justify-content: center;
@@ -211,6 +224,13 @@ export default {
       margin-bottom: $spacer-md;
       color: $primary;
     }
+
+    &--badge {
+      position: absolute;
+      bottom: 0;
+      left: $spacer-md;
+      padding: $spacer;
+    }
   }
 
   &__footer {
@@ -231,6 +251,19 @@ export default {
 
       h4 {
         color: $primary;
+        line-height: $line-height-base;
+        padding-bottom: 1rem;
+      }
+
+      span {
+        font-weight: $font-weight-bold;
+      }
+
+      a {
+        span {
+          font-weight: $font-weight-bold;
+          line-height: $line-height-lg;
+        }
       }
 
       &:last-child {

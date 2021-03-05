@@ -98,7 +98,7 @@ export default {
 <style lang="scss" scoped>
 @mixin heightBtn {
   margin: $spacer 0 0 0;
-  height: 3.5rem;
+  height: $spacer-xl - $spacer;
   line-height: $line-height-base;
 }
 
@@ -116,19 +116,19 @@ button:focus {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 2.5rem;
+  height: $spacer-lg + $spacer;
   line-height: $line-height-base;
   font-size: $h5-font-size;
   font-weight: $font-weight-bold;
   text-align: center;
-  padding: $spacer 1.5rem;
+  padding: $spacer $spacer-lg - $spacer;
   color: $white;
   border: none;
   background: $primary;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 
-  @include border-radius (.5rem);
+  @include border-radius ($spacer);
 
   &:hover {
     background: $secondary;

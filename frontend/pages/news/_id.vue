@@ -92,10 +92,10 @@ export default {
 <style lang="scss" scoped>
 .news {
   &__content {
-    padding: 4rem 0;
+    padding: $spacer-xl 0;
 
     @include media-breakpoint-down(sm) {
-      padding: 3rem 2rem;
+      padding: $spacer-xl - 1 $spacer-lg;
     }
 
     b {
@@ -103,7 +103,7 @@ export default {
     }
 
     &--perex {
-      font-size: 1.2rem;
+      font-size: $h5-font-size;
     }
 
     &--image {
@@ -112,30 +112,30 @@ export default {
       align-items: center;
 
       @include media-breakpoint-down(sm) {
-        margin-top: 2rem;
+        margin-top: $spacer-lg;
       }
 
       img {
         width: auto;
-        height: 20rem;
+        height: $spacer-xxl * 2;
 
         @include media-breakpoint-down(sm) {
-          height: 15rem;
+          height: $spacer-xxl + 5;
         }
       }
     }
   }
 
   &__footer {
-    margin-top: 4rem;
-    padding-top: 4rem;
+    margin-top: $spacer-xl;
+    padding-top: $spacer-xl;
     border-top: 1px solid rgba(0, 0, 0, .1);
     display: block;
 
     @include media-breakpoint-down(sm) {
       display: flex;
       flex-direction: column;
-      padding: 2rem 2rem;
+      padding: $spacer-lg;
     }
   }
 }

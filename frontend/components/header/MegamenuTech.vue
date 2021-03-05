@@ -18,7 +18,7 @@
           <b-row cols="1">
             <b-col>
               <div class="megamenu__dropdown--item">
-                <nuxt-link :to="localePath('contact')" active-class="active">
+                <nuxt-link :to="localePath('/downloads/info')" active-class="active">
                   {{ $t('global.header.navLinks.tech.category.tables.title') }}
                 </nuxt-link>
 
@@ -30,7 +30,7 @@
 
             <b-col>
               <div class="megamenu__dropdown--item">
-                <nuxt-link :to="localePath('contact')" active-class="active">
+                <nuxt-link :to="localePath('/downloads/info')" active-class="active">
                   {{ $t('global.header.navLinks.tech.category.info.title') }}
                 </nuxt-link>
 
@@ -42,7 +42,7 @@
 
             <b-col>
               <div class="megamenu__dropdown--item">
-                <nuxt-link :to="localePath('contact')" active-class="active">
+                <nuxt-link :to="localePath('/downloads/info')" active-class="active">
                   {{ $t('global.header.navLinks.tech.category.schemes.title') }}
                 </nuxt-link>
 
@@ -65,19 +65,19 @@
         </template>
 
         <b-dropdown-item id="tables">
-          <nuxt-link :to="localePath('contact')" class="bold">
+          <nuxt-link :to="localePath('/downloads/info')" class="bold">
             {{ $t('global.header.navLinks.tech.category.tables.title') }}
           </nuxt-link>
         </b-dropdown-item>
 
         <b-dropdown-item id="info" class="pt-1">
-          <nuxt-link :to="localePath('contact')" active-class="active" class="bold">
+          <nuxt-link :to="localePath('/downloads/info')" active-class="active" class="bold">
             {{ $t('global.header.navLinks.tech.category.info.title') }}
           </nuxt-link>
         </b-dropdown-item>
 
         <b-dropdown-item id="schemes" class="pt-1">
-          <nuxt-link :to="localePath('contact')" active-class="active" class="bold">
+          <nuxt-link :to="localePath('/downloads/info')" active-class="active" class="bold">
             {{ $t('global.header.navLinks.tech.category.schemes.title') }}
           </nuxt-link>
         </b-dropdown-item>

@@ -21,11 +21,11 @@
 
         <b-col class="d-flex justify-content-center align-items-center">
           <div class="downloads__content--item">
-            <CustomIcon name="card-checklist" scale="2" background bootstrap />
+            <CustomIcon name="calculator-fill" scale="2" background bootstrap />
 
-            <nuxt-link :to="localePath('/downloads/' + 'lists')">
+            <nuxt-link :to="localePath('/downloads/' + 'info')">
               <h4>
-                {{ $t('downloads.lists.title') }}
+                {{ $t('downloads.info.title') }}
               </h4>
             </nuxt-link>
           </div>
@@ -33,11 +33,11 @@
 
         <b-col class="d-flex justify-content-center align-items-center">
           <div class="downloads__content--item">
-            <CustomIcon name="calculator-fill" scale="2" background bootstrap />
+            <CustomIcon name="card-checklist" scale="2" background bootstrap />
 
-            <nuxt-link :to="localePath('/downloads/' + 'info')">
+            <nuxt-link :to="localePath('/downloads/' + 'schemes')">
               <h4>
-                {{ $t('downloads.info.title') }}
+                {{ $t('downloads.schemes.title') }}
               </h4>
             </nuxt-link>
           </div>
@@ -92,10 +92,10 @@ export default {
 <style lang="scss" scoped>
 .downloads {
   &__content {
-    padding: 4rem 0;
+    padding: $spacer-xl 0;
 
     @include media-breakpoint-down(sm) {
-      padding: 1rem;
+      padding: $spacer-md;
     }
 
     &--item {
@@ -104,19 +104,19 @@ export default {
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 2.5rem;
+      padding: $spacer-lg + $spacer;
       width: 100%;
-      background: rgba(0, 0, 0, .05);
+      background: $black-05;
 
-      @include border-radius(1rem);
+      @include border-radius($spacer-md);
 
       @include media-breakpoint-down(sm) {
-        margin: .5rem 0;
-        padding: 2rem;
+        margin: $spacer 0;
+        padding: $spacer-lg;
       }
 
       h4 {
-        margin-top: 1rem;
+        margin-top: $spacer-md;
         font-weight: 700;
       }
     }
@@ -127,20 +127,20 @@ export default {
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-top: 5rem;
-      padding: 0 2rem;
+      margin-top: $spacer-xl + 1;
+      padding: 0 $spacer-lg;
 
       @include media-breakpoint-down(sm) {
         flex-direction: column;
         justify-content: center;
-        margin-top: 2rem;
+        margin-top: $spacer-lg;
       }
 
       h3 {
-        font-weight: 700;
+        font-weight: $font-weight-bold;
 
         @include media-breakpoint-down(sm) {
-          padding-top: 1rem;
+          padding-top: $spacer-md;
         }
       }
     }
