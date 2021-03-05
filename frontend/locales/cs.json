@@ -13,8 +13,8 @@
     "catalogs": "Jednotlivé katalogy",
     "completCatalog": "Celkový katalog",
     "techInfo": "Technické informace",
-    "techTables": "Technické tabulky",
-    "techSchemes": "Technické schémata",
+    "techTables": "Převodní tabulky",
+    "techSchemes": "Montážní schémata",
     "techLists": "Technické listy",
     "download": "Stáhnout",
     "downloadCatalog": "Katalog ke stažení",
@@ -37,6 +37,7 @@
             "02": {
               "title": "Spojovacví armatury",
               "link": "/products/connecting-fittings",
+              "image": "magamenu_katalog_nahled_02",
               "items": [
                 {"id": 1, "title": "Šroubení DIN 11851"},
                 {"id": 2, "title": "Šroubení ISO"},
@@ -56,6 +57,7 @@
             "03": {
               "title": "Potrubní tvarovky",
               "link": "/products/pipe-fittings",
+              "image": "magamenu_katalog_nahled_03",
               "items": [
                 {"id": 1, "title": "Oblouky 90°"},
                 {"id": 2, "title": "Oblouky 45°"},
@@ -68,6 +70,7 @@
             "04": {
               "title": "Regulační armatury",
               "link": "/products/control-fittings",
+              "image": "magamenu_katalog_nahled_04",
               "items": [
                 {"id": 1, "title": "Kuželové trojcestné ventily"},
                 {"id": 2, "title": "Kulové trojcestné ventily"},
@@ -86,6 +89,7 @@
             "05": {
               "title": "Speciální armatury",
               "link": "/products/special-fittings",
+              "image": "magamenu_katalog_nahled_05",
               "items": [
                 {"id": 1, "title": "Zpětné klapky"},
                 {"id": 2, "title": "Zpětné klapky"},
@@ -108,6 +112,7 @@
             "06": {
               "title": "Vlezy a průlezy",
               "link": "/products/manholes-and-manholes",
+              "image": "magamenu_katalog_nahled_06",
               "items": [
                 {"id": 1, "title": "Oválné průlety tlakové"},
                 {"id": 2, "title": "Oválný průlez s izolačním víkem"},
@@ -122,6 +127,7 @@
             "07": {
               "title": "Příslušenství",
               "link": "/products/accessories",
+              "image": "magamenu_katalog_nahled_07",
               "items": [
                 {"id": 1, "title": "Plechové objímky"},
                 {"id": 2, "title": "Třmeny"},
@@ -132,6 +138,7 @@
             "08": {
               "title": "Dvouplášťové armatury",
               "link": "/products/double-jacketed-fittings",
+              "image": "magamenu_katalog_nahled_08",
               "items": [
                 {"id": 1, "title": "Trubky"},
                 {"id": 2, "title": "Kolena"},
@@ -221,29 +228,16 @@
           "title": "Technické informace",
           "category": {
             "tables": {
-              "title": "Technické tabulky",
-              "items": [
-                {"id": 1, "title": "Tabulka převodu tlaků"},
-                {"id": 2, "title": "Tabulka nerezových ocelí"},
-                {"id": 3, "title": "Technické informace pro těsnící kroužky"},
-                {"id": 4, "title": "Tabulka převodu rozměrů"}
-              ]
+              "title": "Převodní tabulky",
+              "description": "Invormace k převodu jednotek, tlaků a dalších fyzikálních veličin."
             },
             "info": {
               "title": "Technické informace",
-              "items": [
-                {"id": 1, "title": "Tabulka převodu tlaků"},
-                {"id": 2, "title": "Tabulka nerezových ocelí"},
-                {"id": 3, "title": "Technické informace pro těsnící kroužky"},
-                {"id": 4, "title": "Tabulka převodu rozměrů"}
-              ]
+              "description": "Všeobecné technické informace k výrobkům, materiálům a výrobě."
             },
             "schemes": {
-              "title": "Technické schémata",
-              "items": [
-                {"id": 1, "title": "Montážní schémata regulační armatury"}
-
-              ]
+              "title": "Montážní schémata",
+              "description": "Ukázky schémat k vybraným produktům z katalogu."
             }
           }
         },
