@@ -18,26 +18,22 @@
         "tables": [
           {
             "title": "Tabulka převodu rozměrů",
-            "url": "/"
+            "url": "dimension-conversion"
           },
           {
             "title": "Tabulka převodu tlaků",
-            "url": "/"
+            "url": "pressure-transfer"
           },
           {
             "title": "Tabulka nerezových ocelí",
-            "url": "/"
+            "url": "stainless steel"
           },
           {
             "title": "Technické informace pro těsnící kroužky",
-            "url": "/"
+            "url": "technical-information-for-sealing-rings"
           }
         ],
         "info": [
-          {
-            "title": "Spojovacví armatury",
-            "url": "/"
-          }
         ],
         "schemes": [
           {
@@ -46,7 +42,39 @@
           }
         ],
         "hero": "02_spojovaci_armatury_header",
-        "preview": "02_spojovaci_armatury"
+        "preview": "02_spojovaci_armatury",
+        "gallery" : [
+          {
+            "image": "02_spojovaci_armatury_01",
+            "code": "2012R",
+            "catalog": "02",
+            "catalogPage": "6"
+          },
+          {
+            "image": "02_spojovaci_armatury_02",
+            "code": "21250",
+            "catalog": "02",
+            "catalogPage": "14"
+          },
+          {
+            "image": "02_spojovaci_armatury_03",
+            "code": "21120 SMS",
+            "catalog": "02",
+            "catalogPage": "12"
+          },
+          {
+            "image": "02_spojovaci_armatury_04",
+            "code": "20740",
+            "catalog": "02",
+            "catalogPage": "32"
+          },
+          {
+            "image": "02_spojovaci_armatury_05",
+            "code": "22870",
+            "catalog": "02",
+            "catalogPage": "36"
+          }
+        ]
       },
       {
         "id": "pipe-fittings",

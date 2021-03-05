@@ -13,8 +13,8 @@
     "catalogs": "Individual catalogs",
     "completCatalog": "Overall catalog",
     "techInfo": "Tech information",
-    "techTables": "Tech tables",
-    "techSchemes": "Tech schemes",
+    "techTables": "Conversion tables",
+    "techSchemes": "Assembly diagrams",
     "techLists": "Tech lists",
     "download": "Download",
     "downloadCatalog": "Download catalog",
@@ -28,6 +28,8 @@
     "noFAQBeFisrt": "Be the first. Write us.",
     "gallery": "Gallery",
     "browseFile": "Browse file",
+    "code": "ID",
+    "catalogPage": "n.",
     "header": {
       "navLinks": {
         "products": {
@@ -220,29 +222,18 @@
           "title": "Tech information",
           "category": {
             "tables": {
-              "title": "Tech tables",
-              "items": [
-                {"id": 1, "title": "Tabulka převodu tlaků"},
-                {"id": 2, "title": "Tabulka nerezových ocelí"},
-                {"id": 3, "title": "Technické informace pro těsnící kroužky"},
-                {"id": 4, "title": "Tabulka převodu rozměrů"}
-              ]
+              "title": "Conversion tables",
+              "description": "Information on the conversion of units, pressures and other physical quantities."
+
             },
             "info": {
               "title": "Tech information",
-              "items": [
-                {"id": 1, "title": "Tabulka převodu tlaků"},
-                {"id": 2, "title": "Tabulka nerezových ocelí"},
-                {"id": 3, "title": "Technické informace pro těsnící kroužky"},
-                {"id": 4, "title": "Tabulka převodu rozměrů"}
-              ]
+              "description": "General technical information on products, materials and production."
+
             },
             "schemes": {
-              "title": "Tech schemes",
-              "items": [
-                {"id": 1, "title": "Montážní schémata regulační armatury"}
-
-              ]
+              "title": "Assembly diagrams",
+              "description": "Samples of diagrams for selected products from the catalog."
             }
           }
         },

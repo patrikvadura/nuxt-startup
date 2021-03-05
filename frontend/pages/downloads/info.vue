@@ -6,49 +6,64 @@
     />
 
     <b-container class="downloads__content">
-      <b-row class="flex-column">
+      <b-row id="conversion-tables" class="flex-column">
         <div class="pb-2 mb-2 border-bottom">
-          <h4>
+          <h3>
             {{ $t('downloads.info.tables.title') }}
-          </h4>
+          </h3>
         </div>
 
         <div v-for="item in $t('downloads.info.tables.items')" :key="item.title">
-          <a :href="item.url">
-            <CustomIcon name="arrow-down-circle-fill" color="#0a6ace" class="mr-1" bootstrap />
-            {{ item.title }}
-          </a>
+          <b-row class="mx-0 pb-2 mb-2 border-bottom">
+            <b-col md="6" cols="12" class="d-flex flex-row align-content-center">
+              <h5 class="mt-1">
+                {{ item.title }}
+              </h5>
+            </b-col>
+
+            <b-col md="6" cols="12" class="d-flex flex-row align-content-center justify-content-start justify-content-md-end">
+              <CustomButton :title="$t('global.show')" :href="item.url" gray />
+
+              <CustomButton :title="$t('global.download')" :href="item.urlDownload" download class="ml-1" />
+            </b-col>
+          </b-row>
         </div>
       </b-row>
 
-      <b-row class="pt-5 flex-column">
+      <b-row id="tech-information" class="pt-5 flex-column">
         <div class="pb-2 mb-2 border-bottom">
-          <h4>
+          <h3>
             {{ $t('downloads.info.info.title') }}
-          </h4>
+          </h3>
         </div>
 
-        <div v-for="item in $t('downloads.info.info.items')" :key="item.title">
-          <a :href="item.url">
-            <CustomIcon name="arrow-down-circle-fill" color="#0a6ace" class="mr-1" bootstrap />
-            {{ item.title }}
-          </a>
-        </div>
-      </b-row>
+        <template v-if="$t('downloads.info.info.items').length > 1">
+          <div v-for="item in $t('downloads.info.info.items')" :key="item.title">
+            <b-row class="mx-0 pb-2 mb-2 border-bottom">
+              <b-col md="6" cols="12" class="d-flex flex-row align-content-center">
+                <h5 class="mt-1">
+                  {{ item.title }}
+                </h5>
+              </b-col>
 
-      <b-row class="pt-5 flex-column">
-        <div class="pb-2 mb-2 border-bottom">
-          <h4>
-            {{ $t('downloads.info.schemes.title') }}
-          </h4>
-        </div>
+              <b-col md="6" cols="12" class="d-flex flex-row align-content-center justify-content-start justify-content-md-end">
+                <CustomButton :title="$t('global.show')" :href="item.url" gray />
 
-        <div v-for="item in $t('downloads.info.schemes.items')" :key="item.title">
-          <a :href="item.url">
-            <CustomIcon name="arrow-down-circle-fill" color="#0a6ace" class="mr-1" bootstrap />
-            {{ item.title }}
-          </a>
-        </div>
+                <CustomButton :title="$t('global.download')" :href="item.urlDownload" download class="ml-1" />
+              </b-col>
+            </b-row>
+          </div>
+        </template>
+
+        <template v-else>
+          <b-row>
+            <b-col cols="12">
+              <h5 class="mt-1">
+                {{ $t('global.noDownload') }}
+              </h5>
+            </b-col>
+          </b-row>
+        </template>
       </b-row>
 
       <b-row class="downloads__footer">
@@ -94,35 +109,27 @@ export default {
 <style lang="scss" scoped>
 .downloads {
   &__content {
-    padding: 4rem 0;
+    padding: $spacer-xl 0;
 
     @include media-breakpoint-down(sm) {
-      padding: 3rem;
+      padding: $spacer-xl - 1;
     }
 
-    a {
-      color: $typo;
-
-      ::v-deep .custom-icon {
-        transform: translateY(.2rem);
-      }
-    }
-
-    h4 {
+    h3 {
       color: $primary;
     }
   }
 
   &__footer {
-    margin-top: 4rem;
-    padding-top: 4rem;
+    margin-top: $spacer-xl;
+    padding-top: $spacer-xl;
     border-top: 1px solid rgba(0, 0, 0, .1);
     display: block;
 
     @include media-breakpoint-down(sm) {
       display: flex;
       flex-direction: column;
-      padding: 2rem 2rem;
+      padding: $spacer-lg;
     }
   }
 }

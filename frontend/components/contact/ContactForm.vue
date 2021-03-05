@@ -89,7 +89,7 @@ export default {
 <style lang="scss" scoped>
 .contact-form {
   @include media-breakpoint-down(sm) {
-    padding: 0 2rem;
+    padding: 0 $spacer-lg;
   }
 
   h4 {
@@ -105,59 +105,59 @@ export default {
   }
 
   &__input {
-    padding: .5rem 0;
+    padding: $spacer 0;
   }
 
   &__file {
-    margin: 1rem 0;
+    margin: $spacer-md 0;
     padding: 0;
     width: 100%;
     display: inline-block;
     cursor: pointer;
 
     @include shadow(.1);
-    @include border-radius(.5rem);
+    @include border-radius($spacer);
 
     ::v-deep label {
       background: $primary;
       color: white;
-      padding: .5rem;
+      padding: $spacer;
       font-family: sans-serif;
-      border-radius: .3rem;
+      border-radius: $spacer;
       cursor: pointer;
-      margin-top: 1rem;
+      margin-top: $spacer-md;
     }
 
     ::v-deep input::-webkit-file-upload-button {
       background: $primary;
       color: white;
-      padding: .5rem;
+      padding: $spacer;
       font-family: sans-serif;
-      border-radius: .3rem;
+      border-radius: $spacer;
       cursor: pointer;
-      margin-top: 1rem;
+      margin-top: $spacer-md;
     }
   }
 
   &__button {
-    margin-top: 1rem;
+    margin-top: $spacer-md;
   }
 
   ul {
-    padding: 1rem 3rem 1rem 0;
+    padding: $spacer-md $spacer-xl - 1 $spacer-md 0;
 
     @include media-breakpoint-down(sm) {
-      padding: 1rem 0;
+      padding: $spacer-md 0;
       text-align: center;
     }
 
     li {
       list-style: none;
-      font-size: .8rem;
-      line-height: 1.5rem;
+      font-size: $sm-font-size;
+      line-height: $line-height-lg;
 
       ::v-deep .custom-icon {
-        padding-right: .5rem;
+        padding-right: $spacer;
         transform: translateY(.2rem);
       }
     }

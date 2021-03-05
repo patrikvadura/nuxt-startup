@@ -1,7 +1,8 @@
 <template>
   <div class="megamenu">
     <template v-if="$device.isDesktop">
-      <div @mouseover="onOver" @mouseleave="onLeave">
+      <!-- <div @mouseover="onOver" @mouseleave="onLeave"> -->
+      <div>
         <b-dropdown
           ref="dropdown"
           variant="link"
@@ -14,49 +15,40 @@
               {{ $t('global.header.navLinks.tech.title') }}
             </b-nav-item>
           </template>
-          <b-row cols-lg="3">
+          <b-row cols="1">
             <b-col>
               <div class="megamenu__dropdown--item">
-                <nuxt-link :to="localePath('contact')" active-class="active">
+                <nuxt-link :to="localePath('/downloads/info')" active-class="active">
                   {{ $t('global.header.navLinks.tech.category.tables.title') }}
                 </nuxt-link>
-                <div
-                  v-for="item in $t('global.header.navLinks.tech.category.tables.items')"
-                  :key="item.id"
-                  class="megamenu__dropdown--subitem"
-                >
-                  {{ item.title }}
-                </div>
+
+                <p>
+                  {{ $t('global.header.navLinks.tech.category.tables.description') }}
+                </p>
               </div>
             </b-col>
 
             <b-col>
               <div class="megamenu__dropdown--item">
-                <nuxt-link :to="localePath('contact')" active-class="active">
+                <nuxt-link :to="localePath('/downloads/info')" active-class="active">
                   {{ $t('global.header.navLinks.tech.category.info.title') }}
                 </nuxt-link>
-                <div
-                  v-for="item in $t('global.header.navLinks.tech.category.info.items')"
-                  :key="item.id"
-                  class="megamenu__dropdown--subitem"
-                >
-                  {{ item.title }}
-                </div>
+
+                <p>
+                  {{ $t('global.header.navLinks.tech.category.info.description') }}
+                </p>
               </div>
             </b-col>
 
             <b-col>
               <div class="megamenu__dropdown--item">
-                <nuxt-link :to="localePath('contact')" active-class="active">
+                <nuxt-link :to="localePath('/downloads/info')" active-class="active">
                   {{ $t('global.header.navLinks.tech.category.schemes.title') }}
                 </nuxt-link>
-                <div
-                  v-for="item in $t('global.header.navLinks.tech.category.schemes.items')"
-                  :key="item.id"
-                  class="megamenu__dropdown--subitem"
-                >
-                  {{ item.title }}
-                </div>
+
+                <p>
+                  {{ $t('global.header.navLinks.tech.category.schemes.description') }}
+                </p>
               </div>
             </b-col>
           </b-row>
@@ -73,42 +65,21 @@
         </template>
 
         <b-dropdown-item id="tables">
-          <nuxt-link :to="localePath('contact')" class="bold">
+          <nuxt-link :to="localePath('/downloads/info')" class="bold">
             {{ $t('global.header.navLinks.tech.category.tables.title') }}
           </nuxt-link>
-          <div
-            v-for="item in $t('global.header.navLinks.tech.category.tables.items')"
-            :key="item.id"
-            class="megamenu__dropdown--subitem"
-          >
-            {{ item.title }}
-          </div>
         </b-dropdown-item>
 
-        <b-dropdown-item id="info" class="pt-3">
-          <nuxt-link :to="localePath('contact')" active-class="active" class="bold">
+        <b-dropdown-item id="info" class="pt-1">
+          <nuxt-link :to="localePath('/downloads/info')" active-class="active" class="bold">
             {{ $t('global.header.navLinks.tech.category.info.title') }}
           </nuxt-link>
-          <div
-            v-for="item in $t('global.header.navLinks.tech.category.info.items')"
-            :key="item.id"
-            class="megamenu__dropdown--subitem"
-          >
-            {{ item.title }}
-          </div>
         </b-dropdown-item>
 
-        <b-dropdown-item id="schemes" class="pt-3">
-          <nuxt-link :to="localePath('contact')" active-class="active" class="bold">
+        <b-dropdown-item id="schemes" class="pt-1">
+          <nuxt-link :to="localePath('/downloads/info')" active-class="active" class="bold">
             {{ $t('global.header.navLinks.tech.category.schemes.title') }}
           </nuxt-link>
-          <div
-            v-for="item in $t('global.header.navLinks.tech.category.schemes.items')"
-            :key="item.id"
-            class="megamenu__dropdown--subitem"
-          >
-            {{ item.title }}
-          </div>
         </b-dropdown-item>
       </b-dropdown>
     </template>
@@ -117,6 +88,7 @@
 
 <script>
 export default {
+  /*
   methods: {
     onOver () {
       this.$refs.dropdown.visible = true
@@ -125,6 +97,7 @@ export default {
       this.$refs.dropdown.visible = false
     }
   }
+  */
 }
 </script>
 
@@ -132,13 +105,13 @@ export default {
 .megamenu {
   &__dropdown {
     &--item {
-      padding: 1rem;
-      border-radius: 1rem;
+      padding: $spacer-md;
+      border-radius: $spacer-md;
 
       a {
-        font-size: 1rem;
-        line-height: 1rem;
-        font-weight: 600;
+        font-size: $spacer-md;
+        line-height: $spacer-md;
+        font-weight: $font-weight-bold;
         color: $primary;
 
         &:active {
@@ -148,34 +121,34 @@ export default {
     }
 
     &--subitem {
-      font-size: .8rem;
-      font-weight: 400;
+      font-size: $sm-font-size;
+      font-weight: $font-weight-base;
     }
   }
 
   ::v-deep .btn-link {
     padding: 0;
     color: $typo;
-    font-size: .9rem;
-    font-weight: 700;
+    font-size: $base-font-size;
+    font-weight: $font-weight-bold;
     text-decoration: none;
 
     @include media-breakpoint-down(sm) {
       padding: 0;
       color: $typo;
-      font-size: 1rem;
-      font-weight: 700;
+      font-size: $spacer-md;
+      font-weight: $font-weight-bold;
       text-decoration: none;
-      max-height: 3rem;
+      max-height: $spacer-xl - 1;
     }
   }
 
   ::v-deep.dropdown-toggle::after {
     display: inline;
-    width: .25rem;
-    height: .25rem;
-    transform: translateY(-1rem);
-    color: rgba(0, 0, 0, .3);
+    width: $spacer-sm;
+    height: $spacer-sm;
+    transform: translateY(- $spacer-md);
+    color: $black-25;
     vertical-align: 0;
   }
 
@@ -183,15 +156,15 @@ export default {
     @include media-breakpoint-up(lg) {
       position: absolute;
       right: 0;
-      padding: 2rem;
-      min-width: 50vw;
-      background: rgba(255, 255, 255, .9);
+      padding: $spacer-lg;
+      min-width: 25vw;
+      background: $white-90;
       border: none;
-      transform: translateX(0) translateY(-50rem);
+      transform: translateX(0) translateY(- $spacer-xxl * 5);
 
       @include shadow (.2);
-      @include blur (.5rem);
-      @include border-radius(1rem);
+      @include blur ($spacer);
+      @include border-radius($spacer-md);
       @include transition-opacity (.5s);
     }
 
@@ -202,20 +175,20 @@ export default {
 
     a {
       @include media-breakpoint-down(sm) {
-        font-size: .8rem !important;
-        font-weight: 400 !important;
+        font-size: $sm-font-size !important;
+        font-weight: $font-weight-base !important;
         white-space: normal !important;
       }
     }
 
     .bold {
-      font-weight: 700 !important;
+      font-weight: $font-weight-bold !important;
     }
   }
 
   ::v-deep .dropdown.show .dropdown-menu {
     @include media-breakpoint-up(lg) {
-      transform: translateX(0) translateY(-.25rem);
+      transform: translateX(0) translateY(- $spacer-sm);
 
       @include transition-opacity-after;
     }
@@ -224,9 +197,9 @@ export default {
   ::v-deep .dropdown-item {
     &:hover {
       color: $primary;
-      background: rgba(0, 0, 0, .02);
+      background: $black-05;
 
-      @include border-radius(.5rem);
+      @include border-radius($spacer);
     }
   }
 }
