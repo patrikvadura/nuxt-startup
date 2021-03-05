@@ -17,7 +17,7 @@
         </b-col>
 
         <b-col md="5" cols="12" class="products__content--image">
-          <CustomImage v-if="post.preview.length > 1" :image="post.preview" folder="products" lightbox />
+          <CustomImage :image="post.preview" folder="products" lightbox />
         </b-col>
       </b-row>
 
@@ -42,7 +42,7 @@
       </template>
 
       <b-row class="products__footer">
-        <b-col md="3" cols="12" class="products__footer--item">
+        <b-col md="4" cols="12" class="products__footer--item">
           <h4>
             {{ $t('global.downloadCatalog') }}
           </h4>
@@ -56,7 +56,7 @@
         </b-col>
 
         <template v-if="post.tables.length > 0">
-          <b-col md="3" cols="12" class="products__footer--item">
+          <b-col md="4" cols="12" class="products__footer--item">
             <h4>
               {{ $t('global.techTables') }}
             </h4>
@@ -88,7 +88,7 @@
         </template>
 
         <template v-if="post.schemes.length > 0">
-          <b-col md="3" cols="12" class="products__footer--item">
+          <b-col md="4" cols="12" class="products__footer--item">
             <h4>
               {{ $t('global.techSchemes') }}
             </h4>
@@ -172,10 +172,10 @@ export default {
 <style lang="scss" scoped>
 .products {
   &__content {
-    padding: 4rem 0;
+    padding: $spacer-xl 0;
 
     @include media-breakpoint-down(sm) {
-      padding: 3rem 2rem;
+      padding: $spacer-xl - 1 $spacer-lg;
     }
 
     b {
@@ -188,43 +188,43 @@ export default {
       align-items: center;
 
       @include media-breakpoint-down(sm) {
-        margin-top: 2rem;
+        margin-top: $spacer-lg;
       }
 
       img {
         width: auto;
-        height: 20rem;
+        height: $spacer-xl * 5;
 
         @include media-breakpoint-down(sm) {
-          height: 15rem;
+          height: $spacer-xl * 4;
         }
       }
     }
   }
 
   &__gallery {
-    margin-top: 3rem;
-    padding: 2rem 2rem;
-    background: rgba(0, 0, 0, .05);
+    margin-top: $spacer-xl - 1;
+    padding: $spacer-lg;
+    background: $black-05;
 
     h4 {
-      margin-bottom: 1rem;
+      margin-bottom: $spacer-md;
       color: $primary;
     }
   }
 
   &__footer {
-    margin-top: 4rem;
-    padding-top: 4rem;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    margin-top: $spacer-xl;
+    padding-top: $spacer-xl;
+    border-top: 1px solid $black-10;
 
     &--item {
-      padding-left: 2rem;
-      border-right: 1px solid rgba(0, 0, 0, .1);
+      padding-left: $spacer-lg;
+      border-right: 1px solid $black-10;
 
       @include media-breakpoint-down(sm) {
-        margin: 1rem 0;
-        padding-left: 1rem;
+        margin: $spacer-md 0;
+        padding-left: $spacer-md;
         text-align: center;
         border-right: none;
       }
@@ -240,15 +240,15 @@ export default {
   }
 
   &__actions {
-    margin-top: 4rem;
-    padding-top: 4rem;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    margin-top: $spacer-xl;
+    padding-top: $spacer-xl;
+    border-top: 1px solid $black-10;
     display: block;
 
     @include media-breakpoint-down(sm) {
       display: flex;
       flex-direction: column;
-      padding: 2rem 2rem;
+      padding: $spacer-lg;
     }
   }
 }

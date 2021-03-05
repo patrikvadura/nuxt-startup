@@ -41,6 +41,7 @@ $spacer-sm: .25rem !default;
 $spacer-md: 1rem !default;
 $spacer-lg: 2rem !default;
 $spacer-xl: 4rem !default;
+$spacer-xxl: 10rem !default;
 
 // colors
 // primary
@@ -86,6 +87,7 @@ $gray-05: rgba(81, 81, 81, .05) !default;
 
 // white
 $white: #fff !default;
+$white-90: rgba(255, 255, 255, .9) !default;
 $white-75: rgba(255, 255, 255, .75) !default;
 $white-50: rgba(255, 255, 255, .5) !default;
 $white-25: rgba(255, 255, 255, .25) !default;

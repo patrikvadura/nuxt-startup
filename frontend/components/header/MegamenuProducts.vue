@@ -1,7 +1,8 @@
 <template>
   <div class="megamenu">
     <template v-if="$device.isDesktop">
-      <div @mouseover="onOver" @mouseleave="onLeave">
+      <!-- <div @mouseover="onOver" @mouseleave="onLeave"> -->
+      <div>
         <b-dropdown
           ref="dropdown"
           variant="link"
@@ -17,7 +18,7 @@
           <b-row cols-xl="4" cols-lg="3">
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_02.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.02.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.02.link'))">
@@ -36,7 +37,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_03.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.03.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.03.link'))">
@@ -55,7 +56,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_04.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.04.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.04.link'))">
@@ -74,7 +75,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_05.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.05.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.05.link'))">
@@ -93,7 +94,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_06.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.06.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.06.link'))">
@@ -112,7 +113,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_07.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.07.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.07.link'))">
@@ -131,7 +132,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_08.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.08.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.08.link'))">
@@ -237,6 +238,7 @@
 
 <script>
 export default {
+  /*
   methods: {
     onOver () {
       this.$refs.dropdown.visible = true
@@ -245,6 +247,7 @@ export default {
       this.$refs.dropdown.visible = false
     }
   }
+  */
 }
 </script>
 

@@ -2,7 +2,7 @@
   <img
     ref="image"
     v-lazy-load
-    :data-fancybox="lightbox ? 'gallery': null"
+    :data-fancybox="image.length > 1 ? lightbox : null ? 'gallery': null"
     :href="image2x"
     :src="image1x"
     :srcset="`${image1x} 1x, ${image2x} 2x`"
