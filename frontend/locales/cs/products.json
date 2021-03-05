@@ -143,13 +143,22 @@
         "preview": "04_regulacni_armatury",
         "gallery" : [
           {
-            "image": "04_regulacni_armatury"
+            "image": "04_regulacni_armatury",
+            "code": "",
+            "catalog": "",
+            "catalogPage": ""
           },
           {
-            "image": "04_regulacni_armatury"
+            "image": "04_regulacni_armatury",
+            "code": "",
+            "catalog": "",
+            "catalogPage": ""
           },
           {
-            "image": "04_regulacni_armatury"
+            "image": "04_regulacni_armatury",
+            "code": "",
+            "catalog": "",
+            "catalogPage": ""
           }
         ]
       },
@@ -177,10 +186,16 @@
         "preview": "05_specialni_armatury",
         "gallery" : [
           {
-            "image": "04_regulacni_armatury"
+            "image": "04_regulacni_armatury",
+            "code": "",
+            "catalog": "",
+            "catalogPage": ""
           },
           {
-            "image": "04_regulacni_armatury"
+            "image": "04_regulacni_armatury",
+            "code": "",
+            "catalog": "",
+            "catalogPage": ""
           }
         ]
       },

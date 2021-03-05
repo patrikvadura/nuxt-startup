@@ -1,7 +1,7 @@
 <template>
   <div id="floating-menu">
     <div class="floating-menu">
-      <div @mouseover="onOver" @mouseleave="onLeave">
+      <div>
         <b-dropdown
           ref="dropdown"
           class="floating-menu__item"
@@ -37,7 +37,7 @@
         </a>
       </div>
 
-      <div @mouseover="onHover" @mouseleave="onLeav">
+      <div>
         <b-dropdown
           ref="dropdown1"
           class="floating-menu__item"
@@ -75,22 +75,6 @@ export default {
         {}
       ]
     }
-  },
-
-  methods: {
-    onOver () {
-      this.$refs.dropdown.visible = true
-    },
-    onLeave () {
-      this.$refs.dropdown.visible = false
-    },
-
-    onHover () {
-      this.$refs.dropdown1.visible = true
-    },
-    onLeav () {
-      this.$refs.dropdown1.visible = false
-    }
   }
 }
 </script>
@@ -99,8 +83,8 @@ export default {
 #floating-menu {
   position: fixed;
   margin-top: 40vh;
-  right: 1rem;
-  width: 3rem;
+  right: $spacer-md;
+  width: $spacer-xl - 1;
   z-index: 1000;
 }
 
@@ -110,17 +94,17 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
-    margin-bottom: .5rem;
+    width: $spacer-xl - 1;
+    height: $spacer-xl - 1;
+    margin-bottom: $spacer;
     background: $secondary;
 
     @include shadow (.2);
-    @include border-radius(.5rem);
+    @include border-radius($spacer);
 
     &:hover {
       background: $secondary;
-      transform: translateX(-.5rem);
+      transform: translateX(- $spacer);
       transition: all .3s ease-in-out;
       transition-delay: .1s;
     }
@@ -138,16 +122,16 @@ export default {
   }
 
   ::v-deep .dropdown-menu {
-    padding: .5rem;
+    padding: $spacer;
 
     @include media-breakpoint-up(lg) {
-      background: rgba(255, 255, 255, .9);
+      background: $white-90;
       border: none;
-      transform: translateX(20rem) translateY(0);
+      transform: translateX($spacer-xxl * 2) translateY(0);
 
       @include shadow (.2);
-      @include blur (.5rem);
-      @include border-radius(1rem);
+      @include blur ($spacer);
+      @include border-radius($spacer-md);
       @include transition-opacity (.5s);
     }
 

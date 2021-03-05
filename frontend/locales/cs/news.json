@@ -4,11 +4,36 @@
     "posts": [
       {
         "id": "08",
-        "title": "Testovací článek Novinka",
+        "title": "Klapka přímá S - S",
         "perex": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam sed tellus id magna elementum tincidunt. Maecenas sollicitudin.",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam sed tellus id magna elementum tincidunt. Maecenas sollicitudin. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Mauris elementum mauris vitae tortor. Integer lacinia. Praesent in mauris eu tortor porttitor accumsan. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Praesent in mauris eu tortor porttitor accumsan. Nunc auctor. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Nunc dapibus tortor vel mi dapibus sollicitudin. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Integer pellentesque quam vel velit. Aenean vel massa quis mauris vehicula lacinia. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aliquam ante. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante.",
         "category": "Spopjovací armatury",
-        "preview": "fake_product_01"
+        "preview": "fake_product_01",
+        "scheme": "news_scheme_43010",
+        "info": {
+          "title": "Klapka přímá S - S",
+          "code": "43010",
+          "catalog": "04",
+          "catalogPage": "9",
+          "table": [
+            { "dn": "15", "a": "15", "b": "50", "c": "110", "d": "15", "e": "18", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "15", "a": "15", "b": "50", "c": "110", "d": "15", "e": "18", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "15", "a": "15", "b": "50", "c": "110", "d": "15", "e": "18", "f": "", "r": "", "l": "", "rd": "", "kg": "" }
+          ],
+          "fields": [
+            { "key": "dn", "label": "DN", "sortable": false },
+            { "key": "a", "label": "A", "sortable": false },
+            { "key": "b", "label": "B", "sortable": false },
+            { "key": "b", "label": "C", "sortable": false },
+            { "key": "c", "label": "D", "sortable": false },
+            { "key": "e", "label": "E", "sortable": false },
+            { "key": "f", "label": "F", "sortable": false },
+            { "key": "r", "label": "R", "sortable": false },
+            { "key": "l", "label": "L", "sortable": false },
+            { "key": "rd", "label": "Rd x s", "sortable": false },
+            { "key": "kg", "label": "Kg", "sortable": false }
+          ]
+        }
       },
       {
         "id": "07",

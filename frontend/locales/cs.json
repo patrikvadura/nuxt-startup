@@ -19,6 +19,7 @@
     "download": "Stáhnout",
     "downloadCatalog": "Katalog ke stažení",
     "forDownload": "ke stažení",
+    "productWhereFind": "Kde tenhle produkt najdete",
     "newestArticle": "Nejnovější článek",
     "noFind": "Nenašli jste co jste hledali? Kontaktujte nás.",
     "noNews": "Aktuálně nejsou k dipozici žádné články.",
@@ -31,6 +32,7 @@
     "browseFile": "Vybrat soubor",
     "code": "ID",
     "catalogPage": "str.",
+    "dimension": "Rozměry",
     "header": {
       "navLinks": {
         "products": {

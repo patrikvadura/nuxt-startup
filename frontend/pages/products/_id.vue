@@ -38,10 +38,12 @@
 
                 <div class="products__gallery--badge">
                   <CustomBadge
+                    v-if="gallery.code.length > 1"
                     :title="$t('global.code') + ' ' + gallery.code"
                   />
 
                   <CustomBadge
+                    v-if="gallery.catalog.length > 1 || gallery.catalogPage.length > 1"
                     :title="gallery.catalog + ' / ' + $t('global.catalogPage') + ' ' + gallery.catalogPage"
                     secondary
                   />

@@ -18,6 +18,8 @@
     "techLists": "Tech lists",
     "download": "Download",
     "downloadCatalog": "Download catalog",
+    "forDownload": "ke stažení",
+    "productWhereFind": "Kde tenhle produkt najdete",
     "newestArticle": "Newest article",
     "noFind": "Did not find what you were looking for? Contact us.",
     "noNews": "There are currently no articles available.",
@@ -30,6 +32,7 @@
     "browseFile": "Browse file",
     "code": "ID",
     "catalogPage": "n.",
+    "dimension": "Dimension",
     "header": {
       "navLinks": {
         "products": {
