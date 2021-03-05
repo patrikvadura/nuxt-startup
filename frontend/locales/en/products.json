@@ -18,26 +18,22 @@
         "tables": [
           {
             "title": "Tabulka převodu rozměrů",
-            "url": "/"
+            "url": "dimension-conversion"
           },
           {
             "title": "Tabulka převodu tlaků",
-            "url": "/"
+            "url": "pressure-transfer"
           },
           {
             "title": "Tabulka nerezových ocelí",
-            "url": "/"
+            "url": "stainless steel"
           },
           {
             "title": "Technické informace pro těsnící kroužky",
-            "url": "/"
+            "url": "technical-information-for-sealing-rings"
           }
         ],
         "info": [
-          {
-            "title": "Spojovacví armatury",
-            "url": "/"
-          }
         ],
         "schemes": [
           {
