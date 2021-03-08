@@ -12,8 +12,14 @@
     <b-container class="products__content">
       <b-row>
         <b-col md="7" cols="12">
-          <p v-if="post.content.length > 1" v-html="post.content" />
-          <p v-else v-html="$t('global.noText')" />
+          <p
+            v-if="post.content.length > 1"
+            v-html="post.content"
+          />
+          <p
+            v-else
+            v-html="$t('global.noText')"
+          />
         </b-col>
 
         <b-col md="5" cols="12" class="products__content--image">

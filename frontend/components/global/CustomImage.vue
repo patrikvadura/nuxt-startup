@@ -39,6 +39,9 @@ export default {
   computed: {
     classes () {
       return {
+        // atriburtes
+        'atributes--pointer': this.lightbox,
+
         // effects
         'effect--grayscale': this.grayscale,
         'effect--blur': this.blur,
@@ -61,6 +64,13 @@ export default {
 <style lang="scss" scoped>
 img {
   object-fit: cover;
+}
+
+// atriburtes
+.atributes {
+  &--pointer {
+    cursor: pointer;
+  }
 }
 
 // effects

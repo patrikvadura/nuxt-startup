@@ -25,34 +25,15 @@
         </b-col>
       </b-row>
 
-      <b-row class="news__info">
-        <b-col v-if="post.info.title.length > 1" cols="12" class="pb-3">
-          <h4>
-            {{ post.info.title }}
-            <span class="pl-1 ml-1 border-left">
-              {{ post.info.code }}
-            </span>
-          </h4>
-        </b-col>
-        <b-col md="4" cols="12">
-          <CustomImage :image="post.scheme" folder="news/schemes" />
-        </b-col>
-
-        <b-col md="8" cols="12">
-          <b-table
-            :items="post.info.table"
-            :fields="post.info.fields"
-          />
-        </b-col>
-
-        <b-col cols="12" class="news__info--footer pt-3 d-flex justify-content-center">
-          <h4
-            v-if="post.info.catalog.length > 1 || post.info.catalogPage.length > 1"
-            secondary
-            v-html="$t('global.productWhereFind') + ' : ' + post.info.catalog + ' / ' + $t('global.catalogPage') + ' ' + post.info.catalogPage"
-          />
-        </b-col>
-      </b-row>
+      <NewsTable
+        :title="post.info.title"
+        :code="post.info.code"
+        :scheme="post.scheme"
+        :table="post.info.table"
+        :table-fields="post.info.fields"
+        :catalog="post.info.catalog"
+        :catalog-page="post.info.catalogPage"
+      />
 
       <b-row class="news__footer">
         <b-col cols="12" class="d-flex flex-column flex-md-row justify-content-center">
@@ -77,7 +58,8 @@
 <script>
 export default {
   components: {
-    HeroBasic: () => import('~/components/hero/HeroBasic')
+    HeroBasic: () => import('~/components/hero/HeroBasic'),
+    NewsTable: () => import('~/components/news/NewsTable')
   },
 
   i18n: {
@@ -152,32 +134,6 @@ export default {
           height: $spacer-xxl + 5;
         }
       }
-    }
-  }
-
-  &__info {
-    h4 {
-      span {
-        margin-left: $spacer-md;
-        padding-left: $spacer-md;
-        border-left: 1px solid rgba(0, 0, 0, .1);
-        color: $primary;
-        font-weight: $font-weight-bold;
-      }
-    }
-
-    &--footer {
-      h4 {
-        color: $primary;
-        font-weight: $font-weight-bold;
-      }
-    }
-
-    ::v-deep .table thead th {
-      vertical-align: bottom;
-      background: $primary;
-      color: $white;
-      border: none;
     }
   }
 
