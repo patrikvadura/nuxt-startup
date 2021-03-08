@@ -9,9 +9,7 @@
       <div v-for="item in $t('certificates.certificates')" :key="item.image">
         <b-row class="certificates__item align-items-center">
           <b-col md="2" cols="3">
-            <a href="">
-              <CustomImage :image="item.image" folder="certificates" />
-            </a>
+            <CustomImage :image="item.image" folder="certificates" />
           </b-col>
 
           <b-col md="10" cols="9">
@@ -62,9 +60,6 @@ export default {
   computed: {
     description () {
       return this.$t('global.metaDescription').substring(0, 67)
-    },
-    content () {
-      return this.limit ? this.object.substring(0, this.limit) : this.object
     }
   },
 
