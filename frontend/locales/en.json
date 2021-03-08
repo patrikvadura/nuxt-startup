@@ -173,50 +173,50 @@
               {
                 "id": 3,
                 "title": "Potrubní tvarovky",
-                "czech": "/catalog/03",
-                "english": "/catalog/03",
-                "german": "/error",
-                "russian": "/catalog/03"
+                "czech": "/catalog/03_potrubni_tvarovky_cz_ru.pdf",
+                "english": "/catalog/03_potrubni_tvarovky_en_de.pdf",
+                "german": "/catalog/03_potrubni_tvarovky_en_de.pdf",
+                "russian": "/catalog/03_potrubni_tvarovky_cz_ru.pdf"
               },
               {
                 "id": 4,
                 "title": "Control fittings",
-                "czech": "/error",
-                "english": "/error",
-                "german": "/catalog/04",
-                "russian": "/error"
+                "czech": "/catalog/04_regulacni_armatury_cz_ru.pdf",
+                "english": "/catalog/04_regulacni_armatury_en_de.pdf",
+                "german": "/catalog/04_regulacni_armatury_en_de.pdf",
+                "russian": "/catalog/04_regulacni_armatury_cz_ru.pdf"
               },
               {
                 "id": 5,
                 "title": "Special fittings",
-                "czech": "/catalog/05",
-                "english": "/catalog/05",
-                "german": "/error",
-                "russian": "/error"
+                "czech": "/catalog/05_specialni_armatury_cz_ru.pdf",
+                "english": "/catalog/05_specialni_armatury_en_de.pdf",
+                "german": "/catalog/05_specialni_armatury_en_de.pdf",
+                "russian": "/catalog/05_specialni_armatury_cz_ru.pdf"
               },
               {
                 "id": 6,
                 "title": "Manholes and manholes",
-                "czech": "/catalog/06",
-                "english": "/catalog/06",
-                "german": "/error",
-                "russian": "/error"
+                "czech": "/catalog/06_vlezy_a_prulezy_cz_ru.pdf",
+                "english": "/catalog/06_vlezy_a_prulezy_en_de.pdf",
+                "german": "/catalog/06_vlezy_a_prulezy_en_de.pdf",
+                "russian": "/catalog/06_vlezy_a_prulezy_cz_ru.pdf"
               },
               {
                 "id": 7,
                 "title": "Accessories",
-                "czech": "/catalog/07",
-                "english": "/catalog/07",
-                "german": "/catalog/07",
-                "russian": "/catalog/07"
+                "czech": "/catalog/07_prislusenstvi_cz_ru.pdf",
+                "english": "/catalog/07_prislusenstvi_en_de.pdf",
+                "german": "/catalog/07_prislusenstvi_en_de.pdf",
+                "russian": "/catalog/07_prislusenstvi_cz_ru.pdf"
               },
               {
                 "id": 8,
                 "title": "Double jacketed fittings",
-                "czech": "/catalog/08",
-                "english": "/error",
-                "german": "/catalog/08",
-                "russian": "/catalog/08"
+                "czech": "/catalog/08_dvouplastove_armatury_cz_ru.pdf",
+                "english": "/catalog/08_dvouplastove_armatury_en_de.pdf",
+                "german": "/catalog/08_dvouplastove_armatury_en_de.pdf",
+                "russian": "/catalog/08_dvouplastove_armatury_cz_ru.pdf"
               }
             ]
           }
