@@ -25,6 +25,16 @@
         </b-col>
       </b-row>
 
+      <NewsTable
+        :title="post.info.title"
+        :code="post.info.code"
+        :scheme="post.scheme"
+        :table="post.info.table"
+        :table-fields="post.info.fields"
+        :catalog="post.info.catalog"
+        :catalog-page="post.info.catalogPage"
+      />
+
       <b-row class="news__footer">
         <b-col cols="12" class="d-flex flex-column flex-md-row justify-content-center">
           <CustomButton
@@ -48,7 +58,8 @@
 <script>
 export default {
   components: {
-    HeroBasic: () => import('~/components/hero/HeroBasic')
+    HeroBasic: () => import('~/components/hero/HeroBasic'),
+    NewsTable: () => import('~/components/news/NewsTable')
   },
 
   i18n: {

@@ -109,22 +109,22 @@ export default {
 <style lang="scss" scoped>
 .news {
   &__content {
-    padding: 4rem 0;
+    padding: $spacer-xl 0;
 
     @include media-breakpoint-down(sm) {
-      padding: 0 0 3rem 0;
+      padding: 0 0 $spacer-xl - 1 0;
     }
 
     &--item {
-      margin-top: 3rem;
-      padding: 0 2rem;
+      margin-top: $spacer-xl - 1;
+      padding: 0 $spacer-lg;
 
       @include media-breakpoint-down(sm) {
-        padding: 0 2rem;
+        padding: 0 $spacer-lg;
       }
 
       h2 {
-        padding-bottom: 1rem;
+        padding-bottom: $spacer-md;
       }
 
       h5 {
@@ -132,59 +132,63 @@ export default {
       }
 
       span {
-        line-height: 2rem;
-        font-weight: 500;
+        line-height: $line-height-md;
+        font-weight: $font-weight-bold;
       }
 
       &:first-child {
         margin-top: 0;
-        padding: 3rem 2rem;
-        background: rgba(0, 0, 0, .05);
+        padding: $spacer-xl - 1 $spacer-lg;
+        background: $black-05;
 
-        @include border-radius(1rem);
+        @include border-radius($spacer-md);
 
         @include media-breakpoint-down(sm) {
-          padding: 2rem 2rem;
+          padding: $spacer-lg;
 
           @include border-radius(0);
         }
 
         h5 {
-          padding-bottom: 1rem;
+          padding-bottom: $spacer;
           display: block;
           color: $primary;
+
+          @include media-breakpoint-down(sm) {
+            padding-bottom: $spacer-md;
+          }
         }
       }
     }
 
     &--showMore {
-      padding-top: 5rem;
+      padding-top: $spacer-xl + 1;
     }
 
     &--image {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-right: 1.5rem;
-      padding: .5rem;
-      width: 10rem;
-      height: 10rem;
-      background: #fff;
+      margin-right: $spacer-lg - $spacer;
+      padding: $spacer;
+      width: $spacer-xxl;
+      height: $spacer-xxl;
+      background: $white;
       object-fit: contain;
 
-      @include border-radius(.5rem);
+      @include border-radius($spacer);
 
       @include media-breakpoint-down(sm) {
         display: none;
       }
 
       ::v-deep img {
-        width: 10rem;
-        height: 10rem;
+        width: $spacer-xxl;
+        height: $spacer-xxl;
         object-fit: contain;
 
         @include media-breakpoint-down(sm) {
-          height: 15rem;
+          height: $spacer-xxl + 5;
         }
       }
     }
@@ -195,10 +199,10 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 6rem 0;
+    padding: $spacer-xxl - 4 0;
 
     @include media-breakpoint-down(sm) {
-      padding: 6rem 2rem;
+      padding: $spacer-xxl - 4 $spacer-lg;
     }
   }
 }

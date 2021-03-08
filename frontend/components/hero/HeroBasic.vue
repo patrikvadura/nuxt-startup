@@ -75,7 +75,7 @@ export default {
     hrefAfter: { type: String, required: false, default: '' },
 
     // atributes
-    video: { type: Boolean, required: false, default: false }
+    video: { type: String, required: false, default: '' }
   }
 }
 </script>
