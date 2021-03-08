@@ -20,6 +20,7 @@
     "downloadCatalog": "Download catalog",
     "forDownload": "ke stažení",
     "productWhereFind": "Kde tenhle produkt najdete",
+    "showInCatalog": "Show in catalog",
     "newestArticle": "Newest article",
     "noFind": "Did not find what you were looking for? Contact us.",
     "noNews": "There are currently no articles available.",
@@ -260,6 +261,10 @@
             "url": "/downloads"
           },
           {
+            "title": "Certificates",
+            "url": "/certificates"
+          },
+          {
             "title": "Terms and Conditions",
             "url": "/terms-and-conditions"
           },
@@ -342,6 +347,23 @@
       {
         "image": "niob_building_foto",
         "folder": "hero"
+      }
+    ]
+  },
+  "certificates": {
+    "title": "Certificates",
+    "versionCZ": "Czech version",
+    "versionEN": "English version",
+    "versionDE": "Germany version",
+    "versionRU": "Russian version",
+    "certificates": [
+      {
+        "title": "Systém managmentu kvality pro kovoobrábění<br>ČSN EN ISO 9001:2016",
+        "image": "ISO9001-ISO3834_CZ",
+        "fileCZ": "ISO9001-ISO3834_CZ",
+        "fileEN": "ISO9001-ISO3834_AJ",
+        "fileDE": "",
+        "fileRU": ""
       }
     ]
   },
