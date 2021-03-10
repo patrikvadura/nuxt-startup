@@ -42,34 +42,34 @@
           }
         ],
         "hero": "02_spojovaci_armatury_header",
-        "preview": "02_spojovaci_armatury",
+        "preview": "02/02_spojovaci_armatury",
         "gallery" : [
           {
-            "image": "02_spojovaci_armatury_01",
+            "image": "02/02_spojovaci_armatury_01",
             "code": "2012R",
             "catalog": "02",
             "catalogPage": "6"
           },
           {
-            "image": "02_spojovaci_armatury_02",
+            "image": "02/02_spojovaci_armatury_06",
             "code": "21250",
             "catalog": "02",
             "catalogPage": "14"
           },
           {
-            "image": "02_spojovaci_armatury_03",
+            "image": "02/02_spojovaci_armatury_03",
             "code": "21120 SMS",
             "catalog": "02",
             "catalogPage": "12"
           },
           {
-            "image": "02_spojovaci_armatury_04",
+            "image": "02/02_spojovaci_armatury_05",
             "code": "20740",
             "catalog": "02",
             "catalogPage": "32"
           },
           {
-            "image": "02_spojovaci_armatury_05",
+            "image": "02/02_spojovaci_armatury_04",
             "code": "22870",
             "catalog": "02",
             "catalogPage": "36"
@@ -109,7 +109,39 @@
           }
         ],
         "hero": "03_potrubni_tvarovky_header",
-        "preview": "03_potrbuni_tvarovky"
+        "preview": "03/03_potrbuni_tvarovky",
+        "gallery" : [
+          {
+            "image": "03/02_spojovaci_armatury_01",
+            "code": "2012R",
+            "catalog": "02",
+            "catalogPage": "6"
+          },
+          {
+            "image": "03/02_spojovaci_armatury_02",
+            "code": "21250",
+            "catalog": "02",
+            "catalogPage": "14"
+          },
+          {
+            "image": "03/02_spojovaci_armatury_03",
+            "code": "21120 SMS",
+            "catalog": "02",
+            "catalogPage": "12"
+          },
+          {
+            "image": "03/02_spojovaci_armatury_04",
+            "code": "20740",
+            "catalog": "02",
+            "catalogPage": "32"
+          },
+          {
+            "image": "03/02_spojovaci_armatury_05",
+            "code": "22870",
+            "catalog": "02",
+            "catalogPage": "36"
+          }
+        ]
       },
       {
         "id": "control-fittings",
@@ -140,22 +172,22 @@
         "schemes": [
         ],
         "hero": "04_regulacni_armatury_header",
-        "preview": "04_regulacni_armatury",
+        "preview": "04/04_regulacni_armatury",
         "gallery" : [
           {
-            "image": "04_regulacni_armatury",
+            "image": "04/04_regulacni_armatury",
             "code": "",
             "catalog": "",
             "catalogPage": ""
           },
           {
-            "image": "04_regulacni_armatury",
+            "image": "04/04_regulacni_armatury",
             "code": "",
             "catalog": "",
             "catalogPage": ""
           },
           {
-            "image": "04_regulacni_armatury",
+            "image": "04/04_regulacni_armatury",
             "code": "",
             "catalog": "",
             "catalogPage": ""
@@ -183,16 +215,16 @@
         "schemes": [
         ],
         "hero": "05_specialni_armatury_header",
-        "preview": "05_specialni_armatury",
+        "preview": "05/05_specialni_armatury",
         "gallery" : [
           {
-            "image": "04_regulacni_armatury",
+            "image": "05/04_regulacni_armatury",
             "code": "",
             "catalog": "",
             "catalogPage": ""
           },
           {
-            "image": "04_regulacni_armatury",
+            "image": "05/04_regulacni_armatury",
             "code": "",
             "catalog": "",
             "catalogPage": ""
@@ -220,7 +252,7 @@
         "schemes": [
         ],
         "hero": "06_vlezy_prulezy_header",
-        "preview": "06_vlezy_prulezy"
+        "preview": "06/06_vlezy_prulezy"
       },
       {
         "id": "accessories",
@@ -243,7 +275,7 @@
         "schemes": [
         ],
         "hero": "07_prislusenstvi_header",
-        "preview": "07_prislusenstvi"
+        "preview": "07/07_prislusenstvi"
       },
       {
         "id": "double-jacketed-fittings",
@@ -266,7 +298,7 @@
         "schemes": [
         ],
         "hero": "08_dvouplastove_armatury_header",
-        "preview": "08_dvouplastove_armatury"
+        "preview": "08/08_dvouplastove_armatury"
       }
     ]
   }
