@@ -22,9 +22,14 @@
             </b-col>
 
             <b-col md="6" cols="12" class="d-flex flex-row align-content-center justify-content-start justify-content-md-end">
-              <CustomButton :title="$t('global.show')" :href="item.url" gray />
+              <CustomButton :title="$t('global.show')" :href="localePath(item.url)" gray />
 
-              <CustomButton :title="$t('global.download')" :href="item.urlDownload" download class="ml-1" />
+              <CustomButton
+                :title="$t('global.download')"
+                :href="'/tables/pdf/' + item.urlDownload + '.pdf'"
+                download
+                class="ml-1"
+              />
             </b-col>
           </b-row>
         </div>
@@ -47,7 +52,7 @@
               </b-col>
 
               <b-col md="6" cols="12" class="d-flex flex-row align-content-center justify-content-start justify-content-md-end">
-                <CustomButton :title="$t('global.show')" :href="item.url" gray />
+                <CustomButton :title="$t('global.show')" :href="localePath(item.url)" gray />
 
                 <CustomButton :title="$t('global.download')" :href="item.urlDownload" download class="ml-1" />
               </b-col>
