@@ -31,6 +31,20 @@
               </div>
             </div>
           </div>
+
+          <div class="slide" style="background: #004798;">
+            <div class="body">
+              <div class="headline">
+                <CustomIcon name="arrow-right-circle" scale="1.5" class="mb-3 d-block" bootstrap />
+                {{ $t('global.showMoreArticles') }}
+              </div>
+              <nuxt-link :to="localePath('/news')">
+                <div class="link">
+                  {{ $t('global.show') }}
+                </div>
+              </nuxt-link>
+            </div>
+          </div>
         </div>
 
         <div id="next-catch" />
