@@ -42,34 +42,34 @@
           }
         ],
         "hero": "02_spojovaci_armatury_header",
-        "preview": "02_spojovaci_armatury",
+        "preview": "02/02_spojovaci_armatury",
         "gallery" : [
           {
-            "image": "02_spojovaci_armatury_01",
+            "image": "02/02_spojovaci_armatury_01",
             "code": "2012R",
             "catalog": "02",
             "catalogPage": "6"
           },
           {
-            "image": "02_spojovaci_armatury_02",
+            "image": "02/02_spojovaci_armatury_06",
             "code": "21250",
             "catalog": "02",
             "catalogPage": "14"
           },
           {
-            "image": "02_spojovaci_armatury_03",
+            "image": "02/02_spojovaci_armatury_03",
             "code": "21120 SMS",
             "catalog": "02",
             "catalogPage": "12"
           },
           {
-            "image": "02_spojovaci_armatury_04",
+            "image": "02/02_spojovaci_armatury_05",
             "code": "20740",
             "catalog": "02",
             "catalogPage": "32"
           },
           {
-            "image": "02_spojovaci_armatury_05",
+            "image": "02/02_spojovaci_armatury_04",
             "code": "22870",
             "catalog": "02",
             "catalogPage": "36"
@@ -85,10 +85,10 @@
         "title": "Potrubní tvarovky",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {
-          "czech": "/catalog/03",
-          "english": "/catalog/03",
-          "german": "/error",
-          "russian":  "/catalog/03"
+          "czech": "/catalog/03_potrubni_tvarovky_cz_ru.pdf",
+          "english": "/catalog/03_potrubni_tvarovky_en_de.pdf",
+          "german": "/catalog/03_potrubni_tvarovky_en_de.pdf",
+          "russian": "/catalog/03_potrubni_tvarovky_cz_ru.pdf"
         },
         "tables": [
           {
@@ -109,7 +109,39 @@
           }
         ],
         "hero": "03_potrubni_tvarovky_header",
-        "preview": "03_potrbuni_tvarovky"
+        "preview": "03/03_potrbuni_tvarovky",
+        "gallery" : [
+          {
+            "image": "03/02_spojovaci_armatury_01",
+            "code": "2012R",
+            "catalog": "02",
+            "catalogPage": "6"
+          },
+          {
+            "image": "03/02_spojovaci_armatury_02",
+            "code": "21250",
+            "catalog": "02",
+            "catalogPage": "14"
+          },
+          {
+            "image": "03/02_spojovaci_armatury_03",
+            "code": "21120 SMS",
+            "catalog": "02",
+            "catalogPage": "12"
+          },
+          {
+            "image": "03/02_spojovaci_armatury_04",
+            "code": "20740",
+            "catalog": "02",
+            "catalogPage": "32"
+          },
+          {
+            "image": "03/02_spojovaci_armatury_05",
+            "code": "22870",
+            "catalog": "02",
+            "catalogPage": "36"
+          }
+        ]
       },
       {
         "id": "control-fittings",
@@ -140,22 +172,22 @@
         "schemes": [
         ],
         "hero": "04_regulacni_armatury_header",
-        "preview": "04_regulacni_armatury",
+        "preview": "04/04_regulacni_armatury",
         "gallery" : [
           {
-            "image": "04_regulacni_armatury",
+            "image": "04/04_regulacni_armatury",
             "code": "",
             "catalog": "",
             "catalogPage": ""
           },
           {
-            "image": "04_regulacni_armatury",
+            "image": "04/04_regulacni_armatury",
             "code": "",
             "catalog": "",
             "catalogPage": ""
           },
           {
-            "image": "04_regulacni_armatury",
+            "image": "04/04_regulacni_armatury",
             "code": "",
             "catalog": "",
             "catalogPage": ""
@@ -171,10 +203,10 @@
         "title": "Speciální armatury",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {
-          "czech": "/catalog/03",
-          "english": "/catalog/03",
-          "german": "/error",
-          "russian":  "/catalog/03"
+          "czech": "/catalog/05_specialni_armatury_cz_ru.pdf",
+          "english": "/catalog/05_specialni_armatury_en_de.pdf",
+          "german": "/catalog/05_specialni_armatury_en_de.pdf",
+          "russian": "/catalog/05_specialni_armatury_cz_ru.pdf"
         },
         "tables": [
         ],
@@ -183,16 +215,16 @@
         "schemes": [
         ],
         "hero": "05_specialni_armatury_header",
-        "preview": "05_specialni_armatury",
+        "preview": "05/05_specialni_armatury",
         "gallery" : [
           {
-            "image": "04_regulacni_armatury",
+            "image": "05/04_regulacni_armatury",
             "code": "",
             "catalog": "",
             "catalogPage": ""
           },
           {
-            "image": "04_regulacni_armatury",
+            "image": "05/04_regulacni_armatury",
             "code": "",
             "catalog": "",
             "catalogPage": ""
@@ -208,10 +240,10 @@
         "title": "Vlezy a průlezy",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {
-          "czech": "/catalog/03",
-          "english": "/catalog/03",
-          "german": "/error",
-          "russian":  "/catalog/03"
+          "czech": "/catalog/06_vlezy_a_prulezy_cz_ru.pdf",
+          "english": "/catalog/06_vlezy_a_prulezy_en_de.pdf",
+          "german": "/catalog/06_vlezy_a_prulezy_en_de.pdf",
+          "russian": "/catalog/06_vlezy_a_prulezy_cz_ru.pdf"
         },
         "tables": [
         ],
@@ -220,7 +252,7 @@
         "schemes": [
         ],
         "hero": "06_vlezy_prulezy_header",
-        "preview": "06_vlezy_prulezy"
+        "preview": "06/06_vlezy_prulezy"
       },
       {
         "id": "accessories",
@@ -231,10 +263,10 @@
         "title": "Příslušenství",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {
-          "czech": "/catalog/03",
-          "english": "/catalog/03",
-          "german": "/error",
-          "russian":  "/catalog/03"
+          "czech": "/catalog/07_prislusenstvi_cz_ru.pdf",
+          "english": "/catalog/07_prislusenstvi_en_de.pdf",
+          "german": "/catalog/07_prislusenstvi_en_de.pdf",
+          "russian": "/catalog/07_prislusenstvi_cz_ru.pdf"
         },
         "tables": [
         ],
@@ -243,7 +275,7 @@
         "schemes": [
         ],
         "hero": "07_prislusenstvi_header",
-        "preview": "07_prislusenstvi"
+        "preview": "07/07_prislusenstvi"
       },
       {
         "id": "double-jacketed-fittings",
@@ -254,10 +286,10 @@
         "title": "Dvouplášťové armatury",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
         "downloadItem": {
-          "czech": "/catalog/03",
-          "english": "/catalog/03",
-          "german": "/error",
-          "russian":  "/catalog/03"
+          "czech": "/catalog/08_dvouplastove_armatury_cz_ru.pdf",
+          "english": "/catalog/08_dvouplastove_armatury_en_de.pdf",
+          "german": "/catalog/08_dvouplastove_armatury_en_de.pdf",
+          "russian": "/catalog/08_dvouplastove_armatury_cz_ru.pdf"
         },
         "tables": [
         ],
@@ -266,7 +298,7 @@
         "schemes": [
         ],
         "hero": "08_dvouplastove_armatury_header",
-        "preview": "08_dvouplastove_armatury"
+        "preview": "08/08_dvouplastove_armatury"
       }
     ]
   }

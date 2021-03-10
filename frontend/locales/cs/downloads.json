@@ -35,21 +35,23 @@
         "items": [
           {
             "title": "Tabulka převodu tlaků",
-            "url": "/",
-            "urlDownload": "/",
-            "table": "<table><tbody><tr><td>100000 Pa</td></tr><tr><td>100 kPa</td></tr><tr><td>1000 Milibarů</td></tr><tr><td>1000000 Mikrobarů</td></tr><tr><td>~0,98 Atmosf&eacute;r</td></tr><tr><td>~401,46 Inches of wather</td></tr><tr><td>10 Meters of wather</td></tr><tr><td>~29,53 Inches of mercury</td></tr><tr><td>~750 Millimeters of mercury</td></tr><tr><td>~14,5 Pounds per square inches</td></tr><tr><td>~1,02 Kilograms per square inches</td></tr></tbody></table>"
+            "url": "/tables/conversion-tables",
+            "urlDownload": "tabulka-prevodu-tlaku"
+          },
+          {
+            "title": "Nerezová ocel",
+            "url": "/tables/steinless-steal",
+            "urlDownload": "nerezova-ocel"
           },
           {
             "title": "Tabulka nerezovch ocelí",
-            "url": "/",
-            "urlDownload": "/",
-            "table": "<table><tbody><tr><td>Poldi</td><td>ČSN<br />PN</td><td>SRN<br />DIN (W. Nr.)</td><td>USA<br />ASTM</td><td>It&aacute;lie<br />UNI</td><td>Francie<br />AFNOR</td><td>Rusko<br />GOST</td></tr><tr><td>AKV7</td><td>17240</td><td>1.4301</td><td>AISI 304</td><td>X5CrNi1810</td><td>Z7CN18-09</td><td>08Ch18N10</td></tr><tr><td>AKV2</td><td>17249</td><td>1.4306</td><td>AISI304L</td><td>X2CrNi1811</td><td>Z3CN19-121</td><td>03Ch18N11</td></tr><tr><td>AKV EX7</td><td>17346</td><td>1.4401</td><td>AISI 316</td><td>X5CrNiMo1712.2</td><td>Z7CND17-12-02</td><td>-</td></tr><tr><td>AKV EX2</td><td>17349</td><td>1.4404</td><td>AISI 316L</td><td>X2CrNiMo1713.2</td><td>Z3CND18-12-02</td><td>03Ch12N14M2</td></tr><tr><td>AKVS7</td><td>17248</td><td>1.4541</td><td>AISI 321</td><td>X6CrNiTi1811</td><td>Z6CNT18-10</td><td>08Ch18N10T</td></tr><tr><td>AKV EX S9</td><td>17348</td><td>1.4571</td><td>AISI 316Ti</td><td>X6CrNiMoTi1712</td><td>Z6CNDT17-12</td><td>08Ch17N13M2</td></tr></tbody></table>"
+            "url": "/tables/steinless-steal-table",
+            "urlDownload": "tabulka-nerezovych-oceli"
           },
           {
             "title": "Materiály těsnění",
-            "url": "/",
-            "urlDownload": "/",
-            "table": "<table><tbody><tr><td>N&aacute;zev</td><td>Silikon<br />(VMQ silikonov&aacute; pryž)</td><td>EPDM<br />(etylen-propylen-dienov&aacute; pryž)</td><td>Viton<br />(FPM fluorov&aacute; pryž)</td><td>Perbunan<br />(NBR nitrilov&aacute; pryž)</td><td>PTFE<br />(polytetrafluoretylen)</td></tr><tr><td>Teplota použit&iacute;</td><td>ve vodě je stabiln&iacute; do 100&deg;C<br /><br />možnost sterilizace p&aacute;rou kr&aacute;tkodobě do 120&deg;C až 130&deg;C</td><td>trval&eacute; provozn&iacute; použit&iacute; od -40&deg;C do +140&deg;C<br /><br />možnost sterilizace p&aacute;rou do 130&deg;C</td><td>trval&eacute; provozn&iacute; použit&iacute; od -20&deg;C do +200&deg;C<br /><br />možnost sterilizace p&aacute;rou kr&aacute;tkodobě do 130&deg;C až 140&deg;C</td><td>trval&eacute; provozn&iacute; použit&iacute; od -25&deg;C do +110&deg;C<br /><br />možnost sterilizace p&aacute;rou kr&aacute;tkodobě do 130&deg;C</td><td>do +200&deg;C je fyziologicky nez&aacute;vadn&yacute;<br /><br />použit&iacute; od -200&deg;C do +260&deg;C</td></tr><tr><td>Doporučen&eacute; použit&iacute;</td><td>vysok&aacute; teplotn&iacute; zat&iacute;žitelnost<br /><br />m&aacute; dobrou odolnost proti chladu, dobře se hod&iacute; pro potraviny, m&aacute; dielektrick&eacute; vlastnosti<br /><br />m&aacute; dobrou odolnost proti alkoholům</td><td>m&aacute; dobrou odolnost proti bobtn&aacute;n&iacute; pro:<br /><br />zředěn&eacute; anorganick&eacute; a organick&eacute; kyseliny, m&eacute;dia, oxidačně působ&iacute;c&iacute; m&eacute;dia, louhy a ketony<br /><br />horkou vodu a p&aacute;ru do 130&deg;C<br /><br /></td><td>m&aacute; dobrou odolnost proti bobtn&aacute;n&iacute; pro:<br /><br />miner&aacute;ln&iacute; oleje<br /><br />rostlinn&eacute; a živoči&scaron;n&eacute; oleje<br /><br />maziva (i určit&aacute; aditiva)<br /><br />pohonn&eacute; hmoty</td><td>m&aacute; dobrou odolnost proti bobtn&aacute;n&iacute; pro:<br /><br />alifatick&eacute; uhlovod&iacute;ky (jako je propan, butan, benzin, miner&aacute;ln&iacute; olej)<br /><br />maziva na z&aacute;kladě miner&aacute;ln&iacute;ho oleje</td><td>m&aacute; dobrou odolnost proti bobtn&aacute;n&iacute; v t&eacute;měř v&scaron;ech d&iacute;lech<br /><br />povrch m&aacute; hladk&yacute; a odpudiv&yacute;, takže nedoch&aacute;z&iacute; k ulp&iacute;v&aacute;n&iacute;<br /><br />m&aacute; chemickou odolnost lep&scaron;&iacute; než tomu je u v&scaron;ech ostatn&iacute;ch elastomerů<br /><br />nehořlav&yacute; materi&aacute;l</td></tr><tr><td>Omezen&eacute; použit&iacute; (hraničn&iacute;)</td><td>vykazuje vysok&eacute; bobtn&aacute;n&iacute; pro:<br /><br />n&iacute;zkomolekul&aacute;rn&iacute; estery a &eacute;tery<br /><br />alifatick&eacute; a aromatick&eacute; uhlovod&iacute;ky<br /><br />koncentrovan&eacute; kyseliny a alk&aacute;lie</td><td>Nelze použ&iacute;t pro:<br /><br />rostlinn&eacute; a živoči&scaron;n&eacute; oleje<br /><br />alifatick&eacute;, aromatick&eacute; a chlorovan&eacute; uhlovod&iacute;ky<br /><br />miner&aacute;ln&iacute; oleje</td><td>vykazuje vysok&eacute; bobtn&aacute;n&iacute; pro:<br /><br />pol&aacute;rn&iacute; rozpou&scaron;tědla, jako je aceton, metylketon, etylacet&aacute;t, dietyl&eacute;ter a dioxan<br /><br />n&iacute;zkomolekulov&eacute; organick&eacute; kyseliny (kyselina mravenč&iacute; a kyselina octov&aacute;)<br /><br />plynn&yacute; amoniak, aminy a alkany<br /><br />přehř&aacute;t&aacute; vodn&iacute; p&aacute;ra</td><td>nen&iacute; odoln&yacute; pro:<br /><br />pol&aacute;rn&iacute; rozpou&scaron;tědla<br /><br />chlorovan&eacute; uhlovod&iacute;ky<br /><br />ketony<br /><br />aromatick&eacute; uhlovod&iacute;ky (benzol)<br /><br />estery</td><td>nen&iacute; odoln&yacute; pro:<br /><br />kapaln&eacute; alkalick&eacute; kovy a někter&eacute; sloučeniny fluoru ve spojen&iacute; s vysok&yacute;m tlakem a teplotou<br /><br />materi&aacute;l nevykazuje pružnost gumy</td></tr><tr><td>Schv&aacute;len&iacute; materi&aacute;lu</td><td>BGA/FDA</td><td>BGA/FDA</td><td>BGA/FDA</td><td>BGA/FDA</td><td>BGA/FDA</td></tr></tbody></table>"
+            "url": "/tables/sealing-materials",
+            "urlDownload": "materialy-tesneni"
           }
         ]
       },

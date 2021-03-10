@@ -1,0 +1,125 @@
+{
+  "tables": {
+    "tables": [
+      {
+        "id": "steinless-steal",
+        "title": "Steinless steal",
+        "description": "All parts and components listed in the catalog are made of stainless acid-resistant Cr-Ni steel ČSN 17 240, which is equivalent to the German standard DIN 1.4301. If there are requirements for increased corrosion resistance, all parts are made of stainless Cr-Ni-Mo steel ČSN 17 349, which corresponds to DIN 1.4404.",
+        "note": "",
+        "fields": [
+          { "key": "csn", "label": "ČSN PN", "sortable": false },
+          { "key": "c", "label": "%C max.", "sortable": false },
+          { "key": "si", "label": "%Si max.", "sortable": false },
+          { "key": "mn", "label": "%Mn max.", "sortable": false },
+          { "key": "p", "label": "%P max.", "sortable": false },
+          { "key": "s", "label": "%S max.", "sortable": false },
+          { "key": "cr", "label": "%Cr max.", "sortable": false },
+          { "key": "mo", "label": "%Mo max.", "sortable": false },
+          { "key": "ni", "label": "%Ni max.", "sortable": false },
+          { "key": "ti", "label": "%Ti max.", "sortable": false }
+        ],
+        "table": [
+          { "csn": "17 240", "c": "0.07", "si": "1.00", "mn": "2.00", "p": "0.045", "s": "0.030", "cr": "17-19", "mo": "", "ni": "8,5-10,5", "ti": "" },
+          { "csn": "17 249", "c": "0.03", "si": "1.00", "mn": "2.00", "p": "0.045", "s": "0.030", "cr": "18-20", "mo": "", "ni": "10.0-12.5", "ti": "" },
+          { "csn": "17 346", "c": "0.07", "si": "1.00", "mn": "2.00", "p": "0.045", "s": "0.030", "cr": "16.5-18.5", "mo": "2.0-2.5", "ni": "10.5-13.5", "ti": "" },
+          { "csn": "17 349", "c": "0.03", "si": "1.00", "mn": "2.00", "p": "0.045", "s": "0.030", "cr": "16.5-18.5", "mo": "2.0-2.5", "ni": "11.0-14.0", "ti": "" },
+          { "csn": "17 248", "c": "0.08", "si": "1.00", "mn": "2.00", "p": "0.045", "s": "0.030", "cr": "17.0-19.0", "mo": "", "ni": "9.0-12.0", "ti": ">=5xC" },
+          { "csn": "17 348", "c": "0.08", "si": "1.00", "mn": "2.00", "p": "0.045", "s": "0.030", "cr": "16.5-15.5", "mo": "2.0-2.5", "ni": "10.5-13.5", "ti": ">=5xC" }
+        ]
+      },
+      {
+        "id": "sealing-materials",
+        "title": "Sealing materials",
+        "description": "",
+        "note": "BGA = approval of the Federal Health Office in Germany (Bundesgesundheitsamt) <br> FDA = approval of theUS Food and Drug Administration",
+        "fields": [
+          { "key": "name", "label": "Název", "sortable": false },
+          { "key": "silicon", "label": "Silikon (VMQ silikonová pryž)", "sortable": false },
+          { "key": "epdm", "label": "EPDM (etylen-propylen-dienová pryž)", "sortable": false },
+          { "key": "viton", "label": "Viton (FPM fluorová pryž)", "sortable": false },
+          { "key": "perbuan", "label": "Perbunan (NBR nitrilová pryž)", "sortable": false },
+          { "key": "ptee", "label": "PTFE (polytetrafluoretylen)", "sortable": false }
+        ],
+        "table": [
+          {
+            "name": "Teplota použití",
+            "silicon": "ve vodě je stabilní do 100°C, možnost sterilizace párou krátkodobě do 120°C až 130°C",
+            "epdm": "trvalé provozní použití od -40°C do +140°C, možnost sterilizace párou do 130°C",
+            "viton": "trvalé provozní použití od -20°C do +200°C, možnost sterilizace párou krátkodobě do 130°C až 140°C",
+            "perbuan": "trvalé provozní použití od -25°C do +110°C, možnost sterilizace párou krátkodobě do 130°C",
+            "ptee": "do +200°C je fyziologicky nezávadný, použití od -200°C do +260°C"
+          },
+          {
+            "name": "Doporučené použití",
+            "silicon": "vysoká teplotní zatížitelnost, má dobrou odolnost proti chladu, dobře se hodí pro potraviny, má dielektrické vlastnosti, má dobrou odolnost proti alkoholům",
+            "epdm": "má dobrou odolnost proti bobtnání pro: zředěné anorganické a organické kyseliny, média, oxidačně působící média, louhy a ketony, horkou vodu a páru do 130°C",
+            "viton": "má dobrou odolnost proti bobtnání pro: minerální oleje, rostlinné a živočišné oleje, maziva (i určitá aditiva), pohonné hmoty",
+            "perbuan": "má dobrou odolnost proti bobtnání pro: alifatické uhlovodíky (jako je propan, butan, benzin, minerální olej), maziva na základě minerálního oleje",
+            "ptee": "má dobrou odolnost proti bobtnání v téměř všech dílech povrch má hladký a odpudivý, takže nedochází k ulpívání, má chemickou odolnost lepší než tomu je u všech ostatních elastomerů, nehořlavý materiál"
+          },
+          {
+            "name": "Omezené použití (hraniční)",
+            "silicon": "vykazuje vysoké bobtnání pro: nízkomolekulární estery a étery, alifatické a aromatické uhlovodíky, koncentrované kyseliny a alkálie",
+            "epdm": "Nelze použít pro: rostlinné a živočišné oleje, alifatické, aromatické a chlorované uhlovodíky, minerální oleje",
+            "viton": "vykazuje vysoké bobtnání pro: polární rozpouštědla, jako je aceton, metylketon, etylacetát, dietyléter a dioxan, nízkomolekulové organické kyseliny (kyselina mravenčí a kyselina octová), plynný amoniak, aminy a alkany, přehřátá vodní pára",
+            "perbuan": "není odolný pro: polární rozpouštědla, chlorované uhlovodíky, ketony, aromatické uhlovodíky (benzol), estery",
+            "ptee": "není odolný pro: kapalné alkalické kovy a některé sloučeniny fluoru ve spojení s vysokým tlakem a teplotou, materiál nevykazuje pružnost gumy"
+          },
+          {
+            "name": "Schválení materiálu",
+            "silicon": "BGA/FDA",
+            "epdm": "BGA/FDA",
+            "viton": "BGA/FDA",
+            "perbuan": "BGA/FDA",
+            "ptee": "BGA/FDA"
+          }
+        ]
+      },
+      {
+        "id": "conversion-tables",
+        "title": "Conversion tables",
+        "description": "",
+        "note": "",
+        "fields": [
+          { "key": "bar", "label": "1 Bar =", "sortable": false }
+        ],
+        "table": [
+          { "bar": "100000 Pa" },
+          { "bar": "100 kPa" },
+          { "bar": "1000 Milibarů" },
+          { "bar": "1000000 Mikrobarů" },
+          { "bar": "~0,98 Atmosfér" },
+          { "bar": "~401,46 Inches of wather" },
+          { "bar": "10 Meters of wather" },
+          { "bar": "~29,53 Inches of mercury" },
+          { "bar": "~750 Millimeters of mercury" },
+          { "bar": "~14,5 Pounds per square inches" },
+          { "bar": "~1,02 Kilograms per square inches" }
+        ]
+      },
+      {
+        "id": "steinless-steal-table",
+        "title": "Steinless steal table",
+        "description": "Table of conversions of international standards for marking steel.",
+        "note": "",
+        "fields": [
+          { "key": "poldi", "label": "Poldi", "sortable": false },
+          { "key": "csn", "label": "ČSN PN", "sortable": false },
+          { "key": "srn", "label": "SRN DIN (W. Nr.)", "sortable": false },
+          { "key": "usa", "label": "USA ASTM", "sortable": false },
+          { "key": "uni", "label": "Itálie UNI", "sortable": false },
+          { "key": "afnor", "label": "Francie AFNOR", "sortable": false },
+          { "key": "gost", "label": "Rusko GOST", "sortable": false }
+        ],
+        "table": [
+          { "poldi": "AKV7", "csn": "17240", "srn": "1.4301", "usa": "AISI 304", "uni": "X5CrNi1810", "afnor": "Z7CN18-09", "gost": "08Ch18N10" },
+          { "poldi": "AKV2", "csn": "17249", "srn": "1.4306", "usa": "AISI304L", "uni": "X2CrNi1811", "afnor": "Z3CN19-121", "gost": "08Ch18N10" },
+          { "poldi": "AKV EX7", "csn": "17346", "srn": "1.4401", "usa": "AISI 316", "uni": "X5CrNiMo1712.2", "afnor": "Z7CND17-12-02", "gost": "" },
+          { "poldi": "AKV EX2", "csn": "17349", "srn": "1.4404", "usa": "AISI 316L", "uni": "X2CrNiMo1713.2", "afnor": "Z3CND18-12-02", "gost": "03Ch12N14M2" },
+          { "poldi": "AKVS7", "csn": "17248", "srn": "1.4541", "usa": "AISI 321", "uni": "X6CrNiTi1811", "afnor": "Z6CNT18-10", "gost": "08Ch18N10T" },
+          { "poldi": "AKV EX S9", "csn": "17348", "srn": "1.4571", "usa": "AISI 316Ti", "uni": "X6CrNiMoTi1712", "afnor": "Z6CNDT17-12", "gost": "08Ch17N13M2" }
+        ]
+      }
+    ]
+  }
+}
