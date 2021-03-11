@@ -42,16 +42,16 @@
                   lightbox
                 />
 
-                <div class="products__gallery--badge">
-                  <CustomBadge
+                <div class="products__gallery--meta pt-2 d-flex flex-row">
+                  <p
                     v-if="gallery.code.length > 1"
-                    :title="$t('global.code') + ' ' + gallery.code"
+                    class="pr-1 font-weight-bold"
+                    v-html="$t('global.code') + ' ' + gallery.code"
                   />
 
-                  <CustomBadge
+                  <p
                     v-if="gallery.catalog.length > 1 || gallery.catalogPage.length > 1"
-                    :title="gallery.catalog + ' / ' + $t('global.catalogPage') + ' ' + gallery.catalogPage"
-                    secondary
+                    v-html="'(' + $t('global.catalogShort') + ' ' + gallery.catalog + ' / ' + $t('global.catalogPage') + ' ' + gallery.catalogPage + ')'"
                   />
                 </div>
               </b-col>
@@ -233,11 +233,10 @@ export default {
       color: $primary;
     }
 
-    &--badge {
-      position: absolute;
-      bottom: 0;
-      left: $spacer-md;
-      padding: $spacer;
+    &--meta {
+      p {
+        font-size: $sm-font-size - .1;
+      }
     }
   }
 
