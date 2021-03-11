@@ -109,39 +109,7 @@
           }
         ],
         "hero": "03_potrubni_tvarovky_header",
-        "preview": "03/03_potrbuni_tvarovky",
-        "gallery" : [
-          {
-            "image": "03/02_spojovaci_armatury_01",
-            "code": "2012R",
-            "catalog": "02",
-            "catalogPage": "6"
-          },
-          {
-            "image": "03/02_spojovaci_armatury_02",
-            "code": "21250",
-            "catalog": "02",
-            "catalogPage": "14"
-          },
-          {
-            "image": "03/02_spojovaci_armatury_03",
-            "code": "21120 SMS",
-            "catalog": "02",
-            "catalogPage": "12"
-          },
-          {
-            "image": "03/02_spojovaci_armatury_04",
-            "code": "20740",
-            "catalog": "02",
-            "catalogPage": "32"
-          },
-          {
-            "image": "03/02_spojovaci_armatury_05",
-            "code": "22870",
-            "catalog": "02",
-            "catalogPage": "36"
-          }
-        ]
+        "preview": "03/03_potrbuni_tvarovky"
       },
       {
         "id": "control-fittings",
@@ -172,27 +140,7 @@
         "schemes": [
         ],
         "hero": "04_regulacni_armatury_header",
-        "preview": "04/04_regulacni_armatury",
-        "gallery" : [
-          {
-            "image": "04/04_regulacni_armatury",
-            "code": "",
-            "catalog": "",
-            "catalogPage": ""
-          },
-          {
-            "image": "04/04_regulacni_armatury",
-            "code": "",
-            "catalog": "",
-            "catalogPage": ""
-          },
-          {
-            "image": "04/04_regulacni_armatury",
-            "code": "",
-            "catalog": "",
-            "catalogPage": ""
-          }
-        ]
+        "preview": "04/04_regulacni_armatury"
       },
       {
         "id": "special-fittings",
@@ -215,21 +163,7 @@
         "schemes": [
         ],
         "hero": "05_specialni_armatury_header",
-        "preview": "05/05_specialni_armatury",
-        "gallery" : [
-          {
-            "image": "05/04_regulacni_armatury",
-            "code": "",
-            "catalog": "",
-            "catalogPage": ""
-          },
-          {
-            "image": "05/04_regulacni_armatury",
-            "code": "",
-            "catalog": "",
-            "catalogPage": ""
-          }
-        ]
+        "preview": "05/05_specialni_armatury"
       },
       {
         "id": "manholes-and-manholes",

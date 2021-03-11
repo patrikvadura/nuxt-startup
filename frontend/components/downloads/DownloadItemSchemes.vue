@@ -9,17 +9,17 @@
     <template v-if="categoryItem.length > 1">
       <b-row cols-md="5" cols="2" class="mx-0 pb-2 mb-2 border-bottom">
         <div v-for="item in categoryItem" :key="item.title">
-          <b-col class="downloads__item d-flex flex-row align-content-center">
+          <b-col class="downloads__item d-flex flex-column align-content-center">
             <CustomImage :image="item.image" />
 
-            <div class="downloads__item--code">
-              <CustomBadge
-                :title="$t('global.code') + ' ' + item.code"
+            <div class="products__item--meta pt-2 d-flex flex-row">
+              <p
+                class="pr-1 font-weight-bold"
+                v-html="$t('global.code') + ' ' + item.code"
               />
 
-              <CustomBadge
-                :title="$t('global.catalogPage') + ' ' + item.catalogPage"
-                secondary
+              <p
+                v-html="$t('global.catalogPage') + ' ' + item.catalogPage"
               />
             </div>
           </b-col>
@@ -68,11 +68,10 @@ export default {
 <style lang="scss" scoped>
 .downloads {
   &__item {
-    &--code {
-      position: absolute;
-      bottom: 0;
-      left: $spacer-md;
-      padding: $spacer-md;
+    &--meta {
+      p {
+        font-size: $sm-font-size - .1;
+      }
     }
   }
 }

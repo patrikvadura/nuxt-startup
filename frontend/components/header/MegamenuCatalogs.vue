@@ -70,7 +70,7 @@
             <b-col cols="8">
               <b-row cols="4">
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.czech">
+                  <a :href="item.czech" target="_blank">
                     <CustomIcon
                       :name="item.czech.length > 6 ? 'check-circle-fill' : 'x-circle-fill'"
                       :color="item.czech.length > 6 ? '#0a6ace' : 'rgba(0, 0, 0, .2)'"
@@ -80,7 +80,7 @@
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.russian">
+                  <a :href="item.russian" target="_blank">
                     <CustomIcon
                       :name="item.russian.length > 6 ? 'check-circle-fill' : 'x-circle-fill'"
                       :color="item.russian.length > 6 ? '#0a6ace' : 'rgba(0, 0, 0, .2)'"
@@ -90,7 +90,7 @@
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.english">
+                  <a :href="item.english" target="_blank">
                     <CustomIcon
                       :name="item.english.length > 6 ? 'check-circle-fill' : 'x-circle-fill'"
                       :color="item.english.length > 6 ? '#0a6ace' : 'rgba(0, 0, 0, .2)'"
@@ -100,7 +100,7 @@
                 </b-col>
 
                 <b-col class="megamenu__dropdown--item d-flex justify-content-center">
-                  <a :href="item.german">
+                  <a :href="item.german" target="_blank">
                     <CustomIcon
                       :name="item.german.length > 6 ? 'check-circle-fill' : 'x-circle-fill'"
                       :color="item.german.length > 6 ? '#0a6ace' : 'rgba(0, 0, 0, .2)'"
@@ -126,7 +126,7 @@
         <b-row>
           <b-col cols="12">
             <div class="megamenu__dropdown--item">
-              <nuxt-link :to="localePath('/downloads/catalog')" class="bold">
+              <nuxt-link :to="localePath('/downloads/catalog')" target="_blank" class="bold">
                 {{ $t('global.catalogs') }}
               </nuxt-link>
             </div>
