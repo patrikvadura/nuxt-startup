@@ -235,6 +235,10 @@ export default {
     icons: true
   },
 
+  storybook: {
+    // Options
+  },
+
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   },
