@@ -1,0 +1,105 @@
+{
+  "downloads": {
+    "title": "Downloads",
+    "footer": "Don´t you find what are you looking for? Contact us.",
+    "downloadComplet": "The complete catalog for download",
+    "downloadCompletDescription": "Don't waste time browsing several different catalogs to find what you are looking for.",
+    "catalog": {
+      "title": "Catalog"
+    },
+    "lists": {
+      "title": "Tech lists",
+      "items": [
+        {
+          "title": "Item 1 to download",
+          "url": "/"
+        },
+        {
+          "title": "Item 2 to download",
+          "url": "/"
+        },
+        {
+          "title": "Item 3 to download",
+          "url": "/"
+        },
+        {
+          "title": "Item 4 to download",
+          "url": "/"
+        }
+      ]
+    },
+    "info": {
+      "title": "Tech info",
+      "tables": {
+        "title": "Conversion tables",
+        "items": [
+          {
+            "title": "Pressure conversion table",
+            "url": "/tables/conversion-tables",
+            "urlDownload": "tabulka-prevodu-tlaku"
+          },
+          {
+            "title": "Steinless steal",
+            "url": "/tables/steinless-steal",
+            "urlDownload": "nerezova-ocel"
+          },
+          {
+            "title": "Stainless steel table",
+            "url": "/tables/steinless-steal-table",
+            "urlDownload": "tabulka-nerezovych-oceli"
+          },
+          {
+            "title": "Sealing materials",
+            "url": "/tables/sealing-materials",
+            "urlDownload": "materialy-tesneni"
+          }
+        ]
+      },
+      "info": {
+        "title": "Tech info",
+        "items": [
+        ]
+      }
+    },
+    "schemes": {
+      "title": "Assembly diagrams",
+      "02": {
+        "title": "Connecting fittings",
+        "code": "connecting-fittings",
+        "items": [
+          {
+            "code": "2568",
+            "catalogPage": "3",
+            "image": ""
+          },
+          {
+            "code": "40035",
+            "catalogPage": "8",
+            "image": ""
+          },
+          {
+            "code": "48965",
+            "catalogPage": "12",
+            "image": ""
+          }
+        ]
+      },
+      "03": {
+        "title": "Pipe fittings",
+        "code": "pipe-fittings",
+        "items": [
+          {
+            "code": "2568",
+            "catalogPage": "6",
+            "image": ""
+          },
+          {
+            "code": "98852",
+            "catalogPage": "11",
+            "image": ""
+          }
+        ]
+      }
+    }
+  }
+}

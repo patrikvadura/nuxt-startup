@@ -7,10 +7,8 @@
         </h4>
 
         <ul>
-          <div v-for="item in $t('contact.address')" :key="item.id">
-            <li>
-              {{ item.title }}
-            </li>
+          <div v-for="item in $t('contact.address')" :key="item.title">
+            <li v-html="item.title" />
           </div>
         </ul>
 
@@ -19,7 +17,7 @@
         </h4>
 
         <ul>
-          <div v-for="item in $t('contact.contact')" :key="item.id">
+          <div v-for="item in $t('contact.contact')" :key="item.title">
             <li>
               <CustomIcon :name="item.icon" color="#0a6ace" bootstrap />
               {{ item.title }}
@@ -41,18 +39,30 @@
             :label="$t('contact.name')"
             name="name"
             type="name"
+            rules="required"
             class="contact-form__input"
+            wide
           />
+
           <CustomInput
             :label="$t('contact.email')"
             name="email"
             type="email"
+            rules="required|email"
             class="contact-form__input"
           />
+
+          <CustomInput
+            placeholder="Váš soubor"
+            file
+            class="contact-form__input"
+          />
+
           <CustomInput
             :label="$t('contact.message')"
             name="message"
             type="message"
+            rules="required"
             class="contact-form__input"
             textarea
             rows="6"
@@ -78,41 +88,76 @@ export default {
 
 <style lang="scss" scoped>
 .contact-form {
-  width: 90%;
-  padding: 0 5rem;
-
   @include media-breakpoint-down(sm) {
-    padding: 0 2rem;
+    padding: 0 $spacer-lg;
   }
 
-  &__title {
-    text-align: center;
-    max-width: 35rem;
+  h4 {
     color: $primary;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+  }
+
+  form {
+    width: 100%;
   }
 
   &__input {
-    padding: .5rem 0;
+    padding: $spacer 0;
+  }
+
+  &__file {
+    margin: $spacer-md 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+
+    @include shadow(.1);
+    @include border-radius($spacer);
+
+    ::v-deep label {
+      background: $primary;
+      color: white;
+      padding: $spacer;
+      font-family: sans-serif;
+      border-radius: $spacer;
+      cursor: pointer;
+      margin-top: $spacer-md;
+    }
+
+    ::v-deep input::-webkit-file-upload-button {
+      background: $primary;
+      color: white;
+      padding: $spacer;
+      font-family: sans-serif;
+      border-radius: $spacer;
+      cursor: pointer;
+      margin-top: $spacer-md;
+    }
   }
 
   &__button {
-    margin-top: 1rem;
+    margin-top: $spacer-md;
   }
 
   ul {
-    padding: 1rem 3rem 1rem 0;
+    padding: $spacer-md $spacer-xl - 1 $spacer-md 0;
 
     @include media-breakpoint-down(sm) {
-      padding: 1rem 0;
+      padding: $spacer-md 0;
+      text-align: center;
     }
 
     li {
       list-style: none;
-      font-size: .8rem;
-      line-height: 1.5rem;
+      font-size: $sm-font-size;
+      line-height: $line-height-lg;
 
       ::v-deep .custom-icon {
-        padding-right: .5rem;
+        padding-right: $spacer;
         transform: translateY(.2rem);
       }
     }

@@ -21,11 +21,27 @@ export default {
         content: 'Společnost NIOB FLUID s.r.o. je českým výrobcem armatur z nerezových ocelí pro potravinářský, chemický a farmaceutický průmysl. Výroba potravinářských ...'
       }
     ],
+
     link: [
       {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css'
+      }
+    ],
+
+    script: [
+      {
+        type: 'module',
+        src: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'
+      },
+      {
+        type: 'module',
+        src: 'https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js'
       }
     ]
   },

@@ -1,0 +1,26 @@
+::-webkit-scrollbar {
+  display: block;
+  width: .75rem;
+
+  &-thumb {
+    background: rgba(0, 0, 0, .15);
+
+    @include border-radius(.5rem);
+  }
+}
+
+*::-moz-selection {
+  color: $secondary;
+}
+
+*::selection {
+  color: $secondary;
+}
+
+::-moz-selection {
+  background: rgba(0, 0, 0, .1);
+}
+
+::selection {
+  background: rgba(0, 0, 0, .1);
+}

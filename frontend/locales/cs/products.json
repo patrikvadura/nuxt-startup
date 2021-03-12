@@ -3,7 +3,10 @@
     "posts": [
       {
         "id": "connecting-fittings",
-        "href": "/",
+        "before": "",
+        "after": "Potrubní tvarovky",
+        "hrefBefore": "",
+        "hrefAfter": "pipe-fittings",
         "title": "Spojovacví armatury",
         "content": "Slouží ke spojování potrubí, připojování ventilů, klapek nebo jiných potrubních dílů.<br><b>Šroubení</b> je rozebíratelný spoj skládající se ze závitového hrdla, kuželového hrdla, matice a těsnění, je možno jej doplnit o matici zaslepovací. Dodává se ve světlostech DN 10 – DN 150. Typy dodávaného šroubení : DIN, ISO , SMS, Hygienické DIN 11853, Aseptické DIN 11864.<br><b>Clampový spoj</b> je jednoduše rozebíratelný spoj, spojený pomocí nerezové objímky , typy clampových spojů : DIN , SMS<br><b>Přírubové spojení</b> je rozebíratelný spoj, krerý spojují šrouby<br>Typy spojovacích přírub: ploché příruby PN10, krkové příruby PN10, PN 16, Hygienické<br>krkové příruby PN 10 (DIN 11853), Aseptické krkové příruby PN 10 (DIN 11864)<br><b>Hadicové nádstavce</b> slouží jako koncovky hadic a umožňují spojení dvou hadic, nebo jako přechod mezi trubku a hadicí.<br><b>Spoj Garola</b> je jednoduchá spojka potrubí nebo hadic zhotovená z plechu lisováním.",
         "downloadItem": {
@@ -15,26 +18,22 @@
         "tables": [
           {
             "title": "Tabulka převodu rozměrů",
-            "url": "/"
+            "url": "dimension-conversion"
           },
           {
             "title": "Tabulka převodu tlaků",
-            "url": "/"
+            "url": "pressure-transfer"
           },
           {
             "title": "Tabulka nerezových ocelí",
-            "url": "/"
+            "url": "stainless steel"
           },
           {
             "title": "Technické informace pro těsnící kroužky",
-            "url": "/"
+            "url": "technical-information-for-sealing-rings"
           }
         ],
         "info": [
-          {
-            "title": "Spojovacví armatury",
-            "url": "/"
-          }
         ],
         "schemes": [
           {
@@ -42,73 +41,198 @@
             "url": "/"
           }
         ],
-        "preview": "fake_product_01"
+        "hero": "02_spojovaci_armatury_header",
+        "preview": "02/02_spojovaci_armatury",
+        "gallery" : [
+          {
+            "image": "02/02_spojovaci_armatury_01",
+            "code": "2012R",
+            "catalog": "02",
+            "catalogPage": "6"
+          },
+          {
+            "image": "02/02_spojovaci_armatury_06",
+            "code": "21250",
+            "catalog": "02",
+            "catalogPage": "14"
+          },
+          {
+            "image": "02/02_spojovaci_armatury_03",
+            "code": "21120 SMS",
+            "catalog": "02",
+            "catalogPage": "12"
+          },
+          {
+            "image": "02/02_spojovaci_armatury_05",
+            "code": "20740",
+            "catalog": "02",
+            "catalogPage": "32"
+          },
+          {
+            "image": "02/02_spojovaci_armatury_04",
+            "code": "22870",
+            "catalog": "02",
+            "catalogPage": "36"
+          }
+        ]
       },
       {
         "id": "pipe-fittings",
-        "href": "/",
-        "title": "Testovací nadpis",
+        "before": "Spojovacví armatury",
+        "after": "Regulační armatury",
+        "hrefBefore": "connecting-fittings",
+        "hrefAfter": "control-fittings",
+        "title": "Potrubní tvarovky",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
-        "downloadItem": "Katalog ke stažení",
-        "tables": "Spojovacví armatury",
-        "info": "Spojovacví armatury",
-        "schemes": "Spojovacví armatury",
-        "preview": "fake_product_02"
+        "downloadItem": {
+          "czech": "/catalog/03_potrubni_tvarovky_cz_ru.pdf",
+          "english": "/catalog/03_potrubni_tvarovky_en_de.pdf",
+          "german": "/catalog/03_potrubni_tvarovky_en_de.pdf",
+          "russian": "/catalog/03_potrubni_tvarovky_cz_ru.pdf"
+        },
+        "tables": [
+          {
+            "title": "Tabulka převodu rozměrů",
+            "url": "/"
+          },
+          {
+            "title": "Tabulka převodu tlaků",
+            "url": "/"
+          }
+        ],
+        "info": [
+        ],
+        "schemes": [
+          {
+            "title": "Montážní schémata regulační armatury",
+            "url": "/"
+          }
+        ],
+        "hero": "03_potrubni_tvarovky_header",
+        "preview": "03/03_potrbuni_tvarovky"
       },
       {
         "id": "control-fittings",
-        "href": "/",
-        "title": "Testovací nadpis delší",
+        "before": "Potrubní tvarovky",
+        "after": "Speciální armatury",
+        "hrefBefore": "pipe-fittings",
+        "hrefAfter": "special-fittings",
+        "title": "Regulační armatury",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
-        "downloadItem": "Katalog ke stažení",
-        "tables": "Spojovacví armatury",
-        "info": "Spojovacví armatury",
-        "schemes": "Spojovacví armatury",
-        "preview": "fake_product_03"
+        "downloadItem": {
+          "czech": "/catalog/04_regulacni_armatury_cz_ru.pdf",
+          "english": "/catalog/04_regulacni_armatury_en_de.pdf",
+          "german": "/catalog/04_regulacni_armatury_en_de.pdf",
+          "russian":  "/catalog/04_regulacni_armatury_cz_ru.pdf"
+        },
+        "tables": [
+          {
+            "title": "Tabulka převodu rozměrů",
+            "url": "/"
+          },
+          {
+            "title": "Tabulka převodu tlaků",
+            "url": "/"
+          }
+        ],
+        "info": [
+        ],
+        "schemes": [
+        ],
+        "hero": "04_regulacni_armatury_header",
+        "preview": "04/04_regulacni_armatury"
       },
       {
         "id": "special-fittings",
-        "href": "/",
-        "title": "Testovací nadpis velmi dlouhý, až moc",
+        "before": "Regulační armatury",
+        "after": "Vlezy a průlezy",
+        "hrefBefore": "control-fittings",
+        "hrefAfter": "manholes-and-manholes",
+        "title": "Speciální armatury",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
-        "downloadItem": "Katalog ke stažení",
-        "tables": "Spojovacví armatury",
-        "info": "Spojovacví armatury",
-        "schemes": "Spojovacví armatury",
-        "preview": "fake_product_04"
+        "downloadItem": {
+          "czech": "/catalog/05_specialni_armatury_cz_ru.pdf",
+          "english": "/catalog/05_specialni_armatury_en_de.pdf",
+          "german": "/catalog/05_specialni_armatury_en_de.pdf",
+          "russian": "/catalog/05_specialni_armatury_cz_ru.pdf"
+        },
+        "tables": [
+        ],
+        "info": [
+        ],
+        "schemes": [
+        ],
+        "hero": "05_specialni_armatury_header",
+        "preview": "05/05_specialni_armatury"
       },
       {
         "id": "manholes-and-manholes",
-        "href": "/",
-        "title": "Testovací nadpis",
+        "before": "Speciální armatury",
+        "after": "Příslušenství",
+        "hrefBefore": "special-fittings",
+        "hrefAfter": "accessories",
+        "title": "Vlezy a průlezy",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
-        "downloadItem": "Katalog ke stažení",
-        "tables": "Spojovacví armatury",
-        "info": "Spojovacví armatury",
-        "schemes": "Spojovacví armatury",
-        "preview": "fake_product_05"
+        "downloadItem": {
+          "czech": "/catalog/06_vlezy_a_prulezy_cz_ru.pdf",
+          "english": "/catalog/06_vlezy_a_prulezy_en_de.pdf",
+          "german": "/catalog/06_vlezy_a_prulezy_en_de.pdf",
+          "russian": "/catalog/06_vlezy_a_prulezy_cz_ru.pdf"
+        },
+        "tables": [
+        ],
+        "info": [
+        ],
+        "schemes": [
+        ],
+        "hero": "06_vlezy_prulezy_header",
+        "preview": "06/06_vlezy_prulezy"
       },
       {
         "id": "accessories",
-        "href": "/",
-        "title": "Testovací nadpis",
+        "before": "Vlezy a průlezy",
+        "after": "Dvouplášťové armatury",
+        "hrefBefore": "manholes-and-manholes",
+        "hrefAfter": "double-jacketed-fittings",
+        "title": "Příslušenství",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
-        "downloadItem": "Katalog ke stažení",
-        "tables": "Spojovacví armatury",
-        "info": "Spojovacví armatury",
-        "schemes": "Spojovacví armatury",
-        "preview": "fake_product_05"
+        "downloadItem": {
+          "czech": "/catalog/07_prislusenstvi_cz_ru.pdf",
+          "english": "/catalog/07_prislusenstvi_en_de.pdf",
+          "german": "/catalog/07_prislusenstvi_en_de.pdf",
+          "russian": "/catalog/07_prislusenstvi_cz_ru.pdf"
+        },
+        "tables": [
+        ],
+        "info": [
+        ],
+        "schemes": [
+        ],
+        "hero": "07_prislusenstvi_header",
+        "preview": "07/07_prislusenstvi"
       },
       {
         "id": "double-jacketed-fittings",
-        "href": "/",
-        "title": "Testovací nadpis",
+        "before": "Příslušenství",
+        "after": "",
+        "hrefBefore": "accessories",
+        "hrefAfter": "",
+        "title": "Dvouplášťové armatury",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Curabitur sagittis hendrerit ante. Nullam eget nisl. Aenean fermentum risus id tortor. Fusce wisi. Pellentesque pretium lectus id turpis. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Fusce consectetuer risus a nunc. Donec ipsum massa, ullamcorper in, auctor et, scelerisque sed, est. Maecenas libero. Proin in tellus sit amet nibh dignissim sagittis.\n\nQuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis viverra diam non justo. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam. Duis pulvinar. In rutrum. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus. Integer lacinia. Nulla accumsan, elit sit amet varius semper, nulla mauris mollis quam, tempor suscipit diam nulla vel leo. In dapibus augue non sapien. Donec iaculis gravida nulla. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Nam quis nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Vivamus luctus egestas leo. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.",
-        "downloadItem": "Katalog ke stažení",
-        "tables": "Spojovacví armatury",
-        "info": "Spojovacví armatury",
-        "schemes": "Spojovacví armatury",
-        "preview": "fake_product_05"
+        "downloadItem": {
+          "czech": "/catalog/08_dvouplastove_armatury_cz_ru.pdf",
+          "english": "/catalog/08_dvouplastove_armatury_en_de.pdf",
+          "german": "/catalog/08_dvouplastove_armatury_en_de.pdf",
+          "russian": "/catalog/08_dvouplastove_armatury_cz_ru.pdf"
+        },
+        "tables": [
+        ],
+        "info": [
+        ],
+        "schemes": [
+        ],
+        "hero": "08_dvouplastove_armatury_header",
+        "preview": "08/08_dvouplastove_armatury"
       }
     ]
   }

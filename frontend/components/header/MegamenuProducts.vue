@@ -1,7 +1,8 @@
 <template>
   <div class="megamenu">
     <template v-if="$device.isDesktop">
-      <div @mouseover="onOver" @mouseleave="onLeave">
+      <!-- <div @mouseover="onOver" @mouseleave="onLeave"> -->
+      <div>
         <b-dropdown
           ref="dropdown"
           variant="link"
@@ -14,10 +15,10 @@
               {{ $t('global.header.navLinks.products.title') }}
             </b-nav-item>
           </template>
-          <b-row cols-lg="4">
+          <b-row cols-xl="4" cols-lg="3">
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_02.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.02.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.02.link'))">
@@ -36,7 +37,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_03.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.03.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.03.link'))">
@@ -55,7 +56,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_04.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.04.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.04.link'))">
@@ -74,7 +75,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_05.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.05.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.05.link'))">
@@ -93,7 +94,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_06.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.06.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.06.link'))">
@@ -112,7 +113,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_07.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.07.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.07.link'))">
@@ -131,7 +132,7 @@
 
             <b-col>
               <div class="d-flex flex-row megamenu__dropdown--item">
-                <img src="~/assets/images/megamenu/niob_fluid_katalog_08.jpg" alt="Spojovacví armatury">
+                <CustomImage :image="$t('global.header.navLinks.products.category.08.image')" folder="megamenu" />
 
                 <div>
                   <nuxt-link :to="localePath($t('global.header.navLinks.products.category.08.link'))">
@@ -237,6 +238,7 @@
 
 <script>
 export default {
+  /*
   methods: {
     onOver () {
       this.$refs.dropdown.visible = true
@@ -245,6 +247,7 @@ export default {
       this.$refs.dropdown.visible = false
     }
   }
+  */
 }
 </script>
 
@@ -252,13 +255,13 @@ export default {
 .megamenu {
   &__dropdown {
     &--item {
-      padding: 1rem;
-      border-radius: 1rem;
+      padding: $spacer-md;
+      border-radius: $spacer-md;
 
       a {
-        font-size: 1rem;
-        line-height: 1rem;
-        font-weight: 600;
+        font-size: $spacer-md;
+        line-height: $line-height-xs;
+        font-weight: $font-weight-bold;
         color: $primary;
 
         &:active {
@@ -266,56 +269,59 @@ export default {
         }
       }
 
-      img {
-        height: 5rem;
-        padding-right: 1rem;
+      ::v-deep img {
+        width: auto;
+        height: $spacer-xl + 2;
+        padding-right: $spacer-md;
       }
     }
 
     &--subitem {
-      font-size: .8rem;
+      font-size: $sm-font-size;
     }
   }
 
   ::v-deep .btn-link {
     padding: 0;
     color: $typo;
-    font-size: .9rem;
-    font-weight: 700;
+    font-size: $base-font-size;
+    font-weight: $font-weight-bold;
     text-decoration: none;
 
     @include media-breakpoint-down(sm) {
       padding: 0;
       color: $typo;
-      font-size: 1rem;
-      font-weight: 700;
+      font-size: $h5-font-size;
+      font-weight: $font-weight-bold;
       text-decoration: none;
-      max-height: 3rem;
+      max-height: $spacer-xl - 1;
     }
   }
 
   ::v-deep.dropdown-toggle::after {
-    display: inline;
-    width: .25rem;
-    height: .25rem;
-    transform: translateY(-1rem);
-    color: rgba(0, 0, 0, .3);
-    vertical-align: 0;
+    @include media-breakpoint-down(md) {
+      display: inline;
+      width: $spacer-xs;
+      height: $spacer-xs;
+      transform: translateY(- $spacer-md);
+      color: $black-25;
+      vertical-align: 0;
+    }
   }
 
   ::v-deep .dropdown-menu {
     @include media-breakpoint-up(lg) {
       position: absolute;
-      right: 0;
-      padding: 2rem;
-      min-width: 80vw;
-      background: rgba(255, 255, 255, .9);
+      right: - $spacer-xxl * 2;
+      padding: $spacer-lg;
+      min-width: 65vw;
+      background: $white-90;
       border: none;
-      transform: translateX(25%) translateY(-50rem);
+      transform: translateX(0) translateY(- $spacer-xxl * 10);
 
       @include shadow (.2);
-      @include blur (.5rem);
-      @include border-radius(1rem);
+      @include blur ($spacer);
+      @include border-radius($spacer-md);
       @include transition-opacity (.5s);
     }
 
@@ -326,19 +332,19 @@ export default {
 
     a {
       @include media-breakpoint-down(sm) {
-        font-size: .8rem !important;
-        font-weight: 400 !important;
+        font-size: $sm-font-size !important;
+        font-weight: $base-font-size !important;
       }
     }
 
     .bold {
-      font-weight: 700 !important;
+      font-weight: $font-weight-bold !important;
     }
   }
 
   ::v-deep .dropdown.show .dropdown-menu {
     @include media-breakpoint-up(lg) {
-      transform: translateX(25%) translateY(-.25rem);
+      transform: translateX(0) translateY(- $spacer-sm);
 
       @include transition-opacity-after;
     }
@@ -347,9 +353,9 @@ export default {
   ::v-deep .dropdown-item {
     &:hover {
       color: $primary;
-      background: rgba(0, 0, 0, .02);
+      background: $black-05;
 
-      @include border-radius(.5rem);
+      @include border-radius($spacer);
     }
   }
 }

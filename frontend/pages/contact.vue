@@ -1,12 +1,14 @@
 <template>
   <div>
-    <HeroBasicVideo
-      video="https://st3.depositphotos.com/1040130/13520/v/600/depositphotos_135207336-stock-video-technical-equipment-at-diary-plant.mp4"
+    <HeroBasic
+      image="niob_building_foto"
       :title="$t('contact.title')"
     />
 
-    <b-container class="contact d-flex justify-content-center">
+    <b-container class="contact">
       <ContactForm />
+
+      <ContactAddress class="mt-10" />
     </b-container>
 
     <Gmaps />
@@ -17,24 +19,25 @@
 export default {
   components: {
     ContactForm: () => import('~/components/contact/ContactForm'),
+    ContactAddress: () => import('~/components/contact/ContactAddress'),
     Gmaps: () => import('~/components/contact/Gmaps'),
-    HeroBasicVideo: () => import('~/components/hero/HeroBasicVideo')
+    HeroBasic: () => import('~/components/hero/HeroBasic')
   },
 
-  data () {
-    return {
-      title: 'Kontakt | STUDIO 5'
+  computed: {
+    description () {
+      return this.$t('global.metaDescription').substring(0, 67)
     }
   },
 
   head () {
     return {
-      title: this.title,
+      title: this.$t('contact.metaTitle') + ' | NIOB FLUID s.r.o.',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Máte otázky na členy našeho týmu, nebo si chcete domluvit nezávaznou schůzku u šálku kávy? Napište nám, zavolejte nbeo se stavte přímo za námi do studia.'
+          content: this.description + '...'
         }
       ]
     }
@@ -42,8 +45,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .contact {
-  padding: 4rem 0;
+  padding: $spacer-xl 0;
 }
 </style>

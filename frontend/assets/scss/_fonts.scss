@@ -5,60 +5,86 @@
 h1,
 .h1 {
   font-family: $font-condensed;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 4rem;
+  font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-lg;
+
+  @include media-breakpoint-down(sm) {
+    line-height: $line-height-md;
+  }
 }
 
 h2,
 .h2 {
   font-family: $font-primary;
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 3rem;
+  font-size: $h2-font-size;
+  font-weight: $font-weight-base;
+  line-height: $line-height-lg;
 }
 
 h3,
 .h3 {
   font-family: $font-primary;
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 3rem;
+  font-size: $h3-font-size;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-lg;
 
   @include media-breakpoint-down(sm) {
-    line-height: 2.5rem;
+    line-height: $line-height-base;
   }
 }
 
 h4,
 .h4 {
   font-family: $font-primary;
-  font-size: 1.3rem;
-  font-weight: 500;
-  line-height: 2rem;
+  font-size: $h4-font-size;
+  font-weight: $font-weight-base;
+  line-height: $line-height-md;
 }
 
 h5,
 .h5 {
   font-family: $font-primary;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 2rem;
+  font-size: $h5-font-size;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-md;
 }
 
 p {
   font-family: $font-paragraph;
-  font-size: .875rem;
-  font-weight: 300;
-  line-height: 1.25rem;
+  font-size: $base-font-size;
+  font-weight: $font-weight-light;
+  line-height: $line-height-base;
+
+  a {
+    font-weight: $font-weight-bold;
+  }
+}
+
+ol li {
+  font-family: $font-paragraph;
+  font-size: $base-font-size;
+  font-weight: $font-weight-light;
+  line-height: $line-height-base;
+}
+
+ul li {
+  font-family: $font-paragraph;
+  font-size: $base-font-size;
+  font-weight: $font-weight-light;
+  line-height: $line-height-base;
 }
 
 button {
   font-family: $font-buttons;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 label,
 input,
 textarea {
-  font-family: $font-primary;
+  font-family: $font-labels;
 }

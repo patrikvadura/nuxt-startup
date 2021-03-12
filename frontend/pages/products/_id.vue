@@ -1,25 +1,69 @@
 <template>
   <div class="products">
-    <HeroBasicVideo
-      video="https://st3.depositphotos.com/1040130/13520/v/600/depositphotos_135207336-stock-video-technical-equipment-at-diary-plant.mp4"
+    <HeroBasic
+      :image="post.hero"
       :title="post.title"
+      :before="post.before"
+      :after="post.after"
+      :href-before="post.hrefBefore"
+      :href-after="post.hrefAfter"
     />
 
     <b-container class="products__content">
       <b-row>
         <b-col md="7" cols="12">
-          <p v-html="post.content" />
+          <p
+            v-if="post.content.length > 1"
+            v-html="post.content"
+          />
+          <p
+            v-else
+            v-html="$t('global.noText')"
+          />
         </b-col>
 
         <b-col md="5" cols="12" class="products__content--image">
-          <CustomImage :image="post.preview" folder="fakeapi/products" />
+          <CustomImage :image="post.preview" folder="products" lightbox />
         </b-col>
       </b-row>
+
+      <template v-if="post.gallery">
+        <div class="products__gallery">
+          <h4>
+            {{ $t('global.gallery') }}
+          </h4>
+
+          <b-row cols-md="5" cols="12">
+            <div v-for="gallery in post.gallery" :key="gallery.image">
+              <b-col>
+                <CustomImage
+                  :image="gallery.image"
+                  folder="products"
+                  lightbox
+                />
+
+                <div class="products__gallery--meta pt-2 d-flex flex-row">
+                  <p
+                    v-if="gallery.code.length > 1"
+                    class="pr-1 font-weight-bold"
+                    v-html="$t('global.code') + ' ' + gallery.code"
+                  />
+
+                  <p
+                    v-if="gallery.catalog.length > 1 || gallery.catalogPage.length > 1"
+                    v-html="'(' + $t('global.catalogShort') + ' ' + gallery.catalog + ' / ' + $t('global.catalogPage') + ' ' + gallery.catalogPage + ')'"
+                  />
+                </div>
+              </b-col>
+            </div>
+          </b-row>
+        </div>
+      </template>
 
       <b-row class="products__footer">
         <b-col md="3" cols="12" class="products__footer--item">
           <h4>
-            {{ $t('global.downloadCatalog') }}
+            {{ $t('global.catalog') }} <span>{{ post.title }}</span> {{ $t('global.forDownload') }}
           </h4>
 
           <ProductsDownload
@@ -30,46 +74,75 @@
           />
         </b-col>
 
-        <b-col md="3" cols="12" class="products__footer--item">
-          <h4>
-            {{ $t('global.techTables') }}
-          </h4>
-          <div
-            v-for="table in post.tables"
-            :key="table.title"
-          >
-            <nuxt-link :to="localePath(table.url)">
-              {{ table.title }}
-            </nuxt-link>
-          </div>
-        </b-col>
+        <template v-if="post.tables.length > 0">
+          <b-col md="3" cols="12" class="products__footer--item">
+            <h4>
+              {{ $t('global.techTables') }}
+            </h4>
+            <div
+              v-for="table in post.tables.slice(0,3)"
+              :key="table.title"
+            >
+              <nuxt-link :to="localePath('/downloads/info#' + table.url)">
+                {{ table.title }}
+              </nuxt-link>
+            </div>
 
-        <b-col md="3" cols="12" class="products__footer--item">
-          <h4>
-            {{ $t('global.techInfo') }}
-          </h4>
-          <div
-            v-for="info in post.info"
-            :key="info.title"
-          >
-            <nuxt-link :to="localePath(info.url)">
-              {{ info.title }}
+            <nuxt-link :to="localePath('/downloads/info#conversion-tables')">
+              <span>
+                {{ $t('global.showMore') }}
+              </span>
             </nuxt-link>
-          </div>
-        </b-col>
+          </b-col>
+        </template>
+
+        <template v-if="post.info.length > 0">
+          <b-col md="3" cols="12" class="products__footer--item">
+            <h4>
+              {{ $t('global.techInfo') }}
+            </h4>
+            <div
+              v-for="info in post.info.slice(0,3)"
+              :key="info.title"
+            >
+              <nuxt-link :to="localePath('/downloads/info#' + info.url)">
+                {{ info.title }}
+              </nuxt-link>
+            </div>
+
+            <nuxt-link :to="localePath('/downloads/info#tech-information')">
+              <span>
+                {{ $t('global.showMore') }}
+              </span>
+            </nuxt-link>
+          </b-col>
+        </template>
 
         <b-col md="3" cols="12" class="products__footer--item">
           <h4>
             {{ $t('global.techSchemes') }}
           </h4>
-          <div
-            v-for="schemes in post.schemes"
-            :key="schemes.title"
-          >
-            <nuxt-link :to="localePath(schemes.url)">
-              {{ schemes.title }}
-            </nuxt-link>
-          </div>
+
+          <nuxt-link :to="localePath('/downloads/schemes#' + id)">
+            <CustomButton :title="$t('global.show')" />
+          </nuxt-link>
+        </b-col>
+      </b-row>
+
+      <b-row class="products__actions">
+        <b-col cols="12" class="d-flex flex-column flex-md-row justify-content-center">
+          <CustomButton
+            :title="$t('global.goBack')"
+            gray
+            onclick="history.back(-1)"
+            class="mr-0 mr-md-2"
+          />
+
+          <CustomButton
+            :title="$t('global.goHome')"
+            :href="localePath('/')"
+            class="mt-2 mt-md-0"
+          />
         </b-col>
       </b-row>
     </b-container>
@@ -79,7 +152,7 @@
 <script>
 export default {
   components: {
-    HeroBasicVideo: () => import('~/components/hero/HeroBasicVideo'),
+    HeroBasic: () => import('~/components/hero/HeroBasic'),
     ProductsDownload: () => import('~/components/products/ProductsDownload')
   },
 
@@ -121,17 +194,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .products {
   &__content {
-    padding: 4rem 0;
+    padding: $spacer-xl 0;
 
     @include media-breakpoint-down(sm) {
-      padding: 3rem 2rem;
-    }
-
-    b {
-      color: $primary;
+      padding: $spacer-xl - 1 $spacer-lg;
     }
 
     &--image {
@@ -140,43 +209,86 @@ export default {
       align-items: center;
 
       @include media-breakpoint-down(sm) {
-        margin-top: 2rem;
+        margin-top: $spacer-lg;
       }
 
       img {
         width: auto;
-        height: 20rem;
+        height: $spacer-xl * 5;
 
         @include media-breakpoint-down(sm) {
-          height: 15rem;
+          height: $spacer-xl * 4;
         }
       }
     }
   }
 
+  &__gallery {
+    margin-top: $spacer-xl - 1;
+    padding: $spacer-lg;
+    background: $black-05;
+
+    h4 {
+      margin-bottom: $spacer-md;
+      color: $primary;
+    }
+
+    &--meta {
+      p {
+        font-size: $sm-font-size - .1;
+      }
+    }
+  }
+
   &__footer {
-    margin-top: 4rem;
-    padding-top: 4rem;
-    border-top: 1px solid rgba(0, 0, 0, .1);
+    margin-top: $spacer-xl;
+    padding-top: $spacer-xl;
+    border-top: 1px solid $black-10;
 
     &--item {
-      padding-left: 2rem;
-      border-right: 1px solid rgba(0, 0, 0, .1);
+      padding-left: $spacer-lg;
+      border-right: 1px solid $black-10;
 
       @include media-breakpoint-down(sm) {
-        margin: 1rem 0;
-        padding-left: 1rem;
+        margin: $spacer-md 0;
+        padding-left: $spacer-md;
         text-align: center;
         border-right: none;
       }
 
       h4 {
         color: $primary;
+        line-height: $line-height-base;
+        padding-bottom: 1rem;
+      }
+
+      span {
+        font-weight: $font-weight-bold;
+      }
+
+      a {
+        span {
+          font-weight: $font-weight-bold;
+          line-height: $line-height-lg;
+        }
       }
 
       &:last-child {
         border-right: none;
       }
+    }
+  }
+
+  &__actions {
+    margin-top: $spacer-xl;
+    padding-top: $spacer-xl;
+    border-top: 1px solid $black-10;
+    display: block;
+
+    @include media-breakpoint-down(sm) {
+      display: flex;
+      flex-direction: column;
+      padding: $spacer-lg;
     }
   }
 }

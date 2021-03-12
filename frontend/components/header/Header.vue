@@ -60,21 +60,21 @@ export default {
       this.showNavbar = currentScrollPosition < this.lastScrollPosition
       // Set the current scroll position as the last scroll position
       this.lastScrollPosition = currentScrollPosition
-    }
-  },
+    },
 
-  onScroll () {
-    const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
-    if (currentScrollPosition < 0) {
-      return
+    onScrolll () {
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+      if (currentScrollPosition < 0) {
+        return
+      }
+      // Stop executing this function if the difference between
+      // current scroll position and last scroll position is less than some offset
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+        return
+      }
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition
+      this.lastScrollPosition = currentScrollPosition
     }
-    // Stop executing this function if the difference between
-    // current scroll position and last scroll position is less than some offset
-    if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
-      return
-    }
-    this.showNavbar = currentScrollPosition < this.lastScrollPosition
-    this.lastScrollPosition = currentScrollPosition
   }
 }
 </script>

@@ -4,11 +4,44 @@
     "posts": [
       {
         "id": "08",
-        "title": "Testovací článek Novinka",
+        "title": "Klapka přímá S - S",
         "perex": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam sed tellus id magna elementum tincidunt. Maecenas sollicitudin.",
         "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam sed tellus id magna elementum tincidunt. Maecenas sollicitudin. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Mauris elementum mauris vitae tortor. Integer lacinia. Praesent in mauris eu tortor porttitor accumsan. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante. Nullam sapien sem, ornare ac, nonummy non, lobortis a enim. Praesent in mauris eu tortor porttitor accumsan. Nunc auctor. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Nunc dapibus tortor vel mi dapibus sollicitudin. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Integer pellentesque quam vel velit. Aenean vel massa quis mauris vehicula lacinia. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus enim erat, vestibulum vel, aliquam a, posuere eu, velit. Aliquam ante. Etiam sapien elit, consequat eget, tristique non, venenatis quis, ante.",
         "category": "Spopjovací armatury",
-        "preview": "fake_product_01"
+        "preview": "fake_product_01",
+        "scheme": "news_scheme_43010",
+        "info": {
+          "title": "Klapka přímá S - S",
+          "code": "43010",
+          "catalog": "04_regulacni_armatury_cz_ru",
+          "catalogPage": "11",
+          "fields": [
+            { "key": "dn", "label": "DN", "sortable": false },
+            { "key": "a", "label": "A", "sortable": false },
+            { "key": "b", "label": "B", "sortable": false },
+            { "key": "b", "label": "C", "sortable": false },
+            { "key": "c", "label": "D", "sortable": false },
+            { "key": "e", "label": "E", "sortable": false },
+            { "key": "f", "label": "F", "sortable": false },
+            { "key": "r", "label": "R", "sortable": false },
+            { "key": "l", "label": "L", "sortable": false },
+            { "key": "rd", "label": "Rd x s", "sortable": false },
+            { "key": "kg", "label": "Kg", "sortable": false }
+          ],
+          "table": [
+            { "dn": "15", "a": "50", "b": "110", "c": "15", "d": "18", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "20", "a": "50", "b": "110", "c": "19", "d": "22", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "25", "a": "40", "b": "114", "c": "26", "d": "31", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "32", "a": "42", "b": "114", "c": "32", "d": "37", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "40", "a": "50", "b": "140", "c": "38", "d": "43", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "50", "a": "50", "b": "140", "c": "50", "d": "55", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "65", "a": "50", "b": "140", "c": "66", "d": "72", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "80", "a": "60", "b": "174", "c": "81", "d": "87", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "100", "a": "64", "b": "174", "c": "100", "d": "106", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "125", "a": "100", "b": "210", "c": "125", "d": "138", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" },
+            { "dn": "150", "a": "100", "b": "210", "c": "150", "d": "164", "e": "", "f": "", "r": "", "l": "", "rd": "", "kg": "" }
+          ]
+        }
       },
       {
         "id": "07",

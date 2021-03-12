@@ -10,33 +10,30 @@
   >
     <template v-if="icon">
       <div class="custom-button__box">
-        <template v-if="bootstrap">
+        <template v-if="!right">
           <b-icon
-            class="custom-button__box--bicon"
+            class="custom-button__box--icon-left"
+            :icon="icon"
+            :style="{ color: `#fff` }"
+          />
+
+          {{ title }}
+        </template>
+
+        <template v-else>
+          {{ title }}
+
+          <b-icon
+            class="custom-button__box--icon-right"
             :icon="icon"
             :style="{ color: `#fff` }"
           />
         </template>
-
-        <template v-else>
-          <img
-            :src="require(`~/assets/images/icons/white/${icon}.svg`)"
-            title=""
-            :alt="icon"
-            class="custom-button__box--icon"
-          >
-        </template>
-
-        <div class="custom-button__box--title">
-          {{ title }}
-        </div>
       </div>
     </template>
 
     <template v-else>
-      <div class="custom-button__title">
-        {{ title }}
-      </div>
+      {{ title }}
     </template>
   </b-button>
 </template>
@@ -44,72 +41,55 @@
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      required: true,
-      default: ''
-    },
-    id: {
-      type: String,
-      required: false,
-      default: ''
-    },
-    href: {
-      type: String,
-      required: false,
-      default: ''
-    },
-    icon: {
-      type: String,
-      required: false,
-      default: ''
-    },
-    wide: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    primary: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    secondary: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    light: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    disabled: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    bootstrap: {
-      type: Boolean,
-      required: false,
-      default: false
-    },
-    height: {
-      type: Boolean,
-      required: false,
-      default: false
-    }
+    // default
+    title: { type: String, required: false, default: '' },
+    id: { type: String, required: false, default: '' },
+    href: { type: String, required: false, default: '' },
+
+    // color variations
+    primary: { type: Boolean, required: false, default: false },
+    secondary: { type: Boolean, required: false, default: false },
+    light: { type: Boolean, required: false, default: false },
+    gray: { type: Boolean, required: false, default: false },
+
+    // atributes
+    disabled: { type: Boolean, required: false, default: false },
+
+    // icons
+    icon: { type: String, required: false, default: '' },
+
+    // positioning
+    right: { type: Boolean, required: false, default: false },
+
+    // sizing
+    wide: { type: Boolean, required: false, default: false },
+    wideTablet: { type: Boolean, required: false, default: false },
+    wideMobile: { type: Boolean, required: false, default: false },
+    height: { type: Boolean, required: false, default: false },
+    heightTablet: { type: Boolean, required: false, default: false },
+    heightMobile: { type: Boolean, required: false, default: false }
   },
 
   computed: {
     classes () {
       return {
-        'custom-button--wide': this.wide,
+        // color variations
         'custom-button': this.primary,
         'custom-button--disabled': this.disabled,
         'custom-button--secondary': this.secondary,
         'custom-button--light': this.light,
-        'custom-button--height': this.height
+        'custom-button--gray': this.gray,
+
+        // atributes
+        'custom-button--disabled': this.disabled,
+
+        // sizing
+        'custom-button--wide': this.wide,
+        'custom-button--wideTablet': this.wideTablet,
+        'custom-button--wideMobile': this.wideMobile,
+        'custom-button--height': this.height,
+        'custom-button--heightTablet': this.heightTablet,
+        'custom-button--heightMobile': this.heightMobile
       }
     }
   }
@@ -117,114 +97,130 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@mixin heightBtn {
+  margin: $spacer 0 0 0;
+  height: $spacer-xl - $spacer;
+  line-height: $line-height-base;
+}
+
+@mixin widthBtn {
+  margin: $spacer 0 0 0;
+  width: 100%;
+}
+
+button:focus {
+  outline: none;
+}
+
 .custom-button {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  height: $spacer-lg + $spacer;
+  line-height: $line-height-base;
+  font-size: $h5-font-size;
+  font-weight: $font-weight-bold;
+  text-align: center;
+  padding: $spacer $spacer-lg - $spacer;
+  color: $white;
   border: none;
-  padding: .5rem;
   background: $primary;
   cursor: pointer;
   transition: all 300ms ease-in-out;
 
-  @include border-radius (.5rem);
+  @include border-radius ($spacer);
 
   &:hover {
     background: $secondary;
+    color: $white;
   }
 
+  // atributes
+  &--disabled {
+    opacity: .3;
+    cursor: none;
+  }
+
+  // icons
   &__box {
     display: inline-flex;
     align-items: center;
-    padding: 0 .75rem;
+    padding: 0;
 
     &--icon {
       display: inline-flex;
-      width: 1rem;
-    }
+      width: $spacer-md;
 
-    &--bicon {
-      display: inline-flex;
-      width: 1rem;
-    }
+      &-right {
+        margin-left: $spacer;
+      }
 
-    &--title {
-      font-size: 1rem;
-      font-weight: 600;
-      text-align: center;
-      padding-left: .5rem;
-      color: #fff;
+      &-left {
+        margin-right: $spacer;
+      }
     }
   }
 
-  &__title {
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    padding: .5rem 1rem;
-    color: #fff;
-  }
-
-  &--disabled {
-    pointer-events: none;
-    opacity: .2;
-  }
-
-  &--height {
-    margin: .5rem 0 0 0;
-    height: 3.5rem;
-    line-height: 1.3rem;
-  }
-
-  &--wide {
-    margin: .5rem 0 0 0;
-    width: 100%;
-
-    .custom-button__title {
-      width: 100%;
-    }
-  }
-
+  // color variables
   &--secondary {
     background: $secondary;
-
-    .custom-button__title {
-      color: #fff;
-    }
-
-    .custom-button__box--title {
-      color: #fff;
-    }
-
+    color: $white;
+    
     &:hover {
       background: $primary;
     }
   }
 
   &--light {
-    background: $lightWhite;
-
-    .custom-button__title {
-      color: #fff;
-
-      &:hover {
-        color: $primary;
-      }
-    }
-
-    .custom-button__box--title {
-      color: #fff;
-
-      &:hover {
-        color: #fff;
-      }
-    }
+    background: $white-05;
+    color: $white;
 
     &:hover {
       background: $secondary;
+      color: $white;
+    }
+  }
+
+  &--gray {
+    background: $black-05;
+    color: $primary;
+
+    &:hover {
+      background: $secondary;
+    }
+  }
+
+  // sizing
+  &--height {
+    @include heightBtn;
+
+    &Tablet {
+      @include media-breakpoint-down(md) {
+        @include heightBtn;
+      }
+    }
+
+    &Mobile {
+      @include media-breakpoint-down(sm) {
+        @include heightBtn;
+      }
+    }
+  }
+
+  &--wide {
+    @include widthBtn;
+
+    &Tablet {
+      @include media-breakpoint-down(md) {
+        @include widthBtn;
+      }
+    }
+
+    &Mobile {
+      @include media-breakpoint-down(sm) {
+        @include widthBtn;
+      }
     }
   }
 }

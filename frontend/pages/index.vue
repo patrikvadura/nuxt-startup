@@ -13,25 +13,25 @@
 <script>
 export default {
   components: {
-    Hero: () => import('~/components/hero/HeroVideo'),
+    Hero: () => import('~/components/hero/HeroHomepage'),
     ProductSlider: () => import('~/components/homepage/ProductSlider'),
     HomepageFeatures: () => import('~/components/homepage/HomepageFeatures')
   },
 
-  data () {
-    return {
-      title: 'Výroba armatur z nerezové oceli | NiobFluid'
+  computed: {
+    description () {
+      return this.$t('global.metaDescription').substring(0, 67)
     }
   },
 
   head () {
     return {
-      title: this.title,
+      title: this.$t('global.metaTitle') + ' | NIOB FLUID s.r.o.',
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: 'Společnost NIOB FLUID s.r.o. je českým výrobcem armatur z nerezových ocelí pro potravinářský, chemický a farmaceutický průmysl. Výroba potravinářských ...'
+          content: this.description + '...'
         }
       ]
     }
@@ -39,7 +39,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .homepage {
   padding: 0;
 }

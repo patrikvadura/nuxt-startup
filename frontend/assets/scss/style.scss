@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'lazyload';
 @import 'custom/cookies';
+@import 'custom/browser';
 
 *,
 *::before,
@@ -11,15 +12,16 @@
 
 html {
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 body {
-  background: #fff;
+  background: $white;
   color: $typo;
   margin: 0;
   padding: 0;
+  width: auto;
   overflow-x: hidden;
-  overflow-y: scroll;
   white-space: normal;
 
   --slides-per-page: 2;
@@ -34,12 +36,4 @@ iframe {
   max-width: 100%;
   vertical-align: middle;
   border: 0;
-}
-
-a {
-  text-decoration: none !important;
-}
-
-button:focus {
-  outline: none;
 }
