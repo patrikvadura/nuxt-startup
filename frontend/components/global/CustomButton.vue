@@ -75,7 +75,6 @@ export default {
       return {
         // color variations
         'custom-button': this.primary,
-        'custom-button--disabled': this.disabled,
         'custom-button--secondary': this.secondary,
         'custom-button--light': this.light,
         'custom-button--gray': this.gray,
@@ -166,7 +165,7 @@ button:focus {
   &--secondary {
     background: $secondary;
     color: $white;
-    
+
     &:hover {
       background: $primary;
     }
